@@ -3,12 +3,14 @@
 Vernieuwing van de website [Check Je Stress](http://checkjestress.nl/)
 
 ### Taakverdeling
-[Opmaak / CSS] MateyByrd<br>
-[PHP] Omniscimus<br>
-[Database / SQL]<br>
-[Communicatie] thealias<br>
-[Planning] thealias<br>
-[Verbeteren tekst] thealias & Omnisciumus<br>
+| Onderdeel | Persoon |
+|-----------|---------|
+| Opmaak / CSS | MateyByrd |
+| PHP | Omniscimus |
+| Database / SQL | nog niemand |
+| Communicatie | thealias |
+| Planning | thealias |
+| Verbeteren teksten | thealias & Omniscimus |
 
 ### Aantekeningen
 ##### Tests
