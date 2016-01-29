@@ -3,12 +3,12 @@
 Vernieuwing van de website checkjestress.nl
 
 ### Taakverdeling
-[Opmaak / Css] MateyByrd
-[PHP] Omniscimus
-[Database / SQL] 
-[Communicatie] thealias
-[Planning] thealias
-[Verbeteren tekst] Omnisciumus & thealias
+[Opmaak / Css] MateyByrd<br>
+[PHP] Omniscimus<br>
+[Database / SQL]<br>
+[Communicatie] thealias<br>
+[Planning] thealias<br>
+[Verbeteren tekst] Omnisciumus & thealias<br>
 
 ### Aantekeningen
 * Vragen weglaten op basis van score
