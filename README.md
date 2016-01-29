@@ -1,29 +1,31 @@
 ## CheckJeStress
 
-Vernieuwing van de website checkjestress.nl
+Vernieuwing van de website [Check Je Stress](http://checkjestress.nl/)
 
 ### Taakverdeling
-[Opmaak / Css] MateyByrd<br>
+[Opmaak / CSS] MateyByrd<br>
 [PHP] Omniscimus<br>
 [Database / SQL]<br>
 [Communicatie] thealias<br>
 [Planning] thealias<br>
-[Verbeteren tekst] Omnisciumus & thealias<br>
+[Verbeteren tekst] thealias & Omnisciumus<br>
 
 ### Aantekeningen
+##### Tests
 * Vragen weglaten op basis van score
-* Vragen van testen hetzelfde laten
-* Metertje (van java -> js, css, html)
-* Mobiele website -> FOUNDATION
-* Kaartje (clickable map)
-* Logo vernieuwing ? Zelfde idee
-* BLAUW
-* Aanpassen van tekst niet zeer belangrijk
-* Ria mag verdwijnen
-* Plaatjes / Foto's auteurrechtvrij (duuh)
-* Plaatjes / Foto's in rust
-* Links naar social media
-* Vragen mogen veranderd worden mits in overleg
-* Bestaande database is belangrijk
-* Vragenlijst naar 6 opties
+* Vragen mogen veranderd worden **in overleg met de opdrachtgever**
+* De vragen van de tests moeten zoveel mogelijk hetzelfde blijven.
+* Het resultaat van de tests kan worden weergegeven met een metertje. Huidige versie is met Javalogo, dit kan beter met JavaScript / CSS3 / HTML5.
+* Er is al een database met een grote hoeveelheid resultaten van de huidige tests: dit is waardevol en kan niet zomaar weggegooid worden. Het zou het best zijn als we deze gegevens op de een of andere manier konden integreren met het nieuwe systeem.
+* De vragen in de tests moeten 6 opties hebben in plaats van 5
 * Laten zien waar het resultaat vandaan komt
+
+##### Algemeen
+* De website moet responsive worden. We kunnen hier makkelijk het [Foundation framework](http://foundation.zurb.com/) voor gebruiken.
+* Logo vernieuwing: zie issue [#3](https://github.com/MateyByrd/CheckJeStress/issues/3)
+* De kleur BLAUW (rond de #3C96C8) heeft de voorkeur. Verder rustige foto's.
+* Aanpassen van tekst is niet zeer belangrijk, maar kunnen we wel hier en daar doen om het er wat mooier / professioneler uit te laten zien.
+* Op [de pagina](https://github.com/MateyByrd/CheckJeStress/blob/master/old_website/page1.php) met 'steunpunten bij jou in de buurt' kunnen we een kaartje zetten waarop alle locaties zichtbaar zijn (bijv. een clickable map).
+* Ria mag verdwijnen uit de pagina's met medewerkers
+* Plaatjes / Foto's auteurrechtvrij (duuh)
+* Links naar social media (Facebookpagina, evt. Twitter)
