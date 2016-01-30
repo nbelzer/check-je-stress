@@ -39,7 +39,7 @@ class PageCreator {
     $body = $this->body;
 
     // Print de pagina (en voer php uit die daarop staat)
-    include 'resources/includes/generic.php';
+    include 'generic.php';
   }
 
 }
