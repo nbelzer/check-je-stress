@@ -2,6 +2,17 @@
 
 Vernieuwing van de website [Check Je Stress](http://checkjestress.nl/)
 
+### Setup
+Om de website werkend te krijgen, moet er een aantal dingen gedaan worden:
+* Kopiëer de bestanden in de src/ map naar de gewenste locatie in de Apache server en chmod / chown eventueel
+* Verplaats het bestand .htpasswd, in de src/ map, naar een plaats **buiten** de webserver. Mensen die de website bezoeken, mogen dit bestand niet kunnen zien, ook niet als de server verkeerd geconfigureerd is
+* Genereer nieuwe inloggegevens voor in .htpasswd en zet ze in het .htpasswd bestandje. Gebruik het commando:
+```shell
+$ htpasswd -c .htpasswd user
+```
+* Zet het goede pad naar het .htpasswd bestand in het bestand admin/.htaccess (bij AuthUserFile)
+* Ga met je browser naar de website :smile:
+
 ### Taakverdeling
 | Onderdeel | Persoon |
 |-----------|---------|
