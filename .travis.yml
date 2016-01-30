@@ -16,4 +16,4 @@ matrix:
     - php: hhvm
     - php: nightly
 
-script: sh travis_parse.sh
+script: sh travis_parse.sh src
