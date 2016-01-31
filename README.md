@@ -1,4 +1,5 @@
 ## CheckJeStress
+[![Build Status](https://travis-ci.org/MateyByrd/CheckJeStress.svg?branch=master)](https://travis-ci.org/MateyByrd/CheckJeStress)
 
 Vernieuwing van de website [Check Je Stress](http://checkjestress.nl/)
 
