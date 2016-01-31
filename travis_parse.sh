@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Checkt of alle bestanden die eindigen op .php correcte php syntax hebben.
 
 function parse_file {
