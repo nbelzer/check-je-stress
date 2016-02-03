@@ -9,19 +9,17 @@
  * @return string een element voor de navigatie
  */
 function createNavEntry($file, $is_directory, $indents) {
-  $to_return = "<p style=\"";
 
   // Voeg indents toe in het geval dat de entry in een map zit
   $padding = 20 * $indents;
-  $to_return .= "padding-left: {$padding}px;";
 
+  // Files moeten linken naar de editor; mappen niet, die zijn er alleen voor het overzicht.
   if ($is_directory) {
-    $to_return .= "color: blue;";
+    $to_return = "<p style=\"padding-left: {$padding}px; color: blue;\">$file</p>";
   } else {
-    $to_return .= "color: red;";
+    $to_return = "<a href=\"editor.php?page=$file\" style=\"padding-left: {$padding}px; color: red;\">$file</a><br />";
   }
 
-  $to_return .= "\">$file</p>";
   return $to_return;
 }
 
@@ -63,7 +61,6 @@ function readDirs($main, $output, $indents) {
 
 // Maak de inhoud van de navigatiebalk waar de administrator bestanden kan selecteren om ze aan te passen
 $navigation = readDirs('../', '', 0);
-
 // Maak de inhoud van de editor
 if (isset($_POST['page'])) {
   $page = $_POST['page'];
