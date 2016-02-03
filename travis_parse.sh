@@ -1,10 +1,22 @@
 #!/bin/bash
 # Checkt of alle bestanden die eindigen op .php correcte php syntax hebben.
 
+error_count=0
+
 function parse_file {
-	if [[ $(php -l $1) != "No syntax errors detected in $file" ]]; then
-		echo "syntax error"
-		exit 1
+	parse_output=$(php -l $1)
+	if [[ $parse_output != "No syntax errors detected in $file" ]]; then
+		echo
+		echo "Found a syntax error in $1:"
+		while read -r line
+		do
+			echo "> $line"
+		done <<< "$parse_output"
+		#echo "$parse_output"
+		echo
+		error_count=$(($error_count+1))
+	else
+		echo "Valid: $file"
 	fi
 }
 
@@ -22,7 +34,13 @@ function parse_directory {
 	done
 }
 
+echo "Checking all .php files for syntax errors..."
+echo
 parse_directory $1
-
-echo "valid"
-exit 0
+echo
+echo "Found $error_count file(s) with syntax errors."
+if [[ $error_count > 255 ]]; then
+	exit 255
+else
+	exit $error_count
+fi
