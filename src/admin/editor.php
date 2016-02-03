@@ -60,24 +60,27 @@ function readDirs($main, $output, $indents) {
 }
 
 // Maak de inhoud van de navigatiebalk waar de administrator bestanden kan selecteren om ze aan te passen
-$navigation = readDirs('../', '', 0);
+$file_index = readDirs('../', '', 0);
+$navigation = <<<EOF
+  $file_index
+EOF;
+
 // Maak de inhoud van de editor
-if (isset($_POST['page'])) {
-  $page = $_POST['page'];
+if (isset($_GET['page'])) {
+  $page = $_GET['page'];
   if (isset($_POST['contents'])) {
     // De admin heeft zojuist een pagina aangepast.
-    // Zet $_POST['contents'] in MySQL als contents bij deze pagina
+    // TODO Zet $_POST['contents'] in MySQL als contents bij deze pagina
     $editor = <<<EOF
       <p>De pagina $page is aangepast.</p>
 EOF;
   } else {
     // De admin heeft een bestand geselecteerd om aan te passen. Geef de editor weer.
-    // Tekst van deze pagina wordt uit MySQL gehaald en in de variabele $page_contents gezet
+    // TODO Tekst van deze pagina wordt uit MySQL gehaald en in de variabele $page_contents gezet
     $page_contents = "";
     $editor = <<<EOF
-      <form action="editor.php" method="POST">
+      <form action="editor.php?page=$page" method="POST">
         <textarea name="contents">$page_contents</textarea>
-        <input type="hidden" name="page" value="$page" />
         <input type="submit" />
       </form>
 EOF;
