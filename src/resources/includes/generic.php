@@ -24,30 +24,11 @@
   </head>
 
   <body>
-  <?php
-  require 'menubar.php';
-  $menu = new Menubar();
-  $menu->create();
-  ?>
-
-<!--        <ul class="dropdown menu" data-dropdown-menu>-->
-<!--          <li class="menu-text">Check je stress</li>-->
-<!--          <li>-->
-<!--            <a href="#">One</a>-->
-<!--            <ul class="menu vertical">-->
-<!--              <li><a href="#">One</a></li>-->
-<!--              <li><a href="#">Two</a></li>-->
-<!--              <li><a href="#">Three</a></li>-->
-<!--            </ul>-->
-<!--          </li>-->
-<!---->
-<!--          <li><a href="#">Two</a></li>-->
-<!--          <li><a href="#">Three</a></li>-->
-<!--        </ul>-->
-
-
-
-    <h1><?php echo $title; ?></h1>
+    <?php
+    require 'menubar.php';
+    $menu = new Menubar();
+    $menu->create();
+    ?>
     <?php echo $body; ?>
 
     <script src="resources/js/vendor/jquery.min.js"></script>
