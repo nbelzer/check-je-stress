@@ -2,7 +2,7 @@
 /**
  * Deze PHP class bevat functies voor een (top-bar) menu.
  */
-class Menubar {
+class MenuCreator {
  /**
   * Menu items
   */

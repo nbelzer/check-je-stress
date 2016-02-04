@@ -25,8 +25,8 @@
 
   <body>
     <?php
-    require 'menubar.php';
-    $menu = new Menubar();
+    require 'MenuCreator.php';
+    $menu = new MenuCreator();
     $menu->create();
     ?>
     <?php echo $body; ?>
