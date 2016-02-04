@@ -1,8 +1,29 @@
 <?php
+
 /**
  * Deze PHP class bevat functies waarmee pagina's gemaakt kunnen worden.
  */
 class PageCreator {
+
+  /**
+   * Bevat de config array.
+   */
+  var $config;
+
+  /**
+   * Zie MySQLManager.php. Roep getConnection() aan als je hem nodig hebt;
+   * vergeet dan niet om aan het eind closeConnection() aan te roepen.
+   */
+  var $mysql;
+
+  /**
+   * Maakt een nieuwe PageCreator; initialiseert $config en $mysql.
+   */
+  function __construct() {
+    $this->config = include 'config.php';
+    include 'MySQLManager.php';
+    $this->mysql = new MySQLManager;
+  }
 
   /**
    * De paginatitel.

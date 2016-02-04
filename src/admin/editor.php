@@ -1,5 +1,8 @@
 <?php
 
+include '../resources/includes/PageCreator.php';
+$page_creator = new PageCreator;
+
 /**
  * Geeft een string met HTML-code voor een entry in de navigatie.
  *
@@ -77,7 +80,7 @@ EOF;
   } else {
     // De admin heeft een bestand geselecteerd om aan te passen. Geef de editor weer.
     // TODO Tekst van deze pagina wordt uit MySQL gehaald en in de variabele $page_contents gezet
-    $page_contents = "";
+    $page_contents = $page_creator->mysql->getPageBody($page);
     $editor = <<<EOF
       <form action="editor.php?page=$page" method="POST">
         <textarea name="contents">$page_contents</textarea>
@@ -93,12 +96,9 @@ EOF;
 }
 
 // Maak de editor.php pagina
-include '../resources/includes/PageCreator.php';
-
-$page = new PageCreator;
-$page->title = "CheckJeStress - Editor";
+$page_creator->title = "CheckJeStress - Editor";
 // Responsive CSS
-$page->head = <<<EOF
+$page_creator->head = <<<EOF
   <style>
     @media screen and (min-width: 480px) {
       #nav {
@@ -114,7 +114,7 @@ $page->head = <<<EOF
     }
   </style>
 EOF;
-$page->body = <<<EOF
+$page_creator->body = <<<EOF
   <div id="nav">
     $navigation
   </div>
@@ -122,4 +122,4 @@ $page->body = <<<EOF
     $editor
   </div>
 EOF;
-$page->create();
+$page_creator->create();

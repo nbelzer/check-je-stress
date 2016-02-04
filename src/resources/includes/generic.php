@@ -1,5 +1,4 @@
 <?php
-$config = include 'resources/includes/config.php';
 
 /*
  * Dit is een standaardpagina voor op de website. Voor het includen van deze
