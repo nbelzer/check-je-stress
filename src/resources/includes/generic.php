@@ -24,36 +24,28 @@
   </head>
 
   <body>
-<!--  Menu Bar -->
-  <!-- Toggle for smaller screens -->
-    <div class="title-bar" data-responsive-toggle="top-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle></button>
-      <div class="title-bar-title">Menu</div>
-    </div>
-  <!-- Actual Menu -->
-    <div class="top-bar" id="top-menu">
+  <?php
+  require 'menubar.php';
+  $menu = new Menubar();
+  $menu->create();
+  ?>
 
-      <div class="top-bar-left">
+<!--        <ul class="dropdown menu" data-dropdown-menu>-->
+<!--          <li class="menu-text">Check je stress</li>-->
+<!--          <li>-->
+<!--            <a href="#">One</a>-->
+<!--            <ul class="menu vertical">-->
+<!--              <li><a href="#">One</a></li>-->
+<!--              <li><a href="#">Two</a></li>-->
+<!--              <li><a href="#">Three</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!---->
+<!--          <li><a href="#">Two</a></li>-->
+<!--          <li><a href="#">Three</a></li>-->
+<!--        </ul>-->
 
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Check je stress</li>
-          <li>
-            <a href="#">One</a>
-            <ul class="menu vertical">
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
-            </ul>
-          </li>
 
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-        </ul>
-
-      </div>
-
-    </div>
-<!-- End Menu Bar -->
 
     <h1><?php echo $title; ?></h1>
     <?php echo $body; ?>
