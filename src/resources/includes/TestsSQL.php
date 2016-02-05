@@ -6,15 +6,15 @@
  */
 class TestsSQL {
 
-    private $mySQLManager;
+  private $mySQLManager;
 
-    /**
-     * Maakt een nieuwe PageSQL.
-     *
-     * @param MySQLManager $mySQLManager de manager van deze instance
-     */
-    function __construct($mySQLManager) {
-      $this->$mySQLManager = $mySQLManager;
-    }
+  /**
+   * Maakt een nieuwe PageSQL.
+   *
+   * @param MySQLManager $mySQLManager de manager van deze instance
+   */
+  function __construct($mySQLManager) {
+    $this->$mySQLManager = $mySQLManager;
+  }
 
 }
