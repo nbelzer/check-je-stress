@@ -43,13 +43,4 @@ class MySQLManager {
         }
     }
 
-    /**
-     * Geeft de inhoud van de body tag van de opgegeven pagina.
-     *
-     * @param string $page de pagina waarvan de body uit de database gehaald moet worden
-     */
-    function getPageBody($page) {
-      return '';
-    }
-
 }
