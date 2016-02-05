@@ -6,6 +6,8 @@
 class MySQLManager {
 
     private $connection;
+    private $pageSQL;
+    private $testsSQL;
 
     /**
      * Geeft de MySQL-verbinding.
@@ -41,6 +43,26 @@ class MySQLManager {
         } else {
             $this->connection = $connection;
         }
+    }
+
+    /**
+     * Geeft de PageSQL die gebruikt kan worden om contents van pagina's uit MySQL op te vragen.
+     */
+    function getPageSQL() {
+      if (!isset($this->pageSQL)) {
+          $this->pageSQL = new PageSQL($this);
+      }
+      return $this->pageSQL;
+    }
+
+    /**
+     * Geeft de TestsSQL die gebruikt kan worden om resultaten van stresstests uit MySQL op te vragen.
+     */
+    function getTestsSQL() {
+      if (!isset($this->testsSQL)) {
+          $this->testsSQL = new TestsSQL($this);
+      }
+      return $this->testsSQL;
     }
 
 }

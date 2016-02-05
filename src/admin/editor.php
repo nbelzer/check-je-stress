@@ -80,7 +80,7 @@ EOF;
   } else {
     // De admin heeft een bestand geselecteerd om aan te passen. Geef de editor weer.
     // TODO Tekst van deze pagina wordt uit MySQL gehaald en in de variabele $page_contents gezet
-    $page_contents = $page_creator->mysql->getPageBody($page);
+    $page_contents = $page_creator->mysql->getPageSQL()->getPageBody($page);
     $editor = <<<EOF
       <form action="editor.php?page=$page" method="POST">
         <textarea name="contents">$page_contents</textarea>
