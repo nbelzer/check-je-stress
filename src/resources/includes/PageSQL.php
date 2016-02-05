@@ -18,12 +18,27 @@ class PageSQL {
   }
 
   /**
+   * Geeft de inhoud van de opgegeven pagina.
+   *
+   * @param string $page de pagina waarvan de inhoud opgezocht moet worden
+   * @return array een associated array als volgt:
+   * array('title' => titel, 'head' => head, 'body' => body)
+   */
+  function getPageContents($page) {
+    $sql = "SELECT title, head, body FROM pages WHERE page = '$page';";
+    $results = $this->mySQLManager->getterQuery($sql, null, array('title', 'head', 'body'));
+    return $results;
+  }
+
+  /**
    * Geeft de paginatitel van de opgegeven pagina.
    *
    * @param string $page de pagina waarvan de titel uit de database gehaald moet worden
    */
   function getPageTitle($page) {
-    return '';
+    $sql = "SELECT title FROM pages WHERE page = '$page';";
+    $result = $this->mySQLManager->getterQuery($sql, null, array('title'));
+    return $result['title'];
   }
 
   /**
@@ -32,7 +47,9 @@ class PageSQL {
    * @param string $page de pagina waarvan de head uit de database gehaald moet worden
    */
   function getPageHead($page) {
-    return '';
+    $sql = "SELECT head FROM pages WHERE page = '$page';";
+    $result = $this->mySQLManager->getterQuery($sql, null, array('head'));
+    return $result['head'];
   }
 
   /**
@@ -41,7 +58,9 @@ class PageSQL {
    * @param string $page de pagina waarvan de body uit de database gehaald moet worden
    */
   function getPageBody($page) {
-    return '';
+    $sql = "SELECT body FROM pages WHERE page = '$page';";
+    $result = $this->mySQLManager->getterQuery($sql, null, array('body'));
+    return $result['body'];
   }
 
 }

@@ -19,10 +19,21 @@ $ htpasswd -c .htpasswd user
 |-----------|---------|
 | Opmaak / CSS | MateyByrd |
 | PHP | Omniscimus |
-| Database / SQL | nog niemand |
+| Database / SQL | Omniscimus |
 | Communicatie | thealias |
 | Planning | thealias |
 | Verbeteren teksten | thealias & Omniscimus |
+
+### MySQL
+tabel `pages`:
+
+| Kolom | Data type | Opmerking |
+|-------|-----------|-----------|
+| `id` | `TINYINT UNSIGNED UNIQUE AUTO_INCREMENT` ||
+| `page` | `TINYTEXT` | pad naar de pagina vanaf [src/](https://github.com/MateyByrd/CheckJeStress/tree/master/src) |
+| `title` | `TINYTEXT` | paginatitel |
+| `head` | `TEXT` | extra dingen voor in de head tag |
+| `body` | `TEXT` | inhoud van de body tag |
 
 ### Aantekeningen
 ##### Tests

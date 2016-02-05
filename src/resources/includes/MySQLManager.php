@@ -37,7 +37,9 @@ class MySQLManager {
    */
   function connect() {
     $connection = new \mysqli(
-                $config['mysql']['host'], $config['mysql']['username'], $config['mysql']['password'], NULL, $config['mysql']['port']);
+                $config['mysql']['host'], $config['mysql']['username'],
+                $config['mysql']['password'], $config['mysql']['database'],
+                $config['mysql']['port']);
     if ($connection->connect_error) {
       throw new \Exception("Verbinden met de database is mislukt.");
     } else {
@@ -132,8 +134,10 @@ class MySQLManager {
   function executeQuery($query, $params) {
     // Maak de query uit $query en $params
     $statement = getConnection()->prepare($query);
-    foreach ($params as $type => $param) {
-      $statement->bind_param($type, $param);
+    if (is_array($params)) {
+      foreach ($params as $type => $param) {
+        $statement->bind_param($type, $param);
+      }
     }
     // Voer de query uit
     $statement->execute();
