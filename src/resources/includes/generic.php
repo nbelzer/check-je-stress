@@ -28,6 +28,7 @@
     <?php
     require 'MenuCreator.php';
     $menu = new MenuCreator();
+    $menu->path_to_root = $path_to_root;
     $menu->create();
     ?>
     <?php echo $body; ?>
