@@ -19,7 +19,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/css/foundation.min.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo $path_to_root; ?>resources/css/foundation.min.css" type="text/css">
     <title><?php echo $title; ?></title>
     <?php echo $head; ?>
   </head>
@@ -32,8 +32,8 @@
     ?>
     <?php echo $body; ?>
 
-    <script src="resources/js/vendor/jquery.min.js"></script>
-    <script src="resources/js/foundation.min.js"></script>
+    <script src="<?php echo $path_to_root; ?>resources/js/vendor/jquery.min.js"></script>
+    <script src="<?php echo $path_to_root; ?>resources/js/foundation.min.js"></script>
     <script>$(document).foundation();</script>
   </body>
 </html>

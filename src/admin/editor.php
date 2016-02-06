@@ -100,6 +100,7 @@ EOF;
 }
 
 // Maak de editor.php pagina
+$page_creator->path_to_root = '../';
 $page_creator->title = "CheckJeStress - Editor";
 // Responsive CSS
 $page_creator->head = <<<EOF

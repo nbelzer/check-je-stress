@@ -26,6 +26,15 @@ class PageCreator {
   }
 
   /**
+   * Het pad naar de root van de installatie van de website, gezien vanaf de
+   * pagina die deze class aanroept. Voorbeelden: bij info/index.php zou dit
+   * '../' zijn; bij doelgroep/bedrijven/index.php zou dit '../../' zijn. Het
+   * zetten van deze variabele is verplicht voor pagina's die niet in de webroot
+   * staan.
+   */
+  var $path_to_root;
+
+  /**
    * De paginatitel.
    */
   var $title;
@@ -47,9 +56,12 @@ class PageCreator {
   function create() {
     /*
      * Maak de content variables global zodat ze gebruikt kunnen worden door
-     * de nieuwe pagina. Het werkt niet als ik hier een aparte functie voor
-     * gebruik :/
+     * de nieuwe pagina. Werkt niet in een aparte functie.
      */
+
+    global $path_to_root;
+    $path_to_root = $this->path_to_root;
+
     global $title;
     $title = $this->title;
 
