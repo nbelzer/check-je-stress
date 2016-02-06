@@ -71,11 +71,11 @@ if [ ${config[3]} == "" ]
 then
   mysql -h ${config[0]} -P ${config[1]} -u ${config[2]} << EOF
     CREATE DATABASE IF NOT EXISTS ${config[4]};
-    CREATE TABLE IF NOT EXISTS ${config[4]}.pages (id TINYINT UNSIGNED UNIQUE AUTO_INCREMENT, page TINYTEXT, title TINYTEXT, head TEXT, body TEXT);
+    CREATE TABLE IF NOT EXISTS ${config[4]}.pages (id TINYINT UNSIGNED UNIQUE AUTO_INCREMENT, page VARCHAR(255) UNIQUE KEY, title TINYTEXT, head TEXT, body TEXT);
 EOF
 else
   mysql -h ${config[0]} -P ${config[1]} -u ${config[2]} -p${config[3]} << EOF
     CREATE DATABASE IF NOT EXISTS ${config[4]};
-    CREATE TABLE IF NOT EXISTS ${config[4]}.pages (id TINYINT UNSIGNED UNIQUE AUTO_INCREMENT, page TINYTEXT, title TINYTEXT, head TEXT, body TEXT);
+    CREATE TABLE IF NOT EXISTS ${config[4]}.pages (id TINYINT UNSIGNED UNIQUE AUTO_INCREMENT, page VARCHAR(255) UNIQUE KEY, title TINYTEXT, head TEXT, body TEXT);
 EOF
 fi

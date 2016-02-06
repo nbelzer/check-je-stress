@@ -25,7 +25,7 @@ tabel `pages`:
 | Kolom | Data type | Opmerking |
 |-------|-----------|-----------|
 | `id` | `TINYINT UNSIGNED UNIQUE AUTO_INCREMENT` ||
-| `page` | `TINYTEXT` | pad naar de pagina vanaf [src/](https://github.com/MateyByrd/CheckJeStress/tree/master/src) |
+| `page` | `VARCHAR(255) UNIQUE KEY` | pad naar de pagina vanaf [src/](https://github.com/MateyByrd/CheckJeStress/tree/master/src) |
 | `title` | `TINYTEXT` | paginatitel |
 | `head` | `TEXT` | extra dingen voor in de head tag |
 | `body` | `TEXT` | inhoud van de body tag |

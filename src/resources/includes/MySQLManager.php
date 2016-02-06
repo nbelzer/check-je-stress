@@ -57,33 +57,35 @@ class MySQLManager {
    *
    * @param string $query de query die moet worden uitgevoerd, met evt.
    * vraagtekens op de plaatsen van data
-   * @param array $params optioneel: een associated array met parameters voor in
-   * de query. Formaat is (parameter type) => (parameter). Voor parameter types,
-   * check https://secure.php.net/manual/en/mysqli-stmt.bind-param.php bij
-   * 'types'
+   * @param string $param_types optioneel: een string met de types van de
+   * parameters voor de query. Verplicht als $params ook opgegeven is. Voor
+   * parameter types, check
+   * https://secure.php.net/manual/en/mysqli-stmt.bind-param.php bij 'types'
+   * @param array $params optioneel: een met parameters voor in
+   * de query.
    * @param array $result_names een array met namen voor de resultaten
    * @return array een associated array waarin de waardes van $results aan de
    * resultaten gekoppeld staan
    */
-  function getterQuery($query, $params, $result_names) {
+  function getterQuery($query, $param_types, $params, $result_names) {
 
     // Voer de query uit
-    $statement = $this->executeQuery($query, $params);
+    $statement = $this->executeQuery($query, $param_types, $params);
 
     // Maak een array van arrays voor de resultaten: één column returnt meerdere
     // values als er meerdere rows matchen in MySQL.
     $results = array();
-    for ($i = 0; $i < $result_names.length; $i++) {
+    for ($i = 0; $i < count($result_names); $i++) {
       $results[$i] = array();
     }
 
     // Elke keer als fetch() aangeroepen wordt, wordt $results_row gevuld met
     // een nieuwe row. Voeg elke keer de column value toe aan de goede array uit
     // $results.
-    $results_row = array($result_names.length - 1);
+    $results_row = array(count($result_names) - 1);
     $statement->bind_result($results_row);
     while ($statement->fetch()) {
-      for ($i = 0; $i < $results_row.length; $i++) {
+      for ($i = 0; $i < count($results_row); $i++) {
         array_push($results[$i], $results_row[$i]);
       }
     }
@@ -94,8 +96,8 @@ class MySQLManager {
     // column gekoppeld wordt aan de value. Die value is dus een array als er
     // meerdere rows zijn, of de plain value als het maar één row is.
     $results_assoc = array();
-    for ($i = 0; $i < $results.length; $i++) {
-      switch ($result.length) {
+    for ($i = 0; $i < count($results); $i++) {
+      switch (count($result)) {
         case 0:
           $results_assoc[$result_names[$i]] = null;
           break;
@@ -118,12 +120,13 @@ class MySQLManager {
    *
    * @param string $query de query die moet worden uitgevoerd, met evt.
    * vraagtekens op de plaatsen van data
-   * @param array $params een associated array met parameters voor in de query.
-   * Formaat is (parameter type) => (parameter). Voor parameter types, check
+   * @param string $param_types een string met de types van de parameters voor
+   * de query. Voor parameter types, check
    * https://secure.php.net/manual/en/mysqli-stmt.bind-param.php bij 'types'
+   * @param array $params een met parameters voor in de query.
    */
-  function setterQuery($query, $params) {
-    $statement = $this->executeQuery($query, $params);
+  function setterQuery($query, $param_types, $params) {
+    $statement = $this->executeQuery($query, $param_types, $params);
     $statement->close();
   }
 
@@ -135,17 +138,18 @@ class MySQLManager {
    * @return mysqli_stmt de reeds uitgevoerde statement, waar eventueel
    * resultaten uit gehaald kunnen worden
    */
-  function executeQuery($query, $params) {
+  function executeQuery($query, $param_types, $params) {
     // Maak de query uit $query en $params
     $statement = $this->getConnection()->prepare($query);
     if (is_array($params)) {
-      foreach ($params as $type => $param) {
-        $statement->bind_param($type, $param);
-      }
+      // We willen $statement->bind_param() aanroepen met een dynamisch aantal
+      // parameters. Doe dat met call_user_func_array. bind_param() accepteert
+      // alleen referenced values. Maak dus eerst die array ($refs).
+      $refs = array();
+      foreach ($params as $key => $value)
+      $refs[$key] = &$params[$key];
+      call_user_func_array(array($statement, 'bind_param'), array_merge(array($param_types), $refs));
     }
-    // Voer de query uit
-    $statement->execute();
-
     return $statement;
   }
 

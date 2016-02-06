@@ -26,7 +26,7 @@ class PageSQL {
    */
   function getPageContents($page) {
     $sql = "SELECT title, head, body FROM pages WHERE page = '$page';";
-    $results = $this->mySQLManager->getterQuery($sql, null, array('title', 'head', 'body'));
+    $results = $this->mySQLManager->getterQuery($sql, null, null, array('title', 'head', 'body'));
     return $results;
   }
 
@@ -37,7 +37,7 @@ class PageSQL {
    */
   function getPageTitle($page) {
     $sql = "SELECT title FROM pages WHERE page = '$page';";
-    $result = $this->mySQLManager->getterQuery($sql, null, array('title'));
+    $result = $this->mySQLManager->getterQuery($sql, null, null, array('title'));
     return $result['title'];
   }
 
@@ -48,7 +48,7 @@ class PageSQL {
    */
   function getPageHead($page) {
     $sql = "SELECT head FROM pages WHERE page = '$page';";
-    $result = $this->mySQLManager->getterQuery($sql, null, array('head'));
+    $result = $this->mySQLManager->getterQuery($sql, null, null, array('head'));
     return $result['head'];
   }
 
@@ -59,8 +59,64 @@ class PageSQL {
    */
   function getPageBody($page) {
     $sql = "SELECT body FROM pages WHERE page = '$page';";
-    $result = $this->mySQLManager->getterQuery($sql, null, array('body'));
+    $result = $this->mySQLManager->getterQuery($sql, null, null, array('body'));
     return $result['body'];
+  }
+
+  /**
+   * Update de inhoud van de opgegeven pagina, of maakt de pagina aan als deze
+   * nog niet bestaat.
+   *
+   * @param string $page het pad naar de pagina vanaf de website root
+   * @param string $title de nieuwe paginatitel
+   * @param string $head de nieuwe paginahead
+   * @param string $body de nieuwe paginabody
+   */
+  function updatePageContents($page, $title, $head, $body) {
+    $sql = 'INSERT INTO pages (page, title, head, body) VALUES (?, ?, ?, ?)
+            ON DUPLICATE KEY UPDATE title=?, head=?, body=?;';
+    $param_types = 'sssssss';
+    $params = array($page, $title, $head, $body, $title, $head, $body);
+    $this->mySQLManager->setterQuery($sql, $param_types, $params);
+  }
+
+  /**
+   * Update de titel van de opgegeven pagina.
+   *
+   * @param string $page het pad naar de pagina vanaf de website root
+   * @param string $title de nieuwe paginatitel
+   */
+  function updatePageTitle($page, $title) {
+    $sql = 'UPDATE pages SET title=? WHERE page=?;';
+    $param_types = 'ss';
+    $params = array($title, $page);
+    $this->mySQLManager->setterQuery($sql, $param_types, $params);
+  }
+
+  /**
+   * Update de head van de opgegeven pagina.
+   *
+   * @param string $page het pad naar de pagina vanaf de website root
+   * @param string $head de nieuwe paginahead
+   */
+  function updatePageHead($page, $head) {
+    $sql = 'UPDATE pages SET head=? WHERE page=?;';
+    $param_types = 'ss';
+    $params = array($head, $page);
+    $this->mySQLManager->setterQuery($sql, $param_types, $params);
+  }
+
+  /**
+   * Update de body van de opgegeven pagina.
+   *
+   * @param string $page het pad naar de pagina vanaf de website root
+   * @param string $body de nieuwe paginabody
+   */
+  function updatePageBody($page, $body) {
+    $sql = 'UPDATE pages SET body=? WHERE page=?;';
+    $param_types = 'ss';
+    $params = array($body, $page);
+    $this->mySQLManager->setterQuery($sql, $param_types, $params);
   }
 
 }

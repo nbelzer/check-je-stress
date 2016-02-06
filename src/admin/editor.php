@@ -78,7 +78,7 @@ if (isset($_GET['page'])) {
   $page = $_GET['page'];
   if (isset($_POST['contents'])) {
     // De admin heeft zojuist een pagina aangepast.
-    // TODO Zet $_POST['contents'] in MySQL als contents bij deze pagina
+    $page_creator->mysql->getPageSQL()->updatePageBody($page, $_POST['contents']);
     $editor = <<<EOF
       <p>De pagina $page is aangepast.</p>
 EOF;
