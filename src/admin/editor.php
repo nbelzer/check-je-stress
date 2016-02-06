@@ -13,6 +13,11 @@ $page_creator = new PageCreator;
  */
 function createNavEntry($file, $is_directory, $indents) {
 
+  // Verander '../info/index.php' naar 'info/index.php'
+  $path_from_webroot = substr($file, 3);
+  // Verander 'info/index.php' naar 'index.php'
+  $file = substr($file, strrpos($file, DIRECTORY_SEPARATOR) + 1);
+
   // Voeg indents toe in het geval dat de entry in een map zit
   $padding = 20 * $indents;
 
@@ -20,7 +25,7 @@ function createNavEntry($file, $is_directory, $indents) {
   if ($is_directory) {
     $to_return = "<p style=\"padding-left: {$padding}px; color: blue;\">$file</p>";
   } else {
-    $to_return = "<a href=\"editor.php?page=$file\" style=\"padding-left: {$padding}px; color: red;\">$file</a><br />";
+    $to_return = "<a href=\"editor.php?page=$path_from_webroot\" style=\"padding-left: {$padding}px; color: red;\">$file</a><br />";
   }
 
   return $to_return;
@@ -52,11 +57,11 @@ function readDirs($main, $output, $indents) {
 
   // Als het een map is, roep deze method dan weer aan (recursief).
   foreach ($dirs as $file) {
-    $output .= createNavEntry($file, true, $indents);
+    $output .= createNavEntry($main . $file, true, $indents);
     $output = readDirs($main . $file . '/', $output, $indents + 1);
   }
   foreach ($files as $file) {
-    $output .= createNavEntry($file, false, $indents);
+    $output .= createNavEntry($main . $file, false, $indents);
   }
 
   return $output;
