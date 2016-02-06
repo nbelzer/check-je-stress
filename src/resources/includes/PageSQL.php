@@ -25,8 +25,10 @@ class PageSQL {
    * array('title' => titel, 'head' => head, 'body' => body)
    */
   function getPageContents($page) {
-    $sql = "SELECT title, head, body FROM pages WHERE page = '$page';";
-    $results = $this->mySQLManager->getterQuery($sql, null, null, array('title', 'head', 'body'));
+    $sql = 'SELECT title, head, body FROM pages WHERE page = ?;';
+    $param_types = 's';
+    $params = array($page);
+    $results = $this->mySQLManager->getterQuery($sql, $param_types, $params, array('title', 'head', 'body'));
     return $results;
   }
 
@@ -36,8 +38,10 @@ class PageSQL {
    * @param string $page de pagina waarvan de titel uit de database gehaald moet worden
    */
   function getPageTitle($page) {
-    $sql = "SELECT title FROM pages WHERE page = '$page';";
-    $result = $this->mySQLManager->getterQuery($sql, null, null, array('title'));
+    $sql = 'SELECT title FROM pages WHERE page = ?;';
+    $param_types = 's';
+    $params = array($page);
+    $result = $this->mySQLManager->getterQuery($sql, $param_types, $params, array('title'));
     return $result['title'];
   }
 
@@ -47,8 +51,10 @@ class PageSQL {
    * @param string $page de pagina waarvan de head uit de database gehaald moet worden
    */
   function getPageHead($page) {
-    $sql = "SELECT head FROM pages WHERE page = '$page';";
-    $result = $this->mySQLManager->getterQuery($sql, null, null, array('head'));
+    $sql = 'SELECT head FROM pages WHERE page = ?;';
+    $param_types = 's';
+    $params = array($page);
+    $result = $this->mySQLManager->getterQuery($sql, $param_types, $params, array('head'));
     return $result['head'];
   }
 
@@ -58,8 +64,10 @@ class PageSQL {
    * @param string $page de pagina waarvan de body uit de database gehaald moet worden
    */
   function getPageBody($page) {
-    $sql = "SELECT body FROM pages WHERE page = '$page';";
-    $result = $this->mySQLManager->getterQuery($sql, null, null, array('body'));
+    $sql = "SELECT body FROM pages WHERE page = ?;";
+    $param_types = 's';
+    $params = array($page);
+    $result = $this->mySQLManager->getterQuery($sql, $param_types, $params, array('body'));
     return $result['body'];
   }
 
