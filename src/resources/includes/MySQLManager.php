@@ -31,11 +31,15 @@ class MySQLManager {
   }
 
   /**
-   * Verbindt met de MySQL server.
+   * Verbindt met de MySQL server. De PageCreator class moet al in de globale
+   * variabele $page_creator staan, zodat de MySQL verbindingsgegevens gevonden
+   * kunnen worden.
    *
    * @throws Exception als het verbinden is mislukt
    */
   function connect() {
+    global $page_creator;
+    $config = $page_creator->config;
     $connection = new \mysqli(
                 $config['mysql']['host'], $config['mysql']['username'],
                 $config['mysql']['password'], $config['mysql']['database'],
@@ -133,7 +137,7 @@ class MySQLManager {
    */
   function executeQuery($query, $params) {
     // Maak de query uit $query en $params
-    $statement = getConnection()->prepare($query);
+    $statement = $this->getConnection()->prepare($query);
     if (is_array($params)) {
       foreach ($params as $type => $param) {
         $statement->bind_param($type, $param);
@@ -150,6 +154,7 @@ class MySQLManager {
    */
   function getPageSQL() {
     if (!isset($this->pageSQL)) {
+      require_once 'PageSQL.php';
       $this->pageSQL = new PageSQL($this);
     }
     return $this->pageSQL;
@@ -160,6 +165,7 @@ class MySQLManager {
    */
   function getTestsSQL() {
     if (!isset($this->testsSQL)) {
+      require_once 'TestsSQL.php';
       $this->testsSQL = new TestsSQL($this);
     }
     return $this->testsSQL;

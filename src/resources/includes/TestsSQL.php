@@ -14,7 +14,7 @@ class TestsSQL {
    * @param MySQLManager $mySQLManager de manager van deze instance
    */
   function __construct($mySQLManager) {
-    $this->$mySQLManager = $mySQLManager;
+    $this->mySQLManager = $mySQLManager;
   }
 
 }
