@@ -9,14 +9,29 @@ class MenuCreator {
 
   function create()
   {
-    $menu = (new MenuBuilder)
-      ->appendSubmenu(
-        (new MenuBuilder('Index', $path_to_root))
-          ->appendElement('Hello', $path_to_root . 'howareyou')
-          ->appendElement('HAX', $path_to_root . '360noscope')
+    /*
+     * Bij elementen van het main menu (de menubalk) moet je telkens strings van
+     * MenuBuilders aan elkaar plakken door .build() te gebruiken. Bij submenus
+     * van submenus kun je ->appendSubmenu() doen.
+     */
+    $menu =
+      (new MenuBuilder('Index', $path_to_root))
+        ->appendElement('Hello', $path_to_root . 'howareyou')
+        ->appendElement('HAX', $path_to_root . '360noscope')
+        ->build()
+      . (new MenuBuilder('Information', $path_to_root . 'information'))
+        ->build()
+      . (new MenuBuilder('Locations', $path_to_root . 'locations'))
+        ->appendElement('Amsterdam', $path_to_root . 'locs/adam')
+        ->appendSubmenu((new MenuBuilder('Middelburg', $path_to_root . 'locs/mburg'))
+          ->appendElement('Lange Jan', $path_to_root . 'locs/mburg/langejan')
+          ->appendSubmenu((new MenuBuilder('Nehalennia', $path_to_root . 'locs/mburg/neh'))
+            ->appendElement('Breeweg', $path_to_root . 'locs/mburg/neh/brwg')
+            ->appendElement('Kruisweg', $path_to_root . 'locs/mburg/neh/krswg')
+          )
         )
-      ->appendElement('Information', $path_to_root . 'information')
-      ->build();
+        ->appendElement('Vlissingen', $path_to_root . 'locs/flushing')
+        ->build();
 
     /*
      * Zet het menu in elkaar, plaatst eerst de beforemenu variabele en de
