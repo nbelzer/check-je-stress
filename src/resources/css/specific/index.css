@@ -1,0 +1,42 @@
+
+@import url('../stress.css');
+
+.indexImage {
+  width: 100%;
+  height: 30em;
+  background-image: url('/resources/img/index.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.indexElement {
+  text-align: center;
+  padding: 2em;
+}
+
+.indexElement.indexButton {
+  background-color: #eee;
+}
+
+.indexElement.indexButton:hover {
+  background-color: #e6e6e6;
+}
+
+.title {
+  list-style: none;
+  padding-top: 5em;
+  padding-left: 5em;
+}
+
+.logo {
+  float: left;
+}
+
+.logoTitle {
+  margin-left: 3em;
+  font-size: 3em;
+  color: white;
+  font-weight: bold;
+}

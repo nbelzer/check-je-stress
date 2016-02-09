@@ -1,0 +1,13 @@
+
+@import url('./foundation.min.css');
+
+/* Standard css used on each page */
+
+:root {
+  --main-color: #009ccc
+}
+
+.logo {
+  width: auto;
+  height: 5em;
+}
