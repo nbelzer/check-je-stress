@@ -6,9 +6,9 @@ $page->head = "<link rel=\"stylesheet\" href=" .$path_to_root . "resources/css/s
 $page->body = <<<CONTENT
 
 <div class="row">
-  <div class="indexImage">
+  <div class="indexImage" style="background-image: url('$path_to_root/resources/img/index.png');">
     <ul class="title">
-      <li><img src="/resources/img/logo_highres.png" class="logo"></li>
+      <li><img src="$path_to_root/resources/img/logo_highres.png" class="logo"></li>
       <li><div class="logoTitle">Check Je Stress</div></li>
     </ul>
   </div>
