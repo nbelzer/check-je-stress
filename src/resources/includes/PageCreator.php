@@ -50,6 +50,11 @@ class PageCreator {
   var $body;
 
   /**
+   * Moet er een top-bar menu weergegeven worden. Optioneel.
+   */
+  var $includeMenu;
+
+  /**
    * Geeft de pagina voor op de website. Gebruikt de variabelen uit deze
    * PageCreator instance.
    */
@@ -70,6 +75,9 @@ class PageCreator {
 
     global $body;
     $body = $this->body;
+
+    global $includeMenu;
+    $includeMenu = $this->includeMenu;
 
     // Print de pagina (en voer php uit die daarop staat)
     include 'generic.php';

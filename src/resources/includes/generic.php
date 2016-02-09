@@ -13,6 +13,9 @@
  if (!isset($body)) {
    trigger_error('Deze pagina is leeg!', E_USER_NOTICE);
  }
+//if (!isset($includeMenu)) {
+//  $includeMenu = true;
+//}
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,11 +29,14 @@
 
   <body>
     <?php
-    require 'MenuCreator.php';
-    $menu = new MenuCreator();
-    $menu->path_to_root = $path_to_root;
-    $menu->create();
+    if ($includeMenu) {
+      require 'MenuCreator.php';
+      $menu = new MenuCreator();
+      $menu->path_to_root = $path_to_root;
+      $menu->create();
+    }
     ?>
+
     <?php echo $body; ?>
 
     <script src="<?php echo $path_to_root; ?>resources/js/vendor/jquery.min.js"></script>
