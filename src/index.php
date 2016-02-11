@@ -20,7 +20,7 @@ $page->body = <<<CONTENT
       Doe een test
     </div>
   </a>
-  <a href="/info/">
+  <a href="info/index.php">
     <div class="small-12 medium-3 columns indexElement indexButton">
       Informatie
     </div>
@@ -38,7 +38,7 @@ $page->body = <<<CONTENT
 </div>
 
 <div class="row indexElement">
-  <a href="CheckJeStress/src/resources/img/img_index.html">Index for images</a>
+  <a href="resources/img/img_index.html">Index for images</a>
 
 </div>
 
