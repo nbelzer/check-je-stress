@@ -38,7 +38,7 @@ $page->body = <<<CONTENT
 </div>
 
 <div class="row indexElement">
-  <a href=\"resources/img/img_index.html\">Index for images</a>
+  <a href="CheckJeStress/src/resources/img/img_index.html">Index for images</a>
 
 </div>
 
