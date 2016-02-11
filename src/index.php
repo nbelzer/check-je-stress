@@ -38,7 +38,8 @@ $page->body = <<<CONTENT
 </div>
 
 <div class="row indexElement">
-  Meer informatie hierzo
+  <a href=\"resources/img/img_index.html\">Index for images</a>
+
 </div>
 
 CONTENT;
