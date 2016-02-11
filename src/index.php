@@ -5,14 +5,15 @@ $page->title = "Check je stress";
 $page->head = "<link rel=\"stylesheet\" href=" .$path_to_root . "resources/css/specific/index.css type=\"text/css\">";
 $page->body = <<<CONTENT
 
-<div class="row">
-  <div class="indexImage" style="background-image: url('resources/img/index.png');">
+<div class="indexImage" style="background-image: url('resources/img/frontpage.svg');">
+  <div class="row">
     <ul class="title">
-      <li><img src="resources/img/logo_highres.png" class="logo"></li>
-      <li><div class="logoTitle">Check Je Stress</div></li>
-    </ul>
+        <li><img src="resources/img/logo_vector_blocky.svg" class="logo"></li>
+        <li><h1><div class="logoTitle">Check Je Stress</div></h1></li>
+      </ul>
   </div>
 </div>
+
 
 <div class="row">
   <a href="#">

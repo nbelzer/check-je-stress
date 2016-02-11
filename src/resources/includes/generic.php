@@ -36,9 +36,7 @@ if (!isset($includeMenu)) {
       $menu->create();
     }
     ?>
-    <div class="row">
-      <?php echo $body; ?>
-    </div>
+    <?php echo $body; ?>
 
     <script src="<?php echo $path_to_root; ?>resources/js/vendor/jquery.min.js"></script>
     <script src="<?php echo $path_to_root; ?>resources/js/foundation.min.js"></script>
