@@ -13,9 +13,9 @@
  if (!isset($body)) {
    trigger_error('Deze pagina is leeg!', E_USER_NOTICE);
  }
-//if (!isset($includeMenu)) {
-//  $includeMenu = true;
-//}
+if (!isset($includeMenu)) {
+  $includeMenu = true;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,8 +36,9 @@
       $menu->create();
     }
     ?>
-
-    <?php echo $body; ?>
+    <div class="row">
+      <?php echo $body; ?>
+    </div>
 
     <script src="<?php echo $path_to_root; ?>resources/js/vendor/jquery.min.js"></script>
     <script src="<?php echo $path_to_root; ?>resources/js/foundation.min.js"></script>

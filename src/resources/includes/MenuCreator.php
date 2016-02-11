@@ -4,7 +4,6 @@
  */
 class MenuCreator {
 
-  var $path_to_root;
   var $menu_items;
 
   function create()
@@ -14,12 +13,14 @@ class MenuCreator {
      * MenuBuilders aan elkaar plakken door .build() te gebruiken. Bij submenus
      * van submenus kun je ->appendSubmenu() doen.
      */
+    global $path_to_root;
+
     $menu =
       (new MenuBuilder('Index', $path_to_root))
         ->appendElement('Hello', $path_to_root . 'howareyou')
         ->appendElement('HAX', $path_to_root . '360noscope')
         ->build()
-      . (new MenuBuilder('Information', $path_to_root . 'information'))
+      . (new MenuBuilder('Information', $path_to_root . 'info/'))
         ->build()
       . (new MenuBuilder('Locations', $path_to_root . 'locations'))
         ->appendElement('Amsterdam', $path_to_root . 'locs/adam')
@@ -31,6 +32,8 @@ class MenuCreator {
           )
         )
         ->appendElement('Vlissingen', $path_to_root . 'locs/flushing')
+        ->build()
+      . (new MenuBuilder('Doelgroep', $path_to_root . 'doelgroep/'))
         ->build();
 
     /*

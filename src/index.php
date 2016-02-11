@@ -20,7 +20,7 @@ $page->body = <<<CONTENT
       Doe een test
     </div>
   </a>
-  <a href="#">
+  <a href="/info/">
     <div class="small-12 medium-3 columns indexElement indexButton">
       Informatie
     </div>
@@ -38,7 +38,6 @@ $page->body = <<<CONTENT
 </div>
 
 <div class="row indexElement">
-
   Meer informatie hierzo
 </div>
 
