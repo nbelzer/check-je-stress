@@ -44,5 +44,5 @@ $page->body = <<<CONTENT
 </div>
 
 CONTENT;
-$page->includeMenu = false;
+$page->includeMenu = true;
 $page->create();

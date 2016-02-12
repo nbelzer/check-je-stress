@@ -12,6 +12,12 @@
   height: 5em;
 }
 
-.top-bar, .top-bar ul {
-  background-color: #0c4d78;
+.top-bar {
+  position: absolute;
+  width: 100%;
+  background-color: #cfe0e4;
+}
+
+.top-bar ul {
+  background-color: transparent;
 }
