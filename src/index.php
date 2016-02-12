@@ -39,7 +39,7 @@ $page->body = <<<CONTENT
 </div>
 
 <div class="row indexElement">
-  <a href="resources/img/img_index.html">Index for images</a>
+  <a href="resources/img/index.html">Index for images</a>
 
 </div>
 
