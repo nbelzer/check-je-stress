@@ -40,8 +40,36 @@ $page->body = <<<CONTENT
 
 <div class="row indexElement">
   <a href="resources/img/index.html">Index for images</a>
-
 </div>
+
+<script>
+// This script only works when placed after loading jquery.
+  $(function() {
+    var \$elems = $('.top-bar');
+    var winheight = $(window).height();
+    var fullheight = $(document).height();
+
+    $(window).scroll(function(){
+      animate_elems();
+    });
+
+    function animate_elems() {
+      wintop = $(window).scrollTop();
+
+    \$elems.each(function() {
+      \$elm = $(this);
+
+      if (\$elm.hasClass('animated')) { return true; }
+
+      topcoords = \$elm.offset().top;
+
+      if (wintop > 0) {
+        \$elm.addClass('animated');
+      }
+    });
+  }
+});
+</script>
 
 CONTENT;
 $page->includeMenu = true;
