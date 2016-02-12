@@ -87,8 +87,11 @@ EOF;
     $page_contents = $page_creator->mysql->getPageSQL()->getPageBody($page);
     $editor = <<<EOF
       <form action="editor.php?page=$page" method="POST">
-        <textarea name="contents">$page_contents</textarea>
-        <input type="submit" />
+        <textarea name="contents" id="editor1">$page_contents</textarea>
+        <script>
+          CKEDITOR.replace('editor1');
+        </script>
+        <input type="submit" class="button" value="Aanpassen" />
       </form>
 EOF;
   }
@@ -118,6 +121,7 @@ $page_creator->head = <<<EOF
       }
     }
   </style>
+  <script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
 EOF;
 $page_creator->body = <<<EOF
   <div id="nav">
