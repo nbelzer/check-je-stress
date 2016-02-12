@@ -12,3 +12,6 @@
   height: 5em;
 }
 
+.top-bar, .top-bar ul {
+  background-color: #0c4d78;
+}

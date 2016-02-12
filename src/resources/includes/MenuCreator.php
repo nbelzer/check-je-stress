@@ -56,7 +56,7 @@ class MenuCreator {
       <div class="title-bar-title">Menu</div>
     </div>
   <!-- Actual Menu -->
-    <div class="top-bar" id="top-menu">
+    <div class="top-bar stress" id="top-menu">
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>';
   var $afterMenu = '
