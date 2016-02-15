@@ -8,7 +8,7 @@ $page->body = <<<CONTENT
 <div class="indexImage" style="background-image: url('resources/img/frontpage.svg');">
   <div class="row">
     <ul class="title">
-        <li><img src="resources/img/logo_vector_blocky.svg" class="logo"></li>
+        <li><img src="resources/img/logo_vector.svg" class="logo"></li>
         <li><h1><div class="logoTitle">Check Je Stress</div></h1></li>
       </ul>
   </div>
