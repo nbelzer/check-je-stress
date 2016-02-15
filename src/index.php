@@ -7,10 +7,10 @@ $page->body = <<<CONTENT
 
 <div class="indexImage" style="background-image: url('resources/img/frontpage.svg');">
   <div class="row">
-    <ul class="title">
+    <!--<ul class="title">
         <li><img src="resources/img/logo_vector_blocky.svg" class="logo"></li>
         <li><h1><div class="logoTitle">Check Je Stress</div></h1></li>
-      </ul>
+      </ul>-->
   </div>
 </div>
 
@@ -40,7 +40,6 @@ $page->body = <<<CONTENT
 
 <div class="row indexElement">
   <a href="resources/img/index.html">Index for images</a>
-
 </div>
 
 CONTENT;

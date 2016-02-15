@@ -42,5 +42,33 @@ if (!isset($includeMenu)) {
     <script src="<?php echo $path_to_root; ?>resources/js/vendor/jquery.min.js"></script>
     <script src="<?php echo $path_to_root; ?>resources/js/foundation.min.js"></script>
     <script>$(document).foundation();</script>
+    <script>
+      $(function() {
+        var $elems = $('.top-bar');
+        var winheight = $(window).height();
+        var fullheight = $(document).height();
+
+        $(window).scroll(function () {
+          animate_elems();
+        });
+
+        function animate_elems() {
+          wintop = $(window).scrollTop(); // calculate distance from top of window
+
+          // loop through each item to check when it animates
+          $elems.each(function () {
+            $elm = $(this);
+
+            topcoords = $elm.offset().top; // element's distance from top of page in pixels
+
+            if (wintop > 5) {
+              $elm.addClass('scrolled');
+            } else if (wintop <= 5) {
+              $elm.removeClass('scrolled');
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>

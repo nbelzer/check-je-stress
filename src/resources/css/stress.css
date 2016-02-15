@@ -13,11 +13,101 @@
 }
 
 .top-bar {
-  position: absolute;
+  position: fixed;
+  top: 0px;
   width: 100%;
-  background-color: #cfe0e4;
+  padding: 1.75em 0;
+  background-color: rgba(33, 33, 33, 0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.top-bar.scrolled {
+  background-color: rgba(33, 33, 33, 1.0);
+  padding: 1em 0;
+}
+
+.top-bar .title {
+  display: none;
+}
+
+.top-bar.scrolled .title {
+  margin-top: 0.5em;
+  display: block;
+  float: left;
+  font-size: 0.9em;
+  font-weight: bolder;
+  color: rgba(255,255,255,0.6);
+  padding: 0 1em;
+  border-right: 1px solid rgba(255,255,255,0.25);
+  border-left: 1px solid rgba(255,255,255,0.25);
+}
+
+.top-bar .columns {
+  padding: 0;
+}
+
+/* Make the menu bar scrollable if it's too big for the screen */
+.top-bar ul.menu {
+  overflow: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide the scrollbar */
+.top-bar ul.menu::-webkit-scrollbar {
+  display: none;
 }
 
 .top-bar ul {
   background-color: transparent;
+  font-weight: 800;
+  display: table;
+  margin: 0 auto;
+}
+
+.top-bar ul li {
+  display: table-cell;
+}
+
+.top-bar li a {
+  margin-left: .5em;
+  margin-right: .5em;
+  color: rgba(20, 78, 127, 0.6);
+  font-size: 0.9em;
+  /*border-bottom: 3px solid #eee;*/
+}
+
+.top-bar li a.selected, .top-bar li a:not(.selected):hover{
+  color: #144e7f;
+  font-weight: bolder;
+}
+
+.top-bar.scrolled li a.selected {
+  /*background-color: #eee;*/
+  /*border-bottom: 3px solid #2199e8;*/
+  color: #2199e8;
+}
+
+@media (min-width: 0px) and (max-width: 40em) {
+
+  .top-bar.scrolled .title {
+    display: none;
+  }
+
+  .top-bar ul.menu {
+    white-space: normal;
+    display: block;
+    overflow: visible;
+    margin-top: 0.5em;
+  }
+
+  .top-bar ul li {
+    width: 100%;
+    display: block;
+  }
 }

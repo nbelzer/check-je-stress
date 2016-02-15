@@ -16,24 +16,29 @@ class MenuCreator {
     global $path_to_root;
 
     $menu =
-      (new MenuBuilder('Index', $path_to_root))
-        ->appendElement('Hello', $path_to_root . 'howareyou')
+//      (new MenuBuilder('Index', $path_to_root))->build() .
+//      (new MenuBuilder('Information', $path_to_root . 'info/'))->build() .
+//      (new MenuBuilder('Locations', $path_to_root . 'locs/'))->build();
+      (new MenuBuilder('INDEX', $path_to_root))
+        ->appendElement('HELLO', $path_to_root . 'howareyou')
         ->appendElement('HAX', $path_to_root . '360noscope')
         ->build()
-      . (new MenuBuilder('Information', $path_to_root . 'info/'))
+      . (new MenuBuilder('INFORMATION', $path_to_root . 'info/'))
         ->build()
-      . (new MenuBuilder('Locations', $path_to_root . 'locations'))
-        ->appendElement('Amsterdam', $path_to_root . 'locs/adam')
-        ->appendSubmenu((new MenuBuilder('Middelburg', $path_to_root . 'locs/mburg'))
-          ->appendElement('Lange Jan', $path_to_root . 'locs/mburg/langejan')
-          ->appendSubmenu((new MenuBuilder('Nehalennia', $path_to_root . 'locs/mburg/neh'))
-            ->appendElement('Breeweg', $path_to_root . 'locs/mburg/neh/brwg')
-            ->appendElement('Kruisweg', $path_to_root . 'locs/mburg/neh/krswg')
+      . (new MenuBuilder('LOCATIONS', $path_to_root . 'locations'))
+        ->appendElement('AMSTERDAM', $path_to_root . 'locs/adam')
+        ->appendSubmenu((new MenuBuilder('MIDDELBURG', $path_to_root .
+          'locs/mburg'))
+          ->appendElement('LANGE JAN', $path_to_root . 'locs/mburg/langejan')
+          ->appendSubmenu((new MenuBuilder('NEHALENNIA', $path_to_root .
+            'locs/mburg/neh'))
+            ->appendElement('BREEWEG', $path_to_root . 'locs/mburg/neh/brwg')
+            ->appendElement('KRUISWEG', $path_to_root . 'locs/mburg/neh/krswg')
           )
         )
-        ->appendElement('Vlissingen', $path_to_root . 'locs/flushing')
+        ->appendElement('VLISSINGEN', $path_to_root . 'locs/flushing')
         ->build()
-      . (new MenuBuilder('Doelgroep', $path_to_root . 'doelgroep/'))
+      . (new MenuBuilder('DOELGROEP', $path_to_root . 'doelgroep/'))
         ->build();
 
     /*
@@ -50,19 +55,25 @@ class MenuCreator {
    */
   var $beforeMenu = '
 <!--  Menu Bar -->
-  <!-- Toggle for smaller screens -->
-    <div class="title-bar" data-responsive-toggle="top-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle></button>
-      <div class="title-bar-title">Menu</div>
+  <div class="top-bar">
+    <div class="top-bar-title">
+      <span data-responsive-toggle="reponsive-menu" data-hide-for="medium"
+      style="padding: 1em">
+        <span class="menu-icon" data-toggle>
+        </span>
+        <strong style="color: white; margin-left: 1em;">CJS.NL</strong>
+      </span>
     </div>
-  <!-- Actual Menu -->
-    <div class="top-bar stress" id="top-menu">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>';
-  var $afterMenu = '
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <div class="title" data-hide-for="small">CJS.NL</div>
+        <ul class="menu dropdown" data-dropdown-menu>';
+
+var $afterMenu = '
         </ul>
       </div>
     </div>
+  </div>
 <!-- End Menu Bar -->
   ';
 }
