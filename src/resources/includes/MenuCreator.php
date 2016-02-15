@@ -139,7 +139,8 @@ class MenuBuilder {
    */
   function build() {
     if (is_array($this->children)) {
-      $output = "<li><a href=\"{$this->link}\">{$this->title}</a><ul class=\"menu vertical\">";
+      $output = "<li><a href=\"{$this->link}\">{$this->title}</a><ul
+class=\"menu dropdown\" data-dropdown-menu>";
       foreach ($this->children as $child) {
         $output .= $child->build();
       }
