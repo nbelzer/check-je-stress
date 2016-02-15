@@ -59,8 +59,7 @@ class MenuCreator {
     <div class="top-bar-title">
       <span data-responsive-toggle="responsive-menu" data-hide-for="medium"
       style="padding: 1em">
-        <span class="menu-icon" data-toggle>
-        </span>
+        <span class="menu-icon" data-toggle></span>
         <strong style="color: white; margin-left: 1em;">CHECKJESTRESS
         .NL</strong>
       </span>

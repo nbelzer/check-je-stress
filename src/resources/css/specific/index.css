@@ -24,12 +24,12 @@
   background-color: #e6e6e6;
 }
 
-.title {
-  position: absolute;
-  top: 5em;
-  margin-left: 3em;
-  list-style: none;
-}
+/*.title {*/
+  /*position: absolute;*/
+  /*top: 5em;*/
+  /*margin-left: 3em;*/
+  /*list-style: none;*/
+/*}*/
 
 .logo {
   float: left;
