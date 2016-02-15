@@ -57,16 +57,17 @@ class MenuCreator {
 <!--  Menu Bar -->
   <div class="top-bar">
     <div class="top-bar-title">
-      <span data-responsive-toggle="reponsive-menu" data-hide-for="medium"
+      <span data-responsive-toggle="responsive-menu" data-hide-for="medium"
       style="padding: 1em">
         <span class="menu-icon" data-toggle>
         </span>
-        <strong style="color: white; margin-left: 1em;">CJS.NL</strong>
+        <strong style="color: white; margin-left: 1em;">CHECKJESTRESS
+        .NL</strong>
       </span>
     </div>
-    <div class="row">
+    <div class="row" id="responsive-menu">
       <div class="medium-10 medium-centered columns">
-        <div class="title" data-hide-for="small">CJS.NL</div>
+        <div class="title" data-hide-for="small">CHECKJESTRESS.NL</div>
         <ul class="menu dropdown" data-dropdown-menu>';
 
 var $afterMenu = '

@@ -16,7 +16,6 @@
   position: fixed;
   top: 0px;
   width: 100%;
-<<<<<<< HEAD
   padding: 1.75em 0;
   background-color: rgba(33, 33, 33, 0.1);
   border-bottom: 1px solid rgba(255,255,255,0.25);
@@ -27,7 +26,7 @@
 }
 
 .top-bar.scrolled {
-  background-color: rgba(33, 33, 33, 1.0);
+  background-color: rgb(20, 78, 125);
   padding: 1em 0;
 }
 
@@ -84,20 +83,24 @@
 .top-bar li a {
   margin-left: .5em;
   margin-right: .5em;
-  color: rgba(20, 78, 127, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.9em;
   /*border-bottom: 3px solid #eee;*/
 }
 
+.top-bar li ul li a {
+  color: rgb(141,168,191);
+}
+
 .top-bar li a.selected, .top-bar li a:not(.selected):hover{
-  color: #144e7f;
+  color: #009ccc;
   font-weight: bolder;
 }
 
 .top-bar.scrolled li a.selected {
   /*background-color: #eee;*/
   /*border-bottom: 3px solid #2199e8;*/
-  color: #2199e8;
+  color: #009ccc;
 }
 
 @media (min-width: 0px) and (max-width: 40em) {
