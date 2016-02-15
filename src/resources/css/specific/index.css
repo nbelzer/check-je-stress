@@ -32,7 +32,8 @@
 /*}*/
 
 .logo {
-  float: left;
+  height: 36px;
+  width: auto;
 }
 
 .logoTitle {

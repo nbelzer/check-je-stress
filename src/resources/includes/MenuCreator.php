@@ -5,6 +5,8 @@
 class MenuCreator {
 
   var $menu_items;
+  var $before_menu;
+  var $after_menu;
 
   function create()
   {
@@ -14,6 +16,35 @@ class MenuCreator {
      * van submenus kun je ->appendSubmenu() doen.
      */
     global $path_to_root;
+
+    /*
+     * Variabelen nodig voor het menu
+     */
+    $this->before_menu = '
+<!--  Menu Bar -->
+  <div class="top-bar">
+    <div class="top-bar-title">
+      <span data-responsive-toggle="responsive-menu" data-hide-for="medium"
+      style="padding: 1em">
+        <span class="menu-icon" data-toggle></span>
+        <strong style="color: white; margin-left: 1em;">CHECKJESTRESS
+        .NL</strong>
+      </span>
+    </div>
+    <div class="row" id="responsive-menu">
+      <div class="medium-10 medium-centered columns">
+        <!--<div class="title" data-hide-for="small">CHECKJESTRESS.NL</div>-->
+        <img class="title logo" data-hide-for="small"
+        src="'.$path_to_root.'resources/img/logo_vector.svg">
+        <ul class="menu dropdown" data-dropdown-menu>';
+
+    $this->after_menu = '
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- End Menu Bar -->
+  ';
 
     $menu =
 //      (new MenuBuilder('Index', $path_to_root))->build() .
@@ -45,37 +76,10 @@ class MenuCreator {
      * Zet het menu in elkaar, plaatst eerst de beforemenu variabele en de
      * aftermenu variabele.
      */
-    echo $this->beforeMenu;
+    echo $this->before_menu;
     echo $menu;
-    echo $this->afterMenu;
+    echo $this->after_menu;
   }
-
-  /*
-   * Variabelen nodig voor het menu
-   */
-  var $beforeMenu = '
-<!--  Menu Bar -->
-  <div class="top-bar">
-    <div class="top-bar-title">
-      <span data-responsive-toggle="responsive-menu" data-hide-for="medium"
-      style="padding: 1em">
-        <span class="menu-icon" data-toggle></span>
-        <strong style="color: white; margin-left: 1em;">CHECKJESTRESS
-        .NL</strong>
-      </span>
-    </div>
-    <div class="row" id="responsive-menu">
-      <div class="medium-10 medium-centered columns">
-        <div class="title" data-hide-for="small">CHECKJESTRESS.NL</div>
-        <ul class="menu dropdown" data-dropdown-menu>';
-
-var $afterMenu = '
-        </ul>
-      </div>
-    </div>
-  </div>
-<!-- End Menu Bar -->
-  ';
 }
 
 /**
