@@ -39,3 +39,10 @@ tabel `pages`:
 * Ria mag verdwijnen uit de pagina's met medewerkers
 * Plaatjes / Foto's auteurrechtvrij (duuh)
 * Links naar social media (Facebookpagina, evt. Twitter)
+
+### Vragen
+##### SJA
+* Als je naar [Voor wie](http://checkjestress.nl/page5.php) gaat en het preventieplan downloadt (links), dan krijg je een document zonder .doc extensie en met alleen een inhoudsopgave. Pls better version.
+##### PDY
+* PHP versie?
+* Huidige structuur database?
