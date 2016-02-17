@@ -1,6 +1,7 @@
 <?php
-include 'resources/includes/PageCreator.php';
+require_once '../resources/includes/PageCreator.php';
 $page = new PageCreator;
+$page->path_to_root = '../';
 $page->title = "Quicktest";
 $page->includeMenu = true;
 
@@ -42,7 +43,7 @@ $vragen = array(
 );
 
 $php_self = htmlspecialchars($_SERVER["PHP_SELF"]);
-$page->body .= "<form action=\"$php_self\" method="POST">";
+$page->body .= "<form action=\"$php_self\" method=\"POST\">";
 foreach ($vragen as $id => $vraag) {
 	$page->body .= "<p>$vraag</p>";
   // Input type moet nog veranderd worden.
