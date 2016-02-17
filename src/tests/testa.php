@@ -9,7 +9,7 @@ $page->body = <<<CONTENT
 <p>
   Deze test bestaat uit 25 stellingen/vragen.
   <br />
-	Kies steeds in welke mate de uitspraak op U van toepassing is. 
+  Kies steeds in welke mate de uitspraak op U van toepassing is.
 </p>
 CONTENT;
 
@@ -44,10 +44,13 @@ $vragen = array(
 
 $php_self = htmlspecialchars($_SERVER["PHP_SELF"]);
 $page->body .= "<form action=\"$php_self\" method=\"POST\">";
+
 foreach ($vragen as $id => $vraag) {
 	$page->body .= "<p>$vraag</p>";
-  // Input type moet nog veranderd worden.
-  $page->body .= "<input type=\"text\" name=\"$id\" />";
+  $page->body .= <<<EOF
+    <input type="range" min="0" max="5" step="1" value="2.5" />
+EOF;
+
 }
 $page->body .= '</form>';
 $page->body .= '<input type="submit" value="Versturen" />';
