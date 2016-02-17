@@ -48,3 +48,5 @@ tabel `pages`:
 ##### PDY
 * PHP versie?
 * Huidige structuur database?
+* Source van huidige website?
+* Hoeveel ruimte neemt de huidige database in beslag en hoeveel ruimte is er beschikbaar op het pakket waar de database op dit moment gehost wordt?
