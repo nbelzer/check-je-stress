@@ -33,7 +33,6 @@ class MenuCreator {
     </div>
     <div class="row" id="responsive-menu">
       <div class="medium-10 medium-centered columns">
-        <!--<div class="title" data-hide-for="small">CHECKJESTRESS.NL</div>-->
         <img class="title logo" data-hide-for="small"
         src="'.$path_to_root.'resources/img/logo_vector.svg">
         <ul class="menu dropdown" data-dropdown-menu>';
@@ -47,9 +46,6 @@ class MenuCreator {
   ';
 
     $menu =
-//      (new MenuBuilder('Index', $path_to_root))->build() .
-//      (new MenuBuilder('Information', $path_to_root . 'info/'))->build() .
-//      (new MenuBuilder('Locations', $path_to_root . 'locs/'))->build();
       (new MenuBuilder('INDEX', $path_to_root))
         ->appendElement('HELLO', $path_to_root . 'howareyou')
         ->appendElement('HAX', $path_to_root . '360noscope')

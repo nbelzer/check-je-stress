@@ -37,7 +37,11 @@ if (!isset($includeMenu)) {
       $menu->create();
     }
     ?>
-    <?php echo $body; ?>
+    <div class="content">
+      <div class="large-10 medium-centered columns">
+        <?php echo $body; ?>
+      </div>
+    </div>
 
     <script src="<?php echo $path_to_root; ?>resources/js/vendor/jquery.min.js"></script>
     <script src="<?php echo $path_to_root; ?>resources/js/foundation.min.js"></script>

@@ -24,21 +24,6 @@
   background-color: #e6e6e6;
 }
 
-/*.title {*/
-  /*position: absolute;*/
-  /*top: 5em;*/
-  /*margin-left: 3em;*/
-  /*list-style: none;*/
-/*}*/
-
-.logo {
-  height: 36px;
-  width: auto;
-}
-
-.logoTitle {
-  margin-top: 0.10em;
-  margin-left: 2em;
-  color: white;
-  font-weight: bold;
+.content {
+  margin: 0 !important;
 }

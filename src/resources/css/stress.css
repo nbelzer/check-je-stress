@@ -9,7 +9,7 @@
 
 .logo {
   width: auto;
-  height: 5em;
+  max-height: 2.8em;
 }
 
 .top-bar {
@@ -120,4 +120,12 @@
     width: 100%;
     display: block;
   }
+}
+
+.content {
+  margin-top: 94px;
+}
+
+.columns {
+  padding: 0;
 }
