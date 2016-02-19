@@ -15,7 +15,6 @@ class MenuCreator {
      * MenuBuilders aan elkaar plakken door .build() te gebruiken. Bij submenus
      * van submenus kun je ->appendSubmenu() doen.
      */
-    global $path_to_root;
 
     /*
      * Variabelen nodig voor het menu
@@ -34,7 +33,7 @@ class MenuCreator {
     <div class="row" id="responsive-menu">
       <div class="medium-10 medium-centered columns">
         <img class="title logo" data-hide-for="small"
-        src="'.$path_to_root.'resources/img/logo_vector.svg">
+        src="resources/img/logo_vector.svg">
         <ul class="menu dropdown" data-dropdown-menu>';
 
     $this->after_menu = '
@@ -46,26 +45,24 @@ class MenuCreator {
   ';
 
     $menu =
-      (new MenuBuilder('INDEX', $path_to_root))
-        ->appendElement('HELLO', $path_to_root . 'howareyou')
-        ->appendElement('HAX', $path_to_root . '360noscope')
+      (new MenuBuilder('INDEX', ''))
+        ->appendElement('HELLO', 'howareyou')
+        ->appendElement('HAX', '360noscope')
         ->build()
-      . (new MenuBuilder('INFORMATION', $path_to_root . 'info/'))
+      . (new MenuBuilder('INFORMATION', 'info/'))
         ->build()
-      . (new MenuBuilder('LOCATIONS', $path_to_root . 'locations'))
-        ->appendElement('AMSTERDAM', $path_to_root . 'locs/adam')
-        ->appendSubmenu((new MenuBuilder('MIDDELBURG', $path_to_root .
-          'locs/mburg'))
-          ->appendElement('LANGE JAN', $path_to_root . 'locs/mburg/langejan')
-          ->appendSubmenu((new MenuBuilder('NEHALENNIA', $path_to_root .
-            'locs/mburg/neh'))
-            ->appendElement('BREEWEG', $path_to_root . 'locs/mburg/neh/brwg')
-            ->appendElement('KRUISWEG', $path_to_root . 'locs/mburg/neh/krswg')
+      . (new MenuBuilder('LOCATIONS', 'locations'))
+        ->appendElement('AMSTERDAM', 'locs/adam')
+        ->appendSubmenu((new MenuBuilder('MIDDELBURG', 'locs/mburg'))
+          ->appendElement('LANGE JAN', 'locs/mburg/langejan')
+          ->appendSubmenu((new MenuBuilder('NEHALENNIA', 'locs/mburg/neh'))
+            ->appendElement('BREEWEG', 'locs/mburg/neh/brwg')
+            ->appendElement('KRUISWEG', 'locs/mburg/neh/krswg')
           )
         )
-        ->appendElement('VLISSINGEN', $path_to_root . 'locs/flushing')
+        ->appendElement('VLISSINGEN', 'locs/flushing')
         ->build()
-      . (new MenuBuilder('DOELGROEP', $path_to_root . 'doelgroep/'))
+      . (new MenuBuilder('DOELGROEP', 'doelgroep/'))
         ->build();
 
     /*
