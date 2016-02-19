@@ -50,14 +50,6 @@
   padding: 0;
 }
 
-/* Make the menu bar scrollable if it's too big for the screen */
-.top-bar ul.menu {
-  overflow: hidden;
-  overflow-x: scroll;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-
 /* Hide the scrollbar */
 .top-bar ul.menu::-webkit-scrollbar {
   display: none;
