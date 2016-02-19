@@ -27,3 +27,7 @@
 .content {
   margin: 0 !important;
 }
+
+.top-bar {
+  background-color: rgba(20, 78, 125, 0.2);
+}
