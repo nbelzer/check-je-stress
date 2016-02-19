@@ -21,28 +21,29 @@ class MenuCreator {
      */
     $this->before_menu = '
 <!--  Menu Bar -->
-  <div class="top-bar">
-    <div class="top-bar-title">
-      <span data-responsive-toggle="responsive-menu" data-hide-for="medium"
+<div class="top-bar">
+  <div class="top-bar-title">
+    <span data-responsive-toggle="responsive-menu" data-hide-for="medium"
       style="padding: 1em">
-        <span class="menu-icon" data-toggle></span>
-        <strong style="color: white; margin-left: 1em;">CHECKJESTRESS
+      <span class="menu-icon" data-toggle></span>
+      <strong style="color: white; margin-left: 1em;">CHECKJESTRESS
         .NL</strong>
-      </span>
-    </div>
-    <div class="row" id="responsive-menu">
-      <div class="medium-10 medium-centered columns">
-        <img class="title logo" data-hide-for="small"
-        src="resources/img/logo_vector.svg">
+    </span>
+  </div>
+  <div class="row" id="responsive-menu">
+    <div class="medium-10 medium-centered columns">
+      <img class="title logo" data-hide-for="small"
+          src="resources/img/logo_vector.svg" alt="Logo">
+      <nav>
         <ul class="menu dropdown" data-dropdown-menu>';
 
     $this->after_menu = '
         </ul>
-      </div>
+      </nav>
     </div>
   </div>
-<!-- End Menu Bar -->
-  ';
+</div>
+<!-- End Menu Bar -->';
 
     $menu =
       (new MenuBuilder('INDEX', ''))

@@ -44,7 +44,9 @@ if (!isset($includeMenu)) {
     ?>
     <div class="content">
       <div class="large-10 medium-centered columns">
-        <?php echo $body; ?>
+        <article>
+          <?php echo $body; ?>
+        </article>
       </div>
     </div>
 
