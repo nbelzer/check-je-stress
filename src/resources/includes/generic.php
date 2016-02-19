@@ -21,10 +21,15 @@ if (!isset($includeMenu)) {
 <html>
   <head>
     <meta charset="UTF-8">
+    <title><?php echo $title; ?></title>
+    <meta name="description" content="Heb jij de symptomen van een burnout? Doe de test! Stress is onvermijdelijk: vroeg of laat kun je ermee te maken krijgen. Bewezen effectieve methode.">
+    <meta name="keywords" content="test,stresstest,ziekteverzuim preventie,burnout,stress,balans">
+    <meta name="author" content="Serge Janssen">
+    <meta name="creator" content="CheckJeStress">
+    <meta name="publisher" content="CheckJeStress">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo $path_to_root; ?>resources/css/foundation.min.css" type="text/css">
     <link rel="stylesheet" href="<?php echo $path_to_root; ?>resources/css/stress.css" type="text/css">
-    <title><?php echo $title; ?></title>
     <?php echo $head; ?>
   </head>
 
