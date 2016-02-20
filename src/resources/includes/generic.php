@@ -31,6 +31,8 @@ if (!isset($includeMenu)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/foundation.min.css" type="text/css">
     <link rel="stylesheet" href="resources/css/stress.css" type="text/css">
+    <script src="resources/js/vendor/jquery.min.js"></script>
+    <script src="resources/js/foundation.min.js"></script>
     <?php echo $head; ?>
   </head>
 
@@ -50,8 +52,6 @@ if (!isset($includeMenu)) {
       </div>
     </div>
 
-    <script src="resources/js/vendor/jquery.min.js"></script>
-    <script src="resources/js/foundation.min.js"></script>
     <script>$(document).foundation();</script>
     <script>
       $(function() {
