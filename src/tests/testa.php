@@ -11,37 +11,39 @@ $page->head = <<<EOF
     window.onload = function() {
       // Zoek alle slider divs op en maak de sliders.
       var sliders = document.getElementsByClassName("slider_handle");
-      for (var i = 0; i < sliders.length; i++) {
-        $(sliders[i]).slider({
+      [].forEach.call(sliders, function (slider, index, array) {
+        $(slider).slider({
           // Van 0 tot 100 zodat het sliden smooth gaat en we de slider in het
           // midden kunnen zetten wanneer de pagina laadt.
           min: 0,
           max: 100,
-          // Initial value is 50
-          value: 50,
-          // Deze functie wordt aangeroepen zodra de gebruiker de slider loslaat.
-          // Zorgt ervoor dat er maar 6 mogelijkheden zijn.
-          stop: function(event, ui) {
-            var newValue;
-            if (ui.value < 10) {
-              newValue = 0;
-            } else if (ui.value < 30) {
-              newValue = 20;
-            } else if (ui.value < 50) {
-              newValue = 40;
-            } else if (ui.value < 70) {
-              newValue = 60;
-            } else if (ui.value < 90) {
-              newValue = 80;
-            } else {
-              newValue = 100;
-            }
-            $(event.target).slider("value", newValue);
-            // Geef de bijbehorende <input type="hidden"> de nieuwe value van de slider.
-            $("#vraag" + $(event.target).attr('id')).val(newValue / 20);
-          }
+          // Initial value is 50 (in het midden)
+          value: 50
         });
-      }
+
+        // Deze listener wordt aangeroepen zodra de gebruiker de slider loslaat.
+        // Zorgt ervoor dat er maar 6 mogelijkheden zijn.
+        $(slider).on("slidestop", function(event, ui) {
+          var newValue;
+          if (ui.value < 10) {
+            newValue = 0;
+          } else if (ui.value < 30) {
+            newValue = 20;
+          } else if (ui.value < 50) {
+            newValue = 40;
+          } else if (ui.value < 70) {
+            newValue = 60;
+          } else if (ui.value < 90) {
+            newValue = 80;
+          } else {
+            newValue = 100;
+          }
+          $(event.target).slider("value", newValue);
+          // Geef de bijbehorende <input type="hidden"> de nieuwe value van de
+          // slider. Dit gaat van 0 t/m 5.
+          $("#vraag" + $(event.target).attr('id')).val(newValue / 20);
+        });
+      });
     }
   </script>
 EOF;
