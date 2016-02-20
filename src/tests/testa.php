@@ -5,56 +5,44 @@ $page->path_to_root = '../';
 $page->title = "Quicktest - CheckJeStress";
 $page->includeMenu = true;
 $page->head = <<<EOF
-<script src="resources/js/vendor/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<script>
-  window.onload = function() {
-    // Zoek alle slider divs op en maak de sliders.
-    var sliders = document.getElementsByClassName("slider_handle");
-    for (var i = 0; i < sliders.length; i++) {
-      $(sliders[i]).slider({
-        // Van 0 tot 100 zodat het sliden smooth gaat en we de slider in het
-        // midden kunnen zetten wanneer de pagina laadt.
-        min: 0,
-        max: 100,
-        // Initial value is 50
-        value: 50,
-        // Deze functie wordt aangeroepen zodra de gebruiker de slider loslaat.
-        // Zorgt ervoor dat er maar 6 mogelijkheden zijn.
-        stop: function(event, ui) {
-          var newValue;
-          if (ui.value < 10) {
-            newValue = 0;
-          } else if (ui.value < 30) {
-            newValue = 20;
-          } else if (ui.value < 50) {
-            newValue = 40;
-          } else if (ui.value < 70) {
-            newValue = 60;
-          } else if (ui.value < 90) {
-            newValue = 80;
-          } else {
-            newValue = 100;
+  <script src="resources/js/vendor/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script>
+    window.onload = function() {
+      // Zoek alle slider divs op en maak de sliders.
+      var sliders = document.getElementsByClassName("slider_handle");
+      for (var i = 0; i < sliders.length; i++) {
+        $(sliders[i]).slider({
+          // Van 0 tot 100 zodat het sliden smooth gaat en we de slider in het
+          // midden kunnen zetten wanneer de pagina laadt.
+          min: 0,
+          max: 100,
+          // Initial value is 50
+          value: 50,
+          // Deze functie wordt aangeroepen zodra de gebruiker de slider loslaat.
+          // Zorgt ervoor dat er maar 6 mogelijkheden zijn.
+          stop: function(event, ui) {
+            var newValue;
+            if (ui.value < 10) {
+              newValue = 0;
+            } else if (ui.value < 30) {
+              newValue = 20;
+            } else if (ui.value < 50) {
+              newValue = 40;
+            } else if (ui.value < 70) {
+              newValue = 60;
+            } else if (ui.value < 90) {
+              newValue = 80;
+            } else {
+              newValue = 100;
+            }
+            $(event.target).slider("value", newValue);
           }
-          $(event.target).slider("value", newValue);
-        }
-      });
+        });
+      }
     }
-  }
-</script>
+  </script>
 EOF;
-
-$page->body = <<<CONTENT
-<h1>Quicktest</h1>
-<p>
-  Deze test bestaat uit 25 stellingen/vragen.
-  <br />
-  Kies steeds in welke mate de uitspraak op u van toepassing is.
-</p>
-<noscript>
-  <p>Voor het invullen van de tests moet <a href="http://enable-javascript.com/nl/" target="_blank">Javascript ingeschakeld zijn in uw browser</a>.</p>
-</noscript>
-CONTENT;
 
 // Elke vraag heeft een id. Deze hoeft niet per se gelijk te zijn aan de volgorde van de array. Dit zorgt ervoor dat er in de CMS vragen bij en af kunnen.
 $vragen = array(
@@ -85,17 +73,36 @@ $vragen = array(
   24 => 'Mijn werk lijkt zinloos'
 );
 
+// Maak eerst het formulier met de vragen dat op de testpagina komt.
+$form = "";
+
 $php_self = htmlspecialchars($_SERVER["PHP_SELF"]);
-$page->body .= "<form action=\"$php_self\" method=\"POST\">";
+$form .= "<form action=\"$php_self\" method=\"POST\">\n";
 
+$form .= "<table style=\"width: 100%;\">\n";
 foreach ($vragen as $id => $vraag) {
-	$page->body .= "<p>$vraag</p>";
-  $page->body .= <<<EOF
-    <div id="slider$id" class="slider_handle"></div>
-EOF;
+  $form .= "<tr><td><div class=\"row\">\n";
+	$form .= "<div class=\"small-12 medium-6 columns\">$vraag</div>\n";
+  $form .= "<div class=\"small-12 medium-6 columns\"><div id=\"slider$id\" class=\"slider_handle\"></div></div>\n";
+  $form .= "</div></td></tr>\n";
 }
+$form .= "</table>\n";
 
-$page->body .= '<input type="submit" value="Versturen" class="button" />';
-$page->body .= '</form>';
+$form .= "<input type=\"submit\" value=\"Versturen\" class=\"button\" />\n";
+$form .= "</form>\n";
+
+// Maak de body aan en zet het formulier erin.
+$page->body = <<<CONTENT
+  <h1>Quicktest</h1>
+  <p>
+    Deze test bestaat uit 25 stellingen/vragen.
+    <br />
+    Kies steeds in welke mate de uitspraak op u van toepassing is.
+  </p>
+  <noscript>
+    <p>Voor het invullen van de tests moet <a href="http://enable-javascript.com/nl/" target="_blank">Javascript ingeschakeld zijn in uw browser</a>.</p>
+  </noscript>
+  $form
+CONTENT;
 
 $page->create();
