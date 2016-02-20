@@ -37,6 +37,8 @@ $page->head = <<<EOF
               newValue = 100;
             }
             $(event.target).slider("value", newValue);
+            // Geef de bijbehorende <input type="hidden"> de nieuwe value van de slider.
+            $("#vraag" + $(event.target).attr('id')).val(newValue / 20);
           }
         });
       }
@@ -83,7 +85,8 @@ $form .= "<table style=\"width: 100%;\">\n";
 foreach ($vragen as $id => $vraag) {
   $form .= "<tr><td><div class=\"row\">\n";
 	$form .= "<div class=\"small-12 medium-6 columns\">$vraag</div>\n";
-  $form .= "<div class=\"small-12 medium-6 columns\"><div id=\"slider$id\" class=\"slider_handle\"></div></div>\n";
+  $form .= "<div class=\"small-12 medium-6 columns\"><div id=\"$id\" class=\"slider_handle\"></div></div>\n";
+  $form .= "<input type=\"hidden\" id=\"vraag$id\" name=\"vraag$id\">";
   $form .= "</div></td></tr>\n";
 }
 $form .= "</table>\n";
