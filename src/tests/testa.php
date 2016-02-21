@@ -7,7 +7,26 @@ $page->includeMenu = true;
 $page->head = <<<EOF
   <script src="resources/js/vendor/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <style>
+    .skipped {
+      background-color: #fce6e2;
+    }
+  </style>
   <script>
+    // Houdt bij bij welke vraag de gebruiker is.
+    var questionProgress = -1;
+
+    // Geeft de plaats in de array waar entry staat, of -1 als entry niet in
+    // array staat
+    function indexOf(arr, entry) {
+      for (i = 0; i < arr.length; i++) {
+        if (arr[i] == entry) {
+          return i;
+        }
+      }
+      return -1;
+    }
+
     window.onload = function() {
       // Zoek alle slider divs op en maak de sliders.
       var sliders = document.getElementsByClassName("slider_handle");
@@ -42,6 +61,26 @@ $page->head = <<<EOF
           // Geef de bijbehorende <input type="hidden"> de nieuwe value van de
           // slider. Dit gaat van 0 t/m 5.
           $("#vraag" + $(event.target).attr('id')).val(newValue / 20);
+        });
+
+        // Voeg een listener toe die bijhoudt bij welke vraag de gebruiker is.
+        // De gebruiker wordt gewaarschuwd als hij een vraag overslaat.
+        $(slider).on("slidestart", function(event, ui) {
+          var clickedSliderID = $(event.target).attr('id');
+          if (clickedSliderID > questionProgress + 1) {
+            // Vragen geskipt. Voeg aan die vragen de .skipped class toe.
+            for (var i = questionProgress + 1; i < clickedSliderID; i++) {
+              $("#" + i).parent().parent().parent().addClass("skipped");
+            }
+          } else if (clickedSliderID < questionProgress) {
+            // Teruggekomen op een geskipte vraag. Verwijder de .skipped class.
+            $("#" + clickedSliderID).parent().parent().parent().removeClass("skipped");
+          }
+
+          if (clickedSliderID > questionProgress) {
+            // Progress
+            questionProgress = parseInt(clickedSliderID);
+          }
         });
       });
     }
