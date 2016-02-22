@@ -34,17 +34,17 @@
   margin: 0 !important;
 }
 
-.row .light {
+.row.content .light {
   background-color: #eee;
   padding: 2em;
 }
 
-.row .dark {
+.row.content .dark {
   background-color: #ddd;
   padding: 2em;
 }
 
-.row ul {
+.row.content ul {
   list-style: none;
   padding-left: 1em;
   margin-left: 1em;
@@ -52,15 +52,15 @@
   font-weight: 500;
 }
 
-.row ul.questions {
+.row.content ul.questions {
   border-left: 3px solid #FF3800;
 }
 
-.row ul.facts {
+.row.content ul.facts {
   border-left: 3px solid #0026D4;
 }
 
-.row ul li {
+.row.content ul li {
   padding: 0.4em 0;
 }
 
@@ -70,7 +70,7 @@
 }
 
 @media (max-width: 40em) {
-  .row ul {
+  .row.content ul {
     margin-left: 0;
   }
 }

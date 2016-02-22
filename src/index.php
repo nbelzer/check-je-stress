@@ -11,7 +11,7 @@ $page->body = <<<CONTENT
 
 
 
-<div class="row">
+<div class="row content">
 <div class='medium-12 columns light'>
   <p>
     Welkom op de website van Check je stress. We helpen je graag van spanning, stress en (dreigende) burnout af. Of je nu een onderneming hebt of niet, onze dienstverlening past bij iedereen. Stel jezelf de onderstaande vragen eens:
