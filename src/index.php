@@ -2,7 +2,7 @@
 include 'resources/includes/PageCreator.php';
 $page = new PageCreator;
 $page->title = "Check je stress";
-$page->head = "<link rel=\"stylesheet\" href=" .$path_to_root . "resources/css/specific/index.css type=\"text/css\">";
+$page->head = "<link rel=\"stylesheet\" href=" . $path_to_root . "resources/css/specific/index.css type=\"text/css\">";
 $page->body = <<<CONTENT
 
 <div class="indexImage" style="background-image: url('resources/img/frontpage.svg');">
@@ -11,28 +11,7 @@ $page->body = <<<CONTENT
 </div>
 
 
-<div class="row">
-  <a href="#">
-    <div class="small-12 medium-3 columns indexElement indexButton">
-      Doe een test
-    </div>
-  </a>
-  <a href="info/index.php">
-    <div class="small-12 medium-3 columns indexElement indexButton">
-      Informatie
-    </div>
-  </a>
-  <a href="#">
-    <div class="small-12 medium-3 columns indexElement indexButton">
-      Contact
-    </div>
-  </a>
-  <a href="#">
-    <div class="small-12 medium-3 columns indexElement indexButton">
-      Contact
-    </div>
-  </a>
-</div>
+
 
 <div class="row">
 <div class='medium-12 columns light'>
@@ -41,8 +20,10 @@ $page->body = <<<CONTENT
   </p>
   </div>
 
+
+
 <div class='row' data-equalizer data-equalize-on="medium">
-<div class='medium-6 columns dark' data-equalizer-watch >
+<div class='medium-5 columns dark' data-equalizer-watch >
   <ul class='questions' >
     <li>Heb je het druk op je werk?</li>
     <li>Gun je jezelf steeds minder tijd voor pauze?</li>
@@ -50,7 +31,7 @@ $page->body = <<<CONTENT
     <li>Is je accu gauw leeg en gaat je verkoudheid maar niet over?</li>
   </ul>
   </div>
-  <div class='medium-6 columns dark' data-equalizer-watch>
+  <div class='medium-7 columns dark' data-equalizer-watch>
   <ul class='facts'>
     <li>38% van de arbeidsongeschiktheid in 2005 komt door psychische klachten zoals stress en burnout</li>
     <li>1 op de 8 werknemers heeft last van een burnout (bron CBS)</li>
