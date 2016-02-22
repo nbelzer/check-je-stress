@@ -73,6 +73,6 @@
 
 @media (max-width: 40em) {
   .content ul {
-    margin-left: 0;
+    margin-left: -1em;
   }
 }
