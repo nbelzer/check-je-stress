@@ -46,24 +46,20 @@ class MenuCreator {
 <!-- End Menu Bar -->';
 
     $menu =
-      (new MenuBuilder('INDEX', ''))
-        ->appendElement('HELLO', 'howareyou')
-        ->appendElement('HAX', '360noscope')
+      (new MenuBuilder('Home', ''))
         ->build()
-      . (new MenuBuilder('INFORMATION', 'info/'))
+      . (new MenuBuilder('Informatie', 'info/'))
         ->build()
-      . (new MenuBuilder('LOCATIONS', 'locations'))
-        ->appendElement('AMSTERDAM', 'locs/adam')
-        ->appendSubmenu((new MenuBuilder('MIDDELBURG', 'locs/mburg'))
-          ->appendElement('LANGE JAN', 'locs/mburg/langejan')
-          ->appendSubmenu((new MenuBuilder('NEHALENNIA', 'locs/mburg/neh'))
-            ->appendElement('BREEWEG', 'locs/mburg/neh/brwg')
-            ->appendElement('KRUISWEG', 'locs/mburg/neh/krswg')
-          )
-        )
-        ->appendElement('VLISSINGEN', 'locs/flushing')
+      . (new MenuBuilder('Doelgroep', 'doelgroep/'))
         ->build()
-      . (new MenuBuilder('DOELGROEP', 'doelgroep/'))
+      . (new MenuBuilder('Tests', 'tests/'))
+        ->appendElement('Snelle test', 'tests/snelle-test')
+        ->appendElement('Uitgebreide test', 'tests/uitgebreide-test')
+        ->appendElement('Risicoanalyse bedrijven', 'tests/risicoanalyse')
+        ->build()
+      . (new MenuBuilder('Vacatures', 'vacatures'))
+        ->build()
+      . (new MenuBuilder('Contact', 'contact'))
         ->build();
 
     /*
