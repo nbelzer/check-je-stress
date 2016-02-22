@@ -70,6 +70,13 @@
      id="layer1"
      transform="translate(0,-652.36216)">
     <rect
+       style="opacity:1;fill:#bbeaf5;fill-opacity:1;fill-rule:nonzero;stroke:#023b7c;stroke-opacity:1"
+       id="rect4202"
+       width="2004.8387"
+       height="635.48389"
+       x="-27.419355"
+       y="636.23315" />
+    <rect
        style="fill:#ffffff;fill-opacity:0"
        id="rect3348"
        width="1920"
