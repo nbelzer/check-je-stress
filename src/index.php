@@ -6,8 +6,6 @@ $page->head = "<link rel=\"stylesheet\" href=" . $path_to_root . "resources/css/
 $page->body = <<<CONTENT
 
 <div class="indexImage" style="background-image: url('resources/img/frontpage.svg');">
-  <div class="row">
-  </div>
 </div>
 
 
@@ -18,7 +16,7 @@ $page->body = <<<CONTENT
   <p>
     Welkom op de website van Check je stress. We helpen je graag van spanning, stress en (dreigende) burnout af. Of je nu een onderneming hebt of niet, onze dienstverlening past bij iedereen. Stel jezelf de onderstaande vragen eens:
   </p>
-  </div>
+</div>
 
 
 
