@@ -3,7 +3,7 @@
 
 .indexImage {
   width: 100%;
-  height: 30em;
+  height: 20em;
 
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -17,7 +17,7 @@
 }
 
 .indexElement.indexButton {
-  background-color: #eee;
+  background-color: #ddd;
 }
 
 .indexElement.indexButton:hover {
@@ -26,6 +26,38 @@
 
 .content {
   padding: 0px !important;
+  color: #333;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+.row .light {
+  background-color: #eee;
+  padding: 2em;
+}
+
+.row .dark {
+  background-color: #ddd;
+  padding: 2em;
+}
+
+.row ul {
+  list-style: none;
+  padding-left: 1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+
+.row ul.questions {
+  border-left: 3px solid #FF3800;
+}
+
+.row ul.facts {
+  border-left: 3px solid #0026D4;
 }
 
 .top-bar {

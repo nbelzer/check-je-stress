@@ -2,6 +2,13 @@
 @import url('./foundation.min.css');
 
 /* Standard css used on each page */
+/* Standard colours
+  - #009ccc
+    - #00DB4A
+    - #0026D4
+    - #FF3800
+*/
+
 
 :root {
   --main-color: #009ccc
@@ -20,9 +27,9 @@
   background-color: rgb(20, 78, 125);
   border-bottom: 1px solid rgba(255,255,255,0.25);
 
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 
 .top-bar.scrolled {
