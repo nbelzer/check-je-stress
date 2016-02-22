@@ -14,7 +14,9 @@ $page->body = <<<CONTENT
     <div class="row">
       <div class="medium-10 medium-centered columns">
         <p>
-          Welkom op de website van Check je stress. We helpen je graag van spanning, stress en (dreigende) burnout af. Of je nu een onderneming hebt of niet, onze dienstverlening past bij iedereen. Stel jezelf de onderstaande vragen eens:
+          Welkom op de website van CheckJeStress. We helpen je graag van
+          spanning, stress en (dreigende) burnout af. Of je nu een onderneming
+          hebt of niet, onze dienstverlening past bij iedereen.
         </p>
       </div>
     </div>
@@ -23,6 +25,7 @@ $page->body = <<<CONTENT
       <div class="medium-10 medium-centered columns">
 
         <div class="medium-6 columns" data-equalizer-watch>
+          <h5>Stel jezelf de onderstaande vragen eens:</h5>
           <ul class='questions' >
             <li>Heb je het druk op je werk?</li>
             <li>Gun je jezelf steeds minder tijd voor pauze?</li>
@@ -32,6 +35,7 @@ $page->body = <<<CONTENT
         </div>
 
         <div class="medium-6 columns" data-equalizer-watch>
+          <h5>Feiten:</h5>
           <ul class='facts'>
             <li>38% van de arbeidsongeschiktheid in 2005 komt door psychische klachten zoals stress en burnout</li>
             <li>1 op de 8 werknemers heeft last van een burnout (bron CBS)</li>
