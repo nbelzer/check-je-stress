@@ -44,13 +44,9 @@ if (!isset($includeMenu)) {
       $menu->create();
     }
     ?>
-    <div class="content">
-      <div class="large-10 medium-centered columns">
-        <article>
-          <?php echo $body; ?>
-        </article>
-      </div>
-    </div>
+    <article>
+      <?php echo $body; ?>
+    </article>
 
     <script>$(document).foundation();</script>
     <script>

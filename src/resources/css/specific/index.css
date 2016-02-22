@@ -29,22 +29,24 @@
   color: #333;
 }
 
-.row {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.row.content .light {
-  background-color: #eee;
+.content .water, .content .dark {
+  color: #BBEAF5;
   padding: 2em;
+  font-weight: 500;
 }
 
-.row.content .dark {
-  background-color: #ddd;
-  padding: 2em;
+.content .dark {
+  background-color: #0485A3;
+}
+.content .water {
+   background-color: #32A3BD;
+ }
+
+.water a, .dark a {
+  color: #FF9E3E;
 }
 
-.row.content ul {
+.content ul {
   list-style: none;
   padding-left: 1em;
   margin-left: 1em;
@@ -52,15 +54,15 @@
   font-weight: 500;
 }
 
-.row.content ul.questions {
-  border-left: 3px solid #FF3800;
+.content ul.questions {
+  border-left: 3px solid #BBEAF5;
 }
 
-.row.content ul.facts {
-  border-left: 3px solid #0026D4;
+.content ul.facts {
+  border-left: 3px solid #034E60;
 }
 
-.row.content ul li {
+.content ul li {
   padding: 0.4em 0;
 }
 
