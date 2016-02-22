@@ -30,15 +30,17 @@
 }
 
 .content .water, .content .dark {
-  color: #BBEAF5;
+
   padding: 2em;
   font-weight: 500;
 }
 
 .content .dark {
+  color: #BBEAF5;
   background-color: #0485A3;
 }
 .content .water {
+  color: #fff;
    background-color: #32A3BD;
  }
 
