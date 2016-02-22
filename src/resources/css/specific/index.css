@@ -46,7 +46,6 @@
 
 .row ul {
   list-style: none;
-  line-stacking: 1em;
   padding-left: 1em;
   margin-left: 1em;
   margin-bottom: 1em;
@@ -68,4 +67,10 @@
 
 .top-bar {
   background-color: rgba(20, 78, 125, 0.2);
+}
+
+@media (max-width: 40em) {
+  .row ul {
+    margin-left: 0;
+  }
 }
