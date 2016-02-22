@@ -33,6 +33,17 @@ if (!isset($includeMenu)) {
     <link rel="stylesheet" href="resources/css/stress.css" type="text/css">
     <script src="resources/js/vendor/jquery.min.js"></script>
     <script src="resources/js/foundation.min.js"></script>
+    <script>
+      $(window).bind("load", function () {
+        var footerHeight = $("#footer").height() + 1; // + 1 tegen afronding
+        if (footerHeight < 70) {
+          footerHeight = 70; // Anders zit er een wit stukje onderaan
+        }
+        $("#wrapper").css('margin', '0px auto -' + footerHeight + 'px');
+        $("#push").css('height', footerHeight + 'px');
+        $("#footer").css('height', footerHeight + 'px');
+      });
+    </script>
     <?php echo $head; ?>
   </head>
 
@@ -44,9 +55,20 @@ if (!isset($includeMenu)) {
       $menu->create();
     }
     ?>
-    <article>
-      <?php echo $body; ?>
-    </article>
+
+    <section class="wrapper" id="wrapper">
+      <article>
+        <?php echo $body; ?>
+      </article>
+      <div class="push" id="push"></div>
+    </section>
+    <footer class="footer" id="footer">
+      <p>
+        <a href="colofon">Colofon</a>
+        <br>
+        © Copyright CheckJeStress 2016
+      </p>
+    </footer>
 
     <script>$(document).foundation();</script>
     <script>

@@ -11,6 +11,25 @@
   --main-color: #009ccc
 }
 
+/* -----===== FOOTER CSS =====----- */
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+.footer {
+  text-align: center;
+  background-color: #282C34;
+}
+
+.footer p {
+  color: #ABB2A8;
+}
+.footer a {
+  color: #FF9E3E;
+}
+/* -----===== END FOOTER CSS =====----- */
+
 .logo {
   width: auto;
   max-height: 2.5em;
