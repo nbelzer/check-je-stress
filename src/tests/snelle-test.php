@@ -30,10 +30,10 @@ $vragen = array(
 
 include '../resources/includes/TestCreator.php';
 $test_page = new TestCreator;
-$test_page->title = 'Quicktest';
+$test_page->title = 'Burnout Snelle Test';
 $test_page->questions = $vragen;
 $test_page->body = <<<EOF
-  <h1>Quicktest</h1>
+  <h1>Snelle Test</h1>
   <p>
     Deze test bestaat uit 25 stellingen.
     <br>
