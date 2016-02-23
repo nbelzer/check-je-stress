@@ -17,3 +17,19 @@
 .text ul {
   margin-left: 1em !important;
 }
+
+.navmenu {
+  padding-top: 1em;
+  top: calc(7.5em - 1px);
+  width: 20%;
+  max-width: 240px;
+  position: fixed;
+  background-color: #046F88;
+  text-transform: uppercase;
+  border-top: 2em solid #CBECF4;
+  border-bottom: 2em solid #CBECF4;
+}
+
+.navmenu ul {
+  border: none;
+}
