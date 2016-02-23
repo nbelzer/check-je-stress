@@ -30,7 +30,6 @@
 }
 
 .content .water, .content .dark {
-
   padding: 2em;
   font-weight: 500;
 }
@@ -41,11 +40,18 @@
 }
 .content .water {
   color: #CBECF4;
-   background-color: #32A3BD;
+  background-color: #32A3BD;
  }
 
 .water a, .dark a {
   color: #FF9E3E;
+}
+
+.content .header {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
 }
 
 .content ul {
