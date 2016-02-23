@@ -160,3 +160,16 @@ a {
   color: #BBEAF5;
   background-color: #0485A3;
 }
+
+.content ul {
+  list-style: none;
+  padding-left: 1em;
+  margin-left: 0 !important;
+  margin-bottom: 1em;
+  font-weight: 500;
+  border-left: 3px solid #BBEAF5;
+}
+
+.content ul li {
+  padding: 0.4em 0;
+}

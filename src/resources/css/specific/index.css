@@ -41,24 +41,12 @@
   margin-bottom: 0.5em;
 }
 
-.content ul {
-  list-style: none;
-  padding-left: 1em;
-  margin-left: 0 !important;
-  margin-bottom: 1em;
-  font-weight: 500;
-}
-
 .content ul.questions {
   border-left: 3px solid #BBEAF5;
 }
 
 .content ul.facts {
   border-left: 3px solid #034E60;
-}
-
-.content ul li {
-  padding: 0.4em 0;
 }
 
 
