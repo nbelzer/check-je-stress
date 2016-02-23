@@ -6,6 +6,7 @@
 
 .content h5 {
   margin-left: 1em;
+  font-weight: bolder;
   text-transform: uppercase;
 }
 
@@ -13,3 +14,6 @@
   padding: 1em;
 }
 
+.text ul {
+  margin-left: 1em !important;
+}
