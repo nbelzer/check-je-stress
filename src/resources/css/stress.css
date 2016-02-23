@@ -141,3 +141,7 @@
 .columns {
   padding: 0;
 }
+
+.footer p {
+  padding-top: 1em;
+}
