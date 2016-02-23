@@ -1,33 +1,15 @@
 
 .content {
   color: #CBECF4;
-  background-color: #32A3BD;
+  font-weight: 500;
 }
 
 .content h5 {
-  text-transform: uppercase;
-}
-
-.content .menu {
-  font-weight: bold;
-  margin-top: 1em;
-  display: block;
-  background-color: #CBECF4;
-  color: #FF9E3E;
-  height: 20em;
-  padding: 1em;
-}
-
-.content .menu ul {
-  list-style-type: none;
-}
-
-.content .menu li {
-  padding: 0.5em 0;
-  color: #FF9E3E;
+  margin-left: 1em;
   text-transform: uppercase;
 }
 
 .content .text {
   padding: 1em;
 }
+

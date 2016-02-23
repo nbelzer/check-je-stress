@@ -34,19 +34,6 @@
   font-weight: 500;
 }
 
-.content .dark {
-  color: #BBEAF5;
-  background-color: #0485A3;
-}
-.content .water {
-  color: #CBECF4;
-  background-color: #32A3BD;
- }
-
-.water a, .dark a {
-  color: #FF9E3E;
-}
-
 .content .header {
   font-size: 1em;
   text-transform: uppercase;

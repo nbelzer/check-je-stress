@@ -136,6 +136,7 @@
 
 .content {
   padding-top: 93px;
+  background-color: #32A3BD;
 }
 
 .columns {
@@ -144,4 +145,18 @@
 
 .footer p {
   padding-top: 1em;
+}
+
+a {
+  color: #FF9E3E;
+}
+
+.water {
+  color: #CBECF4;
+  background-color: #32A3BD;
+}
+
+.dark {
+  color: #BBEAF5;
+  background-color: #0485A3;
 }
