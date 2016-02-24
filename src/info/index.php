@@ -1,4 +1,4 @@
-<!--- Ambitie-->
+﻿<!--- Ambitie-->
 <!--- Wat doen we-->
 <!--- Wie zijn we-->
 
@@ -16,8 +16,8 @@ $page->body = <<<CONTENT
   <div class="row show-for-medium">
     <div class="medium-10 medium-centered columns">
       <div class="navmenu">
-        <ul class="vertical menu" data-magellan data-options="barOffset:94">
-          <li><a href="#first">Wie zijn we</a></li>
+        <ul class="vertical menu" data-magellan data-options="barOffset:40">
+          <li><a href="#first">Wie zijn we?</a></li>
           <li><a href="#second">Wat is onze ambitie?</a></li>
           <li><a href="#third">Wat doen we?</a><li>
         </ul>
@@ -107,11 +107,11 @@ $page->body = <<<CONTENT
           <p>
             In het stappenplan zijn ondermeer opgenomen:
             <ul>
-              <li>analyse van testgegevens</li>
+              <li>Analyse van testgegevens</li>
               <li>Klachteninventarisatie</li>
-              <li>directe klachtenreductie (je hebt er dus meteen baat bij)</li>
-              <li>terugvalpreventie</li>
-              <li>preventieplan en opzetten van meerjarig beleid op gebied van stress en burnout</li>
+              <li>Directe klachtenreductie (je hebt er dus meteen baat bij)</li>
+              <li>Terugvalpreventie</li>
+              <li>Preventieplan en opzetten van meerjarig beleid op gebied van stress en burnout</li>
             </ul>
           </p>
 
