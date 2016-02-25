@@ -51,6 +51,8 @@ class MenuCreator {
       . (new MenuBuilder('Informatie', 'info/'))
         ->build()
       . (new MenuBuilder('Doelgroep', 'doelgroep/'))
+        ->appendElement('Particulier', 'doelgroep/particulier')
+        ->appendElement('Bedrijf', 'doelgroep/bedrijf')
         ->build()
       . (new MenuBuilder('Tests', 'tests/'))
         ->appendElement('Snelle test', 'tests/snelle-test')
