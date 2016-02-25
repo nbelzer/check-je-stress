@@ -18,7 +18,7 @@ if (!isset($includeMenu)) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
     <meta charset="UTF-8">
     <base href="<?php echo $path_to_root; ?>">
