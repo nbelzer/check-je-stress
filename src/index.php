@@ -9,7 +9,7 @@ $page->body = <<<CONTENT
 </div>
 <div class="content">
 
-  <section class="water">
+  <div class="water">
 
     <div class="row">
       <div class="medium-10 medium-centered columns">
@@ -53,18 +53,12 @@ $page->body = <<<CONTENT
       </div>
     </div>
 
-  </section>
+  </div>
 
-  <section class="dark">
+  <div class="dark">
 
     <div class="row">
       <div class="medium-10 medium-centered columns">
-
-        <div class="medium-3 columns">
-          <div style="style="padding: 1em;">
-          <img src="resources/img/test.svg" style="max-height: 12em; width: 100%; height: auto;">
-          </div>
-        </div>
         <div class="medium-9 columns">
           <p>
             Wil je voor jezelf controleren of je last hebt van stress of dat je richting een burn-out gaat? Door middel van een test kun je snel en eenvoudig zien of je gevaar loopt.
@@ -88,14 +82,8 @@ $page->body = <<<CONTENT
       </div>
     </div>
 
-  </section>
+  </div>
 
-</div>
-
-
-<div class='light'>
-
-</div>
 </div>
 
 CONTENT;

@@ -56,12 +56,12 @@ if (!isset($includeMenu)) {
     }
     ?>
 
-    <section class="wrapper" id="wrapper">
-      <article>
+    <div class="wrapper" id="wrapper">
+      <section>
         <?php echo $body; ?>
-      </article>
+      </section>
       <div class="push" id="push"></div>
-    </section>
+    </div>
     <footer class="footer" id="footer">
       <p>
         <a href="colofon">Colofon</a>
