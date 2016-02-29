@@ -21,7 +21,7 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			Indien u vragen en/op opmerkingen heeft, n.a.v. deze site, neem dan a.u.b. <a href="/contact/">contact</a> met ons op.
+			Indien u vragen en/op opmerkingen heeft, n.a.v. deze site, neem dan a.u.b. <a href="contact/">contact</a> met ons op.
 		  </p>
 
 		  <p>
