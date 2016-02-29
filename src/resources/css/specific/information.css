@@ -26,8 +26,8 @@
   position: fixed;
   background-color: #046F88;
   text-transform: uppercase;
-  border-top: 2em solid #CBECF4;
-  border-bottom: 2em solid #CBECF4;
+  border-top: 1em solid #CBECF4;
+  border-bottom: 1em solid #CBECF4;
 }
 
 .navmenu ul {
