@@ -67,7 +67,7 @@ $page->body = <<<CONTENT
 		  </p>
 		  
 		  <p>
-			Leisden<br>
+			Leiden<br>
 			<i>Leni Minderhoud Counselling & Coaching</i><br>
 			<a href="http://www.leniminderhoud.nl">www.leniminderhoud.nl</a>
 		  </p>
@@ -165,7 +165,7 @@ $page->body = <<<CONTENT
 		  <p>
 			Helvoirt<br>
 			<i>Stresskundig</i><br>
-			<a href="http://.stresskundig.nl">www.stresskundig.nl</a>
+			<a href="http://www.stresskundig.nl">www.stresskundig.nl</a>
 		  </p>
 		  
 		  <p>
@@ -201,7 +201,7 @@ $page->body = <<<CONTENT
 		  <p>
 			Nijmegen<br>
 			<i>Stil Counseling en Coaching</i><br>
-			<a href="http://www.stilcounseling.nl">www.stilcounseling.nl</a>
+			<a href="http://stilcounseling.nl">www.stilcounseling.nl</a>
 		  </p>
 		  
 		  <p>
@@ -231,11 +231,12 @@ $page->body = <<<CONTENT
 		  <p>
 			Amersfoort<br>
 			<i>Cirkel der Seizoenen</i><br>
-			<a href="http://www.cirkelderseizoenen.nl">www.cirkelderseizoenen.nl</a>
+			<a href="http://www.cirkelderseizoenen.com">www.cirkelderseizoenen.com</a>
 		  </p>
 		  
 		  <p>
 			Houten<br>
+			<i>InEssence</i><br>
 			<i>InEssence</i><br>
 			<a href="http://www.inessence.org">www.inessence.org</a>
 		  </p>
@@ -401,7 +402,7 @@ $page->body = <<<CONTENT
 		  <p>
 			Terneuzen<br>
 			<i>BriljansS*</i><br>
-			<a href="http://www.briljanss.nl">www.briljanss.nl</a>
+			<a href="http://briljanss.nl">www.briljanss.nl</a>
 		  </p>
 		  
 		  <p>
