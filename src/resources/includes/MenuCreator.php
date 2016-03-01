@@ -31,7 +31,7 @@ class MenuCreator {
     </span>
   </div>
   <div class="row" id="responsive-menu">
-    <div class="medium-12 medium-centered columns">
+    <div class="medium-10 medium-centered columns">
       <img class="title logo" data-hide-for="small"
           src="resources/img/logo_vector.svg" alt="Logo">
       <nav>
@@ -59,9 +59,8 @@ class MenuCreator {
         ->appendElement('Uitgebreide test', 'tests/uitgebreide-test/')
         ->appendElement('Risicoanalyse bedrijven', 'tests/risicoanalyse/')
         ->build()
-      . (new MenuBuilder('Vacatures', 'vacatures/'))
-        ->build()
       . (new MenuBuilder('Steunpunten', 'steunpunten/'))
+        ->appendElement('Vacatures', 'steunpunten/vacatures/')
         ->build()
       . (new MenuBuilder('Contact', 'contact/'))
         ->build();

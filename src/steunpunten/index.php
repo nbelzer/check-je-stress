@@ -332,7 +332,7 @@ $page->body = <<<CONTENT
           <h5>Friesland</h5>
 		  
 		  <p>
-			We hebben (nog) geen steunpunten in Drenthe. <a href="vacatures">Klik hier</a> als u zich als steunpunt voor deze provincie aan wilt melden.
+			We hebben (nog) geen steunpunten in Drenthe. <a href="steunpunten/vacatures/">Klik hier</a> als u zich als steunpunt voor deze provincie aan wilt melden.
 		  </p>
 
         </div>
@@ -366,7 +366,7 @@ $page->body = <<<CONTENT
           <h5>Drenthe</h5>
 
           <p>
-			We hebben (nog) geen steunpunten in Drenthe. <a href="vacatures">Klik hier</a> als u zich als steunpunt voor deze provincie aan wilt melden.
+			We hebben (nog) geen steunpunten in Drenthe. <a href="steunpunten/vacatures/">Klik hier</a> als u zich als steunpunt voor deze provincie aan wilt melden.
 		  </p>
 
         </div>
