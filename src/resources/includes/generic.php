@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 /*
  * Dit is een standaardpagina voor op de website. Voor het includen van deze
@@ -64,7 +64,7 @@ if (!isset($includeMenu)) {
     </div>
     <footer class="footer" id="footer">
       <p>
-        <a href="colofon">Colofon</a>
+        <a href="colofon/">Colofon</a>
         <br>
         © Copyright CheckJeStress 2016
       </p>

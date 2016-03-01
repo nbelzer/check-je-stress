@@ -70,7 +70,7 @@ $page->body = <<<CONTENT
           <p style="padding-top: 1em;">
             Het kan zijn, dat er naar aanleiding van de uitslag behoefte bestaat om dit met een counsellor of coach te bespreken. Steunpunt Stress Burnout Nederland streeft ernaar om in alle provincies samenwerkingspartners aan te bieden, die een ruime ervaring hebben met stressklachten of burn-out.
             <br>
-            Neem gerust contact op voor een (vrijblijvend) kennismakingsgesprek en klik <a href="doelgroep/steunpunten/">hier</a> voor een counsellor bij jou in de buurt.
+            Neem gerust contact op voor een (vrijblijvend) kennismakingsgesprek en klik <a href="steunpunten/">hier</a> voor een counsellor bij jou in de buurt.
           </p>
           <p>
             Sommige consulten komen in aanmerking voor vergoeding vanuit de verzekeringsmaatschappij. Vraag bij jouw counsellor om de AGB-code(s) en informeer bij jouw verzekeringsmaatschappij of je in aanmerking komt voor vergoeding.
