@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 $vragen = array(
   0 => 'Ik ga positief om met de dingen die ik moet doen.',
@@ -59,7 +59,7 @@ $vragen = array(
   55 => 'Ik neem besluiten even makkelijk als anders.'
 );
 
-include '../resources/includes/TestCreator.php';
+include '../../resources/includes/TestCreator.php';
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Uitgebreide Test';
 $test_page->questions = $vragen;
