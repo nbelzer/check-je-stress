@@ -36,11 +36,11 @@ class TestCreator {
    * TestCreator instance.
    */
   function create() {
-    require_once '../resources/includes/PageCreator.php';
+    require_once '../../resources/includes/PageCreator.php';
 
     $page = new PageCreator;
 
-    $page->path_to_root = '../';
+    $page->path_to_root = '../../';
     $page->title = $this->title;
     $page->includeMenu = true;
     $page->head = self::$head;
