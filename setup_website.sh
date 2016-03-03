@@ -9,6 +9,10 @@
 # In welke map moet de website geïnstalleerd worden? De bestanden worden direct
 # in deze map geplakt, niet eerst nog in een submap.
 TARGET_LOCATION="/var/www/html"
+# Hoe ga je naar de installatie van de CheckJeStress website vanaf de web root?
+# Stel, de website wordt geïnstalleerd in http://website.com/stress/ dan is deze
+# variabele '/stress/'.
+PATH_TO_INSTALLATION_FROM_ROOT="/"
 # Absolute path naar .htpasswd. Dit moet bij voorkeur een plaats zijn BUITEN de
 # webserver, zodat bezoekers het bestand ook niet kunnen zien als de server
 # verkeerd geconfigureerd is.
@@ -35,6 +39,14 @@ sudo htpasswd -bc $PASSWORD_FILE_LOCATION/.htpasswd $user $password
 # Pas het pad naar .htpasswd aan in admin/.htaccess
 PASSWORD_FILE_LOCATION=$(echo $PASSWORD_FILE_LOCATION | sed 's/\//\\\//g')
 sudo sed -i.bak "s/\/absolute\/path\/to\/.htpasswd/$(echo $PASSWORD_FILE_LOCATION)\/.htpasswd/g" $TARGET_LOCATION/admin/.htaccess
+
+# Pas de ErrorDocument paths in de root .htaccess aan naar absolute vanaf de
+# installatie root
+PATH_TO_INSTALLATION_FROM_ROOT=$(echo $PATH_TO_INSTALLATION_FROM_ROOT | sed 's/\//\\\//g')
+SEDSTRING='s/\/error\//'$PATH_TO_INSTALLATION_FROM_ROOT'error\//'
+mv $TARGET_LOCATION/.htaccess $TARGET_LOCATION/.htaccess.old
+sed $SEDSTRING $TARGET_LOCATION/.htaccess.old > $TARGET_LOCATION/.htaccess
+rm $TARGET_LOCATION/.htaccess.old
 
 # Laat de gebruiker de config editen
 sudo "${EDITOR:-vim}" src/resources/includes/config.php
