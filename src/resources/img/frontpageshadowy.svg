@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.0"
-	 id="svg2" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" inkscape:version="0.91 r13725" sodipodi:docname="frontpage.svg"
+<svg version="1.1"
+	 id="svg2" sodipodi:docname="frontpage.svg" inkscape:version="0.91 r13725" xmlns:cc="http://creativecommons.org/ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="539 98.3 1920 400"
 	 style="enable-background:new 539 98.3 1920 400;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#BBEAF5;stroke:#023B7C;}
-	.st1{fill:#FFFFFF;fill-opacity:0;}
+	.st1{fill:none;}
 	.st2{fill:#6F8A91;}
 	.st3{fill:#93A7AC;}
 	.st4{fill:#32A3BD;}
@@ -14,20 +14,20 @@
 <defs>
 	
 	
-		<inkscape:path-effect  offset_points="0,0.5" sort_points="true" id="path-effect3340" effect="powerstroke" miter_limit="4" is_visible="true" linejoin_type="round" end_linecap_type="zerowidth" start_linecap_type="zerowidth" cusp_linecap_type="round" interpolator_beta="0.2" interpolator_type="Linear">
+		<inkscape:path-effect  interpolator_beta="0.2" cusp_linecap_type="round" start_linecap_type="zerowidth" end_linecap_type="zerowidth" interpolator_type="Linear" linejoin_type="round" offset_points="0,0.5" sort_points="true" miter_limit="4" is_visible="true" effect="powerstroke" id="path-effect3340">
 		</inkscape:path-effect>
 </defs>
-<sodipodi:namedview  bordercolor="#666666" pagecolor="#ffffff" showgrid="false" id="base" borderopacity="1.0" units="px" inkscape:zoom="0.62" inkscape:cy="281.50201" inkscape:cx="1458.8278" inkscape:window-maximized="0" inkscape:window-y="255" inkscape:window-x="899" inkscape:window-height="1023" inkscape:window-width="2464" inkscape:snap-center="true" inkscape:current-layer="layer1" inkscape:document-units="px" inkscape:pageshadow="2" inkscape:pageopacity="0.0">
+<sodipodi:namedview  inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:document-units="px" inkscape:current-layer="layer1" inkscape:snap-center="true" inkscape:window-width="2464" inkscape:window-height="1023" inkscape:window-x="899" inkscape:window-y="255" inkscape:window-maximized="0" inkscape:cx="1458.8278" pagecolor="#ffffff" bordercolor="#666666" showgrid="false" inkscape:zoom="0.62" inkscape:cy="281.50201" borderopacity="1.0" id="base" units="px">
 	</sodipodi:namedview>
-<g id="layer1" transform="translate(0,-652.36216)" inkscape:label="Layer 1" inkscape:groupmode="layer">
-	<polygon id="rect4202" class="st0" points="538.7,751.1 2460.8,751.1 2458.9,1153.4 538.9,1153.4 	"/>
-	<line id="rect3348_1_" class="st1" x1="2460.8" y1="1147.8" x2="540.7" y2="1147.8"/>
+<g id="layer1" transform="translate(0,-652.36216)" inkscape:groupmode="layer" inkscape:label="Layer 1">
+	<polygon id="rect4202" class="st0" points="538.8,750.6 2460.9,750.6 2459,1152.9 539,1152.9 	"/>
+	<line id="rect3348_1_" class="st1" x1="2460.9" y1="1147.3" x2="540.8" y2="1147.3"/>
 	<g id="path3381" inkscape:connector-curvature="0">
 		
-			<image style="overflow:visible;opacity:0.75;" width="440" height="129" xlink:href="2E30D3B3E78D0439.png"  transform="matrix(1 0 0 1 902.9843 1056.6265)">
+			<image style="overflow:visible;opacity:0;enable-background:new    ;" width="441" height="130" xlink:href="2E30D3B3E78D0439.png"  transform="matrix(0.9973 0 0 0.9973 903.1356 1055.8442)">
 		</image>
 		<g>
-			<path class="st2" d="M937.8,1149l68.3-6.1c0.2-0.1,15.1,1.4,15.2,1.2l17.6-10.2c0.3-0.3,0.6-0.5,1-0.7l20.3-9.4
+			<path class="st2" d="M937.9,1148.5l68.3-6.1c0.2-0.1,15.1,1.4,15.2,1.2l17.6-10.2c0.3-0.3,0.6-0.5,1-0.7l20.3-9.4
 				c0.1,0,0.2-0.1,0.3-0.1l33.7-11.2l30.6-9.7c0,0,37.3-12.8,50-11.3c6.3,0.8,16.7,9.1,22.6,11.3c8.1,3,32.9,4.6,36.6,4.8
 				c0.3,0,0.6,0.1,0.9,0.2c2.6,1,16.3,6.4,20.5,9.5c5.3,3.9,12.2,15.8,17.7,19.4c4.6,3,19.3,5.4,24.2,6.2c1,0.2,1.9,0.8,2.3,1.8
 				l7.6,6"/>
@@ -35,10 +35,10 @@
 	</g>
 	<g id="path3375_2_" inkscape:connector-curvature="0">
 		
-			<image style="overflow:visible;opacity:0.75;" width="697" height="267" xlink:href="2E30D3B3E78D043B.png"  transform="matrix(1 0 0 1 502.9843 919.6264)">
+			<image style="overflow:visible;opacity:0.75;enable-background:new    ;" width="698" height="268" xlink:href="2E30D3B3E78D043B.png"  transform="matrix(0.9983 0 0 0.9983 503.1432 918.9001)">
 		</image>
 		<g>
-			<path class="st3" d="M537.1,967.4l15.6-6.8c0,0,27.7-7.1,37.1-6.5c9.9,0.7,28.7,9.2,37.1,14.5c7.6,4.8,30.6,16.1,30.6,16.1
+			<path class="st3" d="M537.2,966.9l15.6-6.8c0,0,27.7-7.1,37.1-6.5c9.9,0.7,28.7,9.2,37.1,14.5c7.6,4.8,30.6,16.1,30.6,16.1
 				s10.9,17,16.1,21c3.5,2.6,11.8,5.9,16.1,6.5c6.4,0.8,25.8-3.2,25.8-3.2s27.2-3.1,35.5,0c9.9,3.7,32.3,27.4,32.3,27.4
 				s15.5,6.1,21,6.5c4.5,0.3,13.4-2,17.7-3.2c4.8-1.3,14.4-5.5,19.4-4.8c5,0.6,13.2,7.5,17.7,9.7c5.5,2.7,16.8,7.6,22.6,9.7
 				c10.3,3.7,34,10.3,43.5,4.8c4.9-2.8,7-15.7,11.3-19.4c4.8-4.1,18-7.1,24.2-6.5c3.6,0.4,12.9,6.5,12.9,6.5s21.3,16.4,29,21
@@ -48,20 +48,20 @@
 	</g>
 	<g id="path4207" inkscape:connector-curvature="0">
 		
-			<image style="overflow:visible;opacity:0.75;" width="391" height="139" xlink:href="2E30D3B3E78D043E.png"  transform="matrix(1 0 0 1 1402.9843 1048.6265)">
+			<image style="overflow:visible;opacity:0;enable-background:new    ;" width="392" height="140" xlink:href="2E30D3B3E78D043E.png"  transform="matrix(0.9969 0 0 0.9969 1403.1418 1047.8835)">
 		</image>
 		<g>
-			<path class="st2" d="M1437.9,1150.6c25.3-11.3,50.5,8.5,75.8-2.8l37.1-17.7c0,0,19.2-22.3,27.4-27.4c2.2-1.3,12.3-3,15.5-5.3
+			<path class="st2" d="M1438,1150.1c25.3-11.3,50.5,8.5,75.8-2.8l37.1-17.7c0,0,19.2-22.3,27.4-27.4c2.2-1.3,12.3-3,15.5-5.3
 				c4.2-2.9,8.7-7.6,8.7-7.6s17.9-6.7,24.2-6.5c4.5,0.2,12.9,4.6,16.1,8.1c3.3,3.6,8.1,2,16.1,11.3c5.3,6.1,38.7,30.6,38.7,30.6
-				s15.4,8.1,21,8.1c5.4,0,17.7,1.6,17.7,1.6l13.5,5.1c3.8,7,5.3-3.7,9.1,3.3C1651.8,1154.6,1544.9,1147.4,1437.9,1150.6z"/>
+				s15.4,8.1,21,8.1c5.4,0,17.7,1.6,17.7,1.6l13.5,5.1c3.8,7,5.3-3.7,9.1,3.3C1651.9,1154.1,1545,1146.9,1438,1150.1z"/>
 		</g>
 	</g>
 	<g id="path4209" inkscape:connector-curvature="0">
 		
-			<image style="overflow:visible;opacity:0.75;" width="727" height="295" xlink:href="2E30D3B3E78D043F.png"  transform="matrix(1 0 0 1 1767.9843 891.6264)">
+			<image style="overflow:visible;opacity:0;" width="728" height="296" xlink:href="2E30D3B3E78D043F.png"  transform="matrix(0.9983 0 0 0.9983 1768.1437 890.9139)">
 		</image>
 		<g>
-			<path class="st2" d="M1802.5,1149.1l41.1-6.6l22.6-12.9l14.5-12.9l19.4-21l21-27.4c0,0,12.4,1.4,16.1,0
+			<path class="st2" d="M1802.6,1148.6l41.1-6.6l22.6-12.9l14.5-12.9l19.4-21l21-27.4c0,0,12.4,1.4,16.1,0
 				c5.1-1.9,12.8-10.2,16.1-14.5c2.7-3.5,9.7-14.5,9.7-14.5s9.6-4.9,12.9-8.1c2.5-2.4,8.6-5.9,11.3-8.1c2.7-2.1,7.5-7,9.7-9.7
 				c3.5-4.3,9.5-13.4,12.9-17.7c1.9-2.5,8.1-9.7,8.1-9.7s10.6-7.7,14.5-9.7c5.4-2.7,17-5.8,22.6-8.1c3.5-1.4,10.3-5.3,12.9-8.1
 				c4.6-4.9,9.7-7.2,12.9-9.7c3.6-2.8,12.9-12.9,12.9-12.9s26.2-11.4,35.5-11.3c3.8,0,14.5,4.8,14.5,4.8s14.3,7.8,19.4,9.7
@@ -72,27 +72,27 @@
 	</g>
 	<g id="path3377" inkscape:connector-curvature="0">
 		
-			<image style="overflow:visible;opacity:0.75;" width="442" height="169" xlink:href="2E30D3B3E78D043A.png"  transform="matrix(1 0 0 1 1546.9843 1016.6264)">
+			<image style="overflow:visible;opacity:0.75;enable-background:new    ;" width="443" height="170" xlink:href="2E30D3B3E78D043A.png"  transform="matrix(0.9973 0 0 0.9973 1547.1431 1015.9)">
 		</image>
 		<g>
-			<path class="st3" d="M1581.2,1150.6l56.3-26.3c0,0,16-15.9,22.6-19.4c10.3-5.4,34.4-8.9,43.5-16.1c6.4-5.1,22.6-14.7,22.6-14.7
+			<path class="st3" d="M1581.3,1150.1l56.3-26.3c0,0,16-15.9,22.6-19.4c10.3-5.4,34.4-8.9,43.5-16.1c6.4-5.1,22.6-14.7,22.6-14.7
 				s6.8-9.6,11.2-12.7c5.3-3.7,24.2-9.7,24.2-9.7s30.3-1,40.3,0c9.8,1,38.7,8.1,38.7,8.1s9.3,16.2,14.5,19.4c6.3,3.8,29,4.8,29,4.8
-				s9.9,4.5,12.9,6.5c6.5,4.2,19,13.6,24.2,19.4c6.2,6.9,21,30.6,21,30.6l11.5,10.1H1581.2z"/>
+				s9.9,4.5,12.9,6.5c6.5,4.2,19,13.6,24.2,19.4c6.2,6.9,21,30.6,21,30.6l11.5,10.1L1581.3,1150.1L1581.3,1150.1z"/>
 		</g>
 	</g>
 	<g>
 		
-			<image style="overflow:visible;opacity:0.75;" width="1991" height="96" xlink:href="2E30D3B3E78D0435.png"  transform="matrix(1 0 0 1 502.9843 1093.6265)">
+			<image style="overflow:visible;opacity:0.75;enable-background:new    ;" width="1992" height="97" xlink:href="2E30D3B3E78D0435.png"  transform="matrix(0.9995 0 0 0.9995 503.0632 1092.6941)">
 		</image>
 		<g>
 			<g>
-				<polygon id="rect3346_12_" class="st4" points="538.7,1141.4 2458.8,1141.4 2458.8,1151.4 538.8,1151.4 				"/>
+				<polygon id="rect3346_12_" class="st4" points="538.8,1140.9 2458.9,1140.9 2458.9,1150.9 538.9,1150.9 				"/>
 				<path id="path4211_12_" sodipodi:nodetypes="ccccccccccccccccccccccc" inkscape:connector-curvature="0" class="st4" d="
-					M2201.6,1146.4c0,0-44-5.9-64.7-8.1c-22.2-2.4-67-1.7-89.2,0c-26.4,2-115.3,8.1-115.3,8.1s-93.7,8.1-138.6,1.5
+					M2201.7,1145.9c0,0-44-5.9-64.7-8.1c-22.2-2.4-67-1.7-89.2,0c-26.4,2-115.3,8.1-115.3,8.1s-93.7,8.1-138.6,1.5
 					c-16.7-2.4-63.8-11.6-96.9-12.8c-37.3-1.4-111.9,1.4-149.2,0c-30.7-1.2-92-7-122.7-6.5c-18.7,0.3-55.8,5.8-74.5,6.5
 					c-25.5,0.9-102-1.6-102-1.6s-73.3,2.8-97.7,4.8c-20.8,1.7-83.1,9.7-83.1,9.7l-75.4,6.5c0,0-84.3-5.6-112.3-8.1
 					c-30.4-2.7-91-12.3-121.5-12.9c-18.5-0.4-55.4,3.5-73.8,4.8c-19.6,1.4-78.4,6.5-78.4,6.5l-69.2,4.8l1921.7,1.7
-					c0,0-31-8.8-46.7-14.6c-28.1-10.4-90.2-3.6-120,0c-20.4,2.4-74.4,12-74.4,12l-3.5-0.9l-2-0.3L2201.6,1146.4z"/>
+					c0,0-31-8.8-46.7-14.6c-28.1-10.4-90.2-3.6-120,0c-20.4,2.4-74.4,12-74.4,12l-3.5-0.9l-2-0.3L2201.7,1145.9z"/>
 			</g>
 		</g>
 	</g>
