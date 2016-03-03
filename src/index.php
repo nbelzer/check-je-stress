@@ -5,7 +5,7 @@ $page->title = "Check je stress";
 $page->head = "<link rel=\"stylesheet\" href=\"resources/css/specific/index.css\" type=\"text/css\">";
 $page->body = <<<CONTENT
 
-<div class="indexImage" style="background-image: url('resources/img/frontpage.svg');">
+<div class="indexImage" style="background-image: url('resources/img/frontpageshadowy.gif');">
 </div>
 <div class="content">
 
