@@ -12,7 +12,6 @@ $page->body = <<<CONTENT
 
 <div class="content">
 
-
   <div class="row show-for-medium">
     <div class="medium-10 medium-centered columns">
       <div class="navmenu">

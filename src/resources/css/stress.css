@@ -116,7 +116,7 @@
   color: #FF9E3E;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 75git em) {
   .top-bar.scrolled .title {
     opacity: 0.0;
   }
