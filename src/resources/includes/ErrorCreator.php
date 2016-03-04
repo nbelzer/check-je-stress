@@ -33,17 +33,19 @@ class ErrorCreator {
     $page->title = $this->title;
     $page->body = <<<CONTENT
       <section class="water">
-        <div class="row">
-          <div class="medium-10 medium-centered columns">
-            <div class="medium-9 columns medium-offset-3">
-              <h1>Error $this->code</h1>
-              <p>
-                Beste bezoeker,
-                <br><br>
-                $this->message
-                <br>
-                Onze excuses voor het ongemak.
-              </p>
+        <div class="content">
+          <div class="row">
+            <div class="medium-10 medium-centered columns">
+              <div class="medium-9 columns medium-offset-3">
+                <h1>Error $this->code</h1>
+                <p>
+                  Beste bezoeker,
+                  <br><br>
+                  $this->message
+                  <br>
+                  Onze excuses voor het ongemak.
+                </p>
+              </div>
             </div>
           </div>
         </div>
