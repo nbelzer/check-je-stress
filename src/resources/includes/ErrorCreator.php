@@ -29,9 +29,10 @@ class ErrorCreator {
     require_once '../resources/includes/PageCreator.php';
 
     $page = new PageCreator;
-
+    $page->path_to_root = "../";
     $page->title = $this->title;
-    $page->body = <<<CONTENT
+
+		$page->body = <<<CONTENT
       <section class="water">
         <div class="content">
           <div class="row">
