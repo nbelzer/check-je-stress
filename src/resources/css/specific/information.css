@@ -2,6 +2,7 @@
 .content {
   color: #CBECF4;
   font-weight: 500;
+  padding-top: 0;
 }
 
 .content h5 {
@@ -33,4 +34,8 @@
 
 .navmenu ul {
   border: none;
+}
+
+.indexImage {
+  background-position: right bottom;
 }

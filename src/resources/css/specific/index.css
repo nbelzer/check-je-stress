@@ -1,16 +1,6 @@
 
 @import url('../stress.css');
 
-.indexImage {
-  width: 100%;
-  height: 20em;
-
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center bottom;
-}
-
 .indexElement {
   text-align: center;
   padding: 2em;

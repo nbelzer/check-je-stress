@@ -176,3 +176,13 @@ a {
 body {
     background-color: #32a3bd;
 }
+
+.indexImage {
+  width: 100%;
+  height: 20em;
+
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center bottom;
+}

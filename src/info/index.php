@@ -10,9 +10,12 @@ $page->head = '<link rel="stylesheet" href="resources/css/specific/information.c
 $page->title = "Informatie";
 $page->body = <<<CONTENT
 
+<div class="indexImage" style="background-image: url('resources/img/beach.gif');">
+</div>
+
 <div class="content">
 
-  <div class="row show-for-medium">
+  <!-- <div class="row show-for-medium">
     <div class="medium-10 medium-centered columns">
       <div class="navmenu">
         <ul class="vertical menu" data-magellan data-options="barOffset:40">
@@ -22,7 +25,7 @@ $page->body = <<<CONTENT
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <section class="text water" id="first">
     <div class="row">
