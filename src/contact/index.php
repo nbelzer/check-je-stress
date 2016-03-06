@@ -1,10 +1,10 @@
-<!--- Contact-->
+﻿<!--- Contact-->
 
 <?php
 include '../resources/includes/PageCreator.php';
 $page = new PageCreator();
 $page->path_to_root = '../';
-$page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
+$page->head = '<link rel="stylesheet" href="resources/css/specific/standard.css" type="text/css">';
 $page->title = "Contact";
 $page->body = <<<CONTENT
 
