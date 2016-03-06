@@ -32,27 +32,55 @@ $page->body = <<<CONTENT
 			Serge Janssen
 		  </p>
 
-		  <form method="post" name="myemailform" action="contact/formulier-email.php">
-			<p>
-			  <label for ='naam'>Naam: </label><br>
-			  <input type="text" name="naam">
-			</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="text dark" id="second">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <div class="medium-9 columns medium-offset-3">
+          <h5>Contactformulier</h1>
+
+		  <form method="post" name="contactformulier" action="contact/formulier-email.php">
+		    <table border="1">
+			
+			  <tr>
+				<td>Aanvinkvelden
+				<td>
+				  <label><input type="checkbox" name="aanvinkvelden" value="Persoonlijke afspraak particulier)">Persoonlijke afspraak (particulier)<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden" value="Persoonlijke afspraak (werkgever)">Persoonlijke afspraak (werkgever)<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden" value="Gratis lezing voor werkgevers">Gratis lezing voor werkgevers: wat is stress/burn-out?<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden" value="Informatie over Burnout-risico-analyse">Informatie over Burnout-risico-analyse<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden" value="Workshop terugvalpreventie">Workshop terugvalpreventie<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden" value="Workshop check je stress">Workshop check je stress<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden" value="Lezing over stress/burnout">Lezing over stress/burn-out<br></label>
+				</td>
+			  </tr>
+			
+			  <tr>
+				<td><label for="1">Voor- en achternaam (of bedrijfsnaam)</label></td>
+				<td><input type="text" name="naam" id="1"></td>
+			  </tr>
+			
+			  <tr>
+				<td><label for="2">E-mailadres</label></td>
+				<td><input type="text" name="email" id="2"></td>
+			  </tr>
+			
+			  <tr>
+				<td><label for="3">Vragen, opmerkingen of jouw ideeën</label></td>
+				<td><input type="text" name="vragen+opmerkingen+ideeën" id="3"></td>
+			  <tr>
+			
+			</table>
 			
 			<p>
-			  <label for ='email'>Emailadres: </label><br>
-			  <input type="text" name="email">
-			</p>
-			
-			<p>
-			  <label for ='bericht'>Bericht: </label><br>
-			  <input type="text" name="bericht">
-			</p>
-			
-			<p>
-			   <input type="submit" value="Versturen">
+			   <input type="submit" value="Verstuur me, ik ben er klaar voor!">
 			</p>
 		  </form>
-
+		  
         </div>
       </div>
     </div>
