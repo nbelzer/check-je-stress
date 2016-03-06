@@ -49,13 +49,13 @@ $page->body = <<<CONTENT
 			  <tr>
 				<td>Aanvinkvelden
 				<td>
-				  <label><input type="checkbox" name="aanvinkvelden" value="Persoonlijke afspraak particulier)">Persoonlijke afspraak (particulier)<br></label>
-				  <label><input type="checkbox" name="aanvinkvelden" value="Persoonlijke afspraak (werkgever)">Persoonlijke afspraak (werkgever)<br></label>
-				  <label><input type="checkbox" name="aanvinkvelden" value="Gratis lezing voor werkgevers">Gratis lezing voor werkgevers: wat is stress/burn-out?<br></label>
-				  <label><input type="checkbox" name="aanvinkvelden" value="Informatie over Burnout-risico-analyse">Informatie over Burnout-risico-analyse<br></label>
-				  <label><input type="checkbox" name="aanvinkvelden" value="Workshop terugvalpreventie">Workshop terugvalpreventie<br></label>
-				  <label><input type="checkbox" name="aanvinkvelden" value="Workshop check je stress">Workshop check je stress<br></label>
-				  <label><input type="checkbox" name="aanvinkvelden" value="Lezing over stress/burnout">Lezing over stress/burn-out<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden[]" value="Persoonlijke afspraak particulier)">Persoonlijke afspraak (particulier)<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden[]" value="Persoonlijke afspraak (werkgever)">Persoonlijke afspraak (werkgever)<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden[]" value="Gratis lezing voor werkgevers">Gratis lezing voor werkgevers: wat is stress/burn-out?<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden[]" value="Informatie over Burnout-risico-analyse">Informatie over Burnout-risico-analyse<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden[]" value="Workshop terugvalpreventie">Workshop terugvalpreventie<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden[]" value="Workshop check je stress">Workshop check je stress<br></label>
+				  <label><input type="checkbox" name="aanvinkvelden[]" value="Lezing over stress/burnout">Lezing over stress/burn-out<br></label>
 				</td>
 			  </tr>
 			
@@ -71,7 +71,7 @@ $page->body = <<<CONTENT
 			
 			  <tr>
 				<td><label for="3">Vragen, opmerkingen of jouw ideeën</label></td>
-				<td><input type="text" name="vragen+opmerkingen+ideeën" id="3"></td>
+				<td><input type="text" name="vragenopmerkingenideeën" id="3"></td>
 			  <tr>
 			
 			</table>
