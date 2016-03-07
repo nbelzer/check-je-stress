@@ -21,19 +21,18 @@
 
 .navmenu {
   padding-top: 1em;
-  margin-right: 1em;
-  top: calc(7.5em - 1px);
-  width: 20%;
-  max-width: 240px;
-  position: fixed;
-  background-color: #CBECF4;
   text-transform: uppercase;
-  border-top: 1em solid #CBECF4;
-  border-bottom: 1em solid #CBECF4;
+  margin-right: 1em;
+}
+
+.navmenu h5 {
+  margin-left: 8px;
 }
 
 .navmenu ul {
+  padding-top: 0.5em;
   border: none;
+  border-left: 4px solid #CBECF4;
 }
 
 .indexImage {
