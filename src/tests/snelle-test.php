@@ -28,7 +28,7 @@ $vragen = array(
   24 => 'Mijn werk lijkt zinloos.'
 );
 
-include '../../resources/includes/TestCreator.php';
+include '../resources/includes/TestCreator.php';
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Snelle Test';
 $test_page->questions = $vragen;

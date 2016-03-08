@@ -28,7 +28,7 @@ $vragen = array(
   24 => 'Dreigementen zijn de beste aansporingen.'
 );
 
-include '../../resources/includes/TestCreator.php';
+include '../resources/includes/TestCreator.php';
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Risico Analyse';
 $test_page->questions = $vragen;

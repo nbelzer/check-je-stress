@@ -26,21 +26,21 @@ class TestCreator {
 
   /**
    * Optioneel: het pad naar de installatie root van de CheckJeStress website.
-   * Deze is default '../' en hoeft alleen veranderd te worden als de test niet
-   * in de standaard tests map staat.
+   * Deze is default '../../' en hoeft alleen veranderd te worden als de test
+   * niet in de standaard tests map staat.
    */
-  var $path_to_root = '../';
+  var $path_to_root = '../../';
 
   /**
    * Print de testpagina op de website. Gebruikt de variabelen uit deze
    * TestCreator instance.
    */
   function create() {
-    require_once '../../resources/includes/PageCreator.php';
+    require_once '../resources/includes/PageCreator.php';
 
     $page = new PageCreator;
 
-    $page->path_to_root = '../../';
+    $page->path_to_root = $this->path_to_root;
     $page->title = $this->title;
     $page->includeMenu = true;
     $page->head = self::$head;
@@ -48,8 +48,7 @@ class TestCreator {
     // Maak eerst het formulier met de vragen dat op de testpagina komt.
     $form = "";
 
-    $php_self = htmlspecialchars($_SERVER["PHP_SELF"]);
-    $form .= "<form action=\"$php_self\" method=\"POST\">\n";
+    $form .= "<form action=\"tests/test-resultaten.php\" method=\"POST\">\n";
 
     $form .= "<table style=\"width: 100%;\">\n";
     foreach ($this->questions as $id => $vraag) {
