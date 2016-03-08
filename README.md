@@ -40,15 +40,16 @@ tabel `pages`:
 * Plaatjes / Foto's auteurrechtvrij (duuh)
 * Links naar social media (Facebookpagina, evt. Twitter)
 
+##### Technisch
+* PHP versie: 5.6
+* Er is 'genoeg' ruimte beschikbaar voor de database
+* We krijgen de source niet
+
 ### Vragen
+✓=gesteld
 ##### SJA
 * Als je naar [Voor wie](http://checkjestress.nl/page5.php) gaat en het preventieplan downloadt (links), dan krijg je een document zonder .doc extensie en met alleen een inhoudsopgave. Pls better version. ✓
 * Steunpunt Stress Burnout Nederland bestaat niet meer en Ria is weg; blijven alle producten wel hetzelfde, of moet er iets aan veranderd worden? Is het bijv. nog steeds mogelijk om een burnout risicoanalyse voor je bedrijf te laten maken?✓
 
 ##### PDY
-* PHP versie? ✓
-* Huidige structuur database?✓
-* Source van huidige website?✓
-* Hoeveel ruimte neemt de huidige database in beslag en hoeveel ruimte is er beschikbaar op het pakket waar de database op dit moment gehost wordt?✓
-
-✓=gesteld 
+Op het moment geen vragen
