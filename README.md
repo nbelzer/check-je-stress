@@ -20,6 +20,14 @@ tabel `pages`:
 | `head` | `TEXT` | extra dingen voor in de head tag |
 | `body` | `TEXT` | inhoud van de body tag |
 
+tabel `testx` (x is nummer van test, voor elke test een tabel):
+
+| Kolom | Data type | Opmerking |
+|-------|-----------|-----------|
+| `id` | `TINYINT UNSIGNED UNIQUE AUTO_INCREMENT` | ID van de test entry |
+| `ip` | `INT UNSIGNED` | IP heeft 4 bytes. Dit past precies in INT |
+| `vraagn` | `TINYINT(3) UNSIGNED` | n is het nummer van de vraag; voor elke vraag een kolom |
+
 ### Aantekeningen
 ##### Tests [#5](https://github.com/MateyByrd/CheckJeStress/issues/5)
 * Vragen weglaten op basis van score
