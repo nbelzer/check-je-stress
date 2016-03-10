@@ -7,6 +7,7 @@ $page->path_to_root = '../';
 $page->head = '<link rel="stylesheet" href="resources/css/specific/standard.css" type="text/css">';
 $page->title = "Contact";
 
+
 $naam = $_POST['naam'];
 $vragenopmerkingenideeën = $_POST['vragenopmerkingenideeën'];
 $email = $_POST['email'];
@@ -16,6 +17,13 @@ foreach($_POST['aanvinkvelden'] as $value){
 	$aanvinkvelden .= $value;
 	$aanvinkvelden .= "</li>";
 }
+
+$to = "coolpower@zeelandnet.nl";
+$headers = "From: $to \r\n";
+$headers .= "Reply-To: $email \r\n";
+$email_subject = "CheckJeStress: Contactaanvraag";
+$email_body = "$naam wenst contact met u op te nemen. Deze persoon heeft interesse in de volgende zaken: <ul>$aanvinkvelden</ul>. Deze persoon liet het volgende bericht achter: $vragenopmerkingenideeën";
+mail($to,$email_subject,$email_body,$headers);
 
 $page->body = <<<CONTENT
 

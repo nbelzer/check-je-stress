@@ -61,17 +61,17 @@ $page->body = <<<CONTENT
 			
 			  <tr>
 				<td><label for="1">Voor- en achternaam (of bedrijfsnaam)</label></td>
-				<td><input type="text" name="naam" id="1"></td>
+				<td><input type="text" name="naam" id="1" placeholder="John Doe"></td>
 			  </tr>
 			
 			  <tr>
 				<td><label for="2">E-mailadres</label></td>
-				<td><input type="text" name="email" id="2"></td>
+				<td><input type="text" name="email" id="2" placeholder="johndoe@gmail.com"></td>
 			  </tr>
 			
 			  <tr>
 				<td><label for="3">Vragen, opmerkingen of jouw ideeën</label></td>
-				<td><input type="text" name="vragenopmerkingenideeën" id="3"></td>
+				<td><input type="text" name="vragenopmerkingenideeën" id="3" placeholder="Uw bericht"></td>
 			  <tr>
 			
 			</table>
