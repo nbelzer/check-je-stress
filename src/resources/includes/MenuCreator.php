@@ -32,8 +32,8 @@ class MenuCreator {
   </div>
   <div class="row" id="responsive-menu">
     <div class="medium-10 medium-centered columns">
-      <img class="title logo" data-hide-for="small"
-          src="resources/img/logo_vector.svg" alt="Logo">
+      <a href=""><img class="title logo" data-hide-for="small"
+          src="resources/img/logo_vector.svg" alt="Logo"></a>
       <nav>
         <ul class="menu dropdown" data-dropdown-menu>';
 
