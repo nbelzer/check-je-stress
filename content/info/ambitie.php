@@ -1,7 +1,7 @@
 <h1>Wat is onze ambitie?</h1>
 
 <p>
-  Steunpunt Stress Burnout Nederland heeft als ambitie om stressklachten en burn-out bespreekbaar en toegankelijk te maken en <b>oplossingsgericht</b> te werken naar een nieuwe stressvrije(re) situatie. Dit willen we niet alleen vanuit onze provincie Zeeland, maar dit ook uitrollen over heel Nederland zodat elke provincie aan deze ambitie mee kan werken.
+  Steunpunt Stress Burn-out Nederland heeft als ambitie om stressklachten en burn-out bespreekbaar en toegankelijk te maken en <b>oplossingsgericht</b> te werken naar een nieuwe stressvrije(re) situatie. Dit willen we niet alleen vanuit onze provincie Zeeland, maar dit ook uitrollen over heel Nederland zodat elke provincie aan deze ambitie mee kan werken.
 </p>
 
 <p>
@@ -14,7 +14,7 @@
 </p>
 
 <p>
-  Particulieren en werkgevers kunnen een stresstest maken en het resultaat hiervan bespreken met één van onze stress- en burnoutcounsellors. Daarbij hebben werkgevers de mogelijkheid om door ons een burnout-risicoanalyse uit te laten voeren, waarbij we het gehele traject rondom stressreductie doorlopen. We bieden een complete dienstverlening aan: van analyseren van testgegevens tot het individuele coachingsgesprek, van het compleet inpasbare actieve preventiebeleid tot training van leidinggevenden.
+  Particulieren en werkgevers kunnen een stresstest maken en het resultaat hiervan bespreken met één van onze stress- en burnoutcounsellors. Daarbij hebben werkgevers de mogelijkheid om door ons een burn-out risicoanalyse uit te laten voeren, waarbij we het gehele traject rondom stressreductie doorlopen. Wij bieden een complete dienstverlening aan: van analyseren van testgegevens tot het individuele coachingsgesprek, van het compleet inpasbare actieve preventiebeleid tot training van leidinggevenden.
 </p>
 
 <p>
