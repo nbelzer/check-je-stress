@@ -77,7 +77,7 @@ $page->body = <<<CONTENT
 			</table>
 			
 			<p>
-			   <input type="submit" value="Verstuur me, ik ben er klaar voor!">
+			   <input type="submit" value="Verstuur me, ik ben er klaar voor!" class="button">
 			</p>
 		  </form>
 		  

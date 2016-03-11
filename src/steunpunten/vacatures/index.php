@@ -87,12 +87,12 @@ $page->body = <<<CONTENT
 
 			  <tr>
 				<td><label for="6">Stad + provincie</label></td>
-				<td><input type="text" name="stad+provincie" id="6"></td>
+				<td><input type="text" name="stadprovincie" id="6"></td>
 			  </tr>
 
 			  <tr>
 				<td><label for="7">Opleiding + werkervaring</label></td>
-				<td><input type="text" name="opleiding+werkervaring" id="7"></td>
+				<td><input type="text" name="opleidingwerkervaring" id="7"></td>
 			  </tr>
 
 			  <tr>
@@ -102,13 +102,13 @@ $page->body = <<<CONTENT
 
 			  <tr>
 				<td><label for="9">Verdere informatie</label></td>
-				<td><input type="text" name="verdere informatie" id="9"></td>
+				<td><input type="text" name="verdereinformatie" id="9"></td>
 			  </tr>
 			  
 			</table>  
 			
 			<p>
-			   <input type="submit" value="Verzenden">
+			   <input type="submit" value="Verzenden" class="button">
 			</p>
 		  </form>
 		  
