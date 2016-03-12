@@ -26,7 +26,7 @@ class TestCreator {
 
   /**
    * Optioneel: het pad naar de installatie root van de CheckJeStress website.
-   * Deze is default '../../' en hoeft alleen veranderd te worden als de test
+   * Deze is default '../' en hoeft alleen veranderd te worden als de test
    * niet in de standaard tests map staat.
    */
   var $path_to_root = '../';
