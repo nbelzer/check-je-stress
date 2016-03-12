@@ -68,7 +68,7 @@ CONTENT;
     } else {
       $slash_number = substr_count($_SERVER[REQUEST_URI], '/', 1, $end_url);
     }
-    for ($i = 0; $i < $slash_number - 1; $i++) {
+    for ($i = 0; $i < $slash_number; $i++) {
       $current_path .= '../';
     }
     return $current_path;
