@@ -21,7 +21,7 @@ class PageCreator {
    */
   function __construct() {
     $this->config = include 'config.php';
-    include 'MySQLManager.php';
+    require_once 'MySQLManager.php';
     $this->mysql = new MySQLManager;
   }
 
