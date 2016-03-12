@@ -1,6 +1,6 @@
 ﻿<?php
 
-$vragen = array(
+$vragen = [
   0 => 'Er is veel verloop in personeel.',
   1 => 'Mensen zitten hun tijd uit.',
   2 => 'Drugs- en/of alcoholproblemen beïnvloeden het werk.',
@@ -26,18 +26,54 @@ $vragen = array(
 	22 => 'Mensen zijn weinig betrokken.',
   23 => 'Mensen hebben geen of weinig invloed op managementbeslissingen.',
   24 => 'Dreigementen zijn de beste aansporingen.'
-);
+];
 
-include '../resources/includes/TestCreator.php';
-$test_page = new TestCreator;
-$test_page->title = 'Burnout Risico Analyse';
-$test_page->questions = $vragen;
-$test_page->body = <<<EOF
-  <h1>Burnout Risico Analyse (voor managers)</h1>
-  <p>
-    Deze test bestaat uit 25 stellingen.
-    <br>
-    Kies steeds in welke mate de uitspraak op uw bedrijf van toepassing is.
-  </p>
+if (isset($_POST['vraag0'])) {
+  try {
+    require_once '../resources/includes/MySQLManager.php';
+    $sql = new MySQLManager;
+
+    require_once '../resources/includes/TestsSQL.php';
+    $tests_sql = new TestsSQL($sql);
+    $tests_sql->processTestResults('risicoanalyse', count($vragen));
+
+    // Toon pagina met resultaten
+  } catch (InvalidTestResultsException $ex) {
+    if ($ex->getCode() == 1) {
+      displayTestPage($vragen, "Beantwoord alstublieft alle vragen.");
+    } else {
+      displayTestPage($vragen, "Er is iets foutgegaan tijdens het verwerken van uw testresultaten.");
+    }
+  }
+} else {
+  displayTestPage($vragen);
+}
+
+/**
+ * Toont de pagina met vragen.
+ *
+ * @param array $questions de vragen voor in de test
+ * @param string $error optioneel een error die weergegeven moet worden
+ */
+function displayTestPage($questions, $error = null) {
+  require_once '../resources/includes/TestCreator.php';
+  $test_page = new TestCreator;
+  $test_page->title = 'Burnout Risico Analyse';
+  $test_page->questions = $questions;
+  $test_page->body = <<<EOF
+    <h1>Burnout Risico Analyse (voor managers)</h1>
+    <p>
+      Deze test bestaat uit 25 stellingen.
+      <br>
+      Kies steeds in welke mate de uitspraak op uw bedrijf van toepassing is.
+    </p>
 EOF;
-$test_page->create();
+  if ($error != null) {
+    $test_page->body .= <<<EOF
+      <div class="error">
+        <p>$error</p>
+      </div>
+EOF;
+  }
+  $test_page->create();
+}

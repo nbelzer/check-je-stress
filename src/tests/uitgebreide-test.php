@@ -1,6 +1,6 @@
 ﻿<?php
 
-$vragen = array(
+$vragen = [
   0 => 'Ik ga positief om met de dingen die ik moet doen.',
   1 => 'Ik ben vergeetachtiger dan anders.',
   2 => 'Ik heb angst- en paniekaanvallen.',
@@ -57,20 +57,56 @@ $vragen = array(
   53 => 'Ik vermeid anderen.',
   54 => 'Ik presteer goed.',
   55 => 'Ik neem besluiten even makkelijk als anders.'
-);
+];
 
-include '../resources/includes/TestCreator.php';
-$test_page = new TestCreator;
-$test_page->title = 'Burnout Uitgebreide Test';
-$test_page->questions = $vragen;
-$test_page->body = <<<EOF
-  <h1>Uitgebreide Test</h1>
-  <p>
-    Heb je verschijnselen van een echte burnout?
-    <br>
-    Deze test bestaat uit 56 stellingen. Geef bij elk van de stellingen aan in
-    hoeverre deze op jou van toepassing is in je werk en/of je privéleven. Neem
-    daarbij de afgelopen 6 maanden in gedachten.
-  </p>
+if (isset($_POST['vraag0'])) {
+  try {
+    require_once '../resources/includes/MySQLManager.php';
+    $sql = new MySQLManager;
+
+    require_once '../resources/includes/TestsSQL.php';
+    $tests_sql = new TestsSQL($sql);
+    $tests_sql->processTestResults('uitgebreid', count($vragen));
+
+    // Toon pagina met resultaten
+  } catch (InvalidTestResultsException $ex) {
+    if ($ex->getCode() == 1) {
+      displayTestPage($vragen, "Beantwoord alstublieft alle vragen.");
+    } else {
+      displayTestPage($vragen, "Er is iets foutgegaan tijdens het verwerken van uw testresultaten.");
+    }
+  }
+} else {
+  displayTestPage($vragen);
+}
+
+/**
+ * Toont de pagina met vragen.
+ *
+ * @param array $questions de vragen voor in de test
+ * @param string $error optioneel een error die weergegeven moet worden
+ */
+function displayTestPage($questions, $error = null) {
+  include '../resources/includes/TestCreator.php';
+  $test_page = new TestCreator;
+  $test_page->title = 'Burnout Uitgebreide Test';
+  $test_page->questions = $questions;
+  $test_page->body = <<<EOF
+    <h1>Uitgebreide Test</h1>
+    <p>
+      Heb je verschijnselen van een echte burnout?
+      <br>
+      Deze test bestaat uit 56 stellingen. Geef bij elk van de stellingen aan in
+      hoeverre deze op jou van toepassing is in je werk en/of je privéleven. Neem
+      daarbij de afgelopen 6 maanden in gedachten.
+    </p>
 EOF;
-$test_page->create();
+    if ($error != null) {
+      $test_page->body .= <<<EOF
+        <div class="error">
+          <p>$error</p>
+        </div>
+EOF;
+    }
+  $test_page->create();
+}
