@@ -139,7 +139,7 @@ class MySQLManager {
    * @return mysqli_stmt de reeds uitgevoerde statement, waar eventueel
    * resultaten uit gehaald kunnen worden
    */
-  function executeQuery($query, $param_types, $params) {
+  private function executeQuery($query, $param_types, $params) {
     // Maak de query uit $query en $params
     $statement = $this->getConnection()->prepare($query);
     if (is_array($params)) {

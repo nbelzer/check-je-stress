@@ -48,7 +48,9 @@ class TestCreator {
     // Maak eerst het formulier met de vragen dat op de testpagina komt.
     $form = "";
 
-    $form .= "<form action=\"tests/test-resultaten.php\" method=\"POST\">\n";
+    $self = htmlentities($_SERVER['PHP_SELF']);
+
+    $form .= "<form action=\"$self\" method=\"POST\">\n";
 
     $form .= "<table style=\"width: 100%;\">\n";
     foreach ($this->questions as $id => $vraag) {
