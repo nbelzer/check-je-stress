@@ -27,9 +27,8 @@ class ErrorCreator {
   function create() {
     // '../' omdat deze class altijd aangeroepen wordt vanuit de /error/ map.
     require_once '../resources/includes/PageCreator.php';
-
     $page = new PageCreator;
-    $page->path_to_root = "../";
+    $page->path_to_root = $this->findRoot();
     $page->title = $this->title;
 
 		$page->body = <<<CONTENT
@@ -54,6 +53,25 @@ class ErrorCreator {
 CONTENT;
 
     $page->create();
+  }
+
+  /**
+   * Zoekt de root van de website.
+   *
+   * @return string het pad naar de webroot map
+   */
+  function findRoot() {
+    $current_path = '';
+    $end_url = strpos($_SERVER[REQUEST_URI], '?');
+    if ($end_url == 0) {
+      $slash_number = substr_count($_SERVER[REQUEST_URI], '/', 1);
+    } else {
+      $slash_number = substr_count($_SERVER[REQUEST_URI], '/', 1, $end_url);
+    }
+    for ($i = 0; $i < $slash_number - 1; $i++) {
+      $current_path .= '../';
+    }
+    return $current_path;
   }
 
 }

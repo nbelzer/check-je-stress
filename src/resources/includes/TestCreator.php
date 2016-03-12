@@ -29,7 +29,7 @@ class TestCreator {
    * Deze is default '../../' en hoeft alleen veranderd te worden als de test
    * niet in de standaard tests map staat.
    */
-  var $path_to_root = '../../';
+  var $path_to_root = '../';
 
   /**
    * Print de testpagina op de website. Gebruikt de variabelen uit deze
