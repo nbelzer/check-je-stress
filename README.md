@@ -24,7 +24,7 @@ tabel `test_testname` (testname is naam van test, voor elke test een tabel):
 
 | Kolom | Data type | Opmerking |
 |-------|-----------|-----------|
-| `id` | `TINYINT UNSIGNED UNIQUE AUTO_INCREMENT` | ID van de test entry |
+| `id` | `MEDIUMINT UNSIGNED UNIQUE AUTO_INCREMENT` | ID van de test entry |
 | `time` | `DATETIME DEFAULT CURRENT_TIMESTAMP` | Wanneer de test is ingevuld. Geen `TIMESTAMP` omdat die maar tot januari 2038 gaat. |
 | `ip` | `INT UNSIGNED` | IP heeft 4 bytes. Dit past precies in INT |
 | `questionm` | `TINYINT(3) UNSIGNED` | m is het nummer van de vraag; voor elke vraag een kolom. Bevat het antwoord op de vraag in het formaat van 0 t/m 5, dus 3 bytes. |
