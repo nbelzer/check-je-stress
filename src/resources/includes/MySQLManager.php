@@ -162,6 +162,7 @@ class MySQLManager {
       foreach ($params as $key => $value)
       $refs[$key] = &$params[$key];
       call_user_func_array(array($statement, 'bind_param'), array_merge(array($param_types), $refs));
+      $statement->execute();
     }
     return $statement;
   }
