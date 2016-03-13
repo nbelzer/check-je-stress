@@ -1,10 +1,24 @@
 <?php
 
+require_once '../resources/includes/PageCreator.php';
+
 /**
  * Met deze PHP class kunnen pagina's voor de CheckJeStress tests gemaakt
  * worden.
  */
 class TestCreator {
+
+  /**
+   * De PageCreator waaruit de testpagina gemaakt zal worden.
+   */
+  var $pageCreator;
+
+  /**
+   * Maakt een nieuwe PageCreator; initialiseert $config en $mysql.
+   */
+  function __construct() {
+    $this->pageCreator = new PageCreator;
+  }
 
   /**
    * De titel van de test.
@@ -36,10 +50,6 @@ class TestCreator {
    * TestCreator instance.
    */
   function create() {
-    require_once '../resources/includes/PageCreator.php';
-
-    $page = new PageCreator;
-
     $page->path_to_root = $this->path_to_root;
     $page->title = $this->title;
     $page->includeMenu = true;

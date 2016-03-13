@@ -6,6 +6,18 @@
  */
 class MySQLManager {
 
+  private $config;
+
+  /**
+   * Maakt een nieuwe MySQLManager.
+   *
+   * @param array $config de configuratie array die de authenticatie informatie
+   * bevat
+   */
+  function __construct($config) {
+    $this->config = $config;
+  }
+
   private $connection;
   private $pageSQL;
   private $testsSQL;
@@ -39,12 +51,10 @@ class MySQLManager {
    * @throws Exception als het verbinden is mislukt
    */
   function connect() {
-    global $page_creator;
-    $config = $page_creator->config;
     $connection = new \mysqli(
-                $config['mysql']['host'], $config['mysql']['username'],
-                $config['mysql']['password'], $config['mysql']['database'],
-                $config['mysql']['port']);
+                $this->config['host'], $this->config['username'],
+                $this->config['password'], $this->config['database'],
+                $this->config['port']);
     if ($connection->connect_error) {
       throw new \Exception("Verbinden met de database is mislukt.");
     } else {

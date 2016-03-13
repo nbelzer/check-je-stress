@@ -1,5 +1,7 @@
 ﻿<?php
 
+require_once '../resources/includes/TestCreator.php';
+
 $vragen = [
   0 => 'Er is veel verloop in personeel.',
   1 => 'Mensen zitten hun tijd uit.',
@@ -30,8 +32,8 @@ $vragen = [
 
 if (isset($_POST['vraag0'])) {
   try {
-    require_once '../resources/includes/MySQLManager.php';
-    $sql = new MySQLManager;
+    $test_page = new TestCreator;
+    $sql = $test_page->pageCreator->mysql;
 
     require_once '../resources/includes/TestsSQL.php';
     $tests_sql = new TestsSQL($sql);
@@ -56,7 +58,6 @@ if (isset($_POST['vraag0'])) {
  * @param string $error optioneel een error die weergegeven moet worden
  */
 function displayTestPage($questions, $error = null) {
-  require_once '../resources/includes/TestCreator.php';
   $test_page = new TestCreator;
   $test_page->title = 'Burnout Risico Analyse';
   $test_page->questions = $questions;
