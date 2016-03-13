@@ -83,8 +83,18 @@ class TestsSQL {
    * volgorde van vragen
    */
   private function storeResults($test, $test_results) {
-    $columns = 'ip, ';
-    $values = '?, ';
+    $ip = ip2long($_SERVER['REMOTE_ADDR']);
+    if (!$ip) {
+      $columns = '';
+      $values = '';
+      $params = [];
+      $param_types = '';
+    } else {
+      $columns = 'ip, ';
+      $values = '?, ';
+      $params = [ip2long($_SERVER['REMOTE_ADDR'])];
+      $param_types = 'i';
+    }
 
     for ($i = 0; $i < count($test_results) - 1; $i++) {
       $columns .= "question$i, ";
@@ -92,9 +102,6 @@ class TestsSQL {
     }
     $columns .= 'question' . strval(count($test_results) - 1);
     $values .= '?';
-
-    $params = [ip2long($_SERVER['REMOTE_ADDR'])];
-    $param_types = 'i';
 
     foreach ($test_results as $answer) {
       array_push($params, $answer);
