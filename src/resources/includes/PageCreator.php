@@ -55,6 +55,13 @@ class PageCreator {
   var $includeMenu;
 
   /**
+	 * Of het mogelijk moet zijn om deze pagina weer te geven in een iframe.
+   * Default false om de gebruiker te beschermen tegen clickjacking.
+   * http://w2spconf.com/2010/papers/p27.pdf
+   */
+  var $allowFraming = false;
+
+  /**
    * Geeft de pagina voor op de website. Gebruikt de variabelen uit deze
    * PageCreator instance.
    */
@@ -79,6 +86,9 @@ class PageCreator {
     global $includeMenu;
     $includeMenu = $this->includeMenu;
 
+		if (!$allowFraming) {
+      header("Content-Security-Policy: frame-ancestors 'none'", false);
+    }
     // Print de pagina (en voer php uit die daarop staat)
     include 'generic.php';
   }
