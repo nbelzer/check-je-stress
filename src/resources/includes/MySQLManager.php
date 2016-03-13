@@ -138,7 +138,9 @@ class MySQLManager {
    */
   function setterQuery($query, $param_types, $params) {
     $statement = $this->executeQuery($query, $param_types, $params);
-    $statement->close();
+    if ($statement !== false) {
+      $statement->close();
+    }
   }
 
   /**
@@ -147,12 +149,12 @@ class MySQLManager {
    * memory leaks te voorkomen.
    *
    * @return mysqli_stmt de reeds uitgevoerde statement, waar eventueel
-   * resultaten uit gehaald kunnen worden
+   * resultaten uit gehaald kunnen worden; of false, als de query is mislukt
    */
   private function executeQuery($query, $param_types, $params) {
     // Maak de query uit $query en $params
     $statement = $this->getConnection()->prepare($query);
-    if (is_array($params)) {
+    if ($statement !== false && is_array($params)) {
       // We willen $statement->bind_param() aanroepen met een dynamisch aantal
       // parameters. Doe dat met call_user_func_array. bind_param() accepteert
       // alleen referenced values. Maak dus eerst die array ($refs).
