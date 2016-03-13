@@ -23,9 +23,9 @@ function createNavEntry($file, $is_directory, $indents) {
 
   // Files moeten linken naar de editor; mappen niet, die zijn er alleen voor het overzicht.
   if ($is_directory) {
-    $to_return = "<p style=\"padding-left: {$padding}px; color: blue;\">$file</p>";
+    $to_return = "<li style=\"padding-left: {$padding}px; color: blue;\">$file</li>";
   } else {
-    $to_return = "<a href=\"editor.php?page=$path_from_webroot\" style=\"padding-left: {$padding}px; color: red;\">$file</a><br />";
+    $to_return = "<li style=\"padding-left: {$padding}px; color: red;\"><a href=\"admin/editor.php?page=$path_from_webroot\">$file</a></li><br />";
   }
 
   return $to_return;
@@ -105,30 +105,30 @@ EOF;
 // Maak de editor.php pagina
 $page_creator->path_to_root = '../';
 $page_creator->title = "CheckJeStress - Editor";
-// Responsive CSS
 $page_creator->head = <<<EOF
-  <style>
-    @media screen and (min-width: 480px) {
-      #nav {
-        width: 20%;
-        float: left;
-        background-color: #DDDDDD;
-      }
-      #editor {
-        width: 80%;
-        float: right;
-        background-color: #EEEEEE;
-      }
-    }
-  </style>
   <script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
 EOF;
 $page_creator->body = <<<EOF
-  <div id="nav">
-    $navigation
-  </div>
-  <div id="editor">
-    $editor
+  <div class="content">
+    <div class="row show-for-medium">
+      <div class="medium-10 medium-centered columns">
+        <div class="navmenu">
+          <ul>
+            $navigation
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="text water" id="first">
+      <div class="row">
+        <div class="medium-10 medium-centered columns">
+          <div class="medium-9 columns medium-offset-3">
+            $editor
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 EOF;
 $page_creator->create();
