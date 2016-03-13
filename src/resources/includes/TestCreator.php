@@ -50,10 +50,10 @@ class TestCreator {
    * TestCreator instance.
    */
   function create() {
-    $page->path_to_root = $this->path_to_root;
-    $page->title = $this->title;
-    $page->includeMenu = true;
-    $page->head = self::$head;
+    $this->pageCreator->path_to_root = $this->path_to_root;
+    $this->pageCreator->title = $this->title;
+    $this->pageCreator->includeMenu = true;
+    $this->pageCreator->head = self::$head;
 
     // Maak eerst het formulier met de vragen dat op de testpagina komt.
     $form = "";
@@ -78,7 +78,7 @@ class TestCreator {
     $form .= "</form>\n";
 
     // Maak de body aan en zet het formulier erin.
-    $page->body = <<<CONTENT
+    $this->pageCreator->body = <<<CONTENT
       $this->body
       <noscript>
         <p>
@@ -90,7 +90,7 @@ class TestCreator {
       $form
 CONTENT;
 
-    $page->create();
+    $this->pageCreator->create();
   }
 
   /**
