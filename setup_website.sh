@@ -27,18 +27,18 @@ APACHE_GROUP=$APACHE_USER
 ###########################
 
 echo Bestanden kopiëren naar $TARGET_LOCATION...
-sudo cp -r src/. $TARGET_LOCATION/
-sudo rm $TARGET_LOCATION/.htpasswd
+cp -r src/. $TARGET_LOCATION/
+rm $TARGET_LOCATION/.htpasswd
 
 echo "Admin user voor de website: "
 read user
 echo "Wachtwoord: "
 read -s password
-sudo htpasswd -bc $PASSWORD_FILE_LOCATION/.htpasswd $user $password
+htpasswd -bc $PASSWORD_FILE_LOCATION/.htpasswd $user $password
 
 # Pas het pad naar .htpasswd aan in admin/.htaccess
 PASSWORD_FILE_LOCATION=$(echo $PASSWORD_FILE_LOCATION | sed 's/\//\\\//g')
-sudo sed -i.bak "s/\/absolute\/path\/to\/.htpasswd/$(echo $PASSWORD_FILE_LOCATION)\/.htpasswd/g" $TARGET_LOCATION/admin/.htaccess
+sed -i.bak "s/\/absolute\/path\/to\/.htpasswd/$(echo $PASSWORD_FILE_LOCATION)\/.htpasswd/g" $TARGET_LOCATION/admin/.htaccess
 
 # Pas de ErrorDocument paths in de root .htaccess aan naar absolute vanaf de
 # installatie root
@@ -49,10 +49,10 @@ sed $SEDSTRING $TARGET_LOCATION/.htaccess.old > $TARGET_LOCATION/.htaccess
 rm $TARGET_LOCATION/.htaccess.old
 
 # Laat de gebruiker de config editen
-sudo "${EDITOR:-vim}" src/resources/includes/config.php
+"${EDITOR:-vim}" src/resources/includes/config.php
 
 # Zet de goede permissions op de bestanden van de website
-sudo chown -R $APACHE_GROUP:$APACHE_USER $TARGET_LOCATION
+chown -R $APACHE_GROUP:$APACHE_USER $TARGET_LOCATION
 
 #########################
 # ==== MySQL SETUP ==== #
@@ -71,7 +71,7 @@ echo '
 ' > temp
 config=()
 counter=0;
-for line in $(sudo php -f temp)
+for line in $(php -f temp)
 do
   config[$counter]=$(echo $line | tr -d §)
   counter=$(($counter+1))
@@ -79,15 +79,32 @@ done
 rm temp
 
 echo MySQL database opzetten...
-if [ ${config[3]} == "" ]
-then
-  mysql -h ${config[0]} -P ${config[1]} -u ${config[2]} << EOF
-    CREATE DATABASE IF NOT EXISTS ${config[4]};
-    CREATE TABLE IF NOT EXISTS ${config[4]}.pages (id TINYINT UNSIGNED UNIQUE AUTO_INCREMENT, page VARCHAR(255) UNIQUE KEY, title TINYTEXT, head TEXT, body TEXT);
-EOF
+
+# create_questions_query <testnaam> <aantalvragen>
+function create_questions_query {
+  query="CREATE TABLE IF NOT EXISTS test_$1 (id MEDIUMINT UNSIGNED UNIQUE AUTO_INCREMENT, time DATETIME DEFAULT CURRENT_TIMESTAMP, ip INT UNSIGNED, "
+  nr=$(($2-1))
+  for (( i=0; i<=$nr; i++ )); do
+    query="${query}question$i TINYINT(3) UNSIGNED, "
+  done
+  query="${query}question$2 TINYINT(3) UNSIGNED);"
+  echo $query
+}
+
+test_snel=$(create_questions_query snel 25)
+test_uitgebreid=$(create_questions_query uitgebreid 56)
+test_risicoanalyse=$(create_questions_query risicoanalyse 25)
+
+if [ "${config[3]}" == "" ]; then
+  password_param="-p${config[3]}"
 else
-  mysql -h ${config[0]} -P ${config[1]} -u ${config[2]} -p${config[3]} << EOF
-    CREATE DATABASE IF NOT EXISTS ${config[4]};
-    CREATE TABLE IF NOT EXISTS ${config[4]}.pages (id TINYINT UNSIGNED UNIQUE AUTO_INCREMENT, page VARCHAR(255) UNIQUE KEY, title TINYTEXT, head TEXT, body TEXT);
-EOF
+  password_param=""
 fi
+mysql -h ${config[0]} -P ${config[1]} -u ${config[2]} $password_param << EOF
+  CREATE DATABASE IF NOT EXISTS ${config[4]};
+  USE ${config[4]};
+  CREATE TABLE IF NOT EXISTS pages (id TINYINT UNSIGNED UNIQUE AUTO_INCREMENT, page VARCHAR(255) UNIQUE KEY, title TINYTEXT, head TEXT, body TEXT);
+  $test_snel
+  $test_uitgebreid
+  $test_risicoanalyse
+EOF
