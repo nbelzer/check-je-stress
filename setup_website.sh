@@ -82,12 +82,12 @@ echo MySQL database opzetten...
 
 # create_questions_query <testnaam> <aantalvragen>
 function create_questions_query {
-  query="CREATE TABLE IF NOT EXISTS test_$1 (id MEDIUMINT UNSIGNED UNIQUE AUTO_INCREMENT, time DATETIME DEFAULT CURRENT_TIMESTAMP, ip INT UNSIGNED, "
+  query="CREATE TABLE IF NOT EXISTS test_$1 (id MEDIUMINT UNSIGNED UNIQUE AUTO_INCREMENT, time DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, ip INT UNSIGNED, "
   nr=$(($2-1))
-  for (( i=0; i<=$nr; i++ )); do
-    query="${query}question$i TINYINT(3) UNSIGNED, "
+  for (( i=0; i<$nr; i++ )); do
+    query="${query}question$i TINYINT(3) UNSIGNED NOT NULL, "
   done
-  query="${query}question$2 TINYINT(3) UNSIGNED);"
+  query="${query}question$nr TINYINT(3) UNSIGNED NOT NULL);"
   echo $query
 }
 
