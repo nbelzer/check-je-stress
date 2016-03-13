@@ -87,10 +87,10 @@ class TestsSQL {
     $values = '?, ';
 
     for ($i = 0; $i < count($test_results) - 1; $i++) {
-      $columns .= "vraag$i, ";
+      $columns .= "question$i, ";
       $values .= '?, ';
     }
-    $columns .= 'vraag' . count($test_results) - 1;
+    $columns .= 'question' . count($test_results) - 1;
     $values .= '?';
 
     $params = [ip2long($_SERVER['REMOTE_ADDR'])];

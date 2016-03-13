@@ -20,14 +20,14 @@ tabel `pages`:
 | `head` | `TEXT` | extra dingen voor in de head tag |
 | `body` | `TEXT` | inhoud van de body tag |
 
-tabel `test_testnaam` (testnaam is nummer van test, voor elke test een tabel):
+tabel `test_testname` (testname is naam van test, voor elke test een tabel):
 
 | Kolom | Data type | Opmerking |
 |-------|-----------|-----------|
 | `id` | `TINYINT UNSIGNED UNIQUE AUTO_INCREMENT` | ID van de test entry |
-| `tijd` | `DATETIME DEFAULT CURRENT_TIMESTAMP` | Wanneer de test is ingevuld. Geen `TIMESTAMP` omdat die maar tot januari 2038 gaat. |
+| `time` | `DATETIME DEFAULT CURRENT_TIMESTAMP` | Wanneer de test is ingevuld. Geen `TIMESTAMP` omdat die maar tot januari 2038 gaat. |
 | `ip` | `INT UNSIGNED` | IP heeft 4 bytes. Dit past precies in INT |
-| `vraagn` | `TINYINT(3) UNSIGNED` | n is het nummer van de vraag; voor elke vraag een kolom. Bevat het antwoord op de vraag in het formaat van 0 t/m 5, dus 3 bytes. |
+| `questionm` | `TINYINT(3) UNSIGNED` | m is het nummer van de vraag; voor elke vraag een kolom. Bevat het antwoord op de vraag in het formaat van 0 t/m 5, dus 3 bytes. |
 
 ### Aantekeningen
 ##### Tests [#5](https://github.com/MateyByrd/CheckJeStress/issues/5)
