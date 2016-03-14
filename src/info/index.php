@@ -1,7 +1,3 @@
-﻿<!--- Ambitie-->
-<!--- Wat doen we-->
-<!--- Wie zijn we-->
-
 <?php
 include '../resources/includes/PageCreator.php';
 $page = new PageCreator();
@@ -135,4 +131,3 @@ $page->body = <<<CONTENT
 
 CONTENT;
 $page->create();
-

@@ -86,7 +86,7 @@ EOF;
     // De admin heeft een bestand geselecteerd om aan te passen. Geef de editor weer.
     $page_contents = $page_creator->mysql->getPageSQL()->getPageBody($page);
     $editor = <<<EOF
-      <form action="editor.php?page=$page" method="POST">
+      <form action="admin/editor.php?page=$page" method="POST">
         <textarea name="contents" id="editor1">$page_contents</textarea>
         <script>
           CKEDITOR.replace('editor1');
@@ -107,28 +107,38 @@ $page_creator->path_to_root = '../';
 $page_creator->title = "CheckJeStress - Editor";
 $page_creator->head = <<<EOF
   <script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
+  <link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">
 EOF;
 $page_creator->body = <<<EOF
-  <div class="content">
-    <div class="row show-for-medium">
-      <div class="medium-10 medium-centered columns">
-        <div class="navmenu">
-          <ul>
-            $navigation
-          </ul>
-        </div>
-      </div>
-    </div>
+  <div class="indexImage" style="background-image: url('resources/img/beach.gif');">
+  </div>
 
-    <section class="text water" id="first">
-      <div class="row">
-        <div class="medium-10 medium-centered columns">
-          <div class="medium-9 columns medium-offset-3">
-            $editor
+  <div class="content">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+
+        <div class="medium-3 columns show-for-medium">
+          <div class="navmenu">
+            <ul>
+              $navigation
+            </ul>
           </div>
         </div>
+
+        <div class="medium-9 columns">
+          <section class="text water" id="first">
+            <div class="row">
+              <div class="medium-10 medium-centered columns">
+                <div class="medium-9 columns medium-offset-3">
+                  $editor
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
       </div>
-    </section>
+    </div>
   </div>
 EOF;
 $page_creator->create();
