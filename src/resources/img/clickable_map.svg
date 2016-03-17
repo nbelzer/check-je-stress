@@ -28,7 +28,7 @@
 				font-size: 11px;
 				line-height: normal;
 				font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-				background: rgb(255, 255, 255);
+				background: none;
 			}
 			body {
 				overflow: hidden;
@@ -43,28 +43,28 @@
 				color: #FFFFFF;
 			}
 			#states a line {
-				stroke: #444;
+				stroke: #444444;
 				stroke-width: 1px;
 			}
 			#states a path {
 				transition: fill .5s ease;
 				-moz-transition: fill .5s ease;
 				-webkit-transition: fill .5s ease;
-				fill: #3C96C8;
+				fill: #034E60;
 			}
 			#states a:hover path {
 				transition: fill .5s ease;
 				-moz-transition: fill .5s ease;
 				-webkit-transition: fill .5s ease;
-				fill: #2c759d !important;
+				fill: #011f26 !important;
 			}
 			#states a:hover path {
 				cursor: pointer;
-				fill: #2c759d;
+				fill: #011f26;
 			}
 			#states a text {
 				cursor: pointer;
-				fill: #222222;
+				fill: #DDDDDD;
 				display: initial;
 			}
 			#states a:hover text {
@@ -72,7 +72,7 @@
 				color: #FFFFFF;
 			}
 			#states a.inverse text {
-				fill: #222222;
+				fill: #DDDDDD;
 			}
     </style>
   <defs
