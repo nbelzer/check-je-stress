@@ -41,7 +41,7 @@ $page->body = <<<CONTENT
           <h5>Overzicht</h5>
 
 		  <p>
-			*Hier komt de clickable map te staan*
+			<object data="resources/img/clickable_map.svg" type="image/svg+xml" width="500"></object>
 		  </p>
 		  
 		  <p>
