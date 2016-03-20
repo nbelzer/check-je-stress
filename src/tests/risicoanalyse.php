@@ -30,51 +30,19 @@ $vragen = [
   24 => 'Dreigementen zijn de beste aansporingen.'
 ];
 
-if (isset($_POST['vraag0'])) {
-  try {
-    $test_page = new TestCreator;
-    $sql = $test_page->pageCreator->mysql;
-
-    require_once '../resources/includes/TestsSQL.php';
-    $tests_sql = new TestsSQL($sql);
-    $tests_sql->processTestResults('risicoanalyse', count($vragen));
-
-    // Toon pagina met resultaten
-  } catch (InvalidTestResultsException $ex) {
-    if ($ex->getCode() == 1) {
-      displayTestPage($vragen, "Beantwoord alstublieft alle vragen.");
-    } else {
-      displayTestPage($vragen, "Er is iets foutgegaan tijdens het verwerken van uw testresultaten.");
-    }
-  }
-} else {
-  displayTestPage($vragen);
-}
-
-/**
- * Toont de pagina met vragen.
- *
- * @param array $questions de vragen voor in de test
- * @param string $error optioneel een error die weergegeven moet worden
- */
-function displayTestPage($questions, $error = null) {
-  $test_page = new TestCreator;
-  $test_page->title = 'Burnout Risico Analyse';
-  $test_page->questions = $questions;
-  $test_page->body = <<<EOF
-    <h1>Burnout Risico Analyse (voor managers)</h1>
-    <p>
-      Deze test bestaat uit 25 stellingen.
-      <br>
-      Kies steeds in welke mate de uitspraak op uw bedrijf van toepassing is.
-    </p>
+$test_page = new TestCreator;
+$test_page->title = 'Burnout Risicoanalyse';
+$test_page->questions = $vragen;
+$test_page->test_body = <<<EOF
+  <h1>Burnout Risicoanalyse (voor managers)</h1>
+  <p>
+    Deze test bestaat uit 25 stellingen.
+    <br>
+    Kies steeds in welke mate de uitspraak op uw bedrijf van toepassing is.
+  </p>
 EOF;
-  if ($error != null) {
-    $test_page->body .= <<<EOF
-      <div class="error">
-        <p>$error</p>
-      </div>
+$test_page->results_body = <<<EOF
+  <h1>Risicoanalyse Resultaten</h1>
+  <p>Bedankt voor het invullen van de test! Hieronder ziet u de resultaten.</p>
 EOF;
-  }
-  $test_page->create();
-}
+$test_page->create('risicoanalyse', count($vragen));
