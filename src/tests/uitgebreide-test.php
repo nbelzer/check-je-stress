@@ -144,4 +144,4 @@ EOF;
   return $advies;
 };
 
-$test_page->create('uitgebreid', count($vragen));
+$test_page->create('uitgebreid');

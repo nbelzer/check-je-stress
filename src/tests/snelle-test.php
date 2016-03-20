@@ -83,4 +83,4 @@ $test_page->advice_function = function($results) {
   return $advies;
 };
 
-$test_page->create('snel', count($vragen));
+$test_page->create('snel');

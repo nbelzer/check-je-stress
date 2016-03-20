@@ -60,10 +60,9 @@ class TestCreator {
    * Maakt de testpagina, of de pagina met resultaten als de test al ingevuld
    * is.
    *
-   * @param int $questions_number het aantal vragen dat er in deze test zou
-   * moeten zitten
+   * @param string $test_name de naam van deze test, voor gebruik in MySQL
    */
-  function create($test_name, $questions_number) {
+  function create($test_name) {
     $this->pageCreator->path_to_root = $this->path_to_root;
     $this->pageCreator->title = $this->title;
     $this->pageCreator->includeMenu = true;
@@ -72,7 +71,7 @@ class TestCreator {
     try {
       /* Kijk of er correcte vragen opgestuurd zijn. Als dat niet zo is, komt
          er een InvalidTestResultsException. */
-      $results = $this->validatePostResults($questions_number);
+      $results = $this->validatePostResults(count($this->questions));
 
       /* Zet de resultaten van de test in de database */
       require_once '../resources/includes/TestsSQL.php';

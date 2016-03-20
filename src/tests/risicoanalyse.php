@@ -52,4 +52,4 @@ EOF;
 //$test_page->advice_function = function($results) {
 //};
 
-$test_page->create('risicoanalyse', count($vragen));
+$test_page->create('risicoanalyse');
