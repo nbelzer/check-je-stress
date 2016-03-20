@@ -112,7 +112,7 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g 
+  <g
      inkscape:label="Laag 1"
      inkscape:groupmode="layer"
      id="layer1"
@@ -122,7 +122,7 @@
        id="states">
       <a
          id="s01"
-         onclick="parent.update_provincie(0);"
+         onclick="parent.update_provincie('drenthe');"
 		 data-rel="external">
         <path
            style="stroke:#ffffff;stroke-width:1.5;stroke-dasharray:1, 0"
@@ -136,7 +136,7 @@
       </a>
       <a
          id="s02"
-         onclick="parent.update_provincie(5);"
+         onclick="parent.update_provincie('limburg');"
          class="inverse"
 		 data-rel="external">
         <path
@@ -157,7 +157,7 @@
       </a>
       <a
          id="s03"
-         onclick="parent.update_provincie(7);"
+         onclick="parent.update_provincie('noordholland');"
          class="inverse"
 		 data-rel="external">
         <path
@@ -178,7 +178,7 @@
       </a>
       <a
          id="s04"
-         onclick="parent.update_provincie(6);"
+         onclick="parent.update_provincie('noordbrabant');"
 		 data-rel="external">
         <path
            style="stroke:#ffffff;stroke-width:1.5;stroke-dasharray:1, 0"
@@ -192,7 +192,7 @@
       </a>
       <a
          id="s05"
-         onclick="parent.update_provincie(1);"
+         onclick="parent.update_provincie('flevoland');"
          class="inverse"
 		 data-rel="external">
         <path
@@ -215,7 +215,7 @@
       </a>
       <a
          id="s06"
-         onclick="parent.update_provincie(2);"
+         onclick="parent.update_provincie('friesland');"
 		 data-rel="external">
         <path
            style="stroke:#ffffff;stroke-width:1.5;stroke-dasharray:1, 0"
@@ -229,7 +229,7 @@
       </a>
       <a
          id="s07"
-         onclick="parent.update_provincie(3);"
+         onclick="parent.update_provincie('gelderland');"
 		 data-rel="external">
         <path
            style="stroke:#ffffff;stroke-width:1.5;stroke-dasharray:1, 0"
@@ -243,7 +243,7 @@
       </a>
       <a
          id="s08"
-         onclick="parent.update_provincie(4);"
+         onclick="parent.update_provincie('groningen');"
 		 data-rel="external">
         <path
            style="stroke:#ffffff;stroke-width:1.5;stroke-dasharray:1, 0"
@@ -257,7 +257,7 @@
       </a>
       <a
          id="s09"
-         onclick="parent.update_provincie(8);"
+         onclick="parent.update_provincie('overijssel');"
 		 data-rel="external">
         <path
            style="stroke:#ffffff;stroke-width:1.5;stroke-dasharray:1, 0"
@@ -271,7 +271,7 @@
       </a>
       <a
          id="s10"
-         onclick="parent.update_provincie(9);"
+         onclick="parent.update_provincie('utrecht');"
 		 data-rel="external">
         <path
            style="stroke:#ffffff;stroke-width:1.5;stroke-dasharray:1, 0"
@@ -285,7 +285,7 @@
       </a>
       <a
          id="s11"
-         onclick="parent.update_provincie(10);"
+         onclick="parent.update_provincie('zeeland');"
          class="inverse"
 		 data-rel="external">
         <path
@@ -307,7 +307,7 @@
       </a>
       <a
          id="s12"
-         onclick="parent.update_provincie(11);"
+         onclick="parent.update_provincie('zuidholland');"
 		 data-rel="external">
         <path
            style="stroke:#ffffff;stroke-width:1.5;stroke-dasharray:1, 0"
