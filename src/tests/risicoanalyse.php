@@ -33,6 +33,7 @@ $vragen = [
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Risicoanalyse';
 $test_page->questions = $vragen;
+
 $test_page->test_body = <<<EOF
   <h1>Burnout Risicoanalyse (voor managers)</h1>
   <p>
@@ -41,8 +42,14 @@ $test_page->test_body = <<<EOF
     Kies steeds in welke mate de uitspraak op uw bedrijf van toepassing is.
   </p>
 EOF;
+
 $test_page->results_body = <<<EOF
   <h1>Risicoanalyse Resultaten</h1>
   <p>Bedankt voor het invullen van de test! Hieronder ziet u de resultaten.</p>
 EOF;
+
+/* TODO: de beoordeling voor deze hebben we nog niet */
+//$test_page->advice_function = function($results) {
+//};
+
 $test_page->create('risicoanalyse', count($vragen));

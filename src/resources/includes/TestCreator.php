@@ -44,6 +44,12 @@ class TestCreator {
   var $results_body;
 
   /**
+   * Een functie waarmee het advies voor de resultaten van de test gegeven kan
+   * worden bij een bepaalde score. Heeft een parameter, namelijk de resultaten.
+   */
+  var $advice_function;
+
+  /**
    * Optioneel: het pad naar de installatie root van de CheckJeStress website.
    * Deze is default '../' en hoeft alleen veranderd te worden als de test
    * niet in de standaard tests map staat.
@@ -138,15 +144,13 @@ CONTENT;
    * Maakt een pagina met testresultaten.
    *
    * @param array $results een array met de antwoorden op de vragen, op volgorde
+   * @param function $advice_function een function waarmee het advies gegeven
+   * kan worden. Heeft een parameter, nl. de behaalde score.
    */
   private function createResultsPage($results) {
-    $results = "";
+    $advies = call_user_func($this->advice_function, $results);
 
-    $this->pageCreator->body = <<<EOF
-      $this->results_body
-      $results
-EOF;
-
+    $this->pageCreator->body = $this->results_body . $advies;
     $this->pageCreator->create();
   }
 

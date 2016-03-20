@@ -61,4 +61,4 @@ tabel `test_testname` (testname is naam van test, voor elke test een tabel):
 * Steunpunt Stress Burnout Nederland bestaat niet meer en Ria is weg; blijven alle producten wel hetzelfde, of moet er iets aan veranderd worden? Is het bijv. nog steeds mogelijk om een burnout risicoanalyse voor je bedrijf te laten maken?✓
 
 ##### PDY
-Op het moment geen vragen
+* Beoordeling van de risicoanalyse test? Deze test heeft in de oude setting 10 opties.

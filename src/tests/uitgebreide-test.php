@@ -64,6 +64,7 @@ $vragen = [
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Uitgebreide Test';
 $test_page->questions = $vragen;
+
 $test_page->test_body = <<<EOF
   <h1>Uitgebreide Test</h1>
   <p>
@@ -74,8 +75,73 @@ $test_page->test_body = <<<EOF
     daarbij de afgelopen 6 maanden in gedachten.
   </p>
 EOF;
+
 $test_page->results_body = <<<EOF
   <h1>Uitgebreide Test Resultaten</h1>
   <p>Bedankt voor het invullen van de test! Hieronder ziet u de resultaten.</p>
 EOF;
+
+$test_page->advice_function = function($score) {
+  /*
+  Oude beoordeling: sommige antwoorden lopen van 1 t/m 5, anderen van 5 t/m 1.
+  Alles bij elkaar optellen en er een percentage van maken.
+
+  Nieuwe beoordeling: antwoorden lopen van 0 t/m 5, anderen van 5 t/m 0. Alles
+  bij elkaar optellen en er een percentage van maken.
+  */
+  $reverse_questions = [
+    0, 7, 11, 16, 21, 24, 25, 27, 31, 33, 37, 40, 42, 45, 47, 49, 54, 55
+  ];
+
+  $score = 0;
+  for ($i=0; $i<56; $i++) {
+    if (in_array($i, $reverse_questions)) {
+      $score += 5 - $i;
+    } else {
+      $score += $i;
+    }
+  }
+
+  if ($score < 56 * 5 / 4) { /* < 25% */
+    $advies = <<<EOF
+      U scoorde 'zeer laag' op het hebben van burnoutverschijnselen.
+      <br>
+      Een zeer lage score op het hebben van burnoutverschijnselen is een teken
+      dat u ontspannen bent en genoeg energie hebt. Hoewel u best na een
+      specifieke dag eens moe kunt zijn, is er van een burnout geen enkele
+      sprake.
+EOF;
+  } else if ($score < 56 * 5 / 2) { /* < 50% */
+    $advies = <<<EOF
+      U scoorde 'laag' op het hebben van burnoutverschijnselen.
+      <br>
+      De meeste mensen scoren laag op het hebben van burnoutverschijnselen.
+      Stress en spanning heeft iedereen wel eens maar doorgaans leidt dat niet
+      tot blijvende klachten en zeker niet tot een burnout.
+EOF;
+  } else if ($score < 56 * 5 / 4 * 3) { /* < 75% */
+    $advies = <<<EOF
+      U scoorde 'enigszins' op het hebben van burnoutverschijnselen.
+      <br>
+      Wanneer u enigzins klachten heeft die horen bij een burnout, is het zaak
+      snel te onderzoeken wat hiervan de oorzaken zijn. Veelal hebben die vooral
+      te maken met werk en privéleven en ligt het niet aan uzelf.
+      Probeer te achterhalen of er bronnen van stress zijn die u kunt
+      verhelpen. Betrek anderen hierin actief.
+EOF;
+  } else { /* < 100% */
+    $advies = <<<EOF
+      U scoorde 'verhoogd' op het hebben van burnoutverschijnselen.
+      <br>
+      Wanneer u hoog scoort op het hebben van burnoutverschijnselen, bent u
+      waarschijnlijk emotioneel afgevlakt en ziet u het niet meer zitten. Het is
+      dan belangrijk dat u stappen onderneemt om van deze klachten af te komen.
+      Het gaat niet vanzelf over; het is zaak om bronnen van stress weg te nemen
+      en hulp te zoeken.
+EOF;
+  }
+
+  return $advies;
+};
+
 $test_page->create('uitgebreid', count($vragen));
