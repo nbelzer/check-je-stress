@@ -7,6 +7,11 @@ $page->path_to_root = '../';
 $page->head = '<link rel="stylesheet" href="resources/css/specific/standard.css" type="text/css">';
 $page->title = "Contact";
 
+/*
+include 'mail.php';
+$mail = new Mailer;
+$mail->sendMail('checkjestresstest@gmail.com', 'Hallo', 'Dit is een email<br>lol', 'Dit is een email zonder html');
+*/
 
 $naam = $_POST['naam'];
 $vragenopmerkingenideeën = $_POST['vragenopmerkingenideeën'];
@@ -28,7 +33,7 @@ mail($to,$email_subject,$email_body,$headers);
 $page->body = <<<CONTENT
 
 <div class="content">
-  
+
   <section class="text water" id="first">
     <div class="row">
       <div class="medium-10 medium-centered columns">
@@ -40,9 +45,9 @@ $page->body = <<<CONTENT
 			Dit is uw naam: $naam<br>
 			Dit is uw E-mailadres: $email<br>
 			Dit zijn uw vragen, opmerkingen of ideeën: $vragenopmerkingenideeën
-			
+
 		  </p>
-		  
+
         </div>
       </div>
     </div>
@@ -52,4 +57,3 @@ $page->body = <<<CONTENT
 
 CONTENT;
 $page->create();
-
