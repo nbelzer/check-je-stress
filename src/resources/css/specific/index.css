@@ -15,8 +15,12 @@
 }
 
 .content {
-  padding: 0px !important;
-  color: #333;
+  /*padding: 0px !important;*/
+  /*color: #333;*/
+}
+
+.indexImage {
+  background: -webkit-linear-gradient(#39bfef, #eee);
 }
 
 .content .water, .content .dark {
@@ -41,7 +45,7 @@
 
 
 .top-bar {
-  background-color: rgba(3, 78, 96, 0.6);
+  /*background-color: rgba(3, 78, 96, 0.6);*/
 }
 
 @media (max-width: 40em) {

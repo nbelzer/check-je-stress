@@ -5,13 +5,22 @@ $page->title = "Check je stress";
 $page->head = "<link rel=\"stylesheet\" href=\"resources/css/specific/index.css\" type=\"text/css\">";
 $page->body = <<<CONTENT
 
-<div class="indexImage" style="background-image: url('resources/img/frontpageshadowy.gif');">
-</div>
+
 <div class="content">
+  <div class="menuSpacing"></div>
 
-  <div class="water">
-
+  <div class="indexImage">
     <div class="row">
+      <div class="medium-12 medium-centered columns">
+        <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolour.svg');">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div class="row water">
       <div class="medium-10 medium-centered columns">
         <p>
           Welkom op de website van CheckJeStress. We helpen je graag van
@@ -21,7 +30,7 @@ $page->body = <<<CONTENT
       </div>
     </div>
 
-    <div class="row" data-equalizer data-equalize-on="medium">
+    <div class="row water" data-equalizer data-equalize-on="medium">
       <div class="medium-10 medium-centered columns">
 
         <div class="medium-6 columns" data-equalizer-watch>
@@ -53,35 +62,29 @@ $page->body = <<<CONTENT
       </div>
     </div>
 
-  </div>
-
-  <div class="dark">
-
-    <div class="row">
-      <div class="medium-10 medium-centered columns">
-        <div class="medium-9 columns">
-          <p>
-            Wil je voor jezelf controleren of je last hebt van stress of dat je richting een burn-out gaat? Door middel van een test kun je snel en eenvoudig zien of je gevaar loopt.
-      <br><br><a href="tests/">Klik hier</a> voor de testpagina.
-          </p>
-        </div>
-
-        <div class="medium-12 columns">
-          <p style="padding-top: 1em;">
-            Het kan zijn, dat er naar aanleiding van de uitslag behoefte bestaat om dit met een counsellor of coach te bespreken. Steunpunt Stress Burnout Nederland streeft ernaar om in alle provincies samenwerkingspartners aan te bieden, die een ruime ervaring hebben met stressklachten of burn-out.
-            <br>
-            Neem gerust contact op voor een (vrijblijvend) kennismakingsgesprek en klik <a href="steunpunten/">hier</a> voor een counsellor bij jou in de buurt.
-          </p>
-          <p>
-            Sommige consulten komen in aanmerking voor vergoeding vanuit de verzekeringsmaatschappij. Vraag bij jouw counsellor om de AGB-code(s) en informeer bij jouw verzekeringsmaatschappij of je in aanmerking komt voor vergoeding.
-          </p>
-
-          <a href="https://www.facebook.com/SSBN2012#!/SSBN2012/likes">Volgen op facebook?</a>
-        </div>
-
+  <div class="row dark">
+    <div class="medium-10 medium-centered columns">
+      <div class="medium-9 columns">
+        <p>
+          Wil je voor jezelf controleren of je last hebt van stress of dat je richting een burn-out gaat? Door middel van een test kun je snel en eenvoudig zien of je gevaar loopt.
+    <br><br><a href="tests/">Klik hier</a> voor de testpagina.
+        </p>
       </div>
-    </div>
 
+      <div class="medium-12 columns">
+        <p style="padding-top: 1em;">
+          Het kan zijn, dat er naar aanleiding van de uitslag behoefte bestaat om dit met een counsellor of coach te bespreken. Steunpunt Stress Burnout Nederland streeft ernaar om in alle provincies samenwerkingspartners aan te bieden, die een ruime ervaring hebben met stressklachten of burn-out.
+          <br>
+          Neem gerust contact op voor een (vrijblijvend) kennismakingsgesprek en klik <a href="steunpunten/">hier</a> voor een counsellor bij jou in de buurt.
+        </p>
+        <p>
+          Sommige consulten komen in aanmerking voor vergoeding vanuit de verzekeringsmaatschappij. Vraag bij jouw counsellor om de AGB-code(s) en informeer bij jouw verzekeringsmaatschappij of je in aanmerking komt voor vergoeding.
+        </p>
+
+        <a href="https://www.facebook.com/SSBN2012#!/SSBN2012/likes">Volgen op facebook?</a>
+      </div>
+
+    </div>
   </div>
 
 </div>
