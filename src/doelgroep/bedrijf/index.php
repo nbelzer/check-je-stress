@@ -1,33 +1,38 @@
-﻿<!--- Bedrijf-->
-
-<?php
+﻿<?php
 include '../../resources/includes/PageCreator.php';
 $page = new PageCreator();
 $page->path_to_root = '../../';
-$page->head = '<link rel="stylesheet" href="resources/css/specific/standard.css" type="text/css">';
+$page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
 $page->title = "Doelgroep";
 $page->body = <<<CONTENT
 
 <div class="content">
+  <div class="menuSpacing"></div>
 
-
-  <div class="row show-for-medium">
-    <div class="medium-10 medium-centered columns">
-      <div class="navmenu">
-        <ul class="vertical menu" data-magellan data-options="barOffset:40">
-          <li><a href="#first">Bedrijf</a></li>
-          <li><a href="#second">Financiële gevolgen</a></li>
-          <li><a href="#third">Producten</a><li>
-		  <li><a href="#fourth">Risicoanalyse</a><li>
-        </ul>
+  <div class="indexImage">
+    <div class="row">
+      <div class="medium-12 medium-centered columns">
+        <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolour.svg');">
+        </div>
       </div>
     </div>
   </div>
 
-  <section class="text water" id="first">
-    <div class="row">
-      <div class="medium-10 medium-centered columns">
-        <div class="medium-9 columns medium-offset-3">
+  <div class="row text water" id="first">
+    <div class="medium-10 medium-centered columns">
+      <div class="medium-3 columns show-for-medium">
+        <div class="navmenu">
+          <h5>Op deze pagina</h5>
+          <ul class="vertical menu" data-magellan data-options="barOffset:40">
+            <li><a href="#first">Bedrijf</a></li>
+            <li><a href="#second">Financiële gevolgen</a></li>
+            <li><a href="#third">Producten</a><li>
+            <li><a href="#fourth">Risicoanalyse</a><li>
+          </ul>
+        </div>
+      </div>
+
+     <div class="medium-9 columns">
 
           <h5>Bedrijf</h5>
 
@@ -82,7 +87,7 @@ $page->body = <<<CONTENT
 		  
 		  <p>
 			<b>Concreet houdt dit in:</b>
-			<br />
+			<br>
 			Persoonlijk leed voor de werknemer en een lang ziekteverzuim, hoge kosten voor de werkgever (loondoorbetaling, WGA, vervangingskosten enz.) en een lagere productie voor het bedrijf. Om nog maar niet te spreken van een slechte PR op feestjes en verjaardagen.
 		  </p>
 		  
@@ -101,10 +106,8 @@ $page->body = <<<CONTENT
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="text dark" id="second">
-    <div class="row">
+    <div class="row text dark" id="second">
       <div class="medium-10 medium-centered columns">
         <div class="medium-9 columns medium-offset-3">
 
@@ -131,10 +134,8 @@ $page->body = <<<CONTENT
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="text water" id="third">
-    <div class="row">
+    <div class="row text water" id="third">
       <div class="medium-10 medium-centered columns">
         <div class="medium-9 columns medium-offset-3">
 
@@ -156,10 +157,9 @@ $page->body = <<<CONTENT
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="text dark" id="fourth">
-    <div class="row">
+
+    <div class="row text dark " id="fourth">
       <div class="medium-10 medium-centered columns">
         <div class="medium-9 columns medium-offset-3">
 
@@ -200,7 +200,6 @@ $page->body = <<<CONTENT
         </div>
       </div>
     </div>
-  </section>
   
 </div>
 

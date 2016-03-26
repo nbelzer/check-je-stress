@@ -4,18 +4,26 @@
 include '../../resources/includes/PageCreator.php';
 $page = new PageCreator();
 $page->path_to_root = '../../';
-$page->head = '<link rel="stylesheet" href="resources/css/specific/standard.css" type="text/css">';
+$page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
 $page->title = "Particulier";
 $page->body = <<<CONTENT
 
 <div class="content">
+<div class="menuSpacing"></div>
 
-  <section class="text water" id="first">
+  <div class="indexImage">
     <div class="row">
-      <div class="medium-10 medium-centered columns">
-        <div class="medium-9 columns medium-offset-3">
+      <div class="medium-12 medium-centered columns">
+        <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolour.svg');">
+        </div>
+      </div>
+    </div>
+  </div>
 
-          <h5>Particulier</h5>
+  <div class="row text water" id="first">
+    <div class="medium-10 medium-centered columns">
+
+        <h5>Particulier</h5>
 
 		  <p>
 			<b>Stress is onvermijdelijk en vroeg of laat kan je ermee te maken krijgen:</b> op je werk, in je sociale en privé-contacten, ja zelfs in je slaap. Steeds meer werkenden – zowel in het lagere als het hogere kader – klagen over stress of spanningen. Voor cijfers zie <a href="http://www.cbs.nl/nl-nl/menu/themas/arbeid-sociale-zekerheid/publicaties/artikelen/archief/2011/2011-3493-wm.htm">CBS.nl</a>
@@ -72,8 +80,6 @@ $page->body = <<<CONTENT
 
         </div>
       </div>
-    </div>
-  </section>
 
 </div>
 
