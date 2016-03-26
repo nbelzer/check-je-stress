@@ -190,3 +190,7 @@ body {
   padding-top: 70px;
   background-color: #39bfef;
 }
+
+.indexImage {
+  background: -webkit-linear-gradient(#39bfef, #eee);
+}

@@ -18,49 +18,47 @@ $page->body = <<<CONTENT
     </div>
   </div>
 
+  <div class="row water">
+    <div class="medium-10 medium-centered columns">
+      <p>
+        Welkom op de website van CheckJeStress. We helpen je graag van
+        spanning, stress en (dreigende) burnout af. Of je nu een onderneming
+        hebt of niet, onze dienstverlening past bij iedereen.
+      </p>
+    </div>
+  </div>
 
+  <div class="row water" data-equalizer data-equalize-on="medium">
+    <div class="medium-10 medium-centered columns">
 
-    <div class="row water">
-      <div class="medium-10 medium-centered columns">
+      <div class="medium-6 columns" data-equalizer-watch>
+        <div class="header" style="color: #CBECF4;">Stel jezelf de onderstaande vragen eens:</div>
+        <ul class="questions">
+          <li>Heb je het druk op je werk?</li>
+          <li>Gun je jezelf steeds minder tijd voor pauze?</li>
+          <li>Neem je vaak werk mee naar huis?</li>
+          <li>Is je accu gauw leeg en gaat je verkoudheid maar niet over?</li>
+        </ul>
+      </div>
+
+      <div class="medium-6 columns" data-equalizer-watch>
+        <div class="header" style="color: #034E60;">Feiten:</div>
+        <ul class="facts">
+          <li>38% van de arbeidsongeschiktheid in 2005 komt door psychische klachten zoals stress en burnout</li>
+          <li>1 op de 8 werknemers heeft last van een burnout (bron CBS)</li>
+          <li>30.000 mensen worden jaarlijks afgekeurd ten gevolge van psychische problematiek</li>
+          <li>Aan stressklachten en burnout kan iets gedaan worden!</li>
+        </ul>
+      </div>
+
+      <div class="medium-12 columns">
         <p>
-          Welkom op de website van CheckJeStress. We helpen je graag van
-          spanning, stress en (dreigende) burnout af. Of je nu een onderneming
-          hebt of niet, onze dienstverlening past bij iedereen.
+          Aarzel niet langer en neem contact met ons op om het heft weer in eigen hand te nemen! Dat wil je toch?
         </p>
       </div>
+
     </div>
-
-    <div class="row water" data-equalizer data-equalize-on="medium">
-      <div class="medium-10 medium-centered columns">
-
-        <div class="medium-6 columns" data-equalizer-watch>
-          <div class="header" style="color: #CBECF4;">Stel jezelf de onderstaande vragen eens:</div>
-          <ul class="questions">
-            <li>Heb je het druk op je werk?</li>
-            <li>Gun je jezelf steeds minder tijd voor pauze?</li>
-            <li>Neem je vaak werk mee naar huis?</li>
-            <li>Is je accu gauw leeg en gaat je verkoudheid maar niet over?</li>
-          </ul>
-        </div>
-
-        <div class="medium-6 columns" data-equalizer-watch>
-          <div class="header" style="color: #034E60;">Feiten:</div>
-          <ul class="facts">
-            <li>38% van de arbeidsongeschiktheid in 2005 komt door psychische klachten zoals stress en burnout</li>
-            <li>1 op de 8 werknemers heeft last van een burnout (bron CBS)</li>
-            <li>30.000 mensen worden jaarlijks afgekeurd ten gevolge van psychische problematiek</li>
-            <li>Aan stressklachten en burnout kan iets gedaan worden!</li>
-          </ul>
-        </div>
-
-        <div class="medium-12 columns">
-          <p>
-            Aarzel niet langer en neem contact met ons op om het heft weer in eigen hand te nemen! Dat wil je toch?
-          </p>
-        </div>
-
-      </div>
-    </div>
+  </div>
 
   <div class="row dark">
     <div class="medium-10 medium-centered columns">
