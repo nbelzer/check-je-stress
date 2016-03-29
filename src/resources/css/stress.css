@@ -175,6 +175,7 @@ body {
   width: auto;
   height: 450px;
   max-height: 450px;
+  margin-bottom: -2em;
 
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -183,7 +184,7 @@ body {
 }
 
 .row.water, .row.dark {
-  max-width: 1126px;
+  max-width: 1125px;
 }
 
 .menuSpacing {
