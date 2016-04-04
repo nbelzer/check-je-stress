@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include '../../resources/includes/PageCreator.php';
 $page = new PageCreator();
 $page->path_to_root = '../../';
@@ -41,15 +41,15 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			TNO berekende dat in 2006 verzuim als gevolg van stress en stressgerelateerde klachten € 6,1 miljard euro kostte. Daarin is het zogenaamde "stil verzuim" niet in meegenomen - mensen komen wel opdagen op het werk, maar zijn te moe of te uitgeblust om goed werk te leveren. 
+			TNO berekende dat in 2006 verzuim als gevolg van stress en stressgerelateerde klachten € 6,1 miljard euro kostte. Daarin is het zogenaamde "stil verzuim" niet in meegenomen - mensen komen wel opdagen op het werk, maar zijn te moe of te uitgeblust om goed werk te leveren.
 		  </p>
-		  
+
 		  <p>
-			Over duurzaam ondernemen spreken de media tegenwoordig vrij regelmatig. Maar hoe duurzaam ben je met je medewerkers? Grote kans dat er medewerkers zijn die het risico lopen om burn-out te raken. Sta je daar wel eens bij stil? 
+			Over duurzaam ondernemen spreken de media tegenwoordig vrij regelmatig. Maar hoe duurzaam ben je met je medewerkers? Grote kans dat er medewerkers zijn die het risico lopen om burn-out te raken. Sta je daar wel eens bij stil?
 		  </p>
 
 		  <p data-magellan data-options="barOffset:40">
-			Heb je dan al eens uitgerekend <b>wat die werknemer je dan kost</b>, mocht deze als gevolg van burn-out (verminderd) arbeidsongeschikt wordt?	
+			Heb je dan al eens uitgerekend <b>wat die werknemer je dan kost</b>, mocht deze als gevolg van burn-out (verminderd) arbeidsongeschikt wordt?
 			<a href="#second">Kijk hieronder</a> voor een eenvoudig rekenvoorbeeld.
 			<br />
 		  </p>
@@ -57,7 +57,7 @@ $page->body = <<<CONTENT
 		  <p>
 			<b>Steunpunt Stress Burnout Nederland kan voor jouw bedrijf een beleidsplan schrijven ter preventie van burn-out, dit geheel toegesneden op jouw bedrijf, ongeacht grootte, branche of locatie. De arbeidsinspectie kan naar een preventiebeleid vragen!</b>
 		  </p>
-		  
+
 		  <p>
 			Dit betekent voor jouw bedrijf:
 			<ul>
@@ -69,7 +69,7 @@ $page->body = <<<CONTENT
 			  <li>Voorlichting voor de medewerkers in de vorm van een lezing of workshop</li>
 			</ul>
 		  </p>
-		  
+
 		  <p>
 			<b>Samengevat enkele voordelen als werkgever op een rij:</b>
 			<ul>
@@ -84,13 +84,13 @@ $page->body = <<<CONTENT
 			  <li>Je voldoet aan wettelijke normen voor preventie ziekteverzuim</li>
 			</ul>
 		  </p>
-		  
+
 		  <p>
 			<b>Concreet houdt dit in:</b>
 			<br>
 			Persoonlijk leed voor de werknemer en een lang ziekteverzuim, hoge kosten voor de werkgever (loondoorbetaling, WGA, vervangingskosten enz.) en een lagere productie voor het bedrijf. Om nog maar niet te spreken van een slechte PR op feestjes en verjaardagen.
 		  </p>
-		  
+
 		  <p>
 			Bij een burnout is de werknemer langere tijd, variërend van 6 maanden tot soms 2 jaar, niet in staat zijn werk te verrichten. Bovendien heb je als werkgever de verplichting om goed werkgeversschap te leveren. Mogelijk kun je als bedrijf/organisatie aansprakelijk gesteld worden voor arbeidsongeschikt van een werknemer als gevolg van een burnout. Lees hier meer over de mogelijke gevolgen.
 		  </p>
@@ -200,9 +200,8 @@ $page->body = <<<CONTENT
         </div>
       </div>
     </div>
-  
+
 </div>
 
 CONTENT;
 $page->create();
-

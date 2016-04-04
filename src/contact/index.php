@@ -1,5 +1,3 @@
-﻿<!--- Contact-->
-
 <?php
 include '../resources/includes/PageCreator.php';
 $page = new PageCreator();
@@ -9,7 +7,7 @@ $page->title = "Contact";
 $page->body = <<<CONTENT
 
 <div class="content">
-  
+
   <section class="text water" id="first">
     <div class="row">
       <div class="medium-10 medium-centered columns">
@@ -36,7 +34,7 @@ $page->body = <<<CONTENT
       </div>
     </div>
   </section>
-  
+
   <section class="text dark" id="second">
     <div class="row">
       <div class="medium-10 medium-centered columns">
@@ -45,7 +43,7 @@ $page->body = <<<CONTENT
 
 		  <form method="post" name="contactformulier" action="contact/formulier-email.php">
 		    <table border="1">
-			
+
 			  <tr>
 				<td>Aanvinkvelden
 				<td>
@@ -58,29 +56,29 @@ $page->body = <<<CONTENT
 				  <label><input type="checkbox" name="aanvinkvelden[]" value="Lezing over stress/burnout">Lezing over stress/burn-out<br></label>
 				</td>
 			  </tr>
-			
+
 			  <tr>
 				<td><label for="1">Voor- en achternaam (of bedrijfsnaam)</label></td>
 				<td><input type="text" name="naam" id="1" placeholder="John Doe"></td>
 			  </tr>
-			
+
 			  <tr>
 				<td><label for="2">E-mailadres</label></td>
 				<td><input type="text" name="email" id="2" placeholder="johndoe@gmail.com"></td>
 			  </tr>
-			
+
 			  <tr>
 				<td><label for="3">Vragen, opmerkingen of jouw ideeën</label></td>
 				<td><input type="text" name="vragenopmerkingenideeën" id="3" placeholder="Uw bericht"></td>
 			  <tr>
-			
+
 			</table>
-			
+
 			<p>
 			   <input type="submit" value="Verstuur me, ik ben er klaar voor!" class="button">
 			</p>
 		  </form>
-		  
+
         </div>
       </div>
     </div>
@@ -90,4 +88,3 @@ $page->body = <<<CONTENT
 
 CONTENT;
 $page->create();
-

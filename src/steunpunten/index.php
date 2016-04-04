@@ -1,5 +1,3 @@
-<!--- Steunpunten-->
-
 <?php
 include '../resources/includes/PageCreator.php';
 $page = new PageCreator();

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include '../../resources/includes/PageCreator.php';
 $page = new PageCreator();
 $page->path_to_root = '../../';
@@ -26,7 +26,7 @@ $page->body = <<<CONTENT
 		  <p>
 			<b>Stress is onvermijdelijk en vroeg of laat kan je ermee te maken krijgen:</b> op je werk, in je sociale en privé-contacten, ja zelfs in je slaap. Steeds meer werkenden – zowel in het lagere als het hogere kader – klagen over stress of spanningen. Voor cijfers zie <a href="http://www.cbs.nl/nl-nl/menu/themas/arbeid-sociale-zekerheid/publicaties/artikelen/archief/2011/2011-3493-wm.htm">CBS.nl</a>
 		  </p>
-		  
+
 		  <p>
 			<b>Welke signalen waarschuwen voor een overbelasting aan stress?</b>
 			<br />
@@ -47,7 +47,7 @@ $page->body = <<<CONTENT
 			  <li>We gaan je vermogen vergroten om een nieuwe burnout te voorkomen.
 			</ul>
 		  </p>
-		  
+
 		  <p>
 			<b>Voordelen van de begeleiding door Steunpunt Stress Burnout Nederland zijn:</b>
 			<ul>
@@ -68,9 +68,9 @@ $page->body = <<<CONTENT
 		  <p>
 			Verzekeringsmaatschappijen erkennen in toenemende mate de waarde van counselling en vergoeden (soms gedeeltelijk) de sessies, waaronder:
 			<br />
-			<i>Aegon, Anderzorg, CZ, Delta Lloyd, IAK, IZA, Lancyr, Menzis, Ohra, Trias, Univé</i> en <i>VGZ</i>. 
+			<i>Aegon, Anderzorg, CZ, Delta Lloyd, IAK, IZA, Lancyr, Menzis, Ohra, Trias, Univé</i> en <i>VGZ</i>.
 			<a href="http://www.abvc.nl/CMS/Docs/Verz/Vergoedingen%20zorgverzekeraars%202013%20ABvC.pdf">Klik hier</a> voor een overzicht van de verzekeringsmaatschappijen en bijbehorende vergoedingen.
-		  </p> 
+		  </p>
 
 		  <p>
 			De consulten/sessies van een individueel traject (geen groepstrainingen, lezingen en/of workshops) vallen onder "Alternatieve Geneeswijzen" in het aanvullende verzekeringspakket. Raadpleeg de eigen polis of neem contact op met de ziektekostenverzekeraar, deze kan je vertellen tot welk verzekerd bedrag onze declaraties vergoed worden.
@@ -83,4 +83,3 @@ $page->body = <<<CONTENT
 
 CONTENT;
 $page->create();
-

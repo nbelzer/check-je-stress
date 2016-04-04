@@ -1,5 +1,3 @@
-﻿<!--- Vacatures-->
-
 <?php
 include '../../resources/includes/PageCreator.php';
 $page = new PageCreator();
@@ -9,7 +7,7 @@ $page->title = "Vacatures";
 $page->body = <<<CONTENT
 
 <div class="content">
-  
+
   <section class="text water" id="first">
     <div class="row">
       <div class="medium-10 medium-centered columns">
@@ -34,7 +32,7 @@ $page->body = <<<CONTENT
 		  <p>
 			Past het profiel en heb je nog steeds interesse? Vul dan onderstaand contactformulier in.
 		  </p>
-		  
+
 		  <p>
 			Tot binnenkort?<br />
 			Serge
@@ -44,7 +42,7 @@ $page->body = <<<CONTENT
       </div>
     </div>
   </section>
-  
+
   <section class="text dark" id="second">
     <div class="row">
       <div class="medium-10 medium-centered columns">
@@ -56,10 +54,10 @@ $page->body = <<<CONTENT
 			  Ja, ik heb interesse om diensten te verzorgen voor CheckJeStress.
 			</b>
 		  </p>
-		  
+
 		  <form method="post" name="contactformulier vacatures" action="steunpunten/vacatures/formulier-email.php">
 			<table border="1">
-			
+
 			  <tr>
 				<td><label for="1">Voor- en achternaam</label></td>
 				<td><input type="text" name="naam" id="1"></td>
@@ -74,7 +72,7 @@ $page->body = <<<CONTENT
 				<td><label for="3">Eigen websitenaam</label></td>
 				<td><input type="text" name="eigenwebsite" id="3"></td>
 			  </tr>
-		
+
 			  <tr>
 				<td><label for="4">E-mailadres</label></td>
 				<td><input type="text" name="email" id="4"></td>
@@ -104,14 +102,14 @@ $page->body = <<<CONTENT
 				<td><label for="9">Verdere informatie</label></td>
 				<td><input type="text" name="verdereinformatie" id="9"></td>
 			  </tr>
-			  
-			</table>  
-			
+
+			</table>
+
 			<p>
 			   <input type="submit" value="Verzenden" class="button">
 			</p>
 		  </form>
-		  
+
         </div>
       </div>
     </div>
@@ -121,4 +119,3 @@ $page->body = <<<CONTENT
 
 CONTENT;
 $page->create();
-
