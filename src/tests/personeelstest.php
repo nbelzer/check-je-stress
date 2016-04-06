@@ -102,4 +102,5 @@ EOF;
 
 } else {
   // TODO Toon pagina met informatie over de personeelstest
+  // Wilt u uw bedrijf of organisatie testen? Neem [link]contact op
 }

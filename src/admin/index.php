@@ -13,12 +13,15 @@ $page->body = <<<EOF
 
             <p>Welkom bij het Admin paneel van de CheckJeStress website.</p>
             <p>Kies een optie...</p>
-            <a href="admin/editor.php"><button type="button" class="button">
+            <a href="admin/editor"><button type="button" class="button">
               Inhoud van de website aanpassen
             </button></a>
             <button type="button" class="button">
               Resultaten van de tests inzien
             </button>
+            <a href="admin/personeelstests"><button type="button" class="button">
+              Personeelstests
+            </button></a>
 
           </div>
         </div>
