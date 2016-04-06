@@ -40,6 +40,7 @@
   padding: 1.75em 0;
   background-color: #034E60;
   border-bottom: 1px solid rgba(187,234,245,0.25);
+  z-index: 20;
 
   -webkit-transition: all 0.4s ease-in;
   -moz-transition: all 0.4s ease-in;
@@ -194,4 +195,8 @@ body {
 
 .indexImage {
   background: -webkit-linear-gradient(#39bfef, #eee);
+}
+
+.str_slider {
+  z-index: -1 !important;
 }

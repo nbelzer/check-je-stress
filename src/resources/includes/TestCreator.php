@@ -112,8 +112,8 @@ EOF;
     foreach ($this->questions as $id => $vraag) {
       $form .= "<tr><td><div class=\"row\">\n";
       $form .= "<div class=\"small-12 medium-6 columns\">$vraag</div>\n";
-      $form .= "<div class=\"small-12 medium-6 columns\">
-                  <div id=\"$id\" class=\"slider_handle\"></div>
+      $form .= "<div class=\"small-12 medium-6 columns str_slider\">
+                  <div id=\"$id\"class=\"slider_handle\"></div>
                 </div>\n";
       $form .= "<input type=\"hidden\" id=\"vraag$id\" name=\"vraag$id\">";
       $form .= "</div></td></tr>\n";
@@ -146,9 +146,7 @@ CONTENT;
    */
   private function createResultsPage($results) {
     $advies = call_user_func($this->advice_function, $results);
-
     $this->pageCreator->body = $this->results_body . $advies;
-    $this->pageCreator->create();
   }
 
   /**
