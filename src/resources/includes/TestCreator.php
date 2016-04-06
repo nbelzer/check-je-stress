@@ -106,9 +106,7 @@ EOF;
     // Maak eerst het formulier met de vragen dat op de testpagina komt.
     $form = "";
 
-    $self = htmlentities($_SERVER['PHP_SELF']);
-
-    $form .= "<form action=\"$self\" method=\"POST\">\n";
+    $form .= "<form action=\"\" method=\"POST\">\n";
 
     $form .= "<table style=\"width: 100%;\">\n";
     foreach ($this->questions as $id => $vraag) {
