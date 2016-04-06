@@ -7,12 +7,6 @@ $page->path_to_root = '../';
 $page->head = '<link rel="stylesheet" href="resources/css/specific/standard.css" type="text/css">';
 $page->title = "Contact";
 
-/*
-include 'mail.php';
-$mail = new Mailer;
-$mail->sendMail('checkjestresstest@gmail.com', 'Hallo', 'Dit is een email<br>lol', 'Dit is een email zonder html');
-*/
-
 $naam = $_POST['naam'];
 $vragenopmerkingenideeën = $_POST['vragenopmerkingenideeën'];
 $email = $_POST['email'];
@@ -23,12 +17,15 @@ foreach($_POST['aanvinkvelden'] as $value){
 	$aanvinkvelden .= "</li>";
 }
 
-$to = "coolpower@zeelandnet.nl";
+$to = "checkjestresstest@gmail.com";
 $headers = "From: $to \r\n";
 $headers .= "Reply-To: $email \r\n";
-$email_subject = "CheckJeStress: Contactaanvraag";
-$email_body = "$naam wenst contact met u op te nemen. Deze persoon heeft interesse in de volgende zaken: <ul>$aanvinkvelden</ul>. Deze persoon liet het volgende bericht achter: $vragenopmerkingenideeën";
-mail($to,$email_subject,$email_body,$headers);
+$email_subject = "CheckJeStress: Contactaanvraag $naam";
+$email_body = "Er is een nieuwe aanvraag binnengekomen van de site CheckJeStress.nl:<br><br>Persoonsinformatie:<br><ul>$naam<br>$email</ul><br>Deze persoon heeft interesse in de volgende zaken:<ul>$aanvinkvelden</ul>Deze persoon liet het volgende bericht achter:<br><ul>$vragenopmerkingenideeën</ul>";
+
+include 'mail.php';
+$mail = new Mailer;
+$mail->sendMail([$to], $email_subject, $email_body, $email_body);
 
 $page->body = <<<CONTENT
 
@@ -41,11 +38,9 @@ $page->body = <<<CONTENT
           <h5>Contact</h1>
 
 		  <p>
-			Dit heeft u aangevinkt: <ul>$aanvinkvelden</ul><br>
-			Dit is uw naam: $naam<br>
-			Dit is uw E-mailadres: $email<br>
-			Dit zijn uw vragen, opmerkingen of ideeën: $vragenopmerkingenideeën
-
+			Hartelijk bedankt voor het versturen van uw contactformulier!<br>
+			Er zal zo spoedig mogelijk contact met u op worden genomen.<br>
+			<a href="">Klik hier</a> om terug te keren naar de homepage
 		  </p>
 
         </div>

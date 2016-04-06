@@ -11,7 +11,7 @@ class Mailer {
    */
   function __construct() {
     $this->mail = new PHPMailer;
-    $this->mail->SMTPDebug = 3; // Enable verbose debug output
+    $this->mail->SMTPDebug = 0; // Enable verbose debug output
   }
 
   /**
@@ -41,7 +41,7 @@ class Mailer {
 
     $this->mail->isHTML(true);
     $this->mail->Subject = $subject;
-    $this->mail->Body = $message; /* Body containing HTML */
+    $this->mail->Body = $html_message; /* Body containing HTML */
     $this->mail->AltBody = $non_html_message;
 
     if(!$this->mail->send()) {
