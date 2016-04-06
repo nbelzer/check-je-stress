@@ -2,7 +2,7 @@
 
 if (isset($_GET['organisatie']) && isset($_GET['code'])) {
   /* Toon de personeelstest */
-  require_once '../resources/includes/TestCreator.php';
+  require_once '../../resources/includes/TestCreator.php';
 
   $vragen = [
     0 => 'Ik ga positief om met de dingen die ik moet doen.',
