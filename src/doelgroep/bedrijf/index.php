@@ -22,8 +22,8 @@ $page->body = <<<CONTENT
     <div class="medium-10 medium-centered columns">
       <div class="medium-3 columns show-for-medium">
         <div class="navmenu">
-          <h5>Op deze pagina</h5>
           <ul class="vertical menu" data-magellan data-options="barOffset:40">
+            <li class="header"><h5>Op deze pagina</h5></li>
             <li><a href="#first">Bedrijf</a></li>
             <li><a href="#second">Financiële gevolgen</a></li>
             <li><a href="#third">Producten</a><li>
@@ -54,7 +54,15 @@ $page->body = <<<CONTENT
 			<br />
 		  </p>
 
-		  <p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text water">
+      <div class="medium-10 medium-centered columns">
+        <div class="medium-12 columns">
+
+      <p>
 			<b>Steunpunt Stress Burnout Nederland kan voor jouw bedrijf een beleidsplan schrijven ter preventie van burn-out, dit geheel toegesneden op jouw bedrijf, ongeacht grootte, branche of locatie. De arbeidsinspectie kan naar een preventiebeleid vragen!</b>
 		  </p>
 
@@ -109,7 +117,7 @@ $page->body = <<<CONTENT
 
     <div class="row text dark" id="second">
       <div class="medium-10 medium-centered columns">
-        <div class="medium-9 columns medium-offset-3">
+        <div class="medium-12 columns">
 
           <h5>Financiële gevolgen voor bedrijven</h5>
 
@@ -137,7 +145,7 @@ $page->body = <<<CONTENT
 
     <div class="row text water" id="third">
       <div class="medium-10 medium-centered columns">
-        <div class="medium-9 columns medium-offset-3">
+        <div class="medium-12 columns">
 
           <h5>Producten</h5>
 
@@ -161,7 +169,7 @@ $page->body = <<<CONTENT
 
     <div class="row text dark " id="fourth">
       <div class="medium-10 medium-centered columns">
-        <div class="medium-9 columns medium-offset-3">
+        <div class="medium-12 columns">
 
           <h5>Burnout risico-analyse voor bedrijven</h5>
 

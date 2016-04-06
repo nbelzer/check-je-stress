@@ -22,8 +22,8 @@ $page->body = <<<CONTENT
     <div class="medium-10 medium-centered columns">
       <div class="medium-3 columns show-for-medium">
         <div class="navmenu">
-        <h5>Op deze pagina</h5>
           <ul class="vertical menu" data-magellan data-options="barOffset:40">
+            <li class="header"><h5>Op deze pagina</h5></li>
             <li><a href="#first">Wie zijn we?</a></li>
             <li><a href="#second">Wat is onze ambitie?</a></li>
             <li><a href="#third">Wat doen we?</a><li>
@@ -56,7 +56,7 @@ $page->body = <<<CONTENT
 
   <div class="row text dark" id="second">
     <div class="medium-10 medium-centered columns">
-      <div class="medium-9 columns medium-offset-3">
+      <div class="medium-12 columns">
 
         <h5>Wat is onze ambitie?</h5>
 
@@ -91,7 +91,7 @@ $page->body = <<<CONTENT
 
   <div class="row text water" id="third">
     <div class="medium-10 medium-centered columns">
-      <div class="medium-9 columns medium-offset-3">
+      <div class="medium-12 columns ">
 
         <h5>Wat doen we?</h5>
 
