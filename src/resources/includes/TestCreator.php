@@ -148,9 +148,7 @@ CONTENT;
    */
   private function createResultsPage($results) {
     $advies = call_user_func($this->advice_function, $results);
-
     $this->pageCreator->body = $this->results_body . $advies;
-    $this->pageCreator->create();
   }
 
   /**
