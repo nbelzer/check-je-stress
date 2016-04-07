@@ -1,5 +1,5 @@
 <?php
-require '../resources/includes/PHPMailer/PHPMailerAutoload.php';
+require 'PHPMailerAutoload.php';
 
 /**
  * Class die voor mail functionaliteit zorgt.

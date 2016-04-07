@@ -1,4 +1,4 @@
-<!--- Contact-->
+﻿<!--- Contact-->
 
 <?php
 include '../resources/includes/PageCreator.php';
@@ -23,7 +23,7 @@ $headers .= "Reply-To: $email \r\n";
 $email_subject = "CheckJeStress: Contactaanvraag $naam";
 $email_body = "Er is een nieuwe aanvraag binnengekomen van de site CheckJeStress.nl:<br><br>Persoonsinformatie:<br><ul>$naam<br>$email</ul><br>Deze persoon heeft interesse in de volgende zaken:<ul>$aanvinkvelden</ul>Deze persoon liet het volgende bericht achter:<br><ul>$vragenopmerkingenideeën</ul>";
 
-include 'mail.php';
+include '../resources/includes/PHPMailer/mail.php';
 $mail = new Mailer;
 $mail->sendMail([$to], $email_subject, $email_body, $email_body);
 
@@ -40,7 +40,7 @@ $page->body = <<<CONTENT
 		  <p>
 			Hartelijk bedankt voor het versturen van uw contactformulier!<br>
 			Er zal zo spoedig mogelijk contact met u op worden genomen.<br>
-			<a href="">Klik hier</a> om terug te keren naar de homepage
+			<a href="">Klik hier</a> om terug te keren naar de homepage.
 		  </p>
 
         </div>
