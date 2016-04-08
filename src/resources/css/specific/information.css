@@ -25,6 +25,10 @@
   margin-left: -3em;
 }
 
+.navmenu a:hover {
+  color: #7CC8ED;
+}
+
 .navmenu h5 {
   /*margin-left: 8px;*/
   padding-top: 0.5em;
