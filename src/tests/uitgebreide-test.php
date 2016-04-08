@@ -93,16 +93,16 @@ $test_page->advice_function = function($score) {
     0, 7, 11, 16, 21, 24, 25, 27, 31, 33, 37, 40, 42, 45, 47, 49, 54, 55
   ];
 
-  $score = 0;
+  $total_score = 0;
   for ($i=0; $i<56; $i++) {
     if (in_array($i, $reverse_questions)) {
-      $score += 5 - $i;
+      $total_score += 5 - $score[$i];
     } else {
-      $score += $i;
+      $total_score += $score[$i];
     }
   }
 
-  if ($score < 56 * 5 / 4) { /* < 25% */
+  if ($total_score < 56 * 5 / 4) { /* < 25% */
     $advies = <<<EOF
       U scoorde 'zeer laag' op het hebben van burnoutverschijnselen.
       <br>
@@ -111,7 +111,7 @@ $test_page->advice_function = function($score) {
       specifieke dag eens moe kunt zijn, is er van een burnout geen enkele
       sprake.
 EOF;
-  } else if ($score < 56 * 5 / 2) { /* < 50% */
+  } else if ($total_score < 56 * 5 / 2) { /* < 50% */
     $advies = <<<EOF
       U scoorde 'laag' op het hebben van burnoutverschijnselen.
       <br>
@@ -119,7 +119,7 @@ EOF;
       Stress en spanning heeft iedereen wel eens maar doorgaans leidt dat niet
       tot blijvende klachten en zeker niet tot een burnout.
 EOF;
-  } else if ($score < 56 * 5 / 4 * 3) { /* < 75% */
+  } else if ($total_score < 56 * 5 / 4 * 3) { /* < 75% */
     $advies = <<<EOF
       U scoorde 'enigszins' op het hebben van burnoutverschijnselen.
       <br>
