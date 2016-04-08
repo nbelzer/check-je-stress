@@ -1,0 +1,22 @@
+tbody {
+  background-color: transparent !important;
+  border: none;
+}
+
+tbody tr:nth-child(2n) {
+  background-color: rgba(24, 24, 24, 0.1) !important;
+}
+
+.test .row {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.skipped {
+  background-color: rgba(255, 24, 24, 0.3) !important;
+}
+
+.test_slider {
+  background: #034E60 !important;
+  border: none;
+}
