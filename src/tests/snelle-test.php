@@ -32,7 +32,7 @@ $vragen = [
 
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Snelle Test';
-$test_page->path_to_root = "../../";
+$test_page->path_to_root = "../";
 $test_page->extra_head = '<link rel="stylesheet" href="resources/css/test.css"
 type="text/css">';
 $test_page->questions = $vragen;
