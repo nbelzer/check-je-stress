@@ -117,7 +117,17 @@ EOF;
       <br>
       De meeste mensen scoren laag op het hebben van burnoutverschijnselen.
       Stress en spanning heeft iedereen wel eens maar doorgaans leidt dat niet
-      tot blijvende klachten en zeker niet tot een burnout.
+      tot blijvende klachten en zeker niet tot een burnout.<br>
+	  
+	  <script src="resources/js/svg-dash-meter.min.js"></script>
+	  <div id="kekmeter"></div>
+  <script>
+    var elm = document.getElementById('kekmeter');
+    var meter = svg_meter(elm, {
+      value: $score,
+	  max: 56,
+    });
+  </script>
 EOF;
   } else if ($total_score < 56 * 5 / 4 * 3) { /* < 75% */
     $advies = <<<EOF
