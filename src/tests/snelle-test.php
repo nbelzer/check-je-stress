@@ -83,16 +83,112 @@ $test_page->advice_function = function($results) {
 
   $advies = "Uw score is $score van de 125. ";
   if ($score < 26) {
-    $advies .= "Het lijkt erop dat u op het moment geen risico loopt op een burnout.";
+    $advies .= <<<EOF
+	
+	  <script src="resources/js/svg-dash-meter.min.js"></script>
+	  <div id="svgmeter"></div>
+	  <script>
+		var elm = document.getElementById('svgmeter');
+		var meter = svg_meter(elm, {
+			value: $score,
+			max: 125,
+			duration: 500,
+			gradient:[
+			{r:0,g:200,b:0},
+			{r:255,g:140,b:0},
+			{r:200,g:0,b:0}
+			],
+		});
+	  </script>		
+	
+	Het lijkt erop dat u op het moment geen risico loopt op een burnout.
+EOF;
   } else if ($score < 51) {
-    $advies .= "Het gaat goed. Let wel op de items waarop uw score hoger is.";
+    $advies .= <<<EOF
+	
+	  <script src="resources/js/svg-dash-meter.min.js"></script>
+	  <div id="svgmeter"></div>
+	  <script>
+		var elm = document.getElementById('svgmeter');
+		var meter = svg_meter(elm, {
+			value: $score,
+			max: 125,
+			duration: 500,
+			gradient:[
+			{r:0,g:200,b:0},
+			{r:255,g:140,b:0},
+			{r:200,g:0,b:0}
+			],
+		});
+	  </script>			
+	
+	Het gaat goed. Let wel op de items waarop uw score hoger is.
+EOF;
   } else if ($score < 76) {
-    $advies .= "U heeft waarschijnlijk geen burnout, maar wij adviseren u wel om preventiemaatregelen te nemen.";
+    $advies .= <<<EOF
+	
+	  <script src="resources/js/svg-dash-meter.min.js"></script>
+	  <div id="svgmeter"></div>
+	  <script>
+		var elm = document.getElementById('svgmeter');
+		var meter = svg_meter(elm, {
+			value: $score,
+			max: 125,
+			duration: 500,
+			gradient:[
+			{r:0,g:200,b:0},
+			{r:255,g:140,b:0},
+			{r:200,g:0,b:0}
+			],
+		});
+	  </script>	
+
+	U heeft waarschijnlijk geen burnout, maar wij adviseren u wel om preventiemaatregelen te nemen.
+EOF;
   } else if ($score < 101) {
-    $advies .= "U loopt risico om een burnout te krijgen. Als u net een burnout gehad hebt, bent u nog niet hersteld.";
+    $advies .= <<<EOF
+	
+	  <script src="resources/js/svg-dash-meter.min.js"></script>
+	  <div id="svgmeter"></div>
+	  <script>
+		var elm = document.getElementById('svgmeter');
+		var meter = svg_meter(elm, {
+			value: $score,
+			max: 125,
+			duration: 500,
+			gradient:[
+			{r:0,g:200,b:0},
+			{r:255,g:140,b:0},
+			{r:200,g:0,b:0}
+			],
+		});
+	  </script>		
+	
+	U loopt risico om een burnout te krijgen. Als u net een burnout gehad hebt, bent u nog niet hersteld.
+EOF;
   } else {
-    $advies .= "U hebt waarschijnlijk een burnout, of een burnout is zich bij u aan het ontwikkelen.";
+    $advies .= <<<EOF
+	
+	  <script src="resources/js/svg-dash-meter.min.js"></script>
+	  <div id="svgmeter"></div>
+	  <script>
+		var elm = document.getElementById('svgmeter');
+		var meter = svg_meter(elm, {
+			value: $score,
+			max: 125,
+			duration: 500,
+			gradient:[
+			{r:0,g:200,b:0},
+			{r:255,g:140,b:0},
+			{r:200,g:0,b:0}
+			],
+		});
+	  </script>		
+	
+	U hebt waarschijnlijk een burnout, of een burnout is zich bij u aan het ontwikkelen.
+EOF;
   }
+  
   return $advies;
 };
 
