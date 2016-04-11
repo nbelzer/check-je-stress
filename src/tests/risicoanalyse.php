@@ -32,10 +32,14 @@ $vragen = [
 
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Risicoanalyse';
+$test_page->path_to_root = '../';
 $test_page->questions = $vragen;
+$test_page->extra_head = <<<EOF
+  <link rel="stylesheet" href="resources/css/test.css" type="text/css">
+EOF;
 
 $test_page->test_body = <<<EOF
-  <h1>Burnout Risicoanalyse (voor managers)</h1>
+  <h3>Burnout Risicoanalyse (voor managers)</h3>
   <p>
     Deze test bestaat uit 25 stellingen.
     <br>

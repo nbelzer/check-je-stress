@@ -63,8 +63,10 @@ $vragen = [
 
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Uitgebreide Test';
+$test_page->path_to_root = "../";
 $test_page->questions = $vragen;
 $test_page->extra_head = <<<EOF
+  <link rel="stylesheet" href="resources/css/test.css" type="text/css">
   <script src="resources/js/svg-dash-meter.min.js"></script>
   <script>
     $(window).bind("load", function () {
@@ -84,7 +86,7 @@ $test_page->extra_head = <<<EOF
 EOF;
 
 $test_page->test_body = <<<EOF
-  <h1>Uitgebreide Test</h1>
+  <h3>Uitgebreide Test</h3>
   <p>
     Heb je verschijnselen van een echte burnout?
     <br>

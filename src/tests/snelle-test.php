@@ -33,6 +33,7 @@ $vragen = [
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Snelle Test';
 $test_page->path_to_root = "../";
+$test_page->questions = $vragen;
 $test_page->extra_head = <<<EOF
   <link rel="stylesheet" href="resources/css/test.css" type="text/css">
   <script src="resources/js/svg-dash-meter.min.js"></script>
@@ -52,25 +53,14 @@ $test_page->extra_head = <<<EOF
     });
   </script>
 EOF;
-$test_page->questions = $vragen;
 
 $test_page->test_body = <<<EOF
-<div class="content">
-  <div class="menuSpacing"></div>
-
-  <div class="indexImage">
-    <div class="row">
-      <div class="medium-12 medium-centered columns">
-        <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolourbeach.svg');">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row text water">
-    <div class="medium-10 medium-centered columns">
-      <div class="medium-12 columns">
-      <h3>Snelle test</h3>
+  <h3>Snelle test</h3>
+  <p>
+    Deze test bestaat uit 25 stellingen.
+    <br>
+    Kies steeds in welke mate de uitspraak op u van toepassing is.
+  </p>
 EOF;
 
 $test_page->results_body = <<<EOF
