@@ -33,8 +33,25 @@ $vragen = [
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Snelle Test';
 $test_page->path_to_root = "../";
-$test_page->extra_head = '<link rel="stylesheet" href="resources/css/test.css"
-type="text/css">';
+$test_page->extra_head = <<<EOF
+  <link rel="stylesheet" href="resources/css/test.css" type="text/css">
+  <script src="resources/js/svg-dash-meter.min.js"></script>
+  <script>
+    $(window).bind("load", function () {
+      var meter = svg_meter(document.getElementById('svgmeter'), {
+        value: 0,
+        max: 125,
+        duration: 500,
+        gradient:[
+          {r:0,g:200,b:0},
+          {r:255,g:140,b:0},
+          {r:200,g:0,b:0}
+        ]
+      });
+      updateMeter(meter);
+    });
+  </script>
+EOF;
 $test_page->questions = $vragen;
 
 $test_page->test_body = <<<EOF
@@ -59,6 +76,7 @@ EOF;
 $test_page->results_body = <<<EOF
   <h1>Snelle Test Resultaten</h1>
   <p>Bedankt voor het invullen van de test! Hieronder ziet u de resultaten.</p>
+  <div id="svgmeter"></div>
 EOF;
 
 $test_page->advice_function = function($results) {
@@ -81,114 +99,27 @@ $test_page->advice_function = function($results) {
     $score += $vraag_score;
   }
 
-  $advies = "Uw score is $score van de 125. ";
+  $percentage = round(($score / 125) * 100);
+  $advies = <<<EOF
+    Uw berekende kans op een burnout is $percentage%.
+    <script>
+      function updateMeter(meter) {
+        meter.update($score);
+      }
+    </script>
+EOF;
   if ($score < 26) {
-    $advies .= <<<EOF
-	
-	  <script src="resources/js/svg-dash-meter.min.js"></script>
-	  <div id="svgmeter"></div>
-	  <script>
-		var elm = document.getElementById('svgmeter');
-		var meter = svg_meter(elm, {
-			value: $score,
-			max: 125,
-			duration: 500,
-			gradient:[
-			{r:0,g:200,b:0},
-			{r:255,g:140,b:0},
-			{r:200,g:0,b:0}
-			],
-		});
-	  </script>		
-	
-	Het lijkt erop dat u op het moment geen risico loopt op een burnout.
-EOF;
+    $advies .= 'Het lijkt erop dat u op het moment geen risico loopt op een burnout.';
   } else if ($score < 51) {
-    $advies .= <<<EOF
-	
-	  <script src="resources/js/svg-dash-meter.min.js"></script>
-	  <div id="svgmeter"></div>
-	  <script>
-		var elm = document.getElementById('svgmeter');
-		var meter = svg_meter(elm, {
-			value: $score,
-			max: 125,
-			duration: 500,
-			gradient:[
-			{r:0,g:200,b:0},
-			{r:255,g:140,b:0},
-			{r:200,g:0,b:0}
-			],
-		});
-	  </script>			
-	
-	Het gaat goed. Let wel op de items waarop uw score hoger is.
-EOF;
+    $advies .= 'Het gaat goed. Let wel op de items waarop uw score hoger is.';
   } else if ($score < 76) {
-    $advies .= <<<EOF
-	
-	  <script src="resources/js/svg-dash-meter.min.js"></script>
-	  <div id="svgmeter"></div>
-	  <script>
-		var elm = document.getElementById('svgmeter');
-		var meter = svg_meter(elm, {
-			value: $score,
-			max: 125,
-			duration: 500,
-			gradient:[
-			{r:0,g:200,b:0},
-			{r:255,g:140,b:0},
-			{r:200,g:0,b:0}
-			],
-		});
-	  </script>	
-
-	U heeft waarschijnlijk geen burnout, maar wij adviseren u wel om preventiemaatregelen te nemen.
-EOF;
+    $advies .= 'U heeft waarschijnlijk geen burnout, maar wij adviseren u wel om preventiemaatregelen te nemen.';
   } else if ($score < 101) {
-    $advies .= <<<EOF
-	
-	  <script src="resources/js/svg-dash-meter.min.js"></script>
-	  <div id="svgmeter"></div>
-	  <script>
-		var elm = document.getElementById('svgmeter');
-		var meter = svg_meter(elm, {
-			value: $score,
-			max: 125,
-			duration: 500,
-			gradient:[
-			{r:0,g:200,b:0},
-			{r:255,g:140,b:0},
-			{r:200,g:0,b:0}
-			],
-		});
-	  </script>		
-	
-	U loopt risico om een burnout te krijgen. Als u net een burnout gehad hebt, bent u nog niet hersteld.
-EOF;
+    $advies .= 'U loopt risico om een burnout te krijgen. Als u net een burnout gehad hebt, bent u nog niet hersteld.';
   } else {
-    $advies .= <<<EOF
-	
-	  <script src="resources/js/svg-dash-meter.min.js"></script>
-	  <div id="svgmeter"></div>
-	  <script>
-		var elm = document.getElementById('svgmeter');
-		var meter = svg_meter(elm, {
-			value: $score,
-			max: 125,
-			duration: 500,
-			gradient:[
-			{r:0,g:200,b:0},
-			{r:255,g:140,b:0},
-			{r:200,g:0,b:0}
-			],
-		});
-	  </script>		
-	
-	U hebt waarschijnlijk een burnout, of een burnout is zich bij u aan het ontwikkelen.
-EOF;
+    $advies .= 'U hebt waarschijnlijk een burnout, of een burnout is zich bij u aan het ontwikkelen.';
   }
-  
+
   return $advies;
 };
 
