@@ -43,11 +43,12 @@ $test_page->extra_head = <<<EOF
         value: 0,
         max: 100,
         duration: 500,
-        gradient:[
+        gradient: [
           {r:0,g:200,b:0},
           {r:255,g:140,b:0},
           {r:200,g:0,b:0}
-        ]
+        ],
+        stops: [25, 50, 75]
       });
       updateMeter(meter);
     });
