@@ -40,7 +40,7 @@ $test_page->extra_head = <<<EOF
     $(window).bind("load", function () {
       var meter = svg_meter(document.getElementById('svgmeter'), {
         value: 0,
-        max: 125,
+        max: 100,
         duration: 500,
         gradient:[
           {r:0,g:200,b:0},
@@ -104,7 +104,7 @@ $test_page->advice_function = function($results) {
     Uw berekende kans op een burnout is $percentage%.
     <script>
       function updateMeter(meter) {
-        meter.update($score);
+        meter.update($percentage);
       }
     </script>
 EOF;
