@@ -3,6 +3,13 @@
 
 Vernieuwing van de website [Check Je Stress](http://checkjestress.nl/)
 
+### Systeemvereisten
+* Apache webserver
+* PHP ≥ 5.6
+* MySQL
+* Securimage vereisten voor de captcha (test met [dit scriptje](https://www.phpcaptcha.org/downloads/securimage_test.php))
+* Mogelijk vereisten voor PHPMailer
+
 ### Setup
 Om de website werkend te krijgen, moet er een aantal dingen gedaan worden:
 * Pas de waarden in het scriptje `setup_website.sh` aan zodat de website o.a. in de goede map geïnstalleerd wordt
