@@ -168,7 +168,31 @@ CONTENT;
    */
   private function createResultsPage($results) {
     $advies = call_user_func($this->advice_function, $results);
-    $this->pageCreator->body = $this->results_body . $advies;
+
+    $results = $this->results_body . $advies;
+
+    // Maak de body aan en zet het resultaat erin.
+    $this->pageCreator->body = <<<CONTENT
+      <div class="content">
+        <div class="menuSpacing"></div>
+
+        <div class="indexImage">
+          <div class="row">
+            <div class="medium-12 medium-centered columns">
+              <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolourbeach.svg');">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text water">
+          <div class="medium-10 medium-centered columns">
+            $results;
+          </div>
+        </div>
+
+      </div>
+CONTENT;
   }
 
   /**
