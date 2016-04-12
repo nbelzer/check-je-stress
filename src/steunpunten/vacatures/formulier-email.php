@@ -32,9 +32,7 @@ EOF;
 			<a href='javascript:history.go(-1)'><button class="button">Probeer het nog eens.</button></a>
 EOF;
 	} else {
-		$to = "checkjestresstest@gmail.com";
-		$headers = "From: $to \r\n";
-		$headers .= "Reply-To: $email \r\n";
+		$to = $page->getConfig()['email']['admin-email'];
 		$email_subject = "CheckJeStress: Sollicitatie $naam";
 		$email_body = <<<EOF
 			Er is een nieuwe sollicitatie binnengekomen van de site CheckJeStress.nl:<br><br>
@@ -49,9 +47,9 @@ EOF;
 			Verdere informatie: $verdereinformatie
 EOF;
 		include '../../resources/includes/PHPMailer/mail.php';
-		$mail = new Mailer;
+		$mail = new Mailer($page->getConfig()['email']);
 		$mail->sendMail([$to], $email_subject, $email_body, $email_body);
-		
+
 		$message = <<<EOF
 			Hartelijk bedankt voor het versturen van uw sollicitatie!<br>
 			Er zal zo spoedig mogelijk contact met u op worden genomen.<br>
@@ -62,13 +60,13 @@ EOF;
 $page->body = <<<CONTENT
 
 <div class="content">
-  
+
   <section class="text water" id="first">
     <div class="row">
       <div class="medium-10 medium-centered columns">
         <div class="medium-9 columns medium-offset-3">
           <h5>Vacatures</h1>
-			<p>$message</p>		  
+					<p>$message</p>
         </div>
       </div>
     </div>
@@ -78,4 +76,3 @@ $page->body = <<<CONTENT
 
 CONTENT;
 $page->create();
-
