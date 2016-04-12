@@ -143,17 +143,15 @@ EOF;
 
         <div class="row text water">
           <div class="medium-10 medium-centered columns">
-            <div class="medium-12 columns">
-              $this->test_body
-              <noscript>
-                <p>
-                  Voor het invullen van de tests moet
-                  <a href="http://enable-javascript.com/nl/" target="_blank">
-                  Javascript ingeschakeld zijn in uw browser</a>.
-                </p>
-              </noscript>
-              $form
-            </div>
+            $this->test_body
+            <noscript>
+              <p>
+                Voor het invullen van de tests moet
+                <a href="http://enable-javascript.com/nl/" target="_blank">
+                Javascript ingeschakeld zijn in uw browser</a>.
+              </p>
+            </noscript>
+            $form
           </div>
         </div>
 
