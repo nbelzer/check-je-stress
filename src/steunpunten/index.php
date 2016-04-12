@@ -7,7 +7,7 @@ $page->head = <<<EOF
   <link rel="stylesheet" href="resources/css/specific/steunpunten.css" type="text/css">
   <script>
     function update_provincie(provincie) {
-      $(document.body).animate({
+      $('body,html').animate({
         'scrollTop': $('#' + provincie).offset().top - 55
       }, 1000);
     }
