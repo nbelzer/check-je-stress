@@ -36,17 +36,17 @@ $page->body = <<<CONTENT
           <ul class="vertical menu" data-magellan data-options="barOffset:40">
             <li class="headeR"><h5><a href="#overzicht">Overzicht</a></h5></li>
             <li><a href="#zuidholland">Zuid-Holland</a></li>
-            <li><a href="#noordholland">Noord-Holland</a><li>
-            <li><a href="#noordbrabant">Noord-Brabant</a><li>
-            <li><a href="#gelderland">Gelderland</a><li>
-            <li><a href="#utrecht">Utrecht</a><li>
-            <li><a href="#overijssel">Overijssel</a><li>
-            <li><a href="#limburg">Limburg</a><li>
-            <li><a href="#friesland">Friesland</a><li>
-            <li><a href="#groningen">Groningen</a><li>
-            <li><a href="#drenthe">Drenthe</a><li>
-            <li><a href="#flevoland">Flevoland</a><li>
-            <li><a href="#zeeland">Zeeland</a><li>
+            <li><a href="#noordholland">Noord-Holland</a></li>
+            <li><a href="#noordbrabant">Noord-Brabant</a></li>
+            <li><a href="#gelderland">Gelderland</a></li>
+            <li><a href="#utrecht">Utrecht</a></li>
+            <li><a href="#overijssel">Overijssel</a></li>
+            <li><a href="#limburg">Limburg</a></li>
+            <li><a href="#friesland">Friesland</a></li>
+            <li><a href="#groningen">Groningen</a></li>
+            <li><a href="#drenthe">Drenthe</a></li>
+            <li><a href="#flevoland">Flevoland</a></li>
+            <li><a href="#zeeland">Zeeland</a></li>
           </ul>
         </div>
       </div>
