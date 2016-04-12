@@ -8,8 +8,12 @@ class Mailer {
 
   /**
    * Constructs the object
+   *
+   * @param array $config het deel van het configuratiebestand dat met de SMTP
+   * server te maken heeft
    */
-  function __construct() {
+  function __construct($config) {
+    $this->config = $config;
     $this->mail = new PHPMailer;
     $this->mail->SMTPDebug = 0; // Enable verbose debug output
   }
@@ -18,6 +22,11 @@ class Mailer {
    * De PHPMailer instance van deze class
    */
   var $mail;
+
+  /**
+   * De array met gegevens betreffende de SMTP server
+   */
+  private $config;
 
   /**
    * Stuurt een mail.
@@ -32,6 +41,7 @@ class Mailer {
 
     foreach ($recipients as $recipient) {
       $this->mail->addAddress($recipient);
+      $this->mail->addReplyTo($recipient);
     }
 
     //$mail->addCC('cc@example.com');
@@ -55,16 +65,15 @@ class Mailer {
    */
   private function configure() {
     $this->mail->isSMTP();
-    $this->mail->Host = 'smtp.gmail.com';
-    $this->mail->Port = 587;
+    $this->mail->Host = $config['host'];
+    $this->mail->Port = $config['port'];
     /* Enable TLS encryption, `ssl` also accepted */
-    $this->mail->SMTPSecure = 'tls';
-    $this->mail->SMTPAuth = true;
-    $this->mail->Username = 'checkjestresstest@gmail.com';
-    $this->mail->Password = 'jemoeder';
+    $this->mail->SMTPSecure = $config['secure'];
+    $this->mail->SMTPAuth = $config['auth'];
+    $this->mail->Username = $config['username'];
+    $this->mail->Password = $config['password'];
 
-    $this->mail->addReplyTo('info@example.com', 'Information');
-    $this->mail->setFrom('from@example.com', 'Mailer');
+    $this->mail->setFrom($config['admin-email'], 'CheckJeStress');
   }
 
 }

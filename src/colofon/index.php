@@ -1,5 +1,3 @@
-<!--- Colofon-->
-
 <?php
 include '../resources/includes/PageCreator.php';
 $page = new PageCreator();
@@ -9,7 +7,7 @@ $page->title = "Colofon";
 $page->body = <<<CONTENT
 
 <div class="content">
-  
+
   <section class="text water" id="first">
     <div class="row">
       <div class="medium-10 medium-centered columns">
@@ -45,4 +43,3 @@ $page->body = <<<CONTENT
 
 CONTENT;
 $page->create();
-

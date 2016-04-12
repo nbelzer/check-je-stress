@@ -49,7 +49,7 @@ sed $SEDSTRING $TARGET_LOCATION/.htaccess.old > $TARGET_LOCATION/.htaccess
 rm $TARGET_LOCATION/.htaccess.old
 
 # Laat de gebruiker de config editen
-"${EDITOR:-vim}" src/resources/includes/config.php
+"${EDITOR:-vim}" src/config.php
 
 # Zet de goede permissions op de bestanden van de website
 chown -R $APACHE_GROUP:$APACHE_USER $TARGET_LOCATION

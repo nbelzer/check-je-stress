@@ -34,9 +34,7 @@ EOF;
 			<a href='javascript:history.go(-1)'><button class="button">Probeer het nog eens.</button></a>
 EOF;
 	} else {
-		$to = "checkjestresstest@gmail.com"; // TODO in config
-		$headers = "From: $to \r\n";
-		$headers .= "Reply-To: $email \r\n";
+		$to = $page->getConfig()['email']['admin-email'];
 		$email_subject = "CheckJeStress: Contactaanvraag $naam";
 		$email_body = <<<EOF
 			Er is een nieuwe aanvraag binnengekomen van de site CheckJeStress.nl:<br><br>
@@ -53,7 +51,7 @@ EOF;
 EOF;
 
 		include '../resources/includes/PHPMailer/mail.php';
-		$mail = new Mailer;
+		$mail = new Mailer($page->getConfig()['email']);
 		$mail->sendMail([$to], $email_subject, $email_body, $email_body);
 
 		$message = <<<EOF

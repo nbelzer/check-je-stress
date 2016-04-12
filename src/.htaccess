@@ -6,7 +6,7 @@ Options -Indexes
 Options +MultiViews
 
 # Deny access to some stuff
-<Files .htaccess>
+<Files .htaccess,config.php>
     Deny from all
 </Files>
 
