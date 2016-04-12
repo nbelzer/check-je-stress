@@ -137,6 +137,11 @@
   background-color: #eee;
 }
 
+.content .water, .content .dark {
+  padding: 2em 1em;
+  font-weight: 500;
+}
+
 .columns {
   padding: 0;
 }
