@@ -19,4 +19,19 @@ tbody tr:nth-child(2n) {
 .test_slider {
   background: #034E60 !important;
   border: none;
+  margin-top: 5px;
+}
+
+.str_slider {
+  padding-left: 3em;
+  padding-right: 1em;
+}
+
+@media (max-width: 40em) {
+  .str_slider {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    padding-left: 0em !important;
+    padding-right: 0em !important;
+  }
 }
