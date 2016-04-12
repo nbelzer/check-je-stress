@@ -21,9 +21,9 @@ $page->body = <<<CONTENT
   <div class="row water">
     <div class="medium-10 medium-centered columns">
       <p>
-        Welkom op de website van CheckJeStress. We helpen je graag van
-        spanning, stress en (dreigende) burnout af. Of je nu een onderneming
-        hebt of niet, onze dienstverlening past bij iedereen.
+        Welkom op de website van CheckJeStress. We helpen u graag van
+        spanning, stress en (dreigende) burnout af. Het maakt niet uit of u een een onderneming
+        heeft of niet, onze dienstverlening past bij iedereen.
       </p>
     </div>
   </div>
@@ -32,12 +32,12 @@ $page->body = <<<CONTENT
     <div class="medium-10 medium-centered columns">
 
       <div class="medium-6 columns" data-equalizer-watch>
-        <div class="header" style="color: #CBECF4;">Stel jezelf de onderstaande vragen eens:</div>
+        <div class="header" style="color: #CBECF4;">Stel uzelf de onderstaande vragen eens:</div>
         <ul class="questions">
-          <li>Heb je het druk op je werk?</li>
-          <li>Gun je jezelf steeds minder tijd voor pauze?</li>
-          <li>Neem je vaak werk mee naar huis?</li>
-          <li>Is je accu gauw leeg en gaat je verkoudheid maar niet over?</li>
+          <li>Heeft u het druk op werk?</li>
+          <li>Gunt u zichzelf steeds minder tijd voor pauze?</li>
+          <li>Neemt u vaak werk mee naar huis?</li>
+          <li>Is uw 'accu' gauw leeg en heeft u langer dan normaal last van verkoudheden?</li>
         </ul>
       </div>
 
@@ -47,13 +47,13 @@ $page->body = <<<CONTENT
           <li>38% van de arbeidsongeschiktheid in 2005 komt door psychische klachten zoals stress en burnout</li>
           <li>1 op de 8 werknemers heeft last van een burnout (bron CBS)</li>
           <li>30.000 mensen worden jaarlijks afgekeurd ten gevolge van psychische problematiek</li>
-          <li>Aan stressklachten en burnout kan iets gedaan worden!</li>
+          <li>Aan stressklachten en burnout kunnen verholpen worden</li>
         </ul>
       </div>
 
       <div class="medium-12 columns">
         <p>
-          Aarzel niet langer en neem contact met ons op om het heft weer in eigen hand te nemen! Dat wil je toch?
+          Aarzel niet langer en neem contact met ons op om het heft weer in eigen hand te nemen! Dat wilt u toch? 
         </p>
       </div>
 
@@ -64,7 +64,7 @@ $page->body = <<<CONTENT
     <div class="medium-10 medium-centered columns">
       <div class="medium-9 columns">
         <p>
-          Wil je voor jezelf controleren of je last hebt van stress of dat je richting een burn-out gaat? Door middel van een test kun je snel en eenvoudig zien of je gevaar loopt.
+          Wilt u voor uzelf controleren of u last heeft van stress of wilt u kijken of uw gewoontes en gedragingen u laten afsteven op een burnout? Door middel van een test kun je snel en eenvoudig zien of je gevaar loopt.
     <br><br><a href="tests/">Klik hier</a> voor de testpagina.
         </p>
       </div>
@@ -73,10 +73,10 @@ $page->body = <<<CONTENT
         <p style="padding-top: 1em;">
           Het kan zijn, dat er naar aanleiding van de uitslag behoefte bestaat om dit met een counsellor of coach te bespreken. Steunpunt Stress Burnout Nederland streeft ernaar om in alle provincies samenwerkingspartners aan te bieden, die een ruime ervaring hebben met stressklachten of burn-out.
           <br>
-          Neem gerust contact op voor een (vrijblijvend) kennismakingsgesprek en klik <a href="steunpunten/">hier</a> voor een counsellor bij jou in de buurt.
+          Neemt u gerust contact op voor een (vrijblijvend) kennismakingsgesprek en klik <a href="steunpunten/">hier</a> voor een counsellor bij jou in de buurt.
         </p>
         <p>
-          Sommige consulten komen in aanmerking voor vergoeding vanuit de verzekeringsmaatschappij. Vraag bij jouw counsellor om de AGB-code(s) en informeer bij jouw verzekeringsmaatschappij of je in aanmerking komt voor vergoeding.
+          Sommige consulten komen in aanmerking voor vergoeding vanuit de verzekeringsmaatschappij. U kunt bij uw counsellor om AGB-code(s) vragen en informeren bij uw verzekeringsmaatschappij of u in aanmerking komt voor vergoeding.
         </p>
 
         <a href="https://www.facebook.com/SSBN2012#!/SSBN2012/likes">Volgen op facebook?</a>
