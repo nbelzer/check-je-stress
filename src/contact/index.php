@@ -74,9 +74,9 @@ $page->body = <<<CONTENT
 
 			</table>
 
-      <img id="captcha" src="resources/captcha/securimage_show.php" alt="CAPTCHA Image" />
-      <input type="text" name="captcha_code" size="10" maxlength="6" />
-	    <a href="#" onclick="document.getElementById('captcha').src = 'resources/captcha/securimage_show.php?' + Math.random(); return false">[ Andere afbeelding ]</a>
+			<img id="captcha" src="resources/captcha/securimage_show.php" alt="CAPTCHA Image" />
+			<input type="text" name="captcha_code" size="10" maxlength="6" />
+			<a href="#" onclick="document.getElementById('captcha').src = 'resources/captcha/securimage_show.php?' + Math.random(); return false">[ Andere afbeelding ]</a>
 
 			<p>
 			   <input type="submit" value="Verstuur me, ik ben er klaar voor!" class="button">
