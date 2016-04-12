@@ -30,7 +30,7 @@ class PageCreator {
    */
   function getConfig() {
     if (!isset($this->config)) {
-      $this->config = include $path_to_root . 'config.php';
+      $this->config = include $this->path_to_root . 'config.php';
     }
     return $this->config;
   }

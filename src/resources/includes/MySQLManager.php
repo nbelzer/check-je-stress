@@ -51,7 +51,7 @@ class MySQLManager {
    * @throws Exception als het verbinden is mislukt
    */
   function connect() {
-    $config = $page->getConfig()['mysql'];
+    $config = $this->page->getConfig()['mysql'];
     $connection = new \mysqli(
                 $config['host'], $config['username'],
                 $config['password'], $config['database'],

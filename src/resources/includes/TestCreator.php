@@ -187,7 +187,7 @@ CONTENT;
 
         <div class="row text water">
           <div class="medium-10 medium-centered columns">
-            $results;
+            $results
           </div>
         </div>
 
