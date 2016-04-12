@@ -146,8 +146,10 @@ a {
 }
 
 .button {
-  background-color: #FFDC7F;
-  color: white;
+  background-color: transparent;
+  border: 1px solid #1a5469;
+  color: #FFDC7F;
+  font-weight: bold;
 }
 
 .water {
