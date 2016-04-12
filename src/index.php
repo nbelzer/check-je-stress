@@ -47,7 +47,7 @@ $page->body = <<<CONTENT
           <li>38% van de arbeidsongeschiktheid in 2005 komt door psychische klachten zoals stress en burnout</li>
           <li>1 op de 8 werknemers heeft last van een burnout (bron CBS)</li>
           <li>30.000 mensen worden jaarlijks afgekeurd ten gevolge van psychische problematiek</li>
-          <li>Aan stressklachten en burnout kunnen verholpen worden</li>
+          <li>Stressklachten en burnouts kunnen verholpen worden</li>
         </ul>
       </div>
 
