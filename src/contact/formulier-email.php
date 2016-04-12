@@ -49,7 +49,6 @@ EOF;
 			Deze persoon liet het volgende bericht achter:<br>
 			<ul>$vragenopmerkingenideeën</ul>;
 EOF;
-
 		include '../resources/includes/PHPMailer/mail.php';
 		$mail = new Mailer($page->getConfig()['email']);
 		$mail->sendMail([$to], $email_subject, $email_body, $email_body);
@@ -72,7 +71,7 @@ $page->body = <<<CONTENT
       <div class="medium-10 medium-centered columns">
         <div class="medium-9 columns medium-offset-3">
           <h5>Contact</h1>
-		  		<p>$message</p>
+		  	<p>$message</p>
         </div>
       </div>
     </div>
