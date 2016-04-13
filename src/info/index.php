@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include '../resources/includes/PageCreator.php';
 $page = new PageCreator();
 $page->path_to_root = '../';
@@ -26,7 +26,7 @@ $page->body = <<<CONTENT
             <li class="header"><h5>Op deze pagina</h5></li>
             <li><a href="#first">Wie zijn we?</a></li>
             <li><a href="#second">Wat is onze ambitie?</a></li>
-            <li><a href="#third">Wat doen we?</a><li>
+            <li><a href="#third">Wat doen we?</a></li>
           </ul>
         </div>
       </div>
