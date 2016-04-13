@@ -79,7 +79,7 @@ $page->body = <<<CONTENT
 
 			  <tr>
 				<td><label for="3">Vragen, opmerkingen of uw ideeën:</label></td>
-				<td><textarea name="vragenopmerkingenideeën" id="3" placeholder="Uw bericht" style="height: px; width: px;"></textarea></td>
+				<td><textarea name="bericht" id="3" placeholder="Uw bericht" style="height: px; width: px;"></textarea></td>
 			  </tr>
 
 			  <tr>

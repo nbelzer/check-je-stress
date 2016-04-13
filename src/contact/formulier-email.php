@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include '../resources/includes/PageCreator.php';
 $page = new PageCreator();
 $page->path_to_root = '../';
@@ -6,7 +6,7 @@ $page->head = '<link rel="stylesheet" href="resources/css/specific/standard.css"
 $page->title = "Contact";
 
 $naam = $_POST['naam'];
-$vragenopmerkingenideeën = $_POST['vragenopmerkingenideeën'];
+$bericht = $_POST['bericht'];
 $email = $_POST['email'];
 $aanvinkvelden = "";
 if (isset($_POST['aanvinkvelden'])) {
@@ -47,7 +47,7 @@ EOF;
 			Deze persoon heeft interesse in de volgende zaken:
 			<ul>$aanvinkvelden</ul>
 			Deze persoon liet het volgende bericht achter:<br>
-			<ul>$vragenopmerkingenideeën</ul>;
+			<ul>$bericht</ul>;
 EOF;
 		include '../resources/includes/PHPMailer/mail.php';
 		$mail = new Mailer($page->getConfig()['email']);
