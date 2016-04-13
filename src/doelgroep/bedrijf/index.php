@@ -26,8 +26,8 @@ $page->body = <<<CONTENT
             <li class="header"><h5>Op deze pagina</h5></li>
             <li><a href="#first">Bedrijf</a></li>
             <li><a href="#second">Financiële gevolgen</a></li>
-            <li><a href="#third">Producten</a><li>
-            <li><a href="#fourth">Risicoanalyse</a><li>
+            <li><a href="#third">Producten</a></li>
+            <li><a href="#fourth">Risicoanalyse</a></li>
           </ul>
         </div>
       </div>
@@ -190,7 +190,7 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			Twijfel je als ondernemer of de organisatie gebukt gaat onder stress en/of burnout? Vul dan de test in voor ondernemers onder <a href="tests/">testen</a>. Kies test B.
+			Twijfel je als ondernemer of de organisatie gebukt gaat onder stress en/of burnout? Vul dan de test in voor ondernemers onder <a href="tests/">testen</a>. Kies de burnout risico analyse.
 		  </p>
 
 		  <p>
@@ -202,7 +202,7 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			<a href="tests/uitgebreide-test">Klik hier</a> voor een burnout risico-analyse voor bedrijven. (kies test B)
+			<a href="tests/risicoanalyse.php">Klik hier</a> voor een burnout risico-analyse voor bedrijven.
 		  </p>
 
         </div>

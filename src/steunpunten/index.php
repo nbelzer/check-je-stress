@@ -55,11 +55,11 @@ $page->body = <<<CONTENT
         <h5>Overzicht</h5>
 
         <p>
-          <object data="resources/img/clickable_map.svg" type="image/svg+xml" width="500"></object>
+          Kies hieronder op de kaart de provincie naar keuze.
         </p>
 
         <p>
-          Kies hierboven op de kaart de provincie naar keuze.
+          <object data="resources/img/clickable_map.svg" type="image/svg+xml" width="500"></object>
         </p>
 
       </div>

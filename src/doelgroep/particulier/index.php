@@ -58,7 +58,7 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			Herken je jezelf in bovenstaande symptomen en ben je benieuwd naar een stressvrij(er) leven? Neem dan contact met ons op door <a href="contact/">hier te klikken</a>. Of vul test A in op de <a href="tests/snelle-test">testpagina</a>.
+			Herken je jezelf in bovenstaande symptomen en ben je benieuwd naar een stressvrij(er) leven? Neem dan contact met ons op door <a href="contact/">hier te klikken</a>, of vul de snelle test in op de <a href="tests/snelle-test.php">testpagina</a>.
 		  </p>
 
 		  <p>

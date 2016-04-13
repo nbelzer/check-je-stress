@@ -25,25 +25,25 @@ $page->body = <<<CONTENT
       <ul>
         <li>
           <!-- test a -->
-          doe de <a href="tests/snelle-test">snelle test</a> als je snel wilt weten of je
+          Doe de <a href="tests/snelle-test">snelle test</a> als je snel wilt weten of je
           risico loopt op een burnout.
           <br>
-          deze test duurt ongeveer 2 minuten.
+          Deze test duurt ongeveer 2 minuten.
         </li>
         <li>
           <!-- test c -->
-          doe de <a href="tests/uitgebreide-test">uitgebreide test</a> als je wilt weten of
+          Doe de <a href="tests/uitgebreide-test">uitgebreide test</a> als je wilt weten of
           je verschijnselen hebt van een echte burnout.
           <br>
-          deze test duurt ongeveer 15 minuten.
+          Deze test duurt ongeveer 5 minuten.
         </li>
         <li>
           <!-- test b -->
-          de <a href="tests/risicoanalyse">burnout risico analyse</a> is een test voor
+          De <a href="tests/risicoanalyse">burnout risico analyse</a> is een test voor
           managers, bestuurders en directeuren om te weten te komen hoeveel risico het
           bedrijf loopt op burnouts van werknemers.
           <br>
-          deze test duurt ongeveer 5 minuten.
+          Deze test duurt ongeveer 2 minuten.
         </li>
       <!-- voor deze test kunnen we misschien het beste een inlogsysteem maken waarbij
            de werknemers de link naar de test krijgen opgestuurd, i.p.v. hem hier neer
@@ -54,8 +54,8 @@ $page->body = <<<CONTENT
       -->
       </ul>
       <p>
-        alle feedback verschijnt na het versturen op je scherm en je weet meteen het
-        resultaat. uiteraard worden alle verstuurde gegevens vertrouwelijk door ons
+        Alle feedback verschijnt na het versturen op je scherm en je weet meteen het
+        resultaat. Uiteraard worden alle verstuurde gegevens vertrouwelijk door ons
         behandeld.
       </p>
 
