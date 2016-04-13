@@ -61,27 +61,20 @@ $page->body = <<<CONTENT
   </div>
 
   <div class="row dark">
-    <div class="medium-10 medium-centered columns">
-      <div class="medium-9 columns">
-        <p>
-          Wilt u voor uzelf controleren of u last heeft van stress of wilt u kijken of uw gewoontes en gedragingen u laten afsteven op een burnout? Door middel van een test kun je snel en eenvoudig zien of je gevaar loopt.
-    <br><br><a href="tests/">Klik hier</a> voor de testpagina.
-        </p>
-      </div>
-
-      <div class="medium-12 columns">
-        <p style="padding-top: 1em;">
-          Het kan zijn, dat er naar aanleiding van de uitslag behoefte bestaat om dit met een counsellor of coach te bespreken. Steunpunt Stress Burnout Nederland streeft ernaar om in alle provincies samenwerkingspartners aan te bieden, die een ruime ervaring hebben met stressklachten of burn-out.
-          <br>
-          Neemt u gerust contact op voor een (vrijblijvend) kennismakingsgesprek en klik <a href="steunpunten/">hier</a> voor een counsellor bij jou in de buurt.
-        </p>
-        <p>
-          Sommige consulten komen in aanmerking voor vergoeding vanuit de verzekeringsmaatschappij. U kunt bij uw counsellor om AGB-code(s) vragen en informeren bij uw verzekeringsmaatschappij of u in aanmerking komt voor vergoeding.
-        </p>
-
-        <a href="https://www.facebook.com/SSBN2012#!/SSBN2012/likes">Volgen op facebook?</a>
-      </div>
-
+    <div class="medium-10 medium-centered columns">	  
+	  <p>
+        Wilt u voor uzelf controleren of u last heeft van stress of wilt u kijken of uw gewoontes en gedragingen u laten afstevenen op een burnout? Door middel van een test kun je snel en eenvoudig zien of je gevaar loopt.
+    	<br><br><a href="tests/">Klik hier</a> voor de testpagina.
+      </p>
+      <p style="padding-top: 1em;">
+        Het kan zijn, dat er naar aanleiding van de uitslag behoefte bestaat om dit met een counsellor of coach te bespreken. Steunpunt Stress Burnout Nederland streeft ernaar om in alle provincies samenwerkingspartners aan te bieden, die een ruime ervaring hebben met stressklachten of burn-out.
+        <br>
+        Neemt u gerust contact op voor een (vrijblijvend) kennismakingsgesprek en klik <a href="steunpunten/">hier</a> voor een counsellor bij jou in de buurt.
+      </p>
+      <p>
+        Sommige consulten komen in aanmerking voor vergoeding vanuit de verzekeringsmaatschappij. U kunt bij uw counsellor om AGB-code(s) vragen en informeren bij uw verzekeringsmaatschappij of u in aanmerking komt voor vergoeding.
+      </p>
+      <a href="https://www.facebook.com/SSBN2012/">Volgen op facebook?</a>
     </div>
   </div>
 
