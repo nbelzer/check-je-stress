@@ -78,7 +78,7 @@ $page->body = <<<CONTENT
         </p>
 
         <p>
-          <a href="steunpunten/">Klik hier</a> voor een counsellor bij jou in de buurt.
+          <a href="steunpunten/">Klik hier</a> voor een counsellor bij u in de buurt.
           <br />
           <a href="doelgroep/particulier/">Klik hier</a> wat we voor particulieren kunnen betekenen.
           <br />
@@ -108,18 +108,18 @@ $page->body = <<<CONTENT
           <ul>
             <li>Analyse van testgegevens</li>
             <li>Klachteninventarisatie</li>
-            <li>Directe klachtenreductie (je hebt er dus meteen baat bij)</li>
+            <li>Directe klachtenreductie (u hebt er dus meteen baat bij)</li>
             <li>Terugvalpreventie</li>
             <li>Preventieplan en opzetten van meerjarig beleid op gebied van stress en burnout</li>
           </ul>
         </p>
 
         <p>
-          Na een aantal sessies leer je signalen te herkennen die spanning bij je oproepen en kun je er beter mee omgaan. We laten je de balans hervinden tussen energieslurpers en energiegevers, zodat je uiteindelijk beter in balans bent en op werk- en privégebied optimaal kunt functioneren. We geven je handvatten mee om gerust in de toekomst om te leren gaan met negatieve stress.
+          Na een aantal sessies leert u signalen te herkennen die spanning bij u oproepen en kunt u er beter mee omgaan. We laten u de balans hervinden tussen energieslurpers en energiegevers, zodat u uiteindelijk beter in balans bent en op werk- en privégebied optimaal kunt functioneren. We geven u handvatten mee om gerust in de toekomst om te leren gaan met negatieve stress.
         </p>
 
         <p>
-          Benieuwd of jij ook bij deze 20% hoort?
+          Benieuwd of u ook bij deze 20% hoort?
           <br />
           <a href="tests/">Klik hier</a> en maak de snelle test of de uitgebreide test.
         </p>

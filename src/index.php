@@ -63,13 +63,13 @@ $page->body = <<<CONTENT
   <div class="row dark">
     <div class="medium-10 medium-centered columns">	  
 	  <p>
-        Wilt u voor uzelf controleren of u last heeft van stress of wilt u kijken of uw gewoontes en gedragingen u laten afstevenen op een burnout? Door middel van een test kun je snel en eenvoudig zien of je gevaar loopt.
+        Wilt u voor uzelf controleren of u last heeft van stress of wilt u kijken of uw gewoontes en gedragingen u laten afstevenen op een burnout? Door middel van een test kunt u snel en eenvoudig zien of u gevaar loopt.
     	<br><br><a href="tests/">Klik hier</a> voor de testpagina.
       </p>
       <p style="padding-top: 1em;">
         Het kan zijn, dat er naar aanleiding van de uitslag behoefte bestaat om dit met een counsellor of coach te bespreken. Steunpunt Stress Burnout Nederland streeft ernaar om in alle provincies samenwerkingspartners aan te bieden, die een ruime ervaring hebben met stressklachten of burn-out.
         <br>
-        Neemt u gerust contact op voor een (vrijblijvend) kennismakingsgesprek en klik <a href="steunpunten/">hier</a> voor een counsellor bij jou in de buurt.
+        Neemt u gerust contact op voor een (vrijblijvend) kennismakingsgesprek en klik <a href="steunpunten/">hier</a> voor een counsellor bij u in de buurt.
       </p>
       <p>
         Sommige consulten komen in aanmerking voor vergoeding vanuit de verzekeringsmaatschappij. U kunt bij uw counsellor om AGB-code(s) vragen en informeren bij uw verzekeringsmaatschappij of u in aanmerking komt voor vergoeding.
