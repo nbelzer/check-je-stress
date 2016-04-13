@@ -120,6 +120,7 @@ $page->body = <<<CONTENT
 				</td>
 			  </tr>
 			
+			</table>
 			<p>
 			   <input type="submit" value="Verzenden" class="button">
 			</p>
