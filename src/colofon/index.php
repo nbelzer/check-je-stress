@@ -7,11 +7,20 @@ $page->title = "Colofon";
 $page->body = <<<CONTENT
 
 <div class="content">
+<div class="menuSpacing"></div>
 
-  <section class="text water" id="first">
+  <div class="indexImage">
     <div class="row">
-      <div class="medium-10 medium-centered columns">
-        <div class="medium-9 columns medium-offset-3">
+      <div class="medium-12 medium-centered columns">
+        <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolourbeach.svg');">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row text water" id="first">
+    <div class="medium-10 medium-centered columns">
+
           <h5>Colofon</h1>
 
 		  <p>
@@ -36,8 +45,6 @@ $page->body = <<<CONTENT
 
         </div>
       </div>
-    </div>
-  </section>
 
 </div>
 
