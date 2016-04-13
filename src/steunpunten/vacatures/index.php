@@ -2,17 +2,27 @@
 include '../../resources/includes/PageCreator.php';
 $page = new PageCreator();
 $page->path_to_root = '../../';
-$page->head = '<link rel="stylesheet" href="resources/css/specific/standard.css" type="text/css">';
+$page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
 $page->title = "Vacatures";
 $page->body = <<<CONTENT
 
 <div class="content">
+  <div class="menuSpacing"></div>
 
-  <section class="text water" id="first">
+  <div class="indexImage">
     <div class="row">
-      <div class="medium-10 medium-centered columns">
-        <div class="medium-9 columns medium-offset-3">
-          <h5>Vacatures</h1>
+      <div class="medium-12 medium-centered columns">
+        <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolourbeach.svg');">
+        </div>
+      </div>
+    </div>
+  </div> 
+ 
+	<div class="row text water" id="first">
+	  <div class="medium-10 medium-centered columns">
+        <div class="medium-12 columns">
+		
+		  <h5>Vacatures</h5>
 
           <p>
 			Ons doel is om in elke provincie een ruim aantal aangesloten praktijken te hebben om iedereen in Nederland te kunnen bedienen om stressklachten en burnout terug te dringen.
@@ -37,16 +47,14 @@ $page->body = <<<CONTENT
 			Tot binnenkort?<br />
 			Serge
 		  </p>
-
-        </div>
+		</div>
       </div>
     </div>
-  </section>
 
-  <section class="text dark" id="second">
-    <div class="row">
+    <div class="row text dark" id="second">
       <div class="medium-10 medium-centered columns">
-        <div class="medium-9 columns medium-offset-3">
+        <div class="medium-12 columns">
+		
           <h5>Contactformulier vacatures</h1>
 
 		  <p>
@@ -54,7 +62,7 @@ $page->body = <<<CONTENT
 			  Ja, ik heb interesse om diensten te verzorgen voor CheckJeStress.
 			</b>
 		  </p>
-
+		  
 		  <form method="post" name="contactformulier vacatures" action="steunpunten/vacatures/formulier-email.php">
 			<table border="1">
 
@@ -103,11 +111,14 @@ $page->body = <<<CONTENT
 				<td><input type="text" name="verdereinformatie" id="9"></td>
 			  </tr>
 
-			</table>
-
-			<img id="captcha" src="resources/captcha/securimage_show.php" alt="CAPTCHA Image" />
-			<input type="text" name="captcha_code" size="10" maxlength="6" />
-			<a href="#" onclick="document.getElementById('captcha').src = 'resources/captcha/securimage_show.php?' + Math.random(); return false">[ Andere afbeelding ]</a>			
+			  <tr>
+				<td><label for="10">Captcha</label></td>
+				<td>
+				  <img id="captcha" src="resources/captcha/securimage_show.php" alt="CAPTCHA Image" />
+				  <a href="#" onclick="document.getElementById('captcha').src = 'resources/captcha/securimage_show.php?' + Math.random(); return false">[ Andere afbeelding ]</a>
+				  <input type="text" name="captcha_code" maxlength="6" id="10">				
+				</td>
+			  </tr>
 			
 			<p>
 			   <input type="submit" value="Verzenden" class="button">
@@ -117,8 +128,7 @@ $page->body = <<<CONTENT
         </div>
       </div>
     </div>
-  </section>
-
+	
 </div>
 
 CONTENT;

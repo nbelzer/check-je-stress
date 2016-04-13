@@ -62,7 +62,7 @@ $page->body = <<<CONTENT
       <div class="medium-10 medium-centered columns">
         <div class="medium-12 columns">
 
-      <p>
+		  <p>
 			<b>Steunpunt Stress Burnout Nederland kan voor jouw bedrijf een beleidsplan schrijven ter preventie van burn-out, dit geheel toegesneden op jouw bedrijf, ongeacht grootte, branche of locatie. De arbeidsinspectie kan naar een preventiebeleid vragen!</b>
 		  </p>
 
