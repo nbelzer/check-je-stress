@@ -16,9 +16,9 @@ $page->body = <<<EOF
             <a href="admin/editor.php"><button type="button" class="button">
               Inhoud van de website aanpassen
             </button></a>
-            <button type="button" class="button">
+            <a href="admin/testresultaten.php"><button type="button" class="button">
               Resultaten van de tests inzien
-            </button>
+            </button></a>
 
           </div>
         </div>

@@ -54,10 +54,53 @@ class TestsSQL {
 
     try {
       $this->mySQLManager->setterQuery($sql, $param_types, $params);
-    } catch (Exception $e) {
-      // TODO log
+    } catch (\Exception $e) {
       /* Doe niets. De testresultaten kunnen niet worden opgeslagen in MySQL,
          maar de gebruiker kan nog steeds zijn resultaten zien. */
+    }
+  }
+
+  /**
+   * Zoekt de resultaten van een bepaalde test op.
+   *
+   * @param string $test de test waarvan de resultaten opgezocht moeten worden
+   * @return array de resultaten van de test
+   */
+  function getResults($test) {
+    $sql = "SELECT * FROM test_$test LIMIT 20;";
+    try {
+      return $this->mySQLManager->getterQuery($sql, null, null);
+    } catch (\Exception $e) {
+      return;
+    }
+  }
+
+  /**
+   * Geeft de gemiddelde resultaten van de vragen.
+   *
+   * @return array een array op volgorde van de vragen met de gemiddelde
+   * antwoorden
+   */
+  function getAverageResults($test) {
+    switch ($test) {
+      case 'risicoanalyse':
+      case 'snel':
+        $number = 25;
+        break;
+      case 'uitgebreid':
+        $number = 56;
+        break;
+    }
+    $columns = 'AVG(question0)';
+    for ($i=1; $i<$number; $i++) {
+      $columns .= ", AVG(question$i)";
+    }
+
+    $sql = "SELECT $columns FROM test_$test;";
+    try {
+      return $this->mySQLManager->getterQuery($sql, null, null)[0];
+    } catch (\Exception $e) {
+      return;
     }
   }
 
