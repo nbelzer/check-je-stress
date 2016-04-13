@@ -24,7 +24,7 @@ $page->body = <<<CONTENT
         <h5>Particulier</h5>
 
 		  <p>
-			<b>Stress is onvermijdelijk en vroeg of laat kan je ermee te maken krijgen:</b> op je werk, in je sociale en privé-contacten, ja zelfs in je slaap. Steeds meer werkenden – zowel in het lagere als het hogere kader – klagen over stress of spanningen. Voor cijfers zie <a href="http://www.cbs.nl/nl-nl/menu/themas/arbeid-sociale-zekerheid/publicaties/artikelen/archief/2011/2011-3493-wm.htm">CBS.nl</a>
+			<b>Stress is onvermijdelijk en vroeg of laat kunt u ermee te maken krijgen:</b> op uw werk, in uw sociale en privé-contacten, ja zelfs in uw slaap. Steeds meer werkenden – zowel in het lagere als het hogere kader – klagen over stress of spanningen. Voor cijfers zie <a href="http://www.cbs.nl/nl-nl/menu/themas/arbeid-sociale-zekerheid/publicaties/artikelen/archief/2011/2011-3493-wm.htm">CBS.nl</a>
 		  </p>
 
 		  <p>
@@ -40,11 +40,11 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			<b>Wat kan Steunpunt Stress Burnout Nederland voor jou betekenen?</b>
+			<b>Wat kan Steunpunt Stress Burnout Nederland voor u betekenen?</b>
 			<ul>
 			  <li>We gaan onderzoeken hoe we de mentale belasting kunnen verminderen.
-			  <li>We helpen je het werk weer belonend te maken en persoonlijke betekenis te geven
-			  <li>We gaan je vermogen vergroten om een nieuwe burnout te voorkomen.
+			  <li>We helpen u het werk weer belonend te maken en persoonlijke betekenis te geven
+			  <li>We gaan u vermogen vergroten om een nieuwe burnout te voorkomen.
 			</ul>
 		  </p>
 
@@ -58,22 +58,23 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			Herken je jezelf in bovenstaande symptomen en ben je benieuwd naar een stressvrij(er) leven? Neem dan contact met ons op door <a href="contact/">hier te klikken</a>, of vul de snelle test in op de <a href="tests/snelle-test.php">testpagina</a>.
+			Herkent u uzelf in bovenstaande symptomen en bent u benieuwd naar een stressvrij(er) leven? Neem dan contact met ons op door <a href="contact/">hier te klikken</a>, of vul de snelle test in op de <a href="tests/snelle-test.php">testpagina</a>.
 		  </p>
 
 		  <p>
-			Je kunt zelf al eenvoudig beginnen om te zorgen voor een goed slaappatroon, maar ook regelmatig en gezond te eten. Neem tijd voor ontspanning door bijvoorbeeld te wandelen, zwemmen of te sporten. Je ziet dat dit al eenvoudige tips zijn om actief iets tegen stress te doen. Zit je echter dieper in de put en wil je een nieuw begin maken? Aarzel niet en neem contact op!
+			U kunt zelf al eenvoudig beginnen om te zorgen voor een goed slaappatroon, maar ook regelmatig en gezond te eten. Neem tijd voor ontspanning door bijvoorbeeld te wandelen, zwemmen of te sporten. U ziet dat dit al eenvoudige tips zijn om actief iets tegen stress te doen. Zit u echter dieper in de put en wilt u een nieuw begin maken? Aarzel niet en neem contact op!
 		  </p>
 
 		  <p>
 			Verzekeringsmaatschappijen erkennen in toenemende mate de waarde van counselling en vergoeden (soms gedeeltelijk) de sessies, waaronder:
 			<br />
 			<i>Aegon, Anderzorg, CZ, Delta Lloyd, IAK, IZA, Lancyr, Menzis, Ohra, Trias, Univé</i> en <i>VGZ</i>.
+			<br />
 			<a href="http://www.abvc.nl/CMS/Docs/Verz/Vergoedingen%20zorgverzekeraars%202013%20ABvC.pdf">Klik hier</a> voor een overzicht van de verzekeringsmaatschappijen en bijbehorende vergoedingen.
 		  </p>
 
 		  <p>
-			De consulten/sessies van een individueel traject (geen groepstrainingen, lezingen en/of workshops) vallen onder "Alternatieve Geneeswijzen" in het aanvullende verzekeringspakket. Raadpleeg de eigen polis of neem contact op met de ziektekostenverzekeraar, deze kan je vertellen tot welk verzekerd bedrag onze declaraties vergoed worden.
+			De consulten/sessies van een individueel traject (geen groepstrainingen, lezingen en/of workshops) vallen onder "Alternatieve Geneeswijzen" in het aanvullende verzekeringspakket. Raadpleeg de eigen polis of neem contact op met de ziektekostenverzekeraar, deze kan u vertellen tot welk verzekerd bedrag onze declaraties vergoed worden.
 		  </p>
 
         </div>

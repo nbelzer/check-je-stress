@@ -37,7 +37,7 @@ $page->body = <<<CONTENT
           <h5>Bedrijf</h5>
 
           <p>
-			<b>Elke werknemer telt! Verzuim als gevolg van stress en stressgerelateerde klachten (RSI!) kost de maatschappij miljoenen euro's per jaar!</b>
+			<b>Iedere werknemer telt! Verzuim als gevolg van stress en stressgerelateerde klachten (RSI!) kost de maatschappij miljoenen euro's per jaar!</b>
 		  </p>
 
 		  <p>
@@ -45,13 +45,12 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			Over duurzaam ondernemen spreken de media tegenwoordig vrij regelmatig. Maar hoe duurzaam ben je met je medewerkers? Grote kans dat er medewerkers zijn die het risico lopen om burn-out te raken. Sta je daar wel eens bij stil?
+			Over duurzaam ondernemen spreken de media tegenwoordig vrij regelmatig. Maar hoe duurzaam bent u met uw medewerkers? Grote kans dat er medewerkers zijn die het risico lopen om burn-out te raken. Staat u daar wel eens bij stil?
 		  </p>
 
 		  <p data-magellan data-options="barOffset:40">
-			Heb je dan al eens uitgerekend <b>wat die werknemer je dan kost</b>, mocht deze als gevolg van burn-out (verminderd) arbeidsongeschikt wordt?
+			Heeft u dan al eens uitgerekend <b>wat die werknemer u dan kost</b>, mocht deze als gevolg van burn-out (verminderd) arbeidsongeschikt worden?
 			<a href="#second">Kijk hieronder</a> voor een eenvoudig rekenvoorbeeld.
-			<br />
 		  </p>
 
         </div>
@@ -63,11 +62,11 @@ $page->body = <<<CONTENT
         <div class="medium-12 columns">
 
 		  <p>
-			<b>Steunpunt Stress Burnout Nederland kan voor jouw bedrijf een beleidsplan schrijven ter preventie van burn-out, dit geheel toegesneden op jouw bedrijf, ongeacht grootte, branche of locatie. De arbeidsinspectie kan naar een preventiebeleid vragen!</b>
+			<b>Steunpunt Stress Burnout Nederland kan voor uw bedrijf een beleidsplan schrijven ter preventie van burn-out, dit geheel toegesneden op uw bedrijf, ongeacht grootte, branche of locatie. De arbeidsinspectie kan naar een preventiebeleid vragen!</b>
 		  </p>
 
 		  <p>
-			Dit betekent voor jouw bedrijf:
+			Dit betekent voor uw bedrijf:
 			<ul>
 			  <li>Uitvoeren van een test en intake per werknemer</li>
 			  <li>Doorlichten van de gehele organisatie op het gebied van werkdruk</li>
@@ -81,15 +80,15 @@ $page->body = <<<CONTENT
 		  <p>
 			<b>Samengevat enkele voordelen als werkgever op een rij:</b>
 			<ul>
-			  <li>Met een lage investering bereik je een hoog rendement</li>
-			  <li>Je voorkomt een lang ziekteverzuim van de werknemer</li>
-			  <li>Je geeft een gedeelte van het protocol voor preventie ziekteverzuim uit handen, zodat er meer tijd overblijft voor je bedrijfsvoering</li>
+			  <li>Met een lage investering bereikt u een hoog rendement</li>
+			  <li>U voorkomt een lang ziekteverzuim van de werknemer</li>
+			  <li>U geeft een gedeelte van het protocol voor preventie ziekteverzuim uit handen, zodat er meer tijd overblijft voor uw bedrijfsvoering</li>
 			  <li>De stressvermindering bij de werknemer zorgt voor een betere werksfeer en daardoor voor een hogere productiviteit</li>
-			  <li>Je toont uw betrokkenheid aan de werknemer</li>
-			  <li>Je kiest voor maatwerk binnen een bewezen effectief concept</li>
+			  <li>U toont uw betrokkenheid aan de werknemer</li>
+			  <li>U kiest voor maatwerk binnen een bewezen effectief concept</li>
 			  <li>Structurele aanpak stress en burnout</li>
 			  <li>Structurele aanpak van preventie ziekteverzuim</li>
-			  <li>Je voldoet aan wettelijke normen voor preventie ziekteverzuim</li>
+			  <li>U voldoet aan wettelijke normen voor preventie ziekteverzuim</li>
 			</ul>
 		  </p>
 
@@ -100,15 +99,15 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			Bij een burnout is de werknemer langere tijd, variërend van 6 maanden tot soms 2 jaar, niet in staat zijn werk te verrichten. Bovendien heb je als werkgever de verplichting om goed werkgeversschap te leveren. Mogelijk kun je als bedrijf/organisatie aansprakelijk gesteld worden voor arbeidsongeschikt van een werknemer als gevolg van een burnout. Lees hier meer over de mogelijke gevolgen.
+			Bij een burnout is de werknemer langere tijd, variërend van 6 maanden tot soms 2 jaar, niet in staat zijn werk te verrichten. Bovendien heeft u als werkgever de verplichting om goed werkgeversschap te leveren. Mogelijk kunt u als bedrijf/organisatie aansprakelijk gesteld worden voor arbeidsongeschikt van een werknemer als gevolg van een burnout. Lees <a href="http://vorige.nrc.nl/binnenland/article1820036.ece/www.stamos.nl">hier</a> meer over de mogelijke gevolgen.
 		  </p>
 
 		  <p data-magellan data-options="barOffset:40">
-			Ziekteverzuim, arbeidsongeschiktheid en mogelijk instroom in de WGA van je personeel heeft financiële gevolgen. Lees <a href="#second">hieronder</a> daarover meer.
+			Ziekteverzuim, arbeidsongeschiktheid en mogelijk instroom in de WGA van uw personeel heeft financiële gevolgen. Lees <a href="#second">hieronder</a> daarover meer.
 		  </p>
 
 		  <p>
-			<a href="contact/">Klik hier</a> voor een vrijblijvende afspraak om de mogelijkheden voor je op een rijtje te zetten.
+			<a href="contact/">Klik hier</a> voor een vrijblijvende afspraak om de mogelijkheden voor u op een rijtje te zetten.
 		  </p>
 
         </div>
@@ -122,17 +121,17 @@ $page->body = <<<CONTENT
           <h5>Financiële gevolgen voor bedrijven</h5>
 
           <p>
-			Ziekteverzuim, arbeidsongeschiktheid en mogelijke instroom in de WGA zijn mogelijke gevolgen van een burnout. Natuurlijk is dit in het ergste geval zo. Indien je een <b>goed ziekteverzuimbeleid</b<, een goed <b>preventieplan</b> hebt en actief bezig bent met het voorkomen van stress en burnout bij je personeel zal het zo een vaart niet lopen.
+			Ziekteverzuim, arbeidsongeschiktheid en mogelijke instroom in de WGA zijn mogelijke gevolgen van een burnout. Natuurlijk is dit in het ergste geval zo. Indien u een <b>goed ziekteverzuimbeleid</b<, een goed <b>preventieplan</b> hebt en actief bezig bent met het voorkomen van stress en burnout bij uw personeel zal het zo een vaart niet lopen.
 		  </p>
 
 		  <p>
-			Toch kan het misgaan en raken er medewerkers burnout als gevolg van het werk. Het bedrijf kan <b>aansprakelijk gesteld</b> worden door letstelschadejuristen en er zijn in het verleden sommen door de rechter opgelegd, die variëren van €80.000,- tot zelfs € 237.000,-. Lees daarover <a href="http://vorige.nrc.nl/binnenland/article1820036.ece/www.stamos.nl">hier</a> meer. Verdere gedetailleerde informatie of heb je vragen of mogelijke <b>juridische gevolgen</b> kun je contact opnemen met letselverhalen.nl
+			Toch kan het misgaan en raken er medewerkers burnout als gevolg van het werk. Het bedrijf kan <b>aansprakelijk gesteld</b> worden door letstelschadejuristen en er zijn in het verleden sommen door de rechter opgelegd, die variëren van €80.000,- tot zelfs € 237.000,-. Lees daarover <a href="http://vorige.nrc.nl/binnenland/article1820036.ece/www.stamos.nl">hier</a> meer. Verdere gedetailleerde informatie of heeft u vragen of mogelijke <b>juridische gevolgen</b> kunt u contact opnemen met letselverhalen.nl
 		  </p>
 
 		  <p>
 			Bovendien heeft de instroom van medewerkers in de <b>WGA</b> ook <b>verstrekkende gevolgen</b>. Een simpele rekensom:
 			<br />
-			Een bedrijf heeft een loonsom van € 10.000.000,- en heeft een parttimer die €10.000 verdiend, die in de WGA stroomt. Dan kost deze parttimer het bedrijf ongeveer € 20.000,- aan premie gedurende 10 jaar lang, dus <b>€ 200.000,-</b> die voorkomen had kunnen worden door een goed en actief preventiebeleid en <b>op tijd ingrijpen</b>. Je kan zelf uitrekenen hoeveel het kost als je meer medewerkers in de WGA hebt met hogere uitkeringen en/of een hogere loonsom.
+			Een bedrijf heeft een loonsom van € 10.000.000,- en heeft een parttimer die €10.000 verdiend, die in de WGA stroomt. Dan kost deze parttimer het bedrijf ongeveer € 20.000,- aan premie gedurende 10 jaar lang, dus <b>€ 200.000,-</b> die voorkomen had kunnen worden door een goed en actief preventiebeleid en <b>op tijd ingrijpen</b>. U kunt zelf uitrekenen hoeveel het kost als u meer medewerkers in de WGA hebt met hogere uitkeringen en/of een hogere loonsom.
 		  </p>
 
 		  <p>
@@ -174,11 +173,11 @@ $page->body = <<<CONTENT
           <h5>Burnout risico-analyse voor bedrijven</h5>
 
 		  <p>
-			Zoals je op de vorige pagina al hebt kunnen lezen kost stress en burnout het bedrijfsleven heel erg veel geld. Geld wat makkelijk uitgespaard kan worden door een <b>goed preventiebeleid</b>. Steunpunt Stress Burnout Nederland kan voor jouw organisatie een <b>burnout risico-analyse</b> uitvoeren.
+			Zoals u op de vorige pagina al hebt kunnen lezen kost stress en burnout het bedrijfsleven heel erg veel geld. Geld wat makkelijk uitgespaard kan worden door een <b>goed preventiebeleid</b>. Steunpunt Stress Burnout Nederland kan voor uw organisatie een <b>burnout risico-analyse</b> uitvoeren.
 		  </p>
 
 		  <p>
-			Hierbij wordt de organisatie (of delen daarvan) doorgelicht met gebruik van testen. Elk personeelslid vult een uitgebreide test in en als werkgever zie je door de terugrapportage in 1 oogopslag hoeveel procent van de medewerkers er gevaar loopt.
+			Hierbij wordt de organisatie (of delen daarvan) doorgelicht door middel van testen. Elk personeelslid vult een uitgebreide test in en als werkgever ziet u door de terugrapportage in 1 oogopslag hoeveel procent van de medewerkers er gevaar loopt.
 		  </p>
 
 		  <p>
@@ -186,11 +185,11 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			Ook een voor de organisatie op maat geschreven Burnoutpreventieplan om ziekteverzuim als gevolg van stress in de toekomst voor te zijn is één van de instrumenten om duurzaam om te gaan met je belangrijkste bedrijfskapitaal: je eigen personeel. Ook bieden we de mogelijkheid om leidinggevenden te trainen in het herkennen van stresssignalen en de daarop volgende actie. Voorkomen is ook hier beter dan genezen.
+			Ook een voor de organisatie op maat geschreven Burnoutpreventieplan om ziekteverzuim als gevolg van stress in de toekomst voor te zijn is één van de instrumenten om duurzaam om te gaan met uw belangrijkste bedrijfskapitaal: uw eigen personeel. Ook bieden we de mogelijkheid om leidinggevenden te trainen in het herkennen van stresssignalen en de daarop volgende actie. Voorkomen is ook hier beter dan genezen.
 		  </p>
 
 		  <p>
-			Twijfel je als ondernemer of de organisatie gebukt gaat onder stress en/of burnout? Vul dan de test in voor ondernemers onder <a href="tests/">testen</a>. Kies de burnout risico analyse.
+			Twijfelt u als ondernemer of de organisatie gebukt gaat onder stress en/of burnout? Vul dan de test in voor ondernemers onder <a href="tests/">testen</a>. Kies de burnout risico analyse.
 		  </p>
 
 		  <p>
@@ -198,7 +197,7 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			Een compleet overzicht van onze dienstverlening vind je onder de menuknop "producten".
+			Een compleet overzicht van onze dienstverlening vindt u onder de menuknop "producten".
 		  </p>
 
 		  <p>
