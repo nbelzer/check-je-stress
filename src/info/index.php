@@ -78,7 +78,7 @@ $page->body = <<<CONTENT
         </p>
 
         <p>
-          <a href="../steunpunten/">Klik hier</a> voor een counsellor bij jou in de buurt.
+          <a href="steunpunten/">Klik hier</a> voor een counsellor bij jou in de buurt.
           <br />
           <a href="doelgroep/particulier/">Klik hier</a> wat we voor particulieren kunnen betekenen.
           <br />
@@ -121,7 +121,7 @@ $page->body = <<<CONTENT
         <p>
           Benieuwd of jij ook bij deze 20% hoort?
           <br />
-          <a href="tests/">Klik hier</a> en maak test A of test C.
+          <a href="tests/">Klik hier</a> en maak de snelle test of de uitgebreide test.
         </p>
 
       </div>
