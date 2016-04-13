@@ -114,8 +114,8 @@ $page->body = <<<CONTENT
 			  <tr>
 				<td><label for="10">Captcha</label></td>
 				<td>
-				  <img id="captcha" src="resources/captcha/securimage_show.php" alt="CAPTCHA Image" />
-				  <a href="#" onclick="document.getElementById('captcha').src = 'resources/captcha/securimage_show.php?' + Math.random(); return false">[ Andere afbeelding ]</a>
+				  <img id="captcha" src="resources/captcha/securimage_show.php" alt="CAPTCHA Image" style="border:1px solid black;" />
+				  <a href="#" onclick="document.getElementById('captcha').src = 'resources/captcha/securimage_show.php?' + Math.random(); return false">[ Andere afbeelding ]</a><br><br>
 				  <input type="text" name="captcha_code" maxlength="6" id="10">				
 				</td>
 			  </tr>
