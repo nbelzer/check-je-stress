@@ -59,8 +59,9 @@ $test_page->test_body = <<<EOF
   <h3>Snelle test</h3>
   <p>
     Deze test bestaat uit 25 stellingen.
-    <br>
-    Kies steeds in welke mate de uitspraak op u van toepassing is.
+    <br><br>
+    Kies steeds in welke mate de uitspraak op u van toepassing is. Hierbij geldt dat hoe 
+	verder de slider naar rechts staat, hoe meer u het eens bent met de uitspraak.
   </p>
 EOF;
 

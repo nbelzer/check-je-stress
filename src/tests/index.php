@@ -25,15 +25,15 @@ $page->body = <<<CONTENT
       <ul>
         <li>
           <!-- test a -->
-          Doe de <a href="tests/snelle-test">snelle test</a> als je snel wilt weten of je
+          Doe de <a href="tests/snelle-test">snelle test</a> als u snel wilt weten of u
           risico loopt op een burnout.
           <br>
           Deze test duurt ongeveer 2 minuten.
         </li>
         <li>
           <!-- test c -->
-          Doe de <a href="tests/uitgebreide-test">uitgebreide test</a> als je wilt weten of
-          je verschijnselen hebt van een echte burnout.
+          Doe de <a href="tests/uitgebreide-test">uitgebreide test</a> als u wilt weten of
+          u verschijnselen heeft van een echte burnout.
           <br>
           Deze test duurt ongeveer 5 minuten.
         </li>
@@ -54,7 +54,7 @@ $page->body = <<<CONTENT
       -->
       </ul>
       <p>
-        Alle feedback verschijnt na het versturen op je scherm en je weet meteen het
+        Alle feedback verschijnt na het versturen op uw scherm en u weet meteen het
         resultaat. Uiteraard worden alle verstuurde gegevens vertrouwelijk door ons
         behandeld.
       </p>

@@ -89,11 +89,11 @@ EOF;
 $test_page->test_body = <<<EOF
   <h3>Uitgebreide Test</h3>
   <p>
-    Heb je verschijnselen van een echte burnout?
-    <br>
-    Deze test bestaat uit 56 stellingen. Geef bij elk van de stellingen aan in
-    hoeverre deze op jou van toepassing is in je werk en/of je privéleven. Neem
-    daarbij de afgelopen 6 maanden in gedachten.
+    Deze test bestaat uit 56 stellingen. 
+	<br><br>
+    Kies steeds in welke mate de uitspraak op u van toepassing is. Hierbij geldt dat hoe 
+	verder de slider naar rechts staat, hoe meer u het eens bent met de uitspraak. Neem bij het 
+    invullen de afgelopen 6 maanden in gedachten.
   </p>
 EOF;
 
