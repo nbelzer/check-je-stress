@@ -48,7 +48,7 @@ class MenuCreator {
     $menu =
       (new MenuBuilder('Home', ''))
         ->build()
-      . (new MenuBuilder('Informatie', 'info/'))
+      . (new MenuBuilder('Informatie', 'info'))
         ->build()
       . (new MenuBuilder('Doelgroep', 'doelgroep/'))
         ->appendElement('Particulier', 'doelgroep/particulier/')

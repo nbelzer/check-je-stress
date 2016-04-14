@@ -1,7 +1,6 @@
 <?php
-include '../resources/includes/PageCreator.php';
+include 'resources/includes/PageCreator.php';
 $page = new PageCreator();
-$page->path_to_root = '../';
 $page->head = '<link rel="stylesheet" href="resources/css/specific/standard.css" type="text/css">';
 $page->title = "Colofon";
 $page->body = <<<CONTENT
@@ -17,7 +16,7 @@ $page->body = <<<CONTENT
       </div>
     </div>
   </div>
-  
+
   <div class="row text water" id="first">
     <div class="medium-10 medium-centered columns">
 
