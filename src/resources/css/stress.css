@@ -184,10 +184,22 @@ body {
     /*background-color: #32a3bd;*/
 }
 
-.backgroundImage {
+.backgroundImagefrontpage {
   width: auto;
   height: 450px;
   max-height: 450px;
+  margin-bottom: -2em;
+
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.backgroundImage {
+  width: auto;
+  height: 211px;
+  max-height: 211px;
   margin-bottom: -2em;
 
   background-repeat: no-repeat;

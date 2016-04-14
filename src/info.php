@@ -11,7 +11,7 @@ $page->body = <<<CONTENT
   <div class="indexImage">
     <div class="row">
       <div class="medium-12 medium-centered columns">
-        <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolourbeach.svg');">
+        <div class="backgroundImage" style="background-image: url('resources/img/background.svg');">
         </div>
       </div>
     </div>
