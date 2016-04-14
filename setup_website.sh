@@ -100,7 +100,6 @@ fi
 mysql -h ${config[0]} -P ${config[1]} -u ${config[2]} $password_param << EOF
   CREATE DATABASE IF NOT EXISTS ${config[4]};
   USE ${config[4]};
-  CREATE TABLE IF NOT EXISTS pages (id TINYINT UNSIGNED UNIQUE AUTO_INCREMENT, page VARCHAR(255) UNIQUE KEY, title TINYTEXT, head TEXT, body TEXT);
   $test_snel
   $test_uitgebreid
   $test_risicoanalyse
