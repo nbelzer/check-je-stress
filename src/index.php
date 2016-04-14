@@ -85,7 +85,7 @@ $page->body = <<<CONTENT
         vragen en informeren bij uw verzekeringsmaatschappij of u in
         aanmerking komt voor vergoeding.
       </p>
-      <a href="https://www.facebook.com/SSBN2012/">Volgen op facebook?</a>
+      <a href="https://www.facebook.com/SSBN2012/">Volgen op Facebook?</a>
     </div>
   </div>
 
