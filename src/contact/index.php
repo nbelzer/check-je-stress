@@ -25,11 +25,11 @@ $page->body = <<<CONTENT
         <h5>Contact</h5>
 
         <p>
-		  Wilt u meer informatie over het Steunpunt Stress Burnout Nederland en onze dienstverlening? Wil u zich aanmelden voor een activiteit (lezing of workshop) of wilt u gewoon een persoonlijk gesprek?
+		  Wilt u meer informatie over het Steunpunt Stress Burnout Nederland en onze dienstverlening? Wilt u zich aanmelden voor een activiteit (lezing of workshop) of gewoon een persoonlijk gesprek?
 		</p>
 
 		<p>
-		  Vul dan onderstaand contactformulier in en we nemen zo spoedig mogelijk contact met u op. We kunnen ons voorstellen, dat dit misschien een grote stap voor u is, maar het is het begin van een nieuwe start.
+		  Vul dan onderstaand contactformulier in en dan zullen wij trachten zo spoedig mogelijk contact met u op. Wij kunnen ons voorstellen dat dit misschien een grote stap voor u is, maar het is het begin van een nieuwe start.
 		</p>
 
 		<p>
