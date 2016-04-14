@@ -23,9 +23,9 @@ $page->body = <<<CONTENT
         <div class="navmenu">
           <ul class="vertical menu" data-magellan data-options="barOffset:40">
             <li class="header"><h5>Op deze pagina</h5></li>
-            <li><a href="#first">Wie zijn we?</a></li>
+            <li><a href="#first">Wie zijn wij?</a></li>
             <li><a href="#second">Wat is onze ambitie?</a></li>
-            <li><a href="#third">Wat doen we?</a></li>
+            <li><a href="#third">Wat doen wij?</a></li>
           </ul>
         </div>
       </div>
@@ -38,15 +38,15 @@ $page->body = <<<CONTENT
           <br />
           Samen hebben we jarenlange ervaring in het trainen en werken met mensen opgebouwd.
           <br />
-          Ria heeft met name haar ervaring in de reïntegratiesector en Serge staat als docent al ruim 15 jaar voor de klas.
+          Serge staat als docent al ruim 15 jaar voor de klas.
         </p>
 
         <p>
-          We zijn beiden registercounsellor bij de ABvC. Dit is de Algemene Beroepsvereniging voor Counselling. Naast een gedegen opleiding met als specialisatie stress en burnoutproblematiek, dienen we ons ook te houden aan de ethische beroepscode. Dit vraagt een jaarlijkse bijscholing en aantal uren intervisie, zodat de kwaliteit van onze  dienstverlening up-to-date blijft.
+          Wij zijn beiden registercounsellor bij de ABvC. Dit is de Algemene Beroepsvereniging voor Counselling. Naast een kwaltitatief uitmuntende opleiding met als specialisatie stress en burnoutproblematiek, dienen we ons ook te houden aan de ethische beroepscode. Dit vraagt een jaarlijkse bijscholing en uren aan intervisie, zodat de kwaliteit van onze dienstverlening up-to-date blijft.
         </p>
 
         <p>
-          Ook van onze samenwerkingspartners in de provincies verwachten we een zelfde betrokkenheid als specialisatie, zodat uw stressvraag in goede handen is.
+          Ook van onze samenwerkingspartners in de provincies verwachten wij een zelfde betrokkenheid en passende specialisatie, zodat uw stressvraag in de juiste, capabele handen is.
         </p>
 
       </div>
@@ -79,9 +79,9 @@ $page->body = <<<CONTENT
         <p>
           <a href="steunpunten/">Klik hier</a> voor een counsellor bij u in de buurt.
           <br />
-          <a href="doelgroep/particulier/">Klik hier</a> wat we voor particulieren kunnen betekenen.
+          <a href="doelgroep/particulier/">Klik hier</a> om te bekijken wat we voor particulieren kunnen betekenen.
           <br />
-          <a href="doelgroep/bedrijf/">Klik hier</a> wat we voor werkgevers kunnen betekenen.
+          <a href="doelgroep/bedrijf/">Klik hier</a> om te bekijken wat wij voor werkgevers kunnen betekenen.
         </p>
 
       </div>
@@ -99,11 +99,11 @@ $page->body = <<<CONTENT
         </p>
 
         <p>
-          Onze begeleiding bestaat uit een op maat gemaakt stappenplan, dat bewezen heeft effectief te zijn. De meerwaarde van het programma zit in de structurele aanpak waarbij een praktische handreiking en psychosociale hulpverlening op maat worden aangeboden. Onze begeleiding is voor zowel de individuele vraag als voor complete organisaties, die met stress/burnoutproblematiek te maken hebben.
+          Onze begeleiding bestaat uit een op maat gemaakt stappenplan, dat bewezen heeft effectief te zijn. De meerwaarde van het programma zit in de structurele aanpak waarbij een praktische handreiking en psychosociale hulpverlening op maat worden aangeboden. Onze begeleiding is voor zowel een individu als voor complete organisaties, die met stress/burnoutproblematiek te maken hebben.
         </p>
 
         <p>
-          In het stappenplan zijn ondermeer opgenomen:
+          In het stappenplan bestaat uit onder meer:
           <ul>
             <li>Analyse van testgegevens</li>
             <li>Klachteninventarisatie</li>
@@ -118,7 +118,7 @@ $page->body = <<<CONTENT
         </p>
 
         <p>
-          Benieuwd of u ook bij deze 20% hoort?
+          Denkt u dat u ook bij de 20% hoort?
           <br />
           <a href="tests/">Klik hier</a> en maak de snelle test of de uitgebreide test.
         </p>
