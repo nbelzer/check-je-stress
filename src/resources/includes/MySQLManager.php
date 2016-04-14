@@ -6,16 +6,16 @@
  */
 class MySQLManager {
 
-  private $config;
+  private $page;
 
   /**
    * Maakt een nieuwe MySQLManager.
    *
-   * @param array $config de configuratie array die de authenticatie informatie
-   * bevat
+   * @param PageCreator $page de PageCreator waaruit de config gehaald kan
+   * worden
    */
-  function __construct($config) {
-    $this->config = $config;
+  function __construct($page) {
+    $this->page = $page;
   }
 
   private $connection;
@@ -51,10 +51,11 @@ class MySQLManager {
    * @throws Exception als het verbinden is mislukt
    */
   function connect() {
+    $config = $this->page->getConfig()['mysql'];
     $connection = new \mysqli(
-                $this->config['host'], $this->config['username'],
-                $this->config['password'], $this->config['database'],
-                $this->config['port']);
+                $config['host'], $config['username'],
+                $config['password'], $config['database'],
+                $config['port']);
     if ($connection->connect_error) {
       throw new \Exception("Verbinden met de database is mislukt.");
     } else {
@@ -74,54 +75,22 @@ class MySQLManager {
    * https://secure.php.net/manual/en/mysqli-stmt.bind-param.php bij 'types'
    * @param array $params optioneel: een met parameters voor in
    * de query.
-   * @param array $result_names een array met namen voor de resultaten
-   * @return array een associated array waarin de waardes van $results aan de
-   * resultaten gekoppeld staan
+   * @return array een array met daarin de geproduceerde rows als arrays
    */
-  function getterQuery($query, $param_types, $params, $result_names) {
+  function getterQuery($query, $param_types, $params) {
 
     // Voer de query uit
     $statement = $this->executeQuery($query, $param_types, $params);
 
-    // Maak een array van arrays voor de resultaten: één column returnt meerdere
-    // values als er meerdere rows matchen in MySQL.
-    $results = array();
-    for ($i = 0; $i < count($result_names); $i++) {
-      $results[$i] = array();
-    }
-
-    // Elke keer als fetch() aangeroepen wordt, wordt $results_row gevuld met
-    // een nieuwe row. Voeg elke keer de column value toe aan de goede array uit
-    // $results.
-    $results_row = array(count($result_names) - 1);
-    $statement->bind_result($results_row);
-    while ($statement->fetch()) {
-      for ($i = 0; $i < count($results_row); $i++) {
-        array_push($results[$i], $results_row[$i]);
-      }
-    }
+    $results = $statement->get_result();
     $statement->close();
-
-    // Zorg ervoor dat arrays met maar 1 entry geconverteerd worden naar die
-    // waarde. Maak een associated array waarin telkens de naam van de result
-    // column gekoppeld wordt aan de value. Die value is dus een array als er
-    // meerdere rows zijn, of de plain value als het maar één row is.
-    $results_assoc = array();
-    for ($i = 0; $i < count($results); $i++) {
-      switch (count($result)) {
-        case 0:
-          $results_assoc[$result_names[$i]] = null;
-          break;
-        case 1:
-          $results_assoc[$result_names[$i]] = $results[$i][0];
-          break;
-        default:
-          $results_assoc[$result_names[$i]] = $results[$i];
-          break;
-      }
+    $rows = [];
+    while ($row = $results->fetch_assoc()) {
+      array_push($rows, $row);
     }
+    //echo $rows[0]['vraag1'];
 
-    return $results_assoc;
+    return $rows;
   }
 
   /**
@@ -148,21 +117,29 @@ class MySQLManager {
    * Vergeet niet de statement te sluiten met $statement->close() na gebruik, om
    * memory leaks te voorkomen.
    *
+   * @param string $query de query die moet worden uitgevoerd
+   * @param string $param_types de types van de parameters in $params
+   * @param array $params de optionele parameters voor een prepared statement
    * @return mysqli_stmt de reeds uitgevoerde statement, waar eventueel
    * resultaten uit gehaald kunnen worden; of false, als de query is mislukt
    */
   private function executeQuery($query, $param_types, $params) {
-    // Maak de query uit $query en $params
-    $statement = $this->getConnection()->prepare($query);
-    if ($statement !== false && is_array($params)) {
-      // We willen $statement->bind_param() aanroepen met een dynamisch aantal
-      // parameters. Doe dat met call_user_func_array. bind_param() accepteert
-      // alleen referenced values. Maak dus eerst die array ($refs).
-      $refs = array();
-      foreach ($params as $key => $value)
-      $refs[$key] = &$params[$key];
-      call_user_func_array(array($statement, 'bind_param'), array_merge(array($param_types), $refs));
-      $statement->execute();
+    $statement = $this->getConnection()->stmt_init();
+    if ($statement->prepare($query)) {
+      if ($param_types != null && $param_types != '') {
+        // We willen $statement->bind_param() aanroepen met een dynamisch aantal
+        // parameters. Doe dat met call_user_func_array. bind_param() accepteert
+        // alleen referenced values. Maak dus eerst die array ($refs).
+        $refs = array();
+          foreach ($params as $key => $value)
+        $refs[$key] = &$params[$key];
+        call_user_func_array(array($statement, 'bind_param'), array_merge(array($param_types), $refs));
+      }
+      if (!$statement->execute()) {
+        trigger_error('Error executing MySQL query: ' . $statement->error);
+      }
+    } else {
+      trigger_error('Error preparing MySQL statement: ' . $statement->error);
     }
     return $statement;
   }

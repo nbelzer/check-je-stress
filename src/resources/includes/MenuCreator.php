@@ -32,7 +32,7 @@ class MenuCreator {
   </div>
   <div class="row" id="responsive-menu">
     <div class="medium-10 medium-centered columns">
-      <a href=""><img class="title logo" data-hide-for="small"
+      <a href="./"><img class="title logo" data-hide-for="small"
           src="resources/img/logo_vector.svg" alt="Logo"></a>
       <nav>
         <ul class="menu dropdown" data-dropdown-menu>';
@@ -46,18 +46,18 @@ class MenuCreator {
 <!-- End Menu Bar -->';
 
     $menu =
-      (new MenuBuilder('Home', ''))
+      (new MenuBuilder('Home', './'))
         ->build()
-      . (new MenuBuilder('Informatie', 'info/'))
+      . (new MenuBuilder('Informatie', 'info.php'))
         ->build()
       . (new MenuBuilder('Doelgroep', 'doelgroep/'))
         ->appendElement('Particulier', 'doelgroep/particulier/')
         ->appendElement('Bedrijf', 'doelgroep/bedrijf/')
         ->build()
       . (new MenuBuilder('Tests', 'tests/'))
-        ->appendElement('Snelle test', 'tests/snelle-test')
-        ->appendElement('Uitgebreide test', 'tests/uitgebreide-test')
-        ->appendElement('Risicoanalyse bedrijven', 'tests/risicoanalyse')
+        ->appendElement('Snelle test', 'tests/snelle-test.php')
+        ->appendElement('Uitgebreide test', 'tests/uitgebreide-test.php')
+        ->appendElement('Risicoanalyse bedrijven', 'tests/risicoanalyse.php')
         ->build()
       . (new MenuBuilder('Steunpunten', 'steunpunten/'))
         ->appendElement('Vacatures', 'steunpunten/vacatures/')

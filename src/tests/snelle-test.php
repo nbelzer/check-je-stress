@@ -32,20 +32,43 @@ $vragen = [
 
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Snelle Test';
+$test_page->path_to_root = "../";
 $test_page->questions = $vragen;
+$test_page->extra_head = <<<EOF
+  <link rel="stylesheet" href="resources/css/test.css" type="text/css">
+  <script src="resources/js/svg-dash-meter.min.js"></script>
+  <script>
+    $(window).bind("load", function () {
+      var meter = svg_meter(document.getElementById('svgmeter'), {
+        value: 0,
+        max: 100,
+        duration: 500,
+        gradient: [
+          {r:0,g:200,b:0},
+          {r:255,g:140,b:0},
+          {r:200,g:0,b:0}
+        ],
+        stops: [25, 50, 75]
+      });
+      updateMeter(meter);
+    });
+  </script>
+EOF;
 
 $test_page->test_body = <<<EOF
-  <h1>Snelle Test</h1>
+  <h3>Snelle test</h3>
   <p>
     Deze test bestaat uit 25 stellingen.
-    <br>
-    Kies steeds in welke mate de uitspraak op u van toepassing is.
+    <br><br>
+    Kies steeds in welke mate de uitspraak op u van toepassing is. Hierbij geldt dat hoe 
+	verder de slider naar rechts staat, hoe meer u het eens bent met de uitspraak.
   </p>
 EOF;
 
 $test_page->results_body = <<<EOF
   <h1>Snelle Test Resultaten</h1>
   <p>Bedankt voor het invullen van de test! Hieronder ziet u de resultaten.</p>
+  <div id="svgmeter"></div>
 EOF;
 
 $test_page->advice_function = function($results) {
@@ -68,18 +91,27 @@ $test_page->advice_function = function($results) {
     $score += $vraag_score;
   }
 
-  $advies = "Uw score is $score van de 125. ";
+  $percentage = round(($score / 125) * 100);
+  $advies = <<<EOF
+    Uw berekende kans op een burnout is $percentage%.
+    <script>
+      function updateMeter(meter) {
+        meter.update($percentage);
+      }
+    </script>
+EOF;
   if ($score < 26) {
-    $advies .= "Het lijkt erop dat u op het moment geen risico loopt op een burnout.";
+    $advies .= 'Het lijkt erop dat u op het moment geen risico loopt op een burnout.';
   } else if ($score < 51) {
-    $advies .= "Het gaat goed. Let wel op de items waarop uw score hoger is.";
+    $advies .= 'Het gaat goed. Let wel op de items waarop uw score hoger is.';
   } else if ($score < 76) {
-    $advies .= "U heeft waarschijnlijk geen burnout, maar wij adviseren u wel om preventiemaatregelen te nemen.";
+    $advies .= 'U heeft waarschijnlijk geen burnout, maar wij adviseren u wel om preventiemaatregelen te nemen.';
   } else if ($score < 101) {
-    $advies .= "U loopt risico om een burnout te krijgen. Als u net een burnout gehad hebt, bent u nog niet hersteld.";
+    $advies .= 'U loopt risico om een burnout te krijgen. Als u net een burnout gehad hebt, bent u nog niet hersteld.';
   } else {
-    $advies .= "U hebt waarschijnlijk een burnout, of een burnout is zich bij u aan het ontwikkelen.";
+    $advies .= 'U hebt waarschijnlijk een burnout, of een burnout is zich bij u aan het ontwikkelen.';
   }
+
   return $advies;
 };
 

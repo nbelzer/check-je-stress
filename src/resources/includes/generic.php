@@ -64,7 +64,7 @@ if (!isset($includeMenu)) {
     </div>
     <footer class="footer" id="footer">
       <p>
-        <a href="colofon/">Colofon</a>
+        <a href="colofon.php">Colofon</a>
         <br>
         © Copyright CheckJeStress 2016
       </p>

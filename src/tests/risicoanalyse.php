@@ -32,24 +32,98 @@ $vragen = [
 
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Risicoanalyse';
+$test_page->path_to_root = '../';
 $test_page->questions = $vragen;
+$test_page->extra_head = <<<EOF
+  <link rel="stylesheet" href="resources/css/test.css" type="text/css">
+  <script src="resources/js/svg-dash-meter.min.js"></script>
+  <script>
+    $(window).bind("load", function () {
+      var meter = svg_meter(document.getElementById('svgmeter'), {
+        value: 0,
+  			max: 100,
+  			duration: 500,
+  			gradient: [
+    			{r:0,g:200,b:0},
+    			{r:255,g:140,b:0},
+    			{r:200,g:0,b:0}
+  			],
+        stops: [25, 50, 75]
+      });
+      updateMeter(meter);
+    });
+  </script>
+EOF;
 
 $test_page->test_body = <<<EOF
-  <h1>Burnout Risicoanalyse (voor managers)</h1>
+  <h3>Burnout Risicoanalyse (voor managers)</h3>
   <p>
     Deze test bestaat uit 25 stellingen.
-    <br>
-    Kies steeds in welke mate de uitspraak op uw bedrijf van toepassing is.
+    <br><br>
+    Kies steeds in welke mate de uitspraak op uw bedrijf van toepassing is.Hierbij geldt dat hoe 
+	verder de slider naar rechts staat, hoe meer u het eens bent met de uitspraak.
   </p>
 EOF;
 
 $test_page->results_body = <<<EOF
   <h1>Risicoanalyse Resultaten</h1>
   <p>Bedankt voor het invullen van de test! Hieronder ziet u de resultaten.</p>
+  <div id="svgmeter"></div>
 EOF;
 
-/* TODO: de beoordeling voor deze hebben we nog niet */
-//$test_page->advice_function = function($results) {
-//};
+$test_page->advice_function = function($results) {
+  /* Nieuwe beoordeling: antwoorden lopen van 0 t/m 5. Alles bij elkaar
+     optellen. */
+  $score = 0;
+  foreach ($results as $vraag_score) {
+    $score += $vraag_score;
+  }
+
+  $percentage = round(($score / 125) * 100);
+  $advies = <<<EOF
+    Uw berekende kans op een burnout is $percentage%.<br>
+    <script>
+      function updateMeter(meter) {
+        meter.update($percentage);
+      }
+    </script>
+EOF;
+  if ($percentage < 30) {
+    $advies .= <<<EOF
+      Comfortabel niveau
+      <br>
+      De medewerkers vertonen weinig tekenen van een burnout. Om problemen in de
+      toekomst te voorkomen, kunt u proactief met deze medewerkers aan de slag
+      gaan om burnouts te voorkomen. Het beste kunt u met hen in gesprek gaan
+      over o.a. de werkdruk.
+EOF;
+  } else if ($percentage < 60) {
+    $advies .= <<<EOF
+      Oppassen niveau
+      <br>
+      De medewerkers vertonen een gematigd beeld van burnout; preventieve actie
+      is geboden.  Start met het doorlichten van de organisatie door een
+      burnout-risicoanalyse af te nemen bij alle medewerkers.
+EOF;
+  } else if ($percentage < 80) {
+    $advies .= <<<EOF
+      Chronisch niveau
+      <br>
+      De medewerkers vertonen talrijke signalen van een burnout; correctieve
+      actie is geboden om erger te voorkomen in het belang van de medewerkers en
+      de organisatie.
+EOF;
+  } else {
+    $advies .= <<<EOF
+      Crisisniveau
+      <br>
+      De medewerkers (en waarschijnlijk ook jij) zijn volledig burnout.
+      Onmiddellijke crisisinterventie is geboden om te voorkomen dat de
+      organisatie compleet instort.
+EOF;
+  }
+
+  return $advies;
+};
 
 $test_page->create('risicoanalyse');

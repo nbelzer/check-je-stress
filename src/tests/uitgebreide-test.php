@@ -63,22 +63,44 @@ $vragen = [
 
 $test_page = new TestCreator;
 $test_page->title = 'Burnout Uitgebreide Test';
+$test_page->path_to_root = "../";
 $test_page->questions = $vragen;
+$test_page->extra_head = <<<EOF
+  <link rel="stylesheet" href="resources/css/test.css" type="text/css">
+  <script src="resources/js/svg-dash-meter.min.js"></script>
+  <script>
+    $(window).bind("load", function () {
+      var meter = svg_meter(document.getElementById('svgmeter'), {
+        value: 0,
+  			max: 100,
+  			duration: 500,
+  			gradient:[
+    			{r:0,g:200,b:0},
+    			{r:255,g:140,b:0},
+    			{r:200,g:0,b:0}
+  			],
+        stops: [25, 50, 75]
+      });
+      updateMeter(meter);
+    });
+  </script>
+EOF;
 
 $test_page->test_body = <<<EOF
-  <h1>Uitgebreide Test</h1>
+  <h3>Uitgebreide Test</h3>
   <p>
-    Heb je verschijnselen van een echte burnout?
-    <br>
-    Deze test bestaat uit 56 stellingen. Geef bij elk van de stellingen aan in
-    hoeverre deze op jou van toepassing is in je werk en/of je privéleven. Neem
-    daarbij de afgelopen 6 maanden in gedachten.
+    Deze test bestaat uit 56 stellingen. 
+	<br><br>
+    Kies steeds in welke mate de uitspraak op u van toepassing is. Hierbij geldt dat hoe 
+	verder de slider naar rechts staat, hoe meer u het eens bent met de uitspraak. Neem bij het 
+    invullen de afgelopen 6 maanden in gedachten.
   </p>
 EOF;
 
 $test_page->results_body = <<<EOF
   <h1>Uitgebreide Test Resultaten</h1>
   <p>Bedankt voor het invullen van de test! Hieronder ziet u de resultaten.</p>
+  <div id="svgmeter"></div>
 EOF;
 
 $test_page->advice_function = function($score) {
@@ -93,17 +115,27 @@ $test_page->advice_function = function($score) {
     0, 7, 11, 16, 21, 24, 25, 27, 31, 33, 37, 40, 42, 45, 47, 49, 54, 55
   ];
 
-  $score = 0;
+  $total_score = 0;
   for ($i=0; $i<56; $i++) {
     if (in_array($i, $reverse_questions)) {
-      $score += 5 - $i;
+      $total_score += 5 - $score[$i];
     } else {
-      $score += $i;
+      $total_score += $score[$i];
     }
   }
 
-  if ($score < 56 * 5 / 4) { /* < 25% */
-    $advies = <<<EOF
+  $percentage = round(($total_score / 275) * 100);
+  $advies = <<<EOF
+    Uw berekende kans op een burnout is $percentage%.<br>
+    <script>
+      function updateMeter(meter) {
+        meter.update($percentage);
+      }
+    </script>
+EOF;
+
+  if ($percentage < 25) { /* < 25% */
+    $advies .= <<<EOF
       U scoorde 'zeer laag' op het hebben van burnoutverschijnselen.
       <br>
       Een zeer lage score op het hebben van burnoutverschijnselen is een teken
@@ -111,16 +143,16 @@ $test_page->advice_function = function($score) {
       specifieke dag eens moe kunt zijn, is er van een burnout geen enkele
       sprake.
 EOF;
-  } else if ($score < 56 * 5 / 2) { /* < 50% */
-    $advies = <<<EOF
+  } else if ($percentage < 50) { /* < 50% */
+    $advies .= <<<EOF
       U scoorde 'laag' op het hebben van burnoutverschijnselen.
       <br>
       De meeste mensen scoren laag op het hebben van burnoutverschijnselen.
       Stress en spanning heeft iedereen wel eens maar doorgaans leidt dat niet
       tot blijvende klachten en zeker niet tot een burnout.
 EOF;
-  } else if ($score < 56 * 5 / 4 * 3) { /* < 75% */
-    $advies = <<<EOF
+  } else if ($percentage < 75) { /* < 75% */
+    $advies .= <<<EOF
       U scoorde 'enigszins' op het hebben van burnoutverschijnselen.
       <br>
       Wanneer u enigzins klachten heeft die horen bij een burnout, is het zaak
@@ -130,7 +162,7 @@ EOF;
       verhelpen. Betrek anderen hierin actief.
 EOF;
   } else { /* < 100% */
-    $advies = <<<EOF
+    $advies .= <<<EOF
       U scoorde 'verhoogd' op het hebben van burnoutverschijnselen.
       <br>
       Wanneer u hoog scoort op het hebben van burnoutverschijnselen, bent u

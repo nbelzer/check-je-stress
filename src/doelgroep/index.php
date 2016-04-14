@@ -12,29 +12,27 @@ $page->body = <<<CONTENT
   <div class="indexImage">
     <div class="row">
       <div class="medium-12 medium-centered columns">
-        <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolour.svg');">
+        <div class="backgroundImage" style="background-image: url('resources/img/background.svg');">
         </div>
       </div>
     </div>
   </div>
   
-
   <div class="row text water"  id="first">
     <div class="medium-10 medium-centered columns">
         <h5>Doelgroep</h1>
 
         <p>
-          CheckJeStress is er voor zowel particulier als bedrijf. Beide partijen kunnen rekenen op onze inzet en ervaring.
+          CheckJeStress is er voor zowel particulieren als voor bedrijven. Beide partijen kunnen compleet vertrouwen op onze inzet en ervaring.
         </p>
 
-    <p>
-          <a href="doelgroep/particulier/">Klik hier</a> voor informatie voor particulieren.
+		<p>
+          <a href="doelgroep/particulier/">Klik hier</a> voor de informatie voor particulieren.
         </p>
 
-    <p>
-          <a href="doelgroep/bedrijf/">Klik hier</a> voor informatie voor bedrijven.
+		<p>
+          <a href="doelgroep/bedrijf/">Klik hier</a> voor de informatie voor bedrijven.
         </p>
-
 
     </div>
   </div>

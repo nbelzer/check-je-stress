@@ -56,6 +56,8 @@ class TestCreator {
    */
   var $path_to_root = '../';
 
+  var $extra_head;
+
   /**
    * Maakt de testpagina, of de pagina met resultaten als de test al ingevuld
    * is.
@@ -66,7 +68,7 @@ class TestCreator {
     $this->pageCreator->path_to_root = $this->path_to_root;
     $this->pageCreator->title = $this->title;
     $this->pageCreator->includeMenu = true;
-    $this->pageCreator->head = self::$head;
+    $this->pageCreator->head = self::$head . $this->extra_head;
 
     try {
       /* Kijk of er correcte vragen opgestuurd zijn. Als dat niet zo is, komt
@@ -110,10 +112,10 @@ EOF;
 
     $form .= "<table style=\"width: 100%;\">\n";
     foreach ($this->questions as $id => $vraag) {
-      $form .= "<tr><td><div class=\"row\">\n";
+      $form .= "<tr class='test'><td><div class=\"row\">\n";
       $form .= "<div class=\"small-12 medium-6 columns\">$vraag</div>\n";
       $form .= "<div class=\"small-12 medium-6 columns str_slider\">
-                  <div id=\"$id\"class=\"slider_handle\"></div>
+                  <div id=\"$id\"class=\"slider_handle t\"></div>
                 </div>\n";
       $form .= "<input type=\"hidden\" id=\"vraag$id\" name=\"vraag$id\">";
       $form .= "</div></td></tr>\n";
@@ -125,15 +127,33 @@ EOF;
 
     // Maak de body aan en zet het formulier erin.
     $this->pageCreator->body = <<<CONTENT
-      $this->test_body
-      <noscript>
-        <p>
-          Voor het invullen van de tests moet
-          <a href="http://enable-javascript.com/nl/" target="_blank">Javascript
-          ingeschakeld zijn in uw browser</a>.
-        </p>
-      </noscript>
-      $form
+    <div class="content">
+      <div class="menuSpacing"></div>
+
+      <div class="indexImage">
+        <div class="row">
+          <div class="medium-12 medium-centered columns">
+            <div class="backgroundImage" style="background-image: url('resources/img/background.svg');">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text water">
+        <div class="medium-10 medium-centered columns">
+          $this->test_body
+          <noscript>
+            <p>
+              Voor het invullen van de tests moet
+              <a href="http://enable-javascript.com/nl/" target="_blank">
+              Javascript ingeschakeld zijn in uw browser</a>.
+            </p>
+          </noscript>
+          $form
+        </div>
+      </div>
+    </div>
+	
 CONTENT;
   }
 
@@ -146,7 +166,31 @@ CONTENT;
    */
   private function createResultsPage($results) {
     $advies = call_user_func($this->advice_function, $results);
-    $this->pageCreator->body = $this->results_body . $advies;
+
+    $results = $this->results_body . $advies;
+
+    // Maak de body aan en zet het resultaat erin.
+    $this->pageCreator->body = <<<CONTENT
+      <div class="content">
+        <div class="menuSpacing"></div>
+
+        <div class="indexImage">
+          <div class="row">
+            <div class="medium-12 medium-centered columns">
+              <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolourbeach.svg');">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text water">
+          <div class="medium-10 medium-centered columns">
+            $results
+          </div>
+        </div>
+
+      </div>
+CONTENT;
   }
 
   /**
@@ -202,11 +246,6 @@ CONTENT;
     <script src="resources/js/vendor/jquery-ui.min.js"></script>
     <link rel="stylesheet"
       href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <style>
-      .skipped {
-        background-color: #fce6e2;
-      }
-    </style>
     <script>
       // Houdt bij bij welke vraag de gebruiker is.
       var questionProgress = -1;
@@ -223,6 +262,9 @@ CONTENT;
             // Initial value is 50 (in het midden)
             value: 50
           });
+
+          $(slider).removeClass("ui-corner-all");
+          $(slider).addClass("test_slider");
 
           // Deze listener wordt aangeroepen zodra de gebruiker de slider loslaat.
           // Zorgt ervoor dat er maar 6 mogelijkheden zijn.

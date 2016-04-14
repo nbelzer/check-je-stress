@@ -137,21 +137,33 @@
   background-color: #eee;
 }
 
+.content .water, .content .dark {
+  padding: 2em 1em;
+  font-weight: 500;
+}
+
 .columns {
   padding: 0;
 }
 
 a {
-  color: #FF9E3E;
+  color: #FFDC7F;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid #1a5469;
+  color: #FFDC7F;
+  font-weight: bold;
 }
 
 .water {
-  color: #CBECF4;
+  color: #fff;
   background-color: #2aa6df;
 }
 
 .dark {
-  color: #BBEAF5;
+  color: #fff;
   background-color: #39bfef;
 }
 
@@ -172,10 +184,22 @@ body {
     /*background-color: #32a3bd;*/
 }
 
-.backgroundImage {
+.backgroundImagefrontpage {
   width: auto;
   height: 450px;
   max-height: 450px;
+  margin-bottom: -2em;
+
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.backgroundImage {
+  width: auto;
+  height: 211px;
+  max-height: 211px;
   margin-bottom: -2em;
 
   background-repeat: no-repeat;

@@ -8,7 +8,7 @@ class PageCreator {
   /**
    * Bevat de config array.
    */
-  var $config;
+  private $config;
 
   /**
    * Zie MySQLManager.php. Roep getConnection() aan als je hem nodig hebt;
@@ -20,9 +20,19 @@ class PageCreator {
    * Maakt een nieuwe PageCreator; initialiseert $config en $mysql.
    */
   function __construct() {
-    $this->config = include 'config.php';
     require_once 'MySQLManager.php';
-    $this->mysql = new MySQLManager($this->config['mysql']);
+    $this->mysql = new MySQLManager($this);
+  }
+
+  /**
+   * Geeft de config array (uit config.php). $path_to_root moet geïnitialiseerd
+   * zijn.
+   */
+  function getConfig() {
+    if (!isset($this->config)) {
+      $this->config = include $this->path_to_root . 'config.php';
+    }
+    return $this->config;
   }
 
   /**

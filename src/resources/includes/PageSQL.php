@@ -29,7 +29,7 @@ class PageSQL {
     $param_types = 's';
     $params = array($page);
     $results = $this->mySQLManager->getterQuery($sql, $param_types, $params, array('title', 'head', 'body'));
-    return $results;
+    return $results[0];
   }
 
   /**
@@ -41,8 +41,8 @@ class PageSQL {
     $sql = 'SELECT title FROM pages WHERE page = ?;';
     $param_types = 's';
     $params = array($page);
-    $result = $this->mySQLManager->getterQuery($sql, $param_types, $params, array('title'));
-    return $result['title'];
+    $result = $this->mySQLManager->getterQuery($sql, $param_types, $params);
+    return $result[0]['title'];
   }
 
   /**
@@ -54,8 +54,8 @@ class PageSQL {
     $sql = 'SELECT head FROM pages WHERE page = ?;';
     $param_types = 's';
     $params = array($page);
-    $result = $this->mySQLManager->getterQuery($sql, $param_types, $params, array('head'));
-    return $result['head'];
+    $result = $this->mySQLManager->getterQuery($sql, $param_types, $param);
+    return $result[0]['head'];
   }
 
   /**
@@ -67,8 +67,8 @@ class PageSQL {
     $sql = "SELECT body FROM pages WHERE page = ?;";
     $param_types = 's';
     $params = array($page);
-    $result = $this->mySQLManager->getterQuery($sql, $param_types, $params, array('body'));
-    return $result['body'];
+    $result = $this->mySQLManager->getterQuery($sql, $param_types, $params);
+    return $result[0]['body'];
   }
 
   /**

@@ -21,19 +21,35 @@
 
 .navmenu {
   text-transform: uppercase;
-  margin-right: 1em;
+  margin-right: 3em;
+  margin-left: -3em;
+}
+
+.navmenu a:hover {
+  color: #7CC8ED;
 }
 
 .navmenu h5 {
-  margin-left: 8px;
+  /*margin-left: 8px;*/
+  padding-top: 0.5em;
+}
+
+.navmenu .header {
+  background-color: #0f83c1;
+  border-bottom: 4px solid #39bfef;
 }
 
 .navmenu ul {
   padding-top: 0.5em;
   border: none;
-  border-left: 4px solid #CBECF4;
+  padding: 0;
+  /*margin-left: -1em;*/
+  /*border-left: 4px solid #CBECF4;*/
 }
 
-.indexImage {
-  background-position: right bottom;
+.navmenu li {
+  background-color: #0f83c1;
+}
+.navmenu li:hover {
+  background-color: #0b76c1;
 }

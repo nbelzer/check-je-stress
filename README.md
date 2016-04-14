@@ -3,23 +3,18 @@
 
 Vernieuwing van de website [Check Je Stress](http://checkjestress.nl/)
 
+### Systeemvereisten
+* Apache webserver
+* PHP ≥ 5.6
+* MySQL
+* Securimage vereisten voor de captcha (test met [dit scriptje](https://www.phpcaptcha.org/downloads/securimage_test.php))
+* Mogelijk vereisten voor PHPMailer
+
 ### Setup
-Om de website werkend te krijgen, moet er een aantal dingen gedaan worden:
-* Pas de waarden in het scriptje `setup_website.sh` aan zodat de website o.a. in de goede map geïnstalleerd wordt
-* Voer het scriptje uit met het commando `./setup_website.sh`
-* Ga met je browser naar de website :smile:
+Er zit een Bash scriptje bij de website genaamd `setup_website.sh`. Dit script zet automatisch de website op. Voorwaarde is dat de server op dezelfde computer runt als waar het scriptje uitgevoerd wordt. Dit werkt dus niet op een webhosting server.
+Het scriptje kan worden uitgevoerd op een Linux server met het commando `./setup_website.sh`.
 
 ### MySQL
-tabel `pages`:
-
-| Kolom | Data type | Opmerking |
-|-------|-----------|-----------|
-| `id` | `TINYINT UNSIGNED UNIQUE AUTO_INCREMENT` ||
-| `page` | `VARCHAR(255) UNIQUE KEY` | pad naar de pagina vanaf [src/](https://github.com/MateyByrd/CheckJeStress/tree/master/src) |
-| `title` | `TINYTEXT` | paginatitel |
-| `head` | `TEXT` | extra dingen voor in de head tag |
-| `body` | `TEXT` | inhoud van de body tag |
-
 tabel `test_testname` (testname is naam van test, voor elke test een tabel):
 
 | Kolom | Data type | Opmerking |
@@ -27,7 +22,7 @@ tabel `test_testname` (testname is naam van test, voor elke test een tabel):
 | `id` | `MEDIUMINT UNSIGNED UNIQUE AUTO_INCREMENT` | ID van de test entry |
 | `time` | `DATETIME DEFAULT CURRENT_TIMESTAMP` | Wanneer de test is ingevuld. Geen `TIMESTAMP` omdat die maar tot januari 2038 gaat. |
 | `ip` | `INT UNSIGNED` | IP heeft 4 bytes. Dit past precies in INT |
-| `questionm` | `TINYINT(3) UNSIGNED` | m is het nummer van de vraag; voor elke vraag een kolom. Bevat het antwoord op de vraag in het formaat van 0 t/m 5, dus 3 bits. |
+| `questionm` | `TINYINT(3) UNSIGNED NOT NULL` | m is het nummer van de vraag; voor elke vraag een kolom. Bevat het antwoord op de vraag in het formaat van 0 t/m 5, dus 3 bits. |
 
 ### Aantekeningen
 ##### Tests [#5](https://github.com/MateyByrd/CheckJeStress/issues/5)
@@ -55,10 +50,7 @@ tabel `test_testname` (testname is naam van test, voor elke test een tabel):
 * We krijgen de source niet
 
 ### Vragen
-✓=gesteld
+✓=gesteld, nog geen antwoord
 ##### SJA
 * Als je naar [Voor wie](http://checkjestress.nl/page5.php) gaat en het preventieplan downloadt (links), dan krijg je een document zonder .doc extensie en met alleen een inhoudsopgave. Pls better version. ✓
 * Steunpunt Stress Burnout Nederland bestaat niet meer en Ria is weg; blijven alle producten wel hetzelfde, of moet er iets aan veranderd worden? Is het bijv. nog steeds mogelijk om een burnout risicoanalyse voor je bedrijf te laten maken?✓
-
-##### PDY
-* Beoordeling van de risicoanalyse test? Deze test heeft in de oude setting 10 opties.
