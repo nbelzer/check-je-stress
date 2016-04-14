@@ -31,7 +31,7 @@ $page->body = <<<CONTENT
       </div>
 
       <div class="medium-9 columns">
-        <h5>Wie zijn we?</h1>
+        <h5>Wie zijn we?</h5>
 
         <p>
           Steunpunt Stress Burn-out Nederland is een initiatief van Ria in de Weij en Serge Janssen en opgericht in 2011.

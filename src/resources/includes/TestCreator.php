@@ -129,33 +129,33 @@ EOF;
 
     // Maak de body aan en zet het formulier erin.
     $this->pageCreator->body = <<<CONTENT
-      <div class="content">
-        <div class="menuSpacing"></div>
+    <div class="content">
+      <div class="menuSpacing"></div>
 
-        <div class="indexImage">
-          <div class="row">
-            <div class="medium-12 medium-centered columns">
-              <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolourbeach.svg');">
-              </div>
+      <div class="indexImage">
+        <div class="row">
+          <div class="medium-12 medium-centered columns">
+            <div class="backgroundImage" style="background-image: url('resources/img/background.svg');">
             </div>
           </div>
         </div>
-
-        <div class="row text water">
-          <div class="medium-10 medium-centered columns">
-            $this->test_body
-            <noscript>
-              <p>
-                Voor het invullen van de tests moet
-                <a href="http://enable-javascript.com/nl/" target="_blank">
-                Javascript ingeschakeld zijn in uw browser</a>.
-              </p>
-            </noscript>
-            $form
-          </div>
-        </div>
-
       </div>
+
+      <div class="row text water">
+        <div class="medium-10 medium-centered columns">
+          $this->test_body
+          <noscript>
+            <p>
+              Voor het invullen van de tests moet
+              <a href="http://enable-javascript.com/nl/" target="_blank">
+              Javascript ingeschakeld zijn in uw browser</a>.
+            </p>
+          </noscript>
+          $form
+        </div>
+      </div>
+    </div>
+	
 CONTENT;
   }
 

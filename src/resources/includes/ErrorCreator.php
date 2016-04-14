@@ -32,33 +32,35 @@ class ErrorCreator {
     $page->title = $this->title;
 	$page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
 	$page->body = <<<CONTENT
-        <div class="content">
-		  <div class="menuSpacing"></div>
+	
+    <div class="content">
+	  <div class="menuSpacing"></div>
 		  
-		  <div class="indexImage">
-			<div class="row">
-			  <div class="medium-12 medium-centered columns">
-				<div class="backgroundImage" style="background-image: url('resources/img/frontpagecolourbeach.svg');">
-				</div>
-			  </div>
+	  <div class="indexImage">
+		<div class="row">
+		  <div class="medium-12 medium-centered columns">
+			<div class="backgroundImage" style="background-image: url('resources/img/background.svg');">
 			</div>
 		  </div>
+		</div>
+	  </div>
 		  
-          <div class="row water">
-            <div class="medium-10 medium-centered columns">
-                <h2>Error $this->code</h2>
-                <p>
-                  Beste bezoeker,
-                  <br><br>
-                  $this->message
-                  <br>
-                  Onze excuses voor het ongemak.
-				  <br><br>
-				  <a href='javascript:history.go(-1)'><button class="button">Terug naar de vorige pagina</button></a>
-                </p>
-            </div>
-          </div>
+      <div class="row water">
+        <div class="medium-10 medium-centered columns">
+          <h2>Error $this->code</h2>
+		  
+          <p>
+            Beste bezoeker,
+            <br><br>
+            $this->message
+            <br>
+            Onze excuses voor het ongemak.
+			<br><br>
+			<a href='javascript:history.go(-1)'><button class="button">Terug naar de vorige pagina</button></a>
+          </p>
         </div>
+      </div>
+    </div>
 
 CONTENT;
 

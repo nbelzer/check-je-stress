@@ -7,12 +7,12 @@ $page->title = "Particulier";
 $page->body = <<<CONTENT
 
 <div class="content">
-<div class="menuSpacing"></div>
+  <div class="menuSpacing"></div>
 
   <div class="indexImage">
     <div class="row">
       <div class="medium-12 medium-centered columns">
-        <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolourbeach.svg');">
+        <div class="backgroundImage" style="background-image: url('resources/img/background.svg');">
         </div>
       </div>
     </div>
@@ -77,8 +77,8 @@ $page->body = <<<CONTENT
 			De consulten/sessies van een individueel traject (geen groepstrainingen, lezingen en/of workshops) vallen onder "Alternatieve Geneeswijzen" in het aanvullende verzekeringspakket. Raadpleeg de eigen polis of neem contact op met de ziektekostenverzekeraar, deze kan u vertellen tot welk verzekerd bedrag onze declaraties vergoed worden.
 		  </p>
 
-        </div>
-      </div>
+    </div>
+  </div>
 
 </div>
 
