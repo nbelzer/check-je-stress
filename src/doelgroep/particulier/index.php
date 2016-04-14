@@ -24,27 +24,27 @@ $page->body = <<<CONTENT
         <h5>Particulier</h5>
 
 		  <p>
-			<b>Stress is onvermijdelijk en vroeg of laat kunt u ermee te maken krijgen:</b> op uw werk, in uw sociale en privé-contacten, ja zelfs in uw slaap. Steeds meer werkenden – zowel in het lagere als het hogere kader – klagen over stress of spanningen. Voor cijfers zie <a href="http://www.cbs.nl/nl-nl/menu/themas/arbeid-sociale-zekerheid/publicaties/artikelen/archief/2011/2011-3493-wm.htm">CBS.nl</a>
+			<b>Stress is onvermijdelijk en vroeg of laat kunt u ermee te maken krijgen:</b> op uw werk, in uw sociale en privé-contacten, zelfs in uw slaap. Steeds meer werkenden – zowel in het lagere als het hogere kader – klagen over stress of spanningen. Voor cijfers zie <a href="http://www.cbs.nl/nl-nl/menu/themas/arbeid-sociale-zekerheid/publicaties/artikelen/archief/2011/2011-3493-wm.htm">CBS.nl</a>
 		  </p>
 
 		  <p>
 			<b>Welke signalen waarschuwen voor een overbelasting aan stress?</b>
 			<br />
-			Signalen die op teveel stress duiden, variëren van een algeheel malaisegevoel tot fysieke pijn. Deze symptomen lopen zo uiteen dat men ze vaak niet herkent als tekenen van stress. Als men onder stress gebukt gaat, kan men zich angstig voelen, zich niet ontspannen of zich langdurig vervelen. Stress kan verder met slaapstoornissen gepaard gaan, met seksuele problemen en met verminderde arbeidsprestaties. Het vervelende van dit alles is, dat stress ook als heel persoonlijk ervaren wordt: waar de een niet opkijkt van 80 uur werken in de week, wordt de ander al misselijk bij het idee om een uur over te moeten werken.
+			Signalen die op teveel stress duiden, variëren van een algeheel malaisegevoel tot fysieke pijn. Deze symptomen lopen zo uiteen dat men ze vaak niet herkent als tekenen van stress. Als men onder stress gebukt gaat, kan men zich angstig, niet ontspannen of zich langdurig verveeld voelen. Stress kan tevens met slaapstoornissen, seksuele problemen en verminderde arbeidsprestaties gepaard gaan. Het vervelende van dit alles is dat stress ook als heel persoonlijk ervaren wordt: waar de een niet opkijkt van 80 uur werken in de week, wordt de ander al misselijk bij het idee om een uur over te moeten werken.
 		  </p>
 
 		  <p>
 			<b>Stress en efficiëntie in het werk</b>
 			<br />
-			Uit ervaring blijkt dat afname van efficiëntie een brede uitstraling kan hebben op collega’s. Als een hele afdeling erdoor wordt beïnvloed, kan het voor een bedrijf beslist kostbaar worden. Dit bijverschijnsel van stress - burnout, de inefficiëntie, belast zowel de betreffende persoon als de hele omgeving. Het demoraliseert en is weer een oorzaak van verlies van eigenwaarde, dit gaat altijd gepaard met een burnout.
+			Uit ervaring blijkt dat afname van efficiëntie een brede uitstraling kan hebben op collega’s. Als een hele afdeling erdoor wordt beïnvloed, kan het voor een bedrijf beslist een grote last worden. Dit bijverschijnsel van stress, een burn-out en de daaraan gekoppelde de inefficiëntie, belast zowel de betreffende persoon als zijn/haar hele omgeving. Het demoraliseert en dat is weer een oorzaak van verlies van eigenwaarde, dit gaat altijd gepaard met een burn-out.
 		  </p>
 
 		  <p>
 			<b>Wat kan Steunpunt Stress Burnout Nederland voor u betekenen?</b>
 			<ul>
-			  <li>We gaan onderzoeken hoe we de mentale belasting kunnen verminderen.
-			  <li>We helpen u het werk weer belonend te maken en persoonlijke betekenis te geven
-			  <li>We gaan u vermogen vergroten om een nieuwe burnout te voorkomen.
+			  <li>Wij gaan onderzoeken hoe we de mentale belasting kunnen verminderen.
+			  <li>Wij helpen u het werk weer belonend te maken en persoonlijke betekenis te geven
+			  <li>Wij gaan uw vermogen vergroten om een nieuwe burnout te voorkomen.
 			</ul>
 		  </p>
 
@@ -58,11 +58,11 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			Herkent u uzelf in bovenstaande symptomen en bent u benieuwd naar een stressvrij(er) leven? Neem dan contact met ons op door <a href="contact/">hier te klikken</a>, of vul de snelle test in op de <a href="tests/snelle-test.php">testpagina</a>.
+			Herkent u uzelf in de bovenstaande symptomen en bent u benieuwd naar een stressvrij(er) leven? Neem dan contact met ons op door <a href="contact/">hier te klikken</a>, of vul de snelle test in op de <a href="tests/snelle-test.php">testpagina</a>.
 		  </p>
 
 		  <p>
-			U kunt zelf al eenvoudig beginnen om te zorgen voor een goed slaappatroon, maar ook regelmatig en gezond te eten. Neem tijd voor ontspanning door bijvoorbeeld te wandelen, zwemmen of te sporten. U ziet dat dit al eenvoudige tips zijn om actief iets tegen stress te doen. Zit u echter dieper in de put en wilt u een nieuw begin maken? Aarzel niet en neem contact op!
+			U kunt zelf al eenvoudig beginnen om te zorgen voor een goed slaappatroon, maar ook regelmatig en gezond te eten. Neem tijd voor ontspanning door bijvoorbeeld te wandelen, zwemmen of te sporten. Dit zijn al eenvoudige tips zijn om actief iets tegen stress te doen. Zit u echter dieper in de put en wilt u een nieuw begin maken? Schroom niet om contact op te nemen, het is nooit te laat om uw mentale/emotionele gestel te herstellen.
 		  </p>
 
 		  <p>
