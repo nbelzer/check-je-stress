@@ -3,7 +3,7 @@ include '../resources/includes/PageCreator.php';
 $page = new PageCreator;
 $page->path_to_root = '../';
 $page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
-$page->title = "Burnout Tests";
+$page->title = "Burn-out Tests";
 $page->body = <<<CONTENT
 
 <div class="content">
@@ -20,7 +20,7 @@ $page->body = <<<CONTENT
 
   <div class="row water">
     <div class="medium-10 medium-centered columns">
-      <h3>Burnout tests</h3>
+      <h3>Burn-out tests</h3>
 
       <ul>
         <li>
@@ -31,16 +31,16 @@ $page->body = <<<CONTENT
         </li>
         <li>
           <!-- test c -->
-          In het geval dat u wilt weten of u verschijnselen heeft van een echte burnout kunt u de  <a href="tests/uitgebreide-test">uitgebreide test</a> afnemen.
+          In het geval dat u wilt weten of u verschijnselen heeft van een echte burn-out kunt u de  <a href="tests/uitgebreide-test">uitgebreide test</a> afnemen.
           
           <br>
           Deze test zal circa vijf minuten van uw tijd nemen.
         </li>
         <li>
           <!-- test b -->
-          De <a href="tests/risicoanalyse">burnout risico analyse</a> is een test voor
+          De <a href="tests/risicoanalyse">burn-out risico analyse</a> is een test voor
           managers, bestuurders en directeuren om te weten te komen hoeveel risico het
-          bedrijf loopt op burnouts van werknemers.
+          bedrijf loopt op burn-outs van werknemers.
           <br>
           Deze test duurt ongeveer 2 minuten.
         </li>
