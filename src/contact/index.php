@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include '../resources/includes/PageCreator.php';
 $page = new PageCreator();
 $page->path_to_root = '../';
@@ -8,7 +8,7 @@ $page->body = <<<CONTENT
 
 <div class="content">
   <div class="menuSpacing"></div>
-  
+
   <div class="indexImage">
     <div class="row">
       <div class="medium-12 medium-centered columns">
@@ -16,12 +16,12 @@ $page->body = <<<CONTENT
         </div>
       </div>
     </div>
-  </div> 
-  
+  </div>
+
 	<div class="row text water" id="first">
 	  <div class="medium-10 medium-centered columns">
         <div class="medium-12 columns">
-		
+
           <h5>Contact</h5>
 
           <p>
@@ -47,7 +47,7 @@ $page->body = <<<CONTENT
     <div class="row text dark" id="second">
       <div class="medium-10 medium-centered columns">
         <div class="medium-12 columns>
-		
+
           <h5>Contactformulier</h5>
 
 		  <form method="post" name="contactformulier" action="contact/formulier-email.php">
@@ -87,10 +87,10 @@ $page->body = <<<CONTENT
 				<td>
 				  <img id="captcha" src="resources/captcha/securimage_show.php" alt="CAPTCHA Image" style="border:1px solid black;" />
 				  <a href="#" onclick="document.getElementById('captcha').src = 'resources/captcha/securimage_show.php?' + Math.random(); return false">[ Andere afbeelding ]</a><br><br>
-				  <input type="text" name="captcha_code" maxlength="6" id="4">				
+				  <input type="text" name="captcha_code" maxlength="6" id="4">
 				</td>
 			  </tr>
-			  
+
 			</table>
 
 			<p>

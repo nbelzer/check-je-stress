@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include '../resources/includes/PageCreator.php';
 $page = new PageCreator();
 $page->path_to_root = '../';
