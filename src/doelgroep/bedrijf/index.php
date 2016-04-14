@@ -37,7 +37,7 @@ $page->body = <<<CONTENT
           <h5>Bedrijf</h5>
 
           <p>
-			<b>Iedere werknemer telt! Verzuim als gevolg van stress en stressgerelateerde klachten (RSI!) kost de maatschappij miljoenen euro's per jaar!</b>
+			<b>U bent het vast met ons eens als wij zeggen:"Iedere werknemer telt!" Verzuim als gevolg van stress en stressgerelateerde klachten (RSI) kost de maatschappij miljoenen euro's per jaar! </b>
 		  </p>
 
 		  <p>
@@ -45,7 +45,7 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			Over duurzaam ondernemen spreken de media tegenwoordig vrij regelmatig. Maar hoe duurzaam bent u met uw medewerkers? Grote kans dat er medewerkers zijn die het risico lopen om burn-out te raken. Staat u daar wel eens bij stil?
+			Duurzaam ondernemen  is een veel besproken onderwerp door de media tegenwoordig. De belangrijke vraag die u moet aan uzelf moet stelling is: "Hoe duurzaam bent ik met mijn medewerkers?" Er bestaat een grote kans dat er medewerkers zijn die het risico lopen om burn-out te raken. Staat u daar wel eens bij stil?
 		  </p>
 
 		  <p data-magellan data-options="barOffset:40">
@@ -95,11 +95,11 @@ $page->body = <<<CONTENT
 		  <p>
 			<b>Concreet houdt dit in:</b>
 			<br>
-			Persoonlijk leed voor de werknemer en een lang ziekteverzuim, hoge kosten voor de werkgever (loondoorbetaling, WGA, vervangingskosten enz.) en een lagere productie voor het bedrijf. Om nog maar niet te spreken van een slechte PR op feestjes en verjaardagen.
+			Persoonlijk leed voor de werknemer en een lang ziekteverzuim, hoge kosten voor de werkgever (loondoorbetaling, WGA, vervangingskosten enz.) en een lagere productie voor het bedrijf. Een ander gevolg is slechte PR op feestjes, verjaardagen en bij mogelijke handelscontacten.
 		  </p>
 
 		  <p>
-			Bij een burnout is de werknemer langere tijd, variërend van 6 maanden tot soms 2 jaar, niet in staat zijn werk te verrichten. Bovendien heeft u als werkgever de verplichting om goed werkgeversschap te leveren. Mogelijk kunt u als bedrijf/organisatie aansprakelijk gesteld worden voor arbeidsongeschikt van een werknemer als gevolg van een burnout. Lees <a href="http://vorige.nrc.nl/binnenland/article1820036.ece/www.stamos.nl">hier</a> meer over de mogelijke gevolgen.
+			Bij een burn-out is de werknemer langere tijd, variërend van 6 maanden tot soms 2 jaar, niet in staat zijn werk te verrichten. Bovendien heeft u als werkgever de verplichting om goed werkgeversschap te leveren. Mogelijk kunt u als bedrijf/organisatie aansprakelijk gesteld worden voor arbeidsongeschikt van een werknemer als gevolg van een burnout. Lees <a href="http://vorige.nrc.nl/binnenland/article1820036.ece/www.stamos.nl">hier</a> meer over de mogelijke gevolgen.
 		  </p>
 
 		  <p data-magellan data-options="barOffset:40">
@@ -149,7 +149,7 @@ $page->body = <<<CONTENT
           <h5>Producten</h5>
 
 		  <p>
-			Voor onze zakelijke cliënten hebben we een aantal producten ontwikkeld, die ondernemers helpen om actief beleid op te stellen om spanning, stress en burnout in de organisatie te lijf te gaan:
+			Voor onze zakelijke cliënten hebben we een aantal producten ontwikkeld, die ondernemers helpen om actief beleid op te stellen om spanning, stress en burn-out in de organisatie te lijf te gaan:
 			<ul data-magellan data-options="barOffset:40">
 			  <li>Burnout risico-analyse (nulmeting van uw werknemers)  Lees <a href="#fourth">hieronder</a> meer.</li>
 			  <li>Preventieplan: eenvoudig implementeerbaar in uw personeelsbeleid</li>
@@ -170,7 +170,7 @@ $page->body = <<<CONTENT
       <div class="medium-10 medium-centered columns">
         <div class="medium-12 columns">
 
-          <h5>Burnout risico-analyse voor bedrijven</h5>
+          <h5>Burn-out risico-analyse voor bedrijven</h5>
 
 		  <p>
 			Zoals u op de vorige pagina al hebt kunnen lezen kost stress en burnout het bedrijfsleven heel erg veel geld. Geld wat makkelijk uitgespaard kan worden door een <b>goed preventiebeleid</b>. Steunpunt Stress Burnout Nederland kan voor uw organisatie een <b>burnout risico-analyse</b> uitvoeren.
@@ -185,11 +185,11 @@ $page->body = <<<CONTENT
 		  </p>
 
 		  <p>
-			Ook een voor de organisatie op maat geschreven Burnoutpreventieplan om ziekteverzuim als gevolg van stress in de toekomst voor te zijn is één van de instrumenten om duurzaam om te gaan met uw belangrijkste bedrijfskapitaal: uw eigen personeel. Ook bieden we de mogelijkheid om leidinggevenden te trainen in het herkennen van stresssignalen en de daarop volgende actie. Voorkomen is ook hier beter dan genezen.
+			Ook een voor de organisatie op maat geschreven Burn-outpreventieplan om ziekteverzuim als gevolg van stress in de toekomst voor te zijn is één van de instrumenten om duurzaam om te gaan met uw belangrijkste bedrijfskapitaal: uw eigen personeel. Ook bieden we de mogelijkheid om leidinggevenden te trainen in het herkennen van stresssignalen en de daarop volgende actie. Voorkomen is ook hier beter dan genezen.
 		  </p>
 
 		  <p>
-			Twijfelt u als ondernemer of de organisatie gebukt gaat onder stress en/of burnout? Vul dan de test in voor ondernemers onder <a href="tests/">testen</a>. Kies de burnout risico analyse.
+			Twijfelt u als ondernemer of de organisatie gebukt gaat onder stress en/of burnout? Vul dan de test in voor ondernemers onder <a href="tests/">testen</a>. Kies de burn-out risico-analyse.
 		  </p>
 
 		  <p>
