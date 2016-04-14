@@ -1,10 +1,51 @@
 <?php
 
+/* Relatief weinig validatie hier, want verwacht niet dat meneer SJA zijn eigen
+   website gaat proberen te hacken. Wel de benodigde validatie zodat er niks
+   fout kan gaan bij het invullen. */
+
+function filename_safe($filename) {
+  $temp = $filename;
+  $temp = strtolower($temp);
+  $temp = str_replace(" ", "_", $temp);
+  $result = '';
+  for ($i=0; $i<strlen($temp); $i++) {
+    if (preg_match('([0-9]|[a-z]|_)', $temp[$i])) {
+      $result = $result . $temp[$i];
+    }
+  }
+  return $result;
+}
+
+if (isset($_POST['request'])) {
+  switch ($_POST['request']) {
+    case 'add':
+      $bedrijf = filename_safe($_POST['bedrijfsnaam']);
+      $file = "../tests/personeelstest/bedrijven/$bedrijf.json";
+
+      $personeelsleden = intval($_POST['personeelsleden']);
+      /* Assoc. array met code => testresultaat */
+      $codes_array = [];
+      for ($i=0; $i<$personeelsleden; $i++) {
+        $codes_array[md5(uniqid(mt_rand(), true))] = null;
+      }
+
+      fwrite(fopen($file, 'w'), json_encode($codes_array));
+      break;
+    case 'remove':
+      $bedrijf = $_POST['bedrijfsnaam'];
+      $file = "../tests/personeelstest/bedrijven/$bedrijf.json";
+
+      unlink($file);
+      break;
+  }
+}
+
 $current_tests = [];
 $dirHandle = opendir('../tests/personeelstest/bedrijven/');
 while ($file = readdir($dirHandle)) {
   if ($file != '.htaccess' && $file != '.' && $file != '..') {
-    array_push($current_tests, $file);
+    array_push($current_tests, substr($file, 0, strlen($file) - 5));
   }
 }
 
@@ -16,9 +57,9 @@ $tests_ul .= "</ul>\n";
 
 $tests_select = "<select name=\"bedrijfsnaam\">\n";
 foreach ($current_tests as $test) {
-  $tests_ul .= "<option value=\"$test\">$test</option>\n";
+  $tests_select .= "<option value=\"$test\">$test</option>\n";
 }
-$tests_ul .= "</select>\n";
+$tests_select .= "</select>\n";
 
 require_once '../resources/includes/PageCreator.php';
 
@@ -26,6 +67,8 @@ $page = new PageCreator();
 $page->path_to_root = '../';
 $page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
 $page->title = "Doelgroep";
+
+$self = htmlentities($_SERVER['PHP_SELF']);
 $page->body = <<<CONTENT
 
   <div class="content">
@@ -50,25 +93,19 @@ $page->body = <<<CONTENT
           $tests_ul
 
           <h6>Bedrijf toevoegen</h6>
-          <form action="" method="POST">
+          <form action="$self" method="POST">
             <label>Bedrijfsnaam <input type="text" name="bedrijfsnaam"></input></label>
             <label>Aantal personeelsleden <input type="number" name="personeelsleden"></input></label>
             <input type="hidden" name="request" value="add"></input>
-            <input type="button" class="button" value="Toevoegen"></input>
+            <input type="submit" class="button" value="Toevoegen"></input>
           </form>
 
           <h6>Bedrijf verwijderen</h6>
           <form action="" method="POST">
             $tests_select
             <input type="hidden" name="request" value="remove"></input>
-            <input type="button" class="button" value="Verwijderen"></input>
+            <input type="submit" class="button" value="Verwijderen"></input>
           </form>
-
-          <p>
-            TODO:<br>
-            Laten zien voor welke bedrijven op dit moment personeelstests bezig zijn, met links naar de resultaten<br>
-            Mogelijkheid om tests toe te voegen voor bedrijven, en om bedrijven te verwijderen
-          </p>
 
         </div>
       </div>
