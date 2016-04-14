@@ -21,7 +21,7 @@ $page->body = <<<CONTENT
     <div class="medium-10 medium-centered columns">
       <p>
         Welkom op de website van CheckJeStress. We helpen u graag van
-        spanning, stress en (dreigende) burnout af. Het maakt niet uit of u
+        spanning, stress en (dreigende) burn-out af. Het maakt niet uit of u
         een onderneming heeft of niet, onze dienstverlening past bij iedereen.
       </p>
     </div>
@@ -43,8 +43,8 @@ $page->body = <<<CONTENT
       <div class="medium-6 columns" data-equalizer-watch>
         <div class="header" style="color: #034E60;">Feiten:</div>
         <ul class="facts">
-          <li>38% van de arbeidsongeschiktheid in 2005 komt door psychische klachten zoals stress en burnout</li>
-          <li>1 op de 8 werknemers heeft last van een burnout (bron CBS)</li>
+          <li>38% van de arbeidsongeschiktheid in 2005 komt door psychische klachten zoals stress en burn-out</li>
+          <li>1 op de 8 werknemers heeft last van een burn-out (bron CBS)</li>
           <li>30.000 mensen worden jaarlijks afgekeurd ten gevolge van psychische problematiek</li>
           <li>Stressklachten en burnouts kunnen verholpen worden</li>
         </ul>
@@ -65,7 +65,7 @@ $page->body = <<<CONTENT
 	  <p>
         Wilt u voor uzelf controleren of u last heeft van stress, of wilt u
         kijken of uw gewoontes en gedragingen u laten afstevenen op een
-        burnout? Door middel van een test kunt u snel en eenvoudig zien of u
+        burn-out? Door middel van een test kunt u snel en eenvoudig zien of u
         gevaar loopt.
         <br><br><a href="tests/">Klik hier</a> voor de testpagina.
       </p>
