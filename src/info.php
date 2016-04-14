@@ -34,7 +34,7 @@ $page->body = <<<CONTENT
         <h5>Wie zijn we?</h1>
 
         <p>
-          Steunpunt Stress Burnout Nederland is een initiatief van Ria in de Weij en Serge Janssen en opgericht in 2011.
+          Steunpunt Stress Burn-out Nederland is een initiatief van Ria in de Weij en Serge Janssen en opgericht in 2011.
           <br />
           Samen hebben we jarenlange ervaring in het trainen en werken met mensen opgebouwd.
           <br />
@@ -73,7 +73,7 @@ $page->body = <<<CONTENT
         </p>
 
         <p>
-          Particulieren en werkgevers kunnen een stresstest maken en het resultaat hiervan bespreken met één van onze stress- en burnoutcounsellors. Daarbij hebben werkgevers de mogelijkheid om door ons een burnout-risicoanalyse uit te laten voeren, waarbij we het gehele traject rondom stressreductie doorlopen. We bieden een complete dienstverlening aan: van analyseren van testgegevens tot het individuele coachingsgesprek, van het compleet inpasbare actieve preventiebeleid tot training van leidinggevenden.
+          Particulieren en werkgevers kunnen een stresstest maken en het resultaat hiervan bespreken met één van onze stress- en burnoutcounsellors. Daarbij hebben werkgevers de mogelijkheid om door ons een burn-out risicoanalyse uit te laten voeren, waarbij we het gehele traject rondom stressreductie doorlopen. Wij bieden een complete dienstverlening aan: van analyseren van testgegevens tot het individuele coachingsgesprek, van het compleet inpasbare actieve preventiebeleid tot training van leidinggevenden.
         </p>
 
         <p>
