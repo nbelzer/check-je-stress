@@ -23,15 +23,15 @@ $page->body = <<<CONTENT
         <h5>Doelgroep</h1>
 
         <p>
-          CheckJeStress is er voor zowel particulier als bedrijf. Beide partijen kunnen rekenen op onze inzet en ervaring.
+          CheckJeStress is er voor zowel particulieren als voor bedrijven. Beide partijen kunnen compleet vertrouwen op onze inzet en ervaring.
         </p>
 
 		<p>
-          <a href="doelgroep/particulier/">Klik hier</a> voor informatie voor particulieren.
+          <a href="doelgroep/particulier/">Klik hier</a> voor de informatie voor particulieren.
         </p>
 
 		<p>
-          <a href="doelgroep/bedrijf/">Klik hier</a> voor informatie voor bedrijven.
+          <a href="doelgroep/bedrijf/">Klik hier</a> voor de informatie voor bedrijven.
         </p>
 
     </div>
