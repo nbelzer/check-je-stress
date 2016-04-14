@@ -10,7 +10,7 @@ $page->head = <<<EOF
       $('body,html').animate({
         'scrollTop': $('#' + provincie).offset().top - 55
       }, 1000);
-    }
+    }we
   </script>
 EOF;
 $page->title = "Steunpunten";
@@ -54,7 +54,7 @@ $page->body = <<<CONTENT
         <h5>Overzicht</h5>
 
         <p>
-          Kies hieronder op de kaart de provincie naar keuze.
+          Kies hieronder op de kaart de provincie naar uw keuze.
         </p>
 
         <p>
@@ -417,7 +417,7 @@ $page->body = <<<CONTENT
       <h5>Drenthe</h5>
 
       <p>
-			We hebben (nog) geen steunpunten in Drenthe. <a href="steunpunten/vacatures/">Klik hier</a> als u zich als steunpunt voor deze provincie aan wilt melden.
+			Wij hebben (nog) geen steunpunten in Drenthe. <a href="steunpunten/vacatures/">Klik hier</a> als u zich als steunpunt voor deze provincie aan wilt melden.
 		  </p>
 
     </div>
