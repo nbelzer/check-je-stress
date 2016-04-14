@@ -8,29 +8,33 @@
 
 # In welke map moet de website geïnstalleerd worden? De bestanden worden direct
 # in deze map geplakt, niet eerst nog in een submap.
-TARGET_LOCATION="/var/www/html"
-# Hoe ga je naar de installatie van de CheckJeStress website vanaf de web root?
-# Stel, de website wordt geïnstalleerd in http://website.com/stress/ dan is deze
-# variabele '/stress/'.
-PATH_TO_INSTALLATION_FROM_ROOT="/"
+echo "In welke map moet de website geïnstalleerd worden?"
+read -e -p "Installatie root: " -i "/var/www/html" TARGET_LOCATION
+
 # Absolute path naar .htpasswd. Dit moet bij voorkeur een plaats zijn BUITEN de
 # webserver, zodat bezoekers het bestand ook niet kunnen zien als de server
 # verkeerd geconfigureerd is.
-PASSWORD_FILE_LOCATION="/var/www"
+echo "In welke map moet het bestand met wachtwoorden voor de admin/ sectie staan?"
+echo "Bij voorkeur moet dit een map zijn BUITEN de webserver."
+read -e -p "Wachtwoord bestand locatie: " -i "/home/user" PASSWORD_FILE_LOCATION
+
 # Welke user moet de owner worden van de website bestanden? Dit moet de apache
 # user zijn.
-APACHE_USER="www-data"
-APACHE_GROUP=$APACHE_USER
+echo "Hoe heet de Apache user op dit systeem?"
+read -e -p "Apache user: " -i "www-data" APACHE_USER
+
+echo "Welke permissions group moet gebruikt worden voor de apache user?"
+read -e -p "Apache group: " -i $APACHE_USER $APACHE_GROUP
 
 ###########################
 # ==== WEBSITE SETUP ==== #
 ###########################
 
-echo Bestanden kopiëren naar $TARGET_LOCATION...
+echo "Bestanden kopiëren naar $TARGET_LOCATION..."
 cp -r src/. $TARGET_LOCATION/
 rm $TARGET_LOCATION/.htpasswd
 
-echo "Admin user voor de website: "
+echo "Admin user voor de website (CMS): "
 read user
 echo "Wachtwoord: "
 read -s password
@@ -40,16 +44,9 @@ htpasswd -bc $PASSWORD_FILE_LOCATION/.htpasswd $user $password
 PASSWORD_FILE_LOCATION=$(echo $PASSWORD_FILE_LOCATION | sed 's/\//\\\//g')
 sed -i.bak "s/\/absolute\/path\/to\/.htpasswd/$(echo $PASSWORD_FILE_LOCATION)\/.htpasswd/g" $TARGET_LOCATION/admin/.htaccess
 
-# Pas de ErrorDocument paths in de root .htaccess aan naar absolute vanaf de
-# installatie root
-PATH_TO_INSTALLATION_FROM_ROOT=$(echo $PATH_TO_INSTALLATION_FROM_ROOT | sed 's/\//\\\//g')
-SEDSTRING='s/\/error\//'$PATH_TO_INSTALLATION_FROM_ROOT'error\//'
-mv $TARGET_LOCATION/.htaccess $TARGET_LOCATION/.htaccess.old
-sed $SEDSTRING $TARGET_LOCATION/.htaccess.old > $TARGET_LOCATION/.htaccess
-rm $TARGET_LOCATION/.htaccess.old
-
 # Laat de gebruiker de config editen
 "${EDITOR:-vim}" src/config.php
+cp src/config.php $TARGET_LOCATION/
 
 # Zet de goede permissions op de bestanden van de website
 chown -R $APACHE_GROUP:$APACHE_USER $TARGET_LOCATION
@@ -62,7 +59,7 @@ echo MySQL gegevens lezen uit config.php...
 
 echo '
   <?php
-  $config = include "src/resources/includes/config.php";
+  $config = include "src/config.php";
   print ("§" . $config["mysql"]["host"] . "\n");
   print ("§" . $config["mysql"]["port"] . "\n");
   print ("§" . $config["mysql"]["username"] . "\n");
@@ -82,7 +79,7 @@ echo MySQL database opzetten...
 
 # create_questions_query <testnaam> <aantalvragen>
 function create_questions_query {
-  query="CREATE TABLE IF NOT EXISTS test_$1 (id MEDIUMINT UNSIGNED UNIQUE AUTO_INCREMENT, time DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, ip INT UNSIGNED, "
+  query="CREATE TABLE IF NOT EXISTS test_$1 (id MEDIUMINT UNSIGNED UNIQUE AUTO_INCREMENT, time DATETIME DEFAULT CURRENT_TIMESTAMP, ip INT UNSIGNED, "
   nr=$(($2-1))
   for (( i=0; i<$nr; i++ )); do
     query="${query}question$i TINYINT(3) UNSIGNED NOT NULL, "
