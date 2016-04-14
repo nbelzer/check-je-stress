@@ -25,7 +25,7 @@ $page->body = <<<CONTENT
 		<h5>Vacatures</h5>
 
         <p>
-		  Ons doel is om in elke provincie een ruim aantal aangesloten praktijken te hebben om iedereen in Nederland te kunnen bedienen om stressklachten en burnout terug te dringen.
+		  Ons doel is om in elke provincie een groot genoeg aantal aangesloten praktijken te hebben om iedereen in Nederland te kunnen bedienen met zijn of haar stressklachten en het terugdringen van zijn of haar burn-out.
 		</p>
 
 		<p>
@@ -40,11 +40,11 @@ $page->body = <<<CONTENT
 		</p>
 		
 		<p>
-		  Past het profiel en heeft u nog steeds interesse? Vul dan onderstaand contactformulier in.
+		  Indien u uzelf in het profiel kunt herkennen en u zich bij ons wil aansluiten, kunt u het onderstaand contactformulier invullen.
 		</p>
 
 		<p>
-		  Tot binnenkort?<br />
+		  Graag horen wij van u!<br />
 		  Serge
 		</p>
 	  </div>
@@ -59,7 +59,7 @@ $page->body = <<<CONTENT
 
 		<p>
 		  <b>
-			Ja, ik heb interesse om diensten te verzorgen voor CheckJeStress.
+			 Ik heb interesse om diensten te verzorgen voor CheckJeStress en herken mijzelf in het geschetste profiel.
 		  </b>
 		</p>
 		  
