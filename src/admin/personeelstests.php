@@ -30,7 +30,9 @@ if (isset($_POST['request'])) {
         $codes_array[md5(uniqid(mt_rand(), true))] = null;
       }
 
-      fwrite(fopen($file, 'w'), json_encode($codes_array));
+      $handle = fopen($file, 'w');
+      fwrite($handle, json_encode($codes_array));
+      fclose($handle);
       break;
     case 'remove':
       $bedrijf = $_POST['bedrijfsnaam'];
