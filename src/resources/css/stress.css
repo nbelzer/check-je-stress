@@ -181,7 +181,7 @@ a {
 }
 
 body {
-    /*background-color: #32a3bd;*/
+    background-color: #eee;
 }
 
 .backgroundImagefrontpage {
@@ -219,8 +219,4 @@ body {
 
 .indexImage {
   background: -webkit-linear-gradient(#39bfef, #eee);
-}
-
-.str_slider {
-  z-index: -1 !important;
 }

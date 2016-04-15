@@ -25,6 +25,7 @@ tbody tr:nth-child(2n) {
 .str_slider {
   padding-left: 3em;
   padding-right: 1em;
+  z-index: -1 !important;
 }
 
 @media (max-width: 40em) {
