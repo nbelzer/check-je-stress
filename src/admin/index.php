@@ -21,17 +21,16 @@ $page->body = <<<EOF
   <div class="row text water" id="first">
     <div class="medium-10 medium-centered columns">
       <div class="medium-9 columns medium-offset-3">
-		<h5>Admin paneel</h5>
-		
-        <p>
-		  Welkom bij het Admin paneel van de CheckJeStress website.
-		</p>
-		
-        <p>
-		  Kies een optie:
-		</p>
-		
-        <a href="admin/testresultaten.php"><button type="button" class="button">Resultaten van de tests inzien</button></a>
+		    <h5>Admin paneel</h5>
+
+        <p>Welkom bij het Admin paneel van de CheckJeStress website.</p>
+        <p>Kies een optie...</p>
+        <a href="admin/testresultaten.php"><button type="button" class="button">
+          Resultaten van de tests inzien
+        </button></a>
+        <a href="admin/personeelstests"><button type="button" class="button">
+          Personeelstests
+        </button></a>
 
       </div>
     </div>

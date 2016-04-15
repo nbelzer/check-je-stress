@@ -137,6 +137,10 @@
   background-color: #eee;
 }
 
+.content label {
+  color: #fff;
+}
+
 .content .water, .content .dark {
   padding: 2em 1em;
   font-weight: 500;
