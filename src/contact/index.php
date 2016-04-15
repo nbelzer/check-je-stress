@@ -29,7 +29,7 @@ $page->body = <<<CONTENT
 		</p>
 
 		<p>
-		  Vul dan onderstaand contactformulier in en dan zullen wij trachten zo spoedig mogelijk contact met u op. Wij kunnen ons voorstellen dat dit misschien een grote stap voor u is, maar het is het begin van een nieuwe start.
+		  Vul dan onderstaand contactformulier in en dan zullen wij trachten zo spoedig mogelijk contact met u op te nemen. Wij kunnen ons voorstellen dat dit misschien een grote stap voor u is, maar het is het begin van een nieuwe start.
 		</p>
 
 		<p>
