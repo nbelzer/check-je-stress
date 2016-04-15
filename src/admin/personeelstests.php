@@ -4,6 +4,13 @@
    website gaat proberen te hacken. Wel de benodigde validatie zodat er niks
    fout kan gaan bij het invullen. */
 
+/**
+ * Geeft de string $filename terug als een bruikbare string voor in een
+ * bestandsnaam.
+ *
+ * @param string $filename een string die bruikbaar moet worden als bestandsnaam
+ * @return string $filename als bruikbare bestandsnaam
+ */
 function filename_safe($filename) {
   $temp = $filename;
   $temp = strtolower($temp);
@@ -93,6 +100,8 @@ $page->body = <<<CONTENT
 
           <h6>Huidige tests:</h6>
           $tests_ul
+
+          <p><a href="admin/personeelstest-results.php">Naar de resultaten</a></p>
 
           <h6>Bedrijf toevoegen</h6>
           <form action="$self" method="POST">

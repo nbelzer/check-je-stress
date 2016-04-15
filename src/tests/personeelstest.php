@@ -134,12 +134,12 @@ EOF;
       0, 7, 11, 16, 21, 24, 25, 27, 31, 33, 37, 40, 42, 45, 47, 49, 54, 55
     ];
 
-    $score = 0;
+    $total_score = 0;
     for ($i=0; $i<56; $i++) {
       if (in_array($i, $reverse_questions)) {
-        $score += 5 - $i;
+        $total_score += 5 - $score[$i];
       } else {
-        $score += $i;
+        $total_score += $score[$i];
       }
     }
 
