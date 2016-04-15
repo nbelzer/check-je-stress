@@ -1,22 +1,50 @@
 <?php
+
+$self = htmlentities($_SERVER['PHP_SELF']);
 if (isset($_GET['bedrijf']) && file_exists("../tests/bedrijven/{$_GET['bedrijf']}.json")) {
+
   $codes_array = (array) json_decode(file_get_contents("../tests/bedrijven/{$_GET['bedrijf']}.json"));
-  $unanswered = 0;
+  $answered = 0;
   foreach ($codes_array as $code => $result) {
-    if ($result == null) {
-      $unanswered++;
+    if ($result != null) {
+      $answered++;
     }
   }
   $count = count($codes_array);
-  $avg = array_sum($codes_array) / $count;
+  if ($answered == 0) {
+    $avg = "0";
+  } else {
+    $avg = array_sum($codes_array) / $answered;
+  }
   $perc = round(($total_score / 275) * 100);
   $content = <<<EOF
     <h5>Testresultaten - {$_GET['bedrijf']}</h5>
     <p>Gemiddelde testuitslag: $avg van de 275. Dat is $perc%</p>
-    <p>$unanswered van de $count personeelsleden hebben de test nog niet beantwoord.</p>
+    <p>$answered van de $count personeelsleden hebben de test ingevuld.</p>
 EOF;
+
+  if (isset($_GET['show_codes']) && boolval($_GET['show_codes']) == true) {
+    $unanswered_codes = '';
+    $answered_codes = '';
+    foreach ($codes_array as $code => $answer) {
+      $url = "http://checkjestress.nl/tests/personeelstest?bedrijf={$_GET['bedrijf']}&code=$code<br>";
+      if ($result == null) {
+        $unanswered_codes .= $url;
+      } else {
+        $answered_codes .= $url;
+      }
+    }
+    $content .= <<<EOF
+      <p>URLs van mensen die de test <b>nog niet</b> hebben ingevuld:</p>
+      <pre>$unanswered_codes</pre>
+      <p>URLs van mensen die de test <b>al wel</b> hebben ingevuld:</p>
+      <pre>$answered_codes</pre>
+EOF;
+  } else {
+    $content .= "<p><a href=\"$self?bedrijf={$_GET['bedrijf']}&show_codes=true\">Toon bestand met URLs</a></p>";
+  }
+
 } else {
-  $self = htmlentities($_SERVER['PHP_SELF']);
   $current_tests = "";
   $dirHandle = opendir('../tests/bedrijven/');
   while ($file = readdir($dirHandle)) {

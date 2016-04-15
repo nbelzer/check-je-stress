@@ -113,7 +113,7 @@ if (isset($_GET['organisatie']) && isset($_GET['code'])
   $test_page->questions = $vragen;
   $test_page->extra_head = <<<EOF
     <link rel="stylesheet" href="resources/css/test.css" type="text/css">
-  EOF;
+EOF;
 
   $test_page->test_body = <<<EOF
     <h1>Personeelstest</h1>
