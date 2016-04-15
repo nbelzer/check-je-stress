@@ -75,10 +75,12 @@ class TestCreator {
          er een InvalidTestResultsException. */
       $results = $this->validatePostResults(count($this->questions));
 
-      /* Zet de resultaten van de test in de database */
-      require_once '../resources/includes/TestsSQL.php';
-      $tests_sql = new TestsSQL($this->pageCreator->mysql);
-      $tests_sql->storeResults($test_name, $results);
+      if ($test_name != 'personeel') {
+        /* Zet de resultaten van de test in de database */
+        require_once '../resources/includes/TestsSQL.php';
+        $tests_sql = new TestsSQL($this->pageCreator->mysql);
+        $tests_sql->storeResults($test_name, $results);
+      }
 
       /* Laat de pagina zien. Dit kan de test zelf of de pagina met resultaten
          zijn. */
@@ -153,7 +155,7 @@ EOF;
         </div>
       </div>
     </div>
-	
+
 CONTENT;
   }
 
@@ -177,15 +179,17 @@ CONTENT;
         <div class="indexImage">
           <div class="row">
             <div class="medium-12 medium-centered columns">
-              <div class="backgroundImage" style="background-image: url('resources/img/frontpagecolourbeach.svg');">
+              <div class="backgroundImage" style="background-image: url('resources/img/background.svg');">
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row text water">
+        <div class="row text water" id="first">
           <div class="medium-10 medium-centered columns">
-            $results
+            <div class="medium-9 columns">
+              $results
+            </div>
           </div>
         </div>
 

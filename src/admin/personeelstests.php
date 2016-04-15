@@ -21,7 +21,7 @@ if (isset($_POST['request'])) {
   switch ($_POST['request']) {
     case 'add':
       $bedrijf = filename_safe($_POST['bedrijfsnaam']);
-      $file = "../tests/personeelstest/bedrijven/$bedrijf.json";
+      $file = "../tests/bedrijven/$bedrijf.json";
 
       $personeelsleden = intval($_POST['personeelsleden']);
       /* Assoc. array met code => testresultaat */
@@ -44,7 +44,7 @@ if (isset($_POST['request'])) {
 }
 
 $current_tests = [];
-$dirHandle = opendir('../tests/personeelstest/bedrijven/');
+$dirHandle = opendir('../tests/bedrijven/');
 while ($file = readdir($dirHandle)) {
   if ($file != '.htaccess' && $file != '.' && $file != '..') {
     array_push($current_tests, substr($file, 0, strlen($file) - 5));

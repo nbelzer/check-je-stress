@@ -22,9 +22,7 @@ function organization_exists($org) {
  */
 function code_exists($org, $code) {
   $file = "bedrijven/$org.json";
-  $handle = fopen($file, 'r');
-  $codes_array = json_decode(fread($handle));
-  fclose($handle);
+  $codes_array = json_decode(file_get_contents($file));
   return array_key_exists($code, $codes_array);
 }
 
@@ -36,8 +34,8 @@ function code_exists($org, $code) {
  */
 function save_result($org, $code, $result) {
   $file = "bedrijven/$org.json";
-  $handle = fopen($file, 'rw');
-  $codes_array = json_decode(fread($handle));
+  $handle = fopen($file, 'w');
+  $codes_array = json_decode(file_get_contents($file));
   $codes_array[$code] = $result;
   fwrite($handle, json_encode($codes_array));
   fclose($handle);
@@ -46,10 +44,10 @@ function save_result($org, $code, $result) {
 
 if (isset($_GET['organisatie']) && isset($_GET['code'])
     && organization_exists($_GET['organisatie'])
-    && code_exists($_GET['code'], $_GET['organisatie'])) {
+    && code_exists($_GET['organisatie'], $_GET['code'])) {
 
   /* Toon de personeelstest */
-  require_once '../../resources/includes/TestCreator.php';
+  require_once '../resources/includes/TestCreator.php';
 
   $vragen = [
     0 => 'Ik ga positief om met de dingen die ik moet doen.',
@@ -113,6 +111,9 @@ if (isset($_GET['organisatie']) && isset($_GET['code'])
   $test_page = new TestCreator;
   $test_page->title = 'Burnout Personeelstest';
   $test_page->questions = $vragen;
+  $test_page->extra_head = <<<EOF
+    <link rel="stylesheet" href="resources/css/test.css" type="text/css">
+  EOF;
 
   $test_page->test_body = <<<EOF
     <h1>Personeelstest</h1>
@@ -123,7 +124,9 @@ if (isset($_GET['organisatie']) && isset($_GET['code'])
     </p>
 EOF;
 
-  $test_page->results_body = "Bedankt voor het invullen van deze test!";
+  $test_page->results_body = <<<EOF
+    <p>Bedankt voor het invullen van deze test!</p>
+EOF;
 
   $test_page->advice_function = function($score) {
 
@@ -140,7 +143,7 @@ EOF;
       }
     }
 
-    save_result($_GET['organisatie'], $_GET['code'], $code);
+    save_result($_GET['organisatie'], $_GET['code'], $score);
 
     return '';
   };
@@ -148,9 +151,9 @@ EOF;
   $test_page->create('personeel');
 
 } else {
-  include '../../resources/includes/PageCreator.php';
+  include '../resources/includes/PageCreator.php';
   $page = new PageCreator;
-  $page->path_to_root = '../../';
+  $page->path_to_root = '../';
   $page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
   $page->title = "Personeelstest Burn-out";
   $page->body = <<<CONTENT
