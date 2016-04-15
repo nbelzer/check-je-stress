@@ -1,8 +1,6 @@
 <?php
-
-if (isset($_GET['bedrijf'])) {
-  $file = "bedrijven/$org.json";
-  $codes_array = json_decode(file_get_contents($file));
+if (isset($_GET['bedrijf']) && file_exists("../tests/bedrijven/{$_GET['bedrijf']}.json")) {
+  $codes_array = (array) json_decode(file_get_contents("../tests/bedrijven/{$_GET['bedrijf']}.json"));
   $unanswered = 0;
   foreach ($codes_array as $code => $result) {
     if ($result == null) {
@@ -13,7 +11,7 @@ if (isset($_GET['bedrijf'])) {
   $avg = array_sum($codes_array) / $count;
   $perc = round(($total_score / 275) * 100);
   $content = <<<EOF
-    <h5>Testresultaten - $test</h5>
+    <h5>Testresultaten - {$_GET['bedrijf']}</h5>
     <p>Gemiddelde testuitslag: $avg van de 275. Dat is $perc%</p>
     <p>$unanswered van de $count personeelsleden hebben de test nog niet beantwoord.</p>
 EOF;
@@ -24,7 +22,7 @@ EOF;
   while ($file = readdir($dirHandle)) {
     if ($file != '.htaccess' && $file != '.' && $file != '..') {
       $file = substr($file, 0, strlen($file) - 5);
-      $current_tests .= "<li><a href=\"$self?bedrijf=$file\">$bedrijf</a></li>";
+      $current_tests .= "<li><a href=\"$self?bedrijf=$file\">$file</a></li>";
     }
   }
   $content = <<<EOF
@@ -36,10 +34,11 @@ EOF;
 EOF;
 }
 
-include 'resources/includes/PageCreator.php';
+include '../resources/includes/PageCreator.php';
 $page = new PageCreator();
 $page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
 $page->title = "Informatie";
+$page->path_to_root = '../';
 $page->body = <<<CONTENT
 
 <div class="content">
@@ -58,10 +57,7 @@ $page->body = <<<CONTENT
     <div class="medium-10 medium-centered columns">
 
       <div class="medium-9 columns">
-        <h5>Testresultaten - $test</h5>
-
-        <p>blabla</p>
-
+        $content
       </div>
     </div>
   </div>
