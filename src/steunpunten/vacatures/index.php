@@ -64,7 +64,7 @@ $page->body = <<<CONTENT
 		</p>
 		  
 		<form method="post" name="contactformulier vacatures" action="steunpunten/vacatures/formulier-email.php">
-		  <table border="1">
+		  <table class="contact" border="1">
 
 			<tr>
 			  <td><label for="1">Voor- en achternaam:</label></td>

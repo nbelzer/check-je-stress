@@ -224,3 +224,32 @@ body {
 .indexImage {
   background: -webkit-linear-gradient(#39bfef, #eee);
 }
+
+.contact tr {
+  background-color: transparent !important;
+  border: 1px solid #1a5469;
+}
+
+.contact tr td {
+  padding-left: 2em;
+  padding-right: 2em;
+  /*border: none;*/
+}
+
+.contact tbody tr:nth-child(2n) {
+  background-color: rgba(24, 24, 24, 0.1) !important;
+}
+
+.contact {
+  width: 100%;
+  padding-top: 2em;
+}
+
+.contact label {
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.contact tbody {
+  background-color: transparent !important;
+}

@@ -51,7 +51,7 @@ $page->body = <<<CONTENT
         <h5>Contactformulier</h5>
 
 		<form method="post" name="contactformulier" action="contact/formulier-email.php">
-		  <table border="1">
+		  <table class="contact" border="1">
 
 			<tr>
 			  <td><label>Uw reden voor deze contactaanvraag:</label></td>
