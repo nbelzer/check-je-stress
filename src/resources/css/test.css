@@ -25,7 +25,25 @@ tbody tr:nth-child(2n) {
 .str_slider {
   padding-left: 3em;
   padding-right: 1em;
-  z-index: -1 !important;
+  z-index: -2 !important;
+}
+
+.str_slider .left, .str_slider .right {
+  position: relative;
+  z-index: 1 !important;
+  color: #bbb;
+  font-size: 0.5em;
+  padding-top: 0.5em;
+}
+
+.str_slider .left {
+  float: left;
+  padding-left: 1em;
+}
+
+.str_slider .right {
+  float: right;
+  padding-right: 1em;
 }
 
 @media (max-width: 40em) {

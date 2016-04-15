@@ -117,6 +117,8 @@ EOF;
       $form .= "<tr class='test'><td><div class=\"row\">\n";
       $form .= "<div class=\"small-12 medium-6 columns\">$vraag</div>\n";
       $form .= "<div class=\"small-12 medium-6 columns str_slider\">
+                  <div class=\"left\">Oneens</div>
+                  <div class=\"right\">Eens</div>
                   <div id=\"$id\"class=\"slider_handle t\"></div>
                 </div>\n";
       $form .= "<input type=\"hidden\" id=\"vraag$id\" name=\"vraag$id\">";
