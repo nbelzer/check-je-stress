@@ -5,33 +5,33 @@ error_count=0
 
 function parse_file {
 	parse_output=$(php -l $1)
-	if [[ $parse_output != "No syntax errors detected in $file" ]]; then
+	if [[ $parse_output != "No syntax errors detected in $1" ]]; then
 		echo
 		echo "Found a syntax error in $1:"
 		while read -r line
 		do
 			echo "> $line"
 		done <<< "$parse_output"
-		#echo "$parse_output"
 		echo
 		error_count=$(($error_count+1))
 	else
-		echo "Valid: $file"
+		echo "Valid: $1"
 	fi
 }
 
 function parse_directory {
-	for file in $1/*
-	do
-		if [[ -f $file ]]; then
-			echo $file | grep -q .php$
-			if [[ $? -eq 0 ]]; then
-				parse_file $file
-			fi
-		else
-			parse_directory $file
+	if [[ -f $1 ]]; then
+		echo $1 | grep -q .php$
+		if [[ $? -eq 0 ]]; then
+			parse_file $1
 		fi
-	done
+	else
+		for thing in $(find $1 -maxdepth 1); do
+			if [[ $thing != $1 ]]; then
+				parse_directory $thing
+			fi
+		done
+	fi
 }
 
 echo "Checking all .php files for syntax errors..."
