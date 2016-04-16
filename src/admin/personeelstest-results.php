@@ -64,7 +64,9 @@ EOF;
 
 include '../resources/includes/PageCreator.php';
 $page = new PageCreator();
-$page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
+$page->head = '<link rel="stylesheet"
+                     href="resources/css/specific/information.css"
+                     type="text/css">';
 $page->title = "Informatie";
 $page->path_to_root = '../';
 $page->body = <<<CONTENT
@@ -75,7 +77,8 @@ $page->body = <<<CONTENT
   <div class="indexImage">
     <div class="row">
       <div class="medium-12 medium-centered columns">
-        <div class="backgroundImage" style="background-image: url('resources/img/background.svg');">
+        <div class="backgroundImage"
+             style="background-image: url('resources/img/background.svg');">
         </div>
       </div>
     </div>
