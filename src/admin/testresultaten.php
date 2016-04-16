@@ -9,7 +9,7 @@ if (isset($_GET['test'])) {
   include_once '../resources/includes/TestsSQL.php';
   $tests_sql = new TestsSQL($page->mysql);
 
-  $content = '<table>';
+  $content = '<table class="contact">';
   $i = 0;
   foreach ($tests_sql->getAverageResults($_GET['test']) as $question_average) {
     $content .= "<tr><th>$i</th><td>$question_average</td></tr>";
