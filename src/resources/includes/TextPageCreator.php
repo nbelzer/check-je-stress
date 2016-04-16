@@ -3,6 +3,8 @@
 /**
  * Deze PHP class bevat functies waarmee een pagina met een stuk tekst gemaakt
  * kan worden.
+ *
+ * @package CheckJeStress
  */
 class TextPageCreator {
 

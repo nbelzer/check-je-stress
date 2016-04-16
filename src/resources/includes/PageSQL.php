@@ -3,6 +3,8 @@
 /**
  * Deze class regelt de SQL queries die te maken hebben met de inhoud van de
  * pagina's op de website.
+ *
+ * @package CheckJeStress
  */
 class PageSQL {
 

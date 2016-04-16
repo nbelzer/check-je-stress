@@ -5,6 +5,8 @@ require_once '../resources/includes/PageCreator.php';
 /**
  * Met deze PHP class kunnen pagina's voor de CheckJeStress tests gemaakt
  * worden.
+ *
+ * @package CheckJeStress
  */
 class TestCreator {
 
@@ -329,6 +331,8 @@ EOF;
  * Dit bericht moet niet gebruikt worden om aan de gebruiker te laten zien, maar
  * is voor debuggen. Catch de exception en geef bericht aan de gebruiker
  * afhankelijk van de error code.
+ *
+ * @package CheckJeStress
  */
 class InvalidTestResultsException extends Exception {
 }

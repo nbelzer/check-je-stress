@@ -3,6 +3,8 @@
 /**
  * Deze class regelt de SQL queries die te maken hebben met de resultaten van de
  * stresstests.
+ *
+ * @package CheckJeStress
  */
 class TestsSQL {
 

@@ -2,6 +2,8 @@
 
 /**
  * Met deze PHP class kunnen pagina's voor de custom error pages gemaakt worden.
+ *
+ * @package CheckJeStress
  */
 class ErrorCreator {
 
@@ -32,10 +34,10 @@ class ErrorCreator {
     $page->title = $this->title;
 	$page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
 	$page->body = <<<CONTENT
-	
+
     <div class="content">
 	  <div class="menuSpacing"></div>
-		  
+
 	  <div class="indexImage">
 		<div class="row">
 		  <div class="medium-12 medium-centered columns">
@@ -44,11 +46,11 @@ class ErrorCreator {
 		  </div>
 		</div>
 	  </div>
-		  
+
       <div class="row water">
         <div class="medium-10 medium-centered columns">
           <h2>Error $this->code</h2>
-		  
+
           <p>
             Beste bezoeker,
             <br><br>

@@ -2,6 +2,8 @@
 
 /**
  * Deze PHP class bevat functies waarmee pagina's gemaakt kunnen worden.
+ *
+ * @package CheckJeStress
  */
 class PageCreator {
 

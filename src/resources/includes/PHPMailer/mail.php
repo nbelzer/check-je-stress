@@ -3,6 +3,8 @@ require 'PHPMailerAutoload.php';
 
 /**
  * Class die voor mail functionaliteit zorgt.
+ *
+ * @package CheckJeStress
  */
 class Mailer {
 
@@ -80,6 +82,8 @@ class Mailer {
 
 /**
  * Thrown if een mail niet verstuurd kon worden.
+ *
+ * @package CheckJeStress
  */
 class MailException extends Exception {
 }

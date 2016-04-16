@@ -3,6 +3,8 @@
 /**
  * Manager voor de verbinding met de MySQL database. Door het gebruik van
  * prepared statements is de SQL-functionaliteit beveiligd tegen SQL injection.
+ *
+ * @package CheckJeStress
  */
 class MySQLManager {
 

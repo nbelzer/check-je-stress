@@ -1,6 +1,8 @@
 <?php
 /**
  * Deze PHP class bevat functies voor een (top-bar) menu.
+ *
+ * @package CheckJeStress
  */
 class MenuCreator {
 
@@ -77,7 +79,9 @@ class MenuCreator {
 
 /**
  * Stelt een element van het menu voor. Deze class kan het menu bouwen op een
- * soort recursieve manier...
+ * soort recursieve manier.
+ *
+ * @package CheckJeStress
  */
 class MenuBuilder {
 
