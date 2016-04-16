@@ -11,8 +11,18 @@ Vernieuwing van de website [Check Je Stress](http://checkjestress.nl/)
 * Mogelijk vereisten voor PHPMailer
 
 ### Setup
+Voor het daadwerkelijk in gebruik nemen van de website, moet er even goed gekeken worden of alle inhoud wel klopt. We hebben gevraagd wat er precies veranderd moest worden aan de inhoud, aangezien _Steunpunt Stress Burnout Nederland_ niet meer bestaat, maar hier kregen we betrekkelijk weinig reactie op.
+
+##### Script
 Er zit een Bash scriptje bij de website genaamd `setup_website.sh`. Dit script zet automatisch de website op. Voorwaarde is dat de server op dezelfde computer runt als waar het scriptje uitgevoerd wordt. Dit werkt dus niet op een webhosting server.
 Het scriptje kan worden uitgevoerd op een Linux server met het commando `./setup_website.sh`.
+
+##### Alternatief:
+1. Upload alle bestanden in de map src/ naar de gewenste locatie op de webserver. De website moet in de root directory van de website staan. Zorg ervoor dat de Apache user de owner permissions heeft. De map /tests/bedrijven moet ook niet alleen lees- maar ook write permissions hebben voor de Apache user.
+2. Genereer een .htpasswd bestand met login gegevens voor de administrator van de website en upload het bij voorkeur naar een map *BUITEN* de webserver bestanden (voor veiligheid). Met dit wachtwoord kunnen bijvoorbeeld de testresultaten worden ingezien. Het genereren van het bestand kan bijvoorbeeld gedaan worden met het commando `htpasswd`. Verwijder het bestand genaamd .htpasswd in de web root.
+3. Zet in het bestand admin/.htaccess het pad naar het zojuist gemaakte .htpasswd bestand (vervang `/absolute/path/to/.htpasswd`).
+4. Zet in het bestand config.php in de web root de juiste waarden (MySQL en SMTP server gegevens, en het e-mailadres van de administrator).
+5. Zet de MySQL database en tables op met de commando's die gevonden kunnen worden in het bestandje `mysql-setup.txt` van dit project.
 
 ### MySQL
 tabel `test_testname` (testname is naam van test, voor elke test een tabel):
