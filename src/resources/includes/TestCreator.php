@@ -143,7 +143,7 @@ EOF;
         </div>
       </div>
 
-      <div class="row text water">
+      <div class="row text water docFill">
         <div class="medium-10 medium-centered columns">
           $this->test_body
           <noscript>
@@ -187,7 +187,7 @@ CONTENT;
           </div>
         </div>
 
-        <div class="row text water" id="first">
+        <div class="row text water docFill" id="first">
           <div class="medium-10 medium-centered columns">
             <div class="medium-9 columns">
               $results

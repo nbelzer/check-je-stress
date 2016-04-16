@@ -18,7 +18,7 @@ $page->body = <<<CONTENT
     </div>
   </div>
 
-  <div class="row water">
+  <div class="row water docFill">
     <div class="medium-10 medium-centered columns">
       <h3>Burn-out tests</h3>
 
