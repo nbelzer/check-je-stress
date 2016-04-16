@@ -11,10 +11,12 @@ $vragen = [
   5 => 'Ik vermijd mensen op mijn werk en in mijn privé-leven.',
   6 => 'Ik heb slaapproblemen, omdat ik me zorgen maak over mijn werk.',
   7 => 'Ik ben vaker ziek dan vroeger.',
-  8 => 'Mijn houding t.o.v. mijn werk is \'Waar zou ik me druk over maken?\' Ik sta er wat onverschillig tegenover.',
+  8 => 'Mijn houding t.o.v. mijn werk is \'Waar zou ik me druk over maken?\' Ik
+        sta er wat onverschillig tegenover.',
   9 => 'Ik raak vaker betrokken bij conflicten.',
   10 => 'Mijn werk lijdt onder \'hoe ik me voel\'.',
-  11 => 'Ik gebruik meer koffie, alcohol, sigaretten, drugs of kalmerende middelen dan normaal om mij beter te voelen.',
+  11 => 'Ik gebruik meer koffie, alcohol, sigaretten, drugs of kalmerende
+         middelen dan normaal om mij beter te voelen.',
   12 => 'Met andere mensen communiceren is een bron van spanning.',
   13 => 'Ik kan me niet concentreren op mijn werk zoals voorheen.',
   14 => 'Het werk verveelt me.',
@@ -26,7 +28,8 @@ $vragen = [
   20 => 'In mijn vrije tijd kijk ik voornamelijk TV.',
   21 => 'Ik heb weinig om me op te verheugen in mijn werk.',
   22 => 'Ik pieker over mijn werk in mijn vrije tijd.',
-  23 => 'Mijn gevoelens over mijn werk zitten mij dwars in mijn persoonlijke leven.',
+  23 => 'Mijn gevoelens over mijn werk zitten mij dwars in mijn persoonlijke
+         leven.',
   24 => 'Mijn werk lijkt zinloos.'
 ];
 
@@ -60,13 +63,14 @@ $test_page->test_body = <<<EOF
   <p>
     Deze test bestaat uit 25 stellingen.
     <br><br>
-    Kies steeds in welke mate de uitspraak op u van toepassing is. Hierbij geldt dat hoe 
-	verder de slider naar rechts staat, hoe meer u het eens bent met de uitspraak.
+    Kies steeds in welke mate de uitspraak op u van toepassing is. Hierbij geldt
+    dat hoe verder de slider naar rechts staat, hoe meer u het eens bent met de
+    uitspraak.
   </p>
 EOF;
 
 $test_page->results_body = <<<EOF
-  <h1>Snelle Test Resultaten</h1>
+  <h3>Snelle Test - Resultaten</h3>
   <p>Bedankt voor het invullen van de test! Hieronder ziet u de resultaten.</p>
   <div id="svgmeter"></div>
 EOF;
@@ -101,15 +105,19 @@ $test_page->advice_function = function($results) {
     </script>
 EOF;
   if ($score < 26) {
-    $advies .= 'Het lijkt erop dat u op het moment geen risico loopt op een burnout.';
+    $advies .= 'Het lijkt erop dat u op het moment geen risico loopt op een
+                burn-out.';
   } else if ($score < 51) {
     $advies .= 'Het gaat goed. Let wel op de items waarop uw score hoger is.';
   } else if ($score < 76) {
-    $advies .= 'U heeft waarschijnlijk geen burnout, maar wij adviseren u wel om preventiemaatregelen te nemen.';
+    $advies .= 'U heeft waarschijnlijk geen burn-out, maar wij adviseren u wel
+                om preventiemaatregelen te nemen.';
   } else if ($score < 101) {
-    $advies .= 'U loopt risico om een burnout te krijgen. Als u net een burnout gehad hebt, bent u nog niet hersteld.';
+    $advies .= 'U loopt risico om een burn-out te krijgen. Als u net een
+                burn-out gehad hebt, bent u nog niet hersteld.';
   } else {
-    $advies .= 'U hebt waarschijnlijk een burnout, of een burnout is zich bij u aan het ontwikkelen.';
+    $advies .= 'U hebt waarschijnlijk een burn-out, of een burn-out is zich bij
+                u aan het ontwikkelen.';
   }
 
   return $advies;

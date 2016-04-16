@@ -60,13 +60,14 @@ $test_page->test_body = <<<EOF
   <p>
     Deze test bestaat uit 25 stellingen.
     <br><br>
-    Kies steeds in welke mate de uitspraak op uw bedrijf van toepassing is.Hierbij geldt dat hoe 
-	verder de slider naar rechts staat, hoe meer u het eens bent met de uitspraak.
+    Kies steeds in welke mate de uitspraak op uw bedrijf van toepassing is.
+    Hierbij geldt dat hoe verder de slider naar rechts staat, hoe meer u het
+    eens bent met de uitspraak.
   </p>
 EOF;
 
 $test_page->results_body = <<<EOF
-  <h1>Risicoanalyse Resultaten</h1>
+  <h3>Risicoanalyse - Resultaten</h3>
   <p>Bedankt voor het invullen van de test! Hieronder ziet u de resultaten.</p>
   <div id="svgmeter"></div>
 EOF;
@@ -92,24 +93,24 @@ EOF;
     $advies .= <<<EOF
       Comfortabel niveau
       <br>
-      De medewerkers vertonen weinig tekenen van een burnout. Om problemen in de
-      toekomst te voorkomen, kunt u proactief met deze medewerkers aan de slag
-      gaan om burnouts te voorkomen. Het beste kunt u met hen in gesprek gaan
-      over o.a. de werkdruk.
+      De medewerkers vertonen weinig tekenen van een burn-out. Om problemen in
+      de toekomst te voorkomen, kunt u proactief met deze medewerkers aan de
+      slag gaan om burn-outs te voorkomen. Het beste kunt u met hen in gesprek
+      gaan over o.a. de werkdruk.
 EOF;
   } else if ($percentage < 60) {
     $advies .= <<<EOF
       Oppassen niveau
       <br>
-      De medewerkers vertonen een gematigd beeld van burnout; preventieve actie
+      De medewerkers vertonen een gematigd beeld van burn-out; preventieve actie
       is geboden.  Start met het doorlichten van de organisatie door een
-      burnout-risicoanalyse af te nemen bij alle medewerkers.
+      burn-out risicoanalyse af te nemen bij alle medewerkers.
 EOF;
   } else if ($percentage < 80) {
     $advies .= <<<EOF
       Chronisch niveau
       <br>
-      De medewerkers vertonen talrijke signalen van een burnout; correctieve
+      De medewerkers vertonen talrijke signalen van een burn-out; correctieve
       actie is geboden om erger te voorkomen in het belang van de medewerkers en
       de organisatie.
 EOF;
@@ -117,7 +118,7 @@ EOF;
     $advies .= <<<EOF
       Crisisniveau
       <br>
-      De medewerkers (en waarschijnlijk ook jij) zijn volledig burnout.
+      De medewerkers (en waarschijnlijk ook u) hebben een volledige burn-out.
       Onmiddellijke crisisinterventie is geboden om te voorkomen dat de
       organisatie compleet instort.
 EOF;

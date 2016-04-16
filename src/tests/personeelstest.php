@@ -116,15 +116,16 @@ if (isset($_GET['organisatie']) && isset($_GET['code'])
 EOF;
 
   $test_page->test_body = <<<EOF
-    <h1>Personeelstest</h1>
+    <h3>Personeelstest</h3>
     <p>
       Deze test bestaat uit 56 stellingen. Geef bij elk van de stellingen aan in
-      hoeverre deze op jou van toepassing is in je werk en/of je privéleven. Neem
-      daarbij de afgelopen 6 maanden in gedachten.
+      hoeverre deze op jou van toepassing is in je werk en/of je privéleven.
+      Neem daarbij de afgelopen 6 maanden in gedachten.
     </p>
 EOF;
 
   $test_page->results_body = <<<EOF
+    <h3>Personeelstest - Verstuurd</h3>
     <p>Bedankt voor het invullen van deze test!</p>
 EOF;
 
@@ -154,7 +155,9 @@ EOF;
   include '../resources/includes/PageCreator.php';
   $page = new PageCreator;
   $page->path_to_root = '../';
-  $page->head = '<link rel="stylesheet" href="resources/css/specific/information.css" type="text/css">';
+  $page->head = '<link rel="stylesheet"
+                       href="resources/css/specific/information.css"
+                       type="text/css">';
   $page->title = "Personeelstest Burn-out";
   $page->body = <<<CONTENT
     <div class="content">
@@ -162,7 +165,8 @@ EOF;
       <div class="indexImage">
         <div class="row">
           <div class="medium-12 medium-centered columns">
-            <div class="backgroundImage" style="background-image: url('resources/img/background.svg');">
+            <div class="backgroundImage"
+                 style="background-image: url('resources/img/background.svg');">
             </div>
           </div>
         </div>

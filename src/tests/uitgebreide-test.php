@@ -89,16 +89,16 @@ EOF;
 $test_page->test_body = <<<EOF
   <h3>Uitgebreide Test</h3>
   <p>
-    Deze test bestaat uit 56 stellingen. 
-	<br><br>
-    Kies steeds in welke mate de uitspraak op u van toepassing is. Hierbij geldt dat hoe 
-	verder de slider naar rechts staat, hoe meer u het eens bent met de uitspraak. Neem bij het 
-    invullen de afgelopen 6 maanden in gedachten.
+    Deze test bestaat uit 56 stellingen.
+	  <br><br>
+    Kies steeds in welke mate de uitspraak op u van toepassing is. Hierbij geldt
+    dat hoe verder de slider naar rechts staat, hoe meer u het eens bent met de
+    uitspraak. Neem bij het invullen de afgelopen 6 maanden in gedachten.
   </p>
 EOF;
 
 $test_page->results_body = <<<EOF
-  <h1>Uitgebreide Test Resultaten</h1>
+  <h3>Uitgebreide Test - Resultaten</h3>
   <p>Bedankt voor het invullen van de test! Hieronder ziet u de resultaten.</p>
   <div id="svgmeter"></div>
 EOF;
@@ -134,7 +134,7 @@ $test_page->advice_function = function($score) {
     </script>
 EOF;
 
-  if ($percentage < 25) { /* < 25% */
+  if ($percentage < 25) {
     $advies .= <<<EOF
       U scoorde 'zeer laag' op het hebben van burnoutverschijnselen.
       <br>
@@ -143,7 +143,7 @@ EOF;
       specifieke dag eens moe kunt zijn, is er van een burnout geen enkele
       sprake.
 EOF;
-  } else if ($percentage < 50) { /* < 50% */
+  } else if ($percentage < 50) {
     $advies .= <<<EOF
       U scoorde 'laag' op het hebben van burnoutverschijnselen.
       <br>
@@ -151,7 +151,7 @@ EOF;
       Stress en spanning heeft iedereen wel eens maar doorgaans leidt dat niet
       tot blijvende klachten en zeker niet tot een burnout.
 EOF;
-  } else if ($percentage < 75) { /* < 75% */
+  } else if ($percentage < 75) {
     $advies .= <<<EOF
       U scoorde 'enigszins' op het hebben van burnoutverschijnselen.
       <br>
@@ -161,7 +161,7 @@ EOF;
       Probeer te achterhalen of er bronnen van stress zijn die u kunt
       verhelpen. Betrek anderen hierin actief.
 EOF;
-  } else { /* < 100% */
+  } else {
     $advies .= <<<EOF
       U scoorde 'verhoogd' op het hebben van burnoutverschijnselen.
       <br>
