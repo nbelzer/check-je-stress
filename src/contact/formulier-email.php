@@ -63,21 +63,17 @@ EOF;
 }
 
 $page->body = <<<CONTENT
-
-<div class="content">
-
-  <section class="text water" id="first">
-    <div class="row">
-      <div class="medium-10 medium-centered columns">
-        <div class="medium-9 columns medium-offset-3">
-          <h5>Contact</h1>
-		  	<p>$message</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
+	<div class="content">
+	  <section class="text water" id="first">
+	    <div class="row">
+	      <div class="medium-10 medium-centered columns">
+	        <div class="medium-9 columns medium-offset-3">
+	          <h5>Contact</h1>
+			  		<p>$message</p>
+	        </div>
+	      </div>
+	    </div>
+	  </section>
+	</div>
 CONTENT;
 $page->create();
