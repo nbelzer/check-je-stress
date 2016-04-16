@@ -99,5 +99,18 @@ if (!isset($includeMenu)) {
         }
       });
     </script>
+    <script>
+      function docFill() {
+        var pageHeight = ($(".content").height());
+        var widowHeight = ($(window).height());
+        if(pageHeight <= widowHeight) {
+          $(".docFill").css("height",widowHeight-pageHeight+$(".docFill").height());
+        } else {
+          $(".docFill").css("height","auto");
+        };
+      };
+      $(document).ready(docFill);
+      $(window).resize(docFill);
+    </script>
   </body>
 </html>
