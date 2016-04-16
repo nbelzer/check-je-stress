@@ -11,7 +11,7 @@ return array(
     'secure' => 'tls', /* 'ssl' of 'tls' */
     'auth' => true,
     'username' => 'checkjestresstest@gmail.com',
-    'password' => 'jemoeder'
+    'password' => 'wachtwoord'
   ),
 
   'mysql' => array(
