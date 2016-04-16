@@ -47,7 +47,7 @@ class ErrorCreator {
 		</div>
 	  </div>
 
-      <div class="row water">
+      <div class="row text water docFill">
         <div class="medium-10 medium-centered columns">
           <h2>Error $this->code</h2>
 

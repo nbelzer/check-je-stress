@@ -49,7 +49,7 @@ $page->body = <<<EOF
       </div>
     </div>
 
-    <div class="row text water" id="first">
+    <div class="row text water docFill" id="first">
       <div class="medium-10 medium-centered columns">
         <div class="medium-9 columns medium-offset-3">
           <h5>Testresultaten</h5>

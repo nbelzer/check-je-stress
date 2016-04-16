@@ -20,7 +20,7 @@ $page->body = <<<CONTENT
       </div>
     </div>
 
-    <div class="row text water" id="first">
+    <div class="row text water docFill" id="first">
       <div class="medium-10 medium-centered columns">
 
         <h5>Colofon</h1>

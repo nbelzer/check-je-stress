@@ -21,7 +21,7 @@ $page->body = <<<CONTENT
       </div>
     </div>
 
-    <div class="row water">
+    <div class="row text water">
       <div class="medium-10 medium-centered columns">
         <p>
           Welkom op de website van CheckJeStress. We helpen u graag van
@@ -31,7 +31,7 @@ $page->body = <<<CONTENT
       </div>
     </div>
 
-    <div class="row water" data-equalizer data-equalize-on="medium">
+    <div class="row text water" data-equalizer data-equalize-on="medium">
       <div class="medium-10 medium-centered columns">
 
         <div class="medium-6 columns" data-equalizer-watch>
@@ -69,7 +69,7 @@ $page->body = <<<CONTENT
       </div>
     </div>
 
-    <div class="row dark">
+    <div class="row text dark docFill">
       <div class="medium-10 medium-centered columns">
   	    <p>
           Wilt u voor uzelf controleren of u last heeft van stress, of wilt u
