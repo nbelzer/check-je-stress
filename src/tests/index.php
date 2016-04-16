@@ -27,21 +27,21 @@ $page->body = <<<CONTENT
           <li>
             <!-- test a -->
             In het geval dat u snel wilt weten of u risico loopt op een burn-out
-            kunt u de <a href="tests/snelle-test">snelle test</a> afnemen.
+            kunt u de <a href="tests/snelle-test.php">snelle test</a> afnemen.
             <br>
             Deze test zal circa 2 minuten van uw tijd nemen.
           </li>
           <li>
             <!-- test c -->
             In het geval dat u wilt weten of u verschijnselen heeft van een
-            echte burn-out kunt u het beste de <a href="tests/uitgebreide-test">
+            echte burn-out kunt u het beste de <a href="tests/uitgebreide-test.php">
             uitgebreide test</a> afnemen.
             <br>
             Deze test zal circa vijf minuten van uw tijd nemen.
           </li>
           <li>
             <!-- test b -->
-            De <a href="tests/risicoanalyse">burn-out risico analyse</a> is een
+            De <a href="tests/risicoanalyse.php">burn-out risico analyse</a> is een
             test voor managers, bestuurders en directeuren om te weten te komen
             hoeveel risico het bedrijf loopt op burn-outs van werknemers.
             <br>
