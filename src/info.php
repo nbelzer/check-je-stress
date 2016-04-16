@@ -44,9 +44,9 @@ $page->body = <<<CONTENT
           </p>
 
           <p>
-            Wij zijn beiden registercounsellor bij de <abbr title="Algemene
-            Beroepsvereniging voor Counselling">ABvC</abbr>. Naast een
-            kwalitatief uitmuntende opleiding met als specialisatie stress en
+            Wij zijn beiden registercounsellor bij de 
+			<abbr title="Algemene Beroepsvereniging voor Counselling">ABvC</abbr>. 
+			Naast een kwalitatief uitmuntende opleiding met als specialisatie stress en
             burn-outproblematiek, dienen we ons ook te houden aan de ethische
             beroepscode. Dit vraagt een jaarlijkse bijscholing en uren aan
             intervisie, zodat de kwaliteit van onze dienstverlening up-to-date
