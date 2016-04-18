@@ -36,6 +36,7 @@ tbody tr:nth-child(2n) {
   color: #bbb;
   font-size: 0.5em;
   padding-top: 0.5em;
+  pointer-events: none;
 }
 
 .str_slider .left {
