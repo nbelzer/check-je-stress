@@ -1,5 +1,7 @@
 <?php
 
+ini_set('display_errors', 0);
+
 /**
  * Deze PHP class bevat functies waarmee pagina's gemaakt kunnen worden.
  *
